@@ -1,95 +1,45 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+@charset "utf-8";
+
+// https://github.com/metafizzy/flickity/issues/754
+@import "~flickity/css/flickity.css";
+
+// Import Lato Google Font
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// More theme colors could be added here...
+$primary: #454545;
+
+$spaces: ("0": 0, "1": 1.65rem, "2": 1.75rem);
+
+$margin-default: map-get($spaces, "2") map-get($spaces, "0");
+
+// Update some of Bulma's component & color variables
+$footer-padding: 3rem 1.5rem;
+$link: hsl(171, 100%, 41%);
+
+// Custom Styles
+.card-gap {margin-top:1.75rem}
+.modal-trigger { cursor: pointer; }
+a.icon > strong {margin-left:.25rem}
+.modal-card-body div.content {margin:$margin-default}
+
+// import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
+@import "~bulma/bulma"; 
+
+// override specific bulma styles
+.section {padding: 2.15rem 1.5rem}
+
+@function theme-color($key: "primary") {
+    @return map-get($theme-colors, $key);
 }
 
-/* Header Section */
-header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
+// Flickity - begin
+.carousel-cell {width:100%}
+// Flickity - end
 
-h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-h2 {
-    font-size: 1.8em;
-    color: #444;
-}
-
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #fff;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #6a11cb;
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-}
-
-/* Buttons */
-.button {
-    display: inline-block;
-    background: #6a11cb;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.button:hover {
-    background: #2575fc;
-}
-
-/* Portfolio Grid */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.portfolio-item {
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
+ 
