@@ -99,6 +99,9 @@ function updateProjectImage() {
   const imageElement = document.getElementById("projectImage");
   if (currentProject && currentProject.images.length > 0) {
     imageElement.src = currentProject.images[currentImageIndex];
+    imageElement.style.objectFit = "contain"; // Prevents stretching
+    imageElement.style.width = "100%";
+    imageElement.style.maxHeight = "80vh"; // Keeps modal consistent
   }
 }
 
