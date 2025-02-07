@@ -3,7 +3,7 @@ const projectData = {
   automation: {
     title: "Business Applications & Automation",
     projects: [
-      { name: "ASU Registration Application", thumbnail: "assets/images/experience/ASU_Career_Center.png" , images: ["assets/images/BusinessAppsAndAutomation/ASUApp/1.png", "assets/images/BusinessAppsAndAutomation/ASUApp/2.png", "assets/images/BusinessAppsAndAutomation/ASUApp/3.png", "assets/images/BusinessAppsAndAutomation/ASUApp/4.png","assets/images/BusinessAppsAndAutomation/ASUApp/5.png","assets/images/BusinessAppsAndAutomation/ASUApp/6.png", "assets/images/BusinessAppsAndAutomation/ASUApp/7,.png","assets/images/BusinessAppsAndAutomation/ASUApp/8.png" ] },
+      { name: "ASU Registration Application", thumbnail: "assets/images/experience/ASU_Career_Center.png" , images: ["assets/images/BusinessAppsAndAutomation/ASUApp/1.png", "assets/images/BusinessAppsAndAutomation/ASUApp/2.jpg", "assets/images/BusinessAppsAndAutomation/ASUApp/3.png", "assets/images/BusinessAppsAndAutomation/ASUApp/4.png","assets/images/BusinessAppsAndAutomation/ASUApp/5.png","assets/images/BusinessAppsAndAutomation/ASUApp/6.png", "assets/images/BusinessAppsAndAutomation/ASUApp/7.png","assets/images/BusinessAppsAndAutomation/ASUApp/8.png" ] },
       { name: "Change Request Management", thumbnail: "crm_thumbnail.jpg", images: ["crm1.jpg", "crm2.jpg"] },
       { name: "Global PO Tracker", thumbnail: "po_thumbnail.jpg", images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"] },
     ],
