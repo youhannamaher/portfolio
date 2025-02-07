@@ -1,12 +1,15 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
 /* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
@@ -20,39 +23,52 @@ body {
 
 /* Header Section */
 #home {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: #fff;
+  background: url('header-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 100px 20px;
+  color: white;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .header-buttons .btn {
   display: inline-block;
   margin: 10px;
-  padding: 10px 20px;
-  background: #f39c12;
+  padding: 12px 25px;
+  background: #007bff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background: #e67e22;
+  background: #0056b3;
 }
 
 /* About Me Section */
 #about {
   text-align: center;
-  padding: 50px 0;
+  padding: 80px 0;
   background: #f4f4f4;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 /* Experience Section */
 #experience {
-  padding: 50px 0;
-  text-align: center;
+  padding: 80px 0;
   background: #fff;
+  text-align: center;
 }
 
 .experience-item {
@@ -72,7 +88,7 @@ body {
 
 /* Education Section */
 #education {
-  padding: 50px 0;
+  padding: 80px 0;
   background: #f4f4f4;
   text-align: center;
 }
@@ -83,31 +99,42 @@ body {
 
 /* Projects Section */
 #projects {
-  padding: 50px 0;
+  padding: 80px 0;
   text-align: center;
+  background: #fff;
 }
 
 .project-category {
-  background: #fff;
-  padding: 20px;
-  margin: 10px auto;
+  background: #f4f4f4;
+  padding: 30px;
+  margin: 20px auto;
   width: 50%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-category:hover {
+  transform: scale(1.05);
 }
 
 /* Contact Section */
 #contact {
-  padding: 50px 0;
-  background: #333;
-  color: #fff;
+  padding: 80px 0;
+  background: #222;
+  color: white;
   text-align: center;
 }
 
 .contact-links a {
-  color: #f39c12;
-  margin: 0 10px;
+  color: #007bff;
+  margin: 0 15px;
   font-size: 24px;
+  transition: all 0.3s;
+}
+
+.contact-links a:hover {
+  color: #0056b3;
 }
 
 /* Footer */
@@ -116,4 +143,4 @@ footer {
   padding: 20px;
   background: #111;
   color: #fff;
-} 
+}
