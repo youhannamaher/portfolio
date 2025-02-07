@@ -6,107 +6,114 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
   background: #f8f9fa;
   color: #333;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
-/* Hero Section */
-.hero-section {
+/* Header Section */
+#home {
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: #fff;
   text-align: center;
   padding: 100px 20px;
 }
 
-.hero-section h1 span {
-  color: #f39c12;
-}
-
-.hero-section .btn {
+.header-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
   background: #f39c12;
   color: #fff;
-  padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  transition: 0.3s;
 }
 
-/* About Section */
-.about-section {
+.btn:hover {
+  background: #e67e22;
+}
+
+/* About Me Section */
+#about {
   text-align: center;
   padding: 50px 0;
+  background: #f4f4f4;
 }
 
-.about-section img {
-  width: 150px;
+/* Experience Section */
+#experience {
+  padding: 50px 0;
+  text-align: center;
+  background: #fff;
+}
+
+.experience-item {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.experience-item img {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  margin-top: 20px;
+}
+
+/* Education Section */
+#education {
+  padding: 50px 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.education-item {
+  margin-bottom: 20px;
 }
 
 /* Projects Section */
-.projects-section {
+#projects {
   padding: 50px 0;
-}
-
-.project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-item {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.project-item img {
-  max-width: 100%;
-  border-radius: 8px;
+.project-category {
+  background: #fff;
+  padding: 20px;
+  margin: 10px auto;
+  width: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 /* Contact Section */
-.contact-section {
-  background: #f4f4f4;
+#contact {
   padding: 50px 0;
+  background: #333;
+  color: #fff;
   text-align: center;
 }
 
-.contact-section form input,
-.contact-section form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.contact-section .btn {
-  background: #3498db;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+.contact-links a {
+  color: #f39c12;
+  margin: 0 10px;
+  font-size: 24px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #333;
+  background: #111;
   color: #fff;
-}
-
-footer .social-links a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 20px;
-  text-decoration: none;
 }
