@@ -6,6 +6,7 @@ const projectData = {
       {
         name: "ASU Registration Application",
         thumbnail: "assets/images/experience/ASU_Career_Center.png",
+         description: "A web app for students to register easily at Ain Shams University.",
         images: [
           "assets/images/BusinessAppsAndAutomation/ASUApp/1.png",
           "assets/images/BusinessAppsAndAutomation/ASUApp/2.jpg",
@@ -20,11 +21,13 @@ const projectData = {
       {
         name: "Change Request Management",
         thumbnail: "crm_thumbnail.jpg",
+         description: "A web app for students to register easily at Ain Shams University.",
         images: ["crm1.jpg", "crm2.jpg"]
       },
       {
         name: "Global PO Tracker",
         thumbnail: "po_thumbnail.jpg",
+         description: "A web app for students to register easily at Ain Shams University.",
         images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"]
       }
     ]
@@ -35,11 +38,13 @@ const projectData = {
       {
         name: "Data Visualization Dashboard",
         thumbnail: "data_thumbnail.jpg",
+         description: "A web app for students to register easily at Ain Shams University.",
         images: ["data1.jpg", "data2.jpg"]
       },
       {
         name: "SQL Performance Analysis",
         thumbnail: "sql_thumbnail.jpg",
+         description: "A web app for students to register easily at Ain Shams University.",
         images: ["sql1.jpg", "sql2.jpg", "sql3.jpg"]
       }
     ]
@@ -50,13 +55,13 @@ const projectData = {
       {
         name: "Corporate Pitch Deck",
         thumbnail: "pitch_thumbnail.jpg",
+         description: "A web app for students to register easily at Ain Shams University.",
         images: ["pitch1.jpg", "pitch2.jpg"]
       }
     ]
   }
 };
 
-// Open the Category Modal
 function openGallery(category) {
   const modal = document.getElementById("categoryModal");
   const title = document.getElementById("categoryTitle");
@@ -70,7 +75,8 @@ function openGallery(category) {
       (project, index) => `
       <div class="project-item" onclick="openProject(${index}, '${category}')">
         <img src="${project.thumbnail}" alt="${project.name}">
-        <p>${project.name}</p>
+        <h3>${project.name}</h3>
+        <p>${project.description}</p> <!-- Add description here -->
       </div>
     `
     )
