@@ -36,10 +36,10 @@ const projectData = {
     title: "Data Management & Analysis",
     projects: [
       {
-        name: "Data Visualization Dashboard",
-        thumbnail: "data_thumbnail.jpg",
-         description: "A web app for students to register easily at Ain Shams University.",
-        images: ["data1.jpg", "data2.jpg"]
+        name: "Data Visualization Excel Dashboard",
+        thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/MainDashboard.jpg",
+         description: "Dashboards made Totally in Excel using pivot tables and VBA and Excel Charts ",
+        images: ["assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4", "assets/images/Data_Analysis/Excel_Dashboards/Dashboard1.png", "assets/images/Data_Analysis/Excel_Dashboards/Dashboard2.png","assets/images/Data_Analysis/Excel_Dashboards/Data Entry option.png"]
       },
       {
         name: "SQL Performance Analysis",
