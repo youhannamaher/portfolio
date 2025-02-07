@@ -1,29 +1,13 @@
-// Project Data with Thumbnails
-const projectData = {
-  automation: {
-    title: "Business Applications & Automation",
-    projects: [
-      { name: "ASU Registration Application", thumbnail: "assets/images/experience/ASU_Career_Center.png" , images: ["assets/images/BusinessAppsAndAutomation/ASUApp/1.png", "assets/images/BusinessAppsAndAutomation/ASUApp/2.jpg", "assets/images/BusinessAppsAndAutomation/ASUApp/3.png", "assets/images/BusinessAppsAndAutomation/ASUApp/4.png","assets/images/BusinessAppsAndAutomation/ASUApp/5.png","assets/images/BusinessAppsAndAutomation/ASUApp/6.png", "assets/images/BusinessAppsAndAutomation/ASUApp/7.png","assets/images/BusinessAppsAndAutomation/ASUApp/8.png" ] },
-      { name: "Change Request Management", thumbnail: "crm_thumbnail.jpg", images: ["crm1.jpg", "crm2.jpg"] },
-      { name: "Global PO Tracker", thumbnail: "po_thumbnail.jpg", images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"] },
-    ],
-  },
-  data: {
-    title: "Data Management & Analysis",
-    projects: [
-      { name: "Data Visualization Dashboard", thumbnail: "data_thumbnail.jpg", images: ["data1.jpg", "data2.jpg"] },
-      { name: "SQL Performance Analysis", thumbnail: "sql_thumbnail.jpg", images: ["sql1.jpg", "sql2.jpg", "sql3.jpg"] },
-    ],
-  },
-  presentation: {
-    title: "Presentation & Documentation",
-    projects: [
-      { name: "Corporate Pitch Deck", thumbnail: "pitch_thumbnail.jpg", images: ["pitch1.jpg", "pitch2.jpg"] },
-    ],
-  },
-};
+let projectData = {}; // Store project data
 
-// To Open the Category Modal
+// Fetch project data from JSON
+fetch("projects.json")
+  .then(response => response.json())
+  .then(data => {
+    projectData = data;
+  })
+  .catch(error => console.error("Error loading projects:", error));
+
 function openGallery(category) {
   const modal = document.getElementById("categoryModal");
   const title = document.getElementById("categoryTitle");
@@ -46,19 +30,36 @@ function openGallery(category) {
   modal.style.display = "flex";
 }
 
-// To Open the Project Image Modal
+// Open Project Modal & Auto Load Images from Folder
 let currentProject = null;
+let currentImages = [];
 let currentImageIndex = 0;
 
 function openProject(index, category) {
-  const modal = document.getElementById("projectModal");
+  const project = projectData[category].projects[index];
+  const folderPath = project.folder;
+
+  fetchImagesFromFolder(folderPath).then(images => {
+    currentProject = project;
+    currentImages = images;
+    currentImageIndex = 0;
+    updateProjectImage();
+    document.getElementById("projectModal").style.display = "flex";
+  });
+}
+
+// Fetch All Images from Folder
+function fetchImagesFromFolder(folderPath) {
+  return fetch(folderPath)
+    .then(response => response.json()) // This assumes you generate a list of files (see Note)
+    .catch(error => console.error("Error fetching images:", error));
+}
+
+function updateProjectImage() {
   const imageElement = document.getElementById("projectImage");
-
-  currentProject = projectData[category].projects[index];
-  currentImageIndex = 0;
-
-  imageElement.src = currentProject.images[currentImageIndex];
-  modal.style.display = "flex";
+  if (currentImages.length > 0) {
+    imageElement.src = currentImages[currentImageIndex];
+  }
 }
 
 function closeModal() {
@@ -71,17 +72,26 @@ function closeProjectModal() {
   currentImageIndex = 0;
 }
 
-// To Navigate Images
+// Image Navigation
 function prevImage() {
   if (currentProject) {
-    currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
-    document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
+    currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+    updateProjectImage();
   }
 }
 
 function nextImage() {
   if (currentProject) {
-    currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
-    document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
+    currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+    updateProjectImage();
   }
 }
+
+// Keyboard Navigation
+document.addEventListener("keydown", event => {
+  if (document.getElementById("projectModal").style.display === "flex") {
+    if (event.key === "ArrowLeft") prevImage();
+    if (event.key === "ArrowRight") nextImage();
+    if (event.key === "Escape") closeProjectModal();
+  }
+});
