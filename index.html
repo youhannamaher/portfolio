@@ -7,12 +7,63 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Temporary inline styles for demonstration */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+    #about {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    #about img {
+      max-width: 150px;
+      border-radius: 10px;
+    }
+    h1 {
+      color: #ffffff; /* Changed text color */
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <!-- Header Section -->
-  <header id="home">
+  <header id="home" style="background-color: #007bff; color: white; text-align: center; padding: 50px 20px;">
     <div class="header-content">
-      <h1>Youhanna Maher</h1>
+      <h1 style="color: #ffffff;">Youhanna Maher</h1> <!-- Changed color to gold -->
       <p>Business Analyst & Developer | Innovating Solutions</p>
       <div class="header-buttons">
         <a href="/cv.pdf" target="_blank" class="btn">Download CV</a>
@@ -22,13 +73,23 @@
     </div>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
+  <section class="about-me">
+  <div class="about-me-image">
+    <img src="your-image.png" alt="Profile Picture">
+  </div>
+  <div class="about-me-text">
+    <h1>About Me</h1>
     <p>
-      Adept in PowerApps, Power Automate, Power BI, Excel, and AI-driven automation tools to enhance operational efficiency. Experienced in combining business knowledge with technology to optimize workflows, improve HR processes, and enable data-backed decisions. Proven ability to develop custom applications, automate processes, and generate analytical reports to drive strategic impact.
+      Adept in PowerApps, Power Automate, Power BI, Excel, and AI-driven automation tools to enhance operational efficiency.
+      Experienced in combining business knowledge with technology to optimize workflows, improve HR processes, and enable
+      data-backed decisions. Proven ability to develop custom applications, automate processes, and generate analytical
+      reports to drive strategic impact.
     </p>
-  </section>
+  </div>
+</section>
+
+
+
 
   <!-- Experience Section -->
   <section id="experience">
@@ -68,6 +129,46 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-categories">
+    <div class="project-category">
+      <h3>Business Applications & Automation</h3>
+      <a href="#" class="btn" onclick="openGallery('automation')">View Projects</a>
+    </div>
+    <div class="project-category">
+      <h3>Data Management & Analysis</h3>
+      <a href="#" class="btn" onclick="openGallery('data')">View Projects</a>
+    </div>
+    <div class="project-category">
+      <h3>Presentation & Documentation</h3>
+      <a href="#" class="btn" onclick="openGallery('presentation')">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Category -->
+<div id="categoryModal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeModal()">&times;</button>
+    <h3 id="categoryTitle"></h3>
+    <div id="projectsList" class="projects-list"></div>
+  </div>
+</div>
+
+<!-- Modal for Project Images -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeProjectModal()">&times;</button>
+    <img id="projectImage" class="modal-image" src="" alt="Project Image">
+    <button class="prev-image" onclick="prevImage()">&#8249;</button>
+    <button class="next-image" onclick="nextImage()">&#8250;</button>
+  </div>
+</div>
+
+
+
   <!-- Education and Training Section -->
   <section id="education">
     <h2>Education & Training</h2>
@@ -88,44 +189,15 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-categories">
-      <div class="project-category">
-        <h3>Business Applications & Automation</h3>
-        <a href="#" class="btn" onclick="openGallery('automation')">View Projects</a>
-      </div>
-      <div class="project-category">
-        <h3>Data Management & Analysis</h3>
-        <a href="#" class="btn" onclick="openGallery('data')">View Projects</a>
-      </div>
-      <div class="project-category">
-        <h3>Presentation & Documentation</h3>
-        <a href="#" class="btn" onclick="openGallery('presentation')">View Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
+ <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact-links">
       <a href="https://linkedin.com/in/youhanna-maher" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:youhannamaher24@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.upwork.com/freelancers/~01abcd12345" target="_blank"><i class="fab fa-upwork"></i></a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Youhanna Maher. All Rights Reserved.</p>
-  </footer>
-
-  <script>
-    function openGallery(category) {
-      alert('Opening gallery for ' + category);
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
