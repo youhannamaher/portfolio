@@ -3,127 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youhanna Maher | Professional Portfolio</title>
+  <title>Youhanna Maher | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <a href="#home" class="logo">Youhanna Maher</a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header id="home" class="hero-section">
-    <div class="hero-content">
-      <h1>Hello, I'm <span>Youhanna Maher</span></h1>
-      <p>A Business Analyst and Developer creating innovative solutions for businesses.</p>
-      <a href="#projects" class="btn">View My Work</a>
+  <!-- Header Section -->
+  <header id="home">
+    <div class="header-content">
+      <h1>Youhanna Maher</h1>
+      <p>Business Analyst & Developer | Innovating Solutions</p>
+      <div class="header-buttons">
+        <a href="/cv.pdf" target="_blank" class="btn">Download CV</a>
+        <a href="https://linkedin.com/in/youhanna-maher" target="_blank" class="btn">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01abcd12345" target="_blank" class="btn">Upwork</a>
+      </div>
     </div>
   </header>
 
   <!-- About Me Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I specialize in developing business applications, automating workflows, and providing data-driven insights. My goal is to drive organizational growth through innovative solutions. I hold expertise in <strong>PowerApps, Power BI, Python, SQL, Excel, and PowerPoint</strong>.
-      </p>
-      <div class="about-details">
-        <div>
-          <h3>Education</h3>
-          <p><strong>Bachelor's in International Business</strong><br>DGCI University</p>
-        </div>
-        <div>
-          <h3>Experience</h3>
-          <ul>
-            <li>Intern at CIB Bank</li>
-            <li>Human Resources Intern at Orange Business</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Certifications</h3>
-          <ul>
-            <li>SAS Data Literacy Essentials</li>
-            <li>CS50 Certificate from Harvard</li>
-          </ul>
-        </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I specialize in developing business applications, automating workflows, and analyzing data to drive impactful business decisions.
+    </p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>ASU Career Center</h3>
+        <p>Conducted workshops on career planning and personal development.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Orange Business</h3>
+        <p>Human Resources Intern in the Learning and Development function.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>RATP Dev</h3>
+        <p>Technical department internship focused on system optimization.</p>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2>My Projects</h2>
-      <div class="project-categories">
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-categories">
+      <div class="project-category">
         <h3>Business Applications & Automation</h3>
-        <div class="project-gallery">
-          <div class="project-item">
-            <img src="business1.jpg" alt="Project 1">
-            <h4>Custom Workflow Automation</h4>
-            <p>Streamlined repetitive tasks using PowerApps.</p>
-          </div>
-          <div class="project-item">
-            <img src="business2.jpg" alt="Project 2">
-            <h4>Task Management Application</h4>
-            <p>Improved collaboration through automated tracking.</p>
-          </div>
-        </div>
-
+        <a href="#" class="btn" onclick="openGallery('automation')">View Projects</a>
+      </div>
+      <div class="project-category">
         <h3>Data Management & Analysis</h3>
-        <div class="project-gallery">
-          <div class="project-item">
-            <img src="data1.jpg" alt="Project 1">
-            <h4>Interactive Power BI Dashboard</h4>
-            <p>Delivered actionable insights from data.</p>
-          </div>
-        </div>
-
+        <a href="#" class="btn" onclick="openGallery('data')">View Projects</a>
+      </div>
+      <div class="project-category">
         <h3>Presentation & Documentation</h3>
-        <div class="project-gallery">
-          <div class="project-item">
-            <img src="presentation1.jpg" alt="Project 1">
-            <h4>Engaging Presentation Deck</h4>
-            <p>Created for high-impact client meetings.</p>
-          </div>
-        </div>
+        <a href="#" class="btn" onclick="openGallery('presentation')">View Projects</a>
       </div>
     </div>
   </section>
 
+  <!-- Education and Training Section -->
+  <section id="education">
+    <h2>Education & Training</h2>
+    <ul>
+      <li>Bachelor's in International Business - DGCI University</li>
+      <li>CS50 Certificate - Harvard University</li>
+      <li>SAS Data Literacy Essentials</li>
+    </ul>
+  </section>
+
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send</button>
-      </form>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/youhanna-maher" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.upwork.com/freelancers/~01abcd12345" target="_blank"><i class="fab fa-upwork"></i></a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>© 2025 Youhanna Maher. All Rights Reserved.</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/youhanna-maher" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://upwork.com" target="_blank"><i class="fab fa-upwork"></i></a>
-      </div>
-    </div>
+    <p>&copy; 2025 Youhanna Maher. All Rights Reserved.</p>
   </footer>
+
+  <!-- JavaScript for Gallery -->
+  <script>
+    function openGallery(category) {
+      // Open gallery logic will go here.
+      alert('Opening gallery for ' + category);
+    }
+  </script>
 </body>
 </html>
