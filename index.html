@@ -3,29 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youhanna Maher | Advanced Portfolio</title>
+  <title>Youhanna Maher | Professional Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="#home" class="logo">Youhanna Maher</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <header id="home" class="hero-section">
     <div class="hero-content">
-      <h1>Hi, I'm <span>Youhanna Maher</span></h1>
-      <p>A Business Analyst and Developer passionate about building innovative solutions.</p>
-      <a href="#projects" class="btn">Explore My Work</a>
+      <h1>Hello, I'm <span>Youhanna Maher</span></h1>
+      <p>A Business Analyst and Developer creating innovative solutions for businesses.</p>
+      <a href="#projects" class="btn">View My Work</a>
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About Me Section -->
   <section id="about" class="about-section">
     <div class="container">
       <h2>About Me</h2>
       <p>
-        Welcome to my portfolio! I specialize in creating <strong>business applications</strong>, automating workflows, and providing advanced data analysis. My expertise lies in <span class="highlight">PowerApps, Power BI, Python, and SQL</span>.
+        I specialize in developing business applications, automating workflows, and providing data-driven insights. My goal is to drive organizational growth through innovative solutions. I hold expertise in <strong>PowerApps, Power BI, Python, SQL, Excel, and PowerPoint</strong>.
       </p>
-      <img src="youhanna.jpg" alt="Profile Picture">
+      <div class="about-details">
+        <div>
+          <h3>Education</h3>
+          <p><strong>Bachelor's in International Business</strong><br>DGCI University</p>
+        </div>
+        <div>
+          <h3>Experience</h3>
+          <ul>
+            <li>Intern at CIB Bank</li>
+            <li>Human Resources Intern at Orange Business</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <ul>
+            <li>SAS Data Literacy Essentials</li>
+            <li>CS50 Certificate from Harvard</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -33,17 +65,37 @@
   <section id="projects" class="projects-section">
     <div class="container">
       <h2>My Projects</h2>
-      <div class="project-gallery">
-        <!-- Add more projects as needed -->
-        <div class="project-item">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>PowerApps Dashboard</h3>
-          <p>An innovative solution for automating business workflows.</p>
+      <div class="project-categories">
+        <h3>Business Applications & Automation</h3>
+        <div class="project-gallery">
+          <div class="project-item">
+            <img src="business1.jpg" alt="Project 1">
+            <h4>Custom Workflow Automation</h4>
+            <p>Streamlined repetitive tasks using PowerApps.</p>
+          </div>
+          <div class="project-item">
+            <img src="business2.jpg" alt="Project 2">
+            <h4>Task Management Application</h4>
+            <p>Improved collaboration through automated tracking.</p>
+          </div>
         </div>
-        <div class="project-item">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>Interactive Power BI Dashboard</h3>
-          <p>Dynamic and insightful data visualizations for decision-making.</p>
+
+        <h3>Data Management & Analysis</h3>
+        <div class="project-gallery">
+          <div class="project-item">
+            <img src="data1.jpg" alt="Project 1">
+            <h4>Interactive Power BI Dashboard</h4>
+            <p>Delivered actionable insights from data.</p>
+          </div>
+        </div>
+
+        <h3>Presentation & Documentation</h3>
+        <div class="project-gallery">
+          <div class="project-item">
+            <img src="presentation1.jpg" alt="Project 1">
+            <h4>Engaging Presentation Deck</h4>
+            <p>Created for high-impact client meetings.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -56,21 +108,22 @@
       <form id="contact-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit" class="btn">Send</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Youhanna Maher. All Rights Reserved.</p>
-    <div class="social-links">
-      <a href="https://linkedin.com/in/youhanna-maher" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://upwork.com" target="_blank"><i class="fab fa-upwork"></i></a>
+    <div class="container">
+      <p>© 2025 Youhanna Maher. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/youhanna-maher" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://upwork.com" target="_blank"><i class="fab fa-upwork"></i></a>
+      </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
