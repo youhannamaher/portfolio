@@ -102,12 +102,30 @@ function openProject(index, category) {
 
 // Update Displayed Image
 function updateProjectImage() {
-  const imageElement = document.getElementById("projectImage");
-  if (currentProject && currentProject.images.length > 0) {
-    imageElement.src = currentProject.images[currentImageIndex];
-    imageElement.style.objectFit = "contain"; // Prevents stretching
+  const mediaContainer = document.getElementById("projectMedia");
+
+  // Get the current file
+  const currentFile = currentProject.images[currentImageIndex];
+
+  // Clear previous content
+  mediaContainer.innerHTML = "";
+
+  if (currentFile.endsWith(".mp4") || currentFile.endsWith(".webm") || currentFile.endsWith(".ogg")) {
+    // Create a video element if the file is a video
+    const videoElement = document.createElement("video");
+    videoElement.src = currentFile;
+    videoElement.controls = true;
+    videoElement.style.width = "100%";
+    videoElement.style.maxHeight = "80vh";
+    mediaContainer.appendChild(videoElement);
+  } else {
+    // Otherwise, display as an image
+    const imageElement = document.createElement("img");
+    imageElement.src = currentFile;
+    imageElement.style.objectFit = "contain";
     imageElement.style.width = "100%";
-    imageElement.style.maxHeight = "80vh"; // Keeps modal consistent
+    imageElement.style.maxHeight = "80vh";
+    mediaContainer.appendChild(imageElement);
   }
 }
 
