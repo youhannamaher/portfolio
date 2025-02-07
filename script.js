@@ -3,27 +3,60 @@ const projectData = {
   automation: {
     title: "Business Applications & Automation",
     projects: [
-      { name: "ASU Registration Application", thumbnail: "assets/images/experience/ASU_Career_Center.png" , images: ["assets/images/BusinessAppsAndAutomation/ASUApp/1.png", "assets/images/BusinessAppsAndAutomation/ASUApp/2.jpg", "assets/images/BusinessAppsAndAutomation/ASUApp/3.png", "assets/images/BusinessAppsAndAutomation/ASUApp/4.png","assets/images/BusinessAppsAndAutomation/ASUApp/5.png","assets/images/BusinessAppsAndAutomation/ASUApp/6.png", "assets/images/BusinessAppsAndAutomation/ASUApp/7.png","assets/images/BusinessAppsAndAutomation/ASUApp/8.png" ] },
-      { name: "Change Request Management", thumbnail: "crm_thumbnail.jpg", images: ["crm1.jpg", "crm2.jpg"] },
-      { name: "Global PO Tracker", thumbnail: "po_thumbnail.jpg", images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"] },
-    ],
+      {
+        name: "ASU Registration Application",
+        thumbnail: "assets/images/experience/ASU_Career_Center.png",
+        images: [
+          "assets/images/BusinessAppsAndAutomation/ASUApp/1.png",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/2.jpg",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/3.png",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/4.png",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/5.png",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/6.png",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/7.png",
+          "assets/images/BusinessAppsAndAutomation/ASUApp/8.png"
+        ]
+      },
+      {
+        name: "Change Request Management",
+        thumbnail: "crm_thumbnail.jpg",
+        images: ["crm1.jpg", "crm2.jpg"]
+      },
+      {
+        name: "Global PO Tracker",
+        thumbnail: "po_thumbnail.jpg",
+        images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"]
+      }
+    ]
   },
   data: {
     title: "Data Management & Analysis",
     projects: [
-      { name: "Data Visualization Dashboard", thumbnail: "data_thumbnail.jpg", images: ["data1.jpg", "data2.jpg"] },
-      { name: "SQL Performance Analysis", thumbnail: "sql_thumbnail.jpg", images: ["sql1.jpg", "sql2.jpg", "sql3.jpg"] },
-    ],
+      {
+        name: "Data Visualization Dashboard",
+        thumbnail: "data_thumbnail.jpg",
+        images: ["data1.jpg", "data2.jpg"]
+      },
+      {
+        name: "SQL Performance Analysis",
+        thumbnail: "sql_thumbnail.jpg",
+        images: ["sql1.jpg", "sql2.jpg", "sql3.jpg"]
+      }
+    ]
   },
   presentation: {
     title: "Presentation & Documentation",
     projects: [
-      { name: "Corporate Pitch Deck", thumbnail: "pitch_thumbnail.jpg", images: ["pitch1.jpg", "pitch2.jpg"] },
-    ],
-  },
+      {
+        name: "Corporate Pitch Deck",
+        thumbnail: "pitch_thumbnail.jpg",
+        images: ["pitch1.jpg", "pitch2.jpg"]
+      }
+    ]
+  }
 };
 
-// To Open the Category Modal
+// Open the Category Modal
 function openGallery(category) {
   const modal = document.getElementById("categoryModal");
   const title = document.getElementById("categoryTitle");
@@ -46,7 +79,7 @@ function openGallery(category) {
   modal.style.display = "flex";
 }
 
-// To Open the Project Image Modal
+// Open the Project Image Modal
 let currentProject = null;
 let currentImageIndex = 0;
 
@@ -57,10 +90,19 @@ function openProject(index, category) {
   currentProject = projectData[category].projects[index];
   currentImageIndex = 0;
 
-  imageElement.src = currentProject.images[currentImageIndex];
+  updateProjectImage();
   modal.style.display = "flex";
 }
 
+// Update Displayed Image
+function updateProjectImage() {
+  const imageElement = document.getElementById("projectImage");
+  if (currentProject && currentProject.images.length > 0) {
+    imageElement.src = currentProject.images[currentImageIndex];
+  }
+}
+
+// Close Modals
 function closeModal() {
   document.getElementById("categoryModal").style.display = "none";
 }
@@ -71,17 +113,42 @@ function closeProjectModal() {
   currentImageIndex = 0;
 }
 
-// To Navigate Images
+// Navigate Images
 function prevImage() {
   if (currentProject) {
-    currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
-    document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
+    currentImageIndex =
+      (currentImageIndex - 1 + currentProject.images.length) %
+      currentProject.images.length;
+    updateProjectImage();
   }
 }
 
 function nextImage() {
   if (currentProject) {
-    currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
-    document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
+    currentImageIndex =
+      (currentImageIndex + 1) % currentProject.images.length;
+    updateProjectImage();
   }
 }
+
+// Keyboard Navigation
+document.addEventListener("keydown", event => {
+  if (document.getElementById("projectModal").style.display === "flex") {
+    if (event.key === "ArrowLeft") prevImage();
+    if (event.key === "ArrowRight") nextImage();
+    if (event.key === "Escape") closeProjectModal();
+  }
+});
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const projectModal = document.getElementById("projectModal");
+  const categoryModal = document.getElementById("categoryModal");
+
+  if (event.target === projectModal) {
+    closeProjectModal();
+  }
+  if (event.target === categoryModal) {
+    closeModal();
+  }
+};
