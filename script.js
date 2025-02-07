@@ -3,7 +3,7 @@ const projectData = {
   automation: {
     title: "Business Applications & Automation",
     projects: [
-      { name: "ASU Registration Application", thumbnail: "assets/images/experience/Orange_png" , images: ["assets/images/experience/Orange_png", "assets/images/experience/Orange_png", "assets/images/experience/RATP_png"] },
+      { name: "ASU Registration Application", thumbnail: "assets/images/experience/Orange.png" , images: ["assets/images/experience/Orange.png", "assets/images/experience/Orange.png", "assets/images/experience/RATP.png"] },
       { name: "Change Request Management", thumbnail: "crm_thumbnail.jpg", images: ["crm1.jpg", "crm2.jpg"] },
       { name: "Global PO Tracker", thumbnail: "po_thumbnail.jpg", images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"] },
     ],
