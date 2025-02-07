@@ -1,0 +1,27 @@
+{
+  "automation": {
+    "title": "Business Applications & Automation",
+    "projects": [
+      {
+        "name": "ASU Registration Application",
+        "thumbnail": "assets/images/experience/ASU_Career_Center.png",
+        "folder": "assets/images/BusinessAppsAndAutomation/ASUApp/"
+      },
+      {
+        "name": "Change Request Management",
+        "thumbnail": "assets/images/thumbnails/crm_thumbnail.jpg",
+        "folder": "assets/images/BusinessAppsAndAutomation/CRM/"
+      }
+    ]
+  },
+  "data": {
+    "title": "Data Management & Analysis",
+    "projects": [
+      {
+        "name": "Data Visualization Dashboard",
+        "thumbnail": "assets/images/thumbnails/data_thumbnail.jpg",
+        "folder": "assets/images/DataManagement/DataViz/"
+      }
+    ]
+  }
+}
