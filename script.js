@@ -161,3 +161,12 @@ window.onclick = function(event) {
     closeModal();
   }
 };
+
+// Select the hamburger menu button and navbar links
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navbarLinks = document.querySelector('.navbar-links');
+
+// Add click event listener to toggle the "active" class
+hamburgerMenu.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active');
+});
