@@ -8,6 +8,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  background: #f8f9fa;
+  color: #333;
 }
 
 .container {
@@ -16,118 +18,95 @@ body {
   padding: 0 20px;
 }
 
-/* Header Section */
-header {
-  background: #333;
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
   color: #fff;
-  padding: 100px 20px;
   text-align: center;
+  padding: 100px 20px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-header .highlight {
+.hero-section h1 span {
   color: #f39c12;
 }
 
-header .btn {
-  padding: 10px 20px;
+.hero-section .btn {
   background: #f39c12;
   color: #fff;
+  padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
-  display: inline-block;
 }
 
 /* About Section */
-#about {
-  padding: 50px 0;
-  background: #f4f4f4;
+.about-section {
   text-align: center;
+  padding: 50px 0;
 }
 
-#about img {
-  max-width: 200px;
+.about-section img {
+  width: 150px;
   border-radius: 50%;
   margin-top: 20px;
 }
 
-#about .highlight {
-  color: #3498db;
-}
-
 /* Projects Section */
-#projects {
+.projects-section {
   padding: 50px 0;
-  background: #fff;
 }
 
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .project-item {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.project-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-info {
-  padding: 10px;
-  background: #f4f4f4;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+.project-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
 /* Contact Section */
-#contact {
+.contact-section {
+  background: #f4f4f4;
   padding: 50px 0;
-  background: #333;
-  color: #fff;
+  text-align: center;
 }
 
-#contact form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#contact input,
-#contact textarea,
-#contact button {
+.contact-section form input,
+.contact-section form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
+  margin: 10px 0;
 }
 
-#contact button {
-  background: #f39c12;
+.contact-section .btn {
+  background: #3498db;
   color: #fff;
-  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
+  background: #333;
   color: #fff;
 }
 
 footer .social-links a {
+  color: #fff;
   margin: 0 10px;
-  color: #f39c12;
+  font-size: 20px;
   text-decoration: none;
 }
