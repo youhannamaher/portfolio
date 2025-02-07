@@ -1,211 +1,211 @@
- General Styles 
+/* General Styles */
 body {
-  margin 0;
-  font-family 'Poppins', sans-serif;
-  color #333;
-  line-height 1.6;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
-  margin 0;
+  margin: 0;
 }
 
 h1 {
-  font-size 2.5rem;
-  color #004aad;
+  font-size: 2.5rem;
+  color: #004aad;
 }
 
 h2 {
-  font-size 2rem;
-  margin-bottom 1rem;
-  color #002a6d;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #002a6d;
 }
 
 h3 {
-  font-size 1.5rem;
-  margin-top 1rem;
-  color #004aad;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #004aad;
 }
 
 p {
-  margin 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
- Header Section 
+/* Header Section */
 header {
-  background linear-gradient(to right, #004aad, #0078d4);
-  color #fff;
-  text-align center;
-  padding 2rem 0;
+  background: linear-gradient(to right, #004aad, #0078d4);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .header-content h1 {
-  font-size 3rem;
+  font-size: 3rem;
 }
 
 .header-content p {
-  font-size 1.2rem;
-  margin 0.5rem 0 2rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 2rem;
 }
 
 .header-buttons .btn {
-  display inline-block;
-  padding 0.75rem 1.5rem;
-  margin 0 0.5rem;
-  background #fff;
-  color #004aad;
-  text-decoration none;
-  border-radius 25px;
-  font-weight bold;
-  transition background 0.3s, color 0.3s;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  background: #fff;
+  color: #004aad;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
 }
 
-.header-buttons .btnhover {
-  background #004aad;
-  color #fff;
+.header-buttons .btn:hover {
+  background: #004aad;
+  color: #fff;
 }
 
- Section Styles 
+/* Section Styles */
 section {
-  padding 3rem 1rem;
-  text-align center;
-  background #f7f7f7;
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #f7f7f7;
 }
 
-sectionnth-child(even) {
-  background #eaf2ff;
+section:nth-child(even) {
+  background: #eaf2ff;
 }
 
 section h2 {
-  margin-bottom 2rem;
+  margin-bottom: 2rem;
 }
 
- Experience Section 
+/* Experience Section */
 .experience-item {
-  max-width 600px;
-  margin 1.5rem auto;
-  text-align left;
-  background #fff;
-  padding 1.5rem;
-  border-radius 10px;
-  box-shadow 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 1.5rem auto;
+  text-align: left;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .experience-item img {
-  float left;
-  margin-right 1rem;
-  border-radius 50%;
-  width 60px;
-  height 60px;
+  float: left;
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
 .experience-item ul {
-  list-style none;
-  padding 0;
+  list-style: none;
+  padding: 0;
 }
 
 .experience-item ul li {
-  margin 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .skills {
-  display block;
-  margin-top 1rem;
-  font-style italic;
-  color #0078d4;
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #0078d4;
 }
 
- Education Section 
+/* Education Section */
 .education-item {
-  max-width 600px;
-  margin 1.5rem auto;
-  text-align left;
-  background #fff;
-  padding 1.5rem;
-  border-radius 10px;
-  box-shadow 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 1.5rem auto;
+  text-align: left;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
- Projects Section 
+/* Projects Section */
 .project-categories {
-  display flex;
-  justify-content center;
-  flex-wrap wrap;
-  gap 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .project-category {
-  background #fff;
-  padding 2rem;
-  border-radius 10px;
-  box-shadow 0 4px 8px rgba(0, 0, 0, 0.1);
-  width 280px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 280px;
 }
 
 .project-category h3 {
-  margin-bottom 1rem;
+  margin-bottom: 1rem;
 }
 
 .project-category .btn {
-  background #004aad;
-  color #fff;
-  padding 0.75rem 1rem;
-  text-decoration none;
-  border-radius 25px;
-  font-weight bold;
+  background: #004aad;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
 }
 
-.project-category .btnhover {
-  background #0078d4;
+.project-category .btn:hover {
+  background: #0078d4;
 }
 
- Contact Section 
+/* Contact Section */
 .contact-links a {
-  display inline-block;
-  margin 0.5rem;
-  padding 0.75rem 1.5rem;
-  background #004aad;
-  color #fff;
-  text-decoration none;
-  border-radius 25px;
-  transition background 0.3s;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #004aad;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
 }
 
-.contact-links ahover {
-  background #0078d4;
+.contact-links a:hover {
+  background: #0078d4;
 }
 
- Footer 
+/* Footer */
 footer {
-  text-align center;
-  padding 1rem;
-  background #002a6d;
-  color #fff;
+  text-align: center;
+  padding: 1rem;
+  background: #002a6d;
+  color: #fff;
 }
 
 footer a {
-  color #fff;
-  text-decoration none;
-  font-weight bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-footer ahover {
-  text-decoration underline;
+footer a:hover {
+  text-decoration: underline;
 }
 
- Responsive Design 
-@media (max-width 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .experience-item img {
-    display none;
+    display: none;
   }
 
   .project-categories {
-    flex-direction column;
-    align-items center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .project-category {
-    width 100%;
-    max-width 400px;
+    width: 100%;
+    max-width: 400px;
   }
 }
