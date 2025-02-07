@@ -462,6 +462,91 @@ body {
 }
 
 .project-item p {
-  font-size: 14px;
-  color: #666;
+  font-size: 14px;}
+  
+/* Base styles for the navigation bar */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222; /* Dark gray color */
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: none; /* Hidden on large screens */
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* Hidden by default, shown on small screens */
+}
+
+/* Navbar links (hidden by default on small screens) */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #ffd700;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .brand-name {
+    display: block; /* Show "My Portfolio" only on smaller screens */
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #222; /* Keep dark gray color */
+    position: absolute;
+    top: 60px; /* Adjust to match navbar height */
+    left: 0;
+  }
+
+  .navbar-links a {
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show links when the menu is active */
+  }
 }
