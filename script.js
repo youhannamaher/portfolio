@@ -91,18 +91,26 @@ let currentImageIndex = 0;
 
 function openProject(index, category) {
   const modal = document.getElementById("projectModal");
-  const imageElement = document.getElementById("projectImage");
+  const mediaContainer = document.getElementById("projectMedia");
 
   currentProject = projectData[category].projects[index];
   currentImageIndex = 0;
+
+  // Ensure mediaContainer exists and is empty before adding new content
+  if (mediaContainer) {
+    mediaContainer.innerHTML = "";
+  }
 
   updateProjectImage();
   modal.style.display = "flex";
 }
 
+
 // Update Displayed Image
 function updateProjectImage() {
   const mediaContainer = document.getElementById("projectMedia");
+
+  if (!currentProject || currentProject.images.length === 0) return;
 
   // Get the current file
   const currentFile = currentProject.images[currentImageIndex];
@@ -128,6 +136,7 @@ function updateProjectImage() {
     mediaContainer.appendChild(imageElement);
   }
 }
+
 
 // Close Modals
 function closeModal() {
