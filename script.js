@@ -6,29 +6,24 @@ const projectData = {
       {
         name: "ASU Registration Application",
         thumbnail: "assets/images/experience/ASU_Career_Center.png",
-         description: "A web app for students to register easily at Ain Shams University.",
+        description: "A web app for students to register at Ain Shams University easily.",
+        detailedDescription: "This application was built to streamline the registration process, allowing students to register efficiently while reducing paperwork and human errors. It integrates a powerful backend to handle thousands of students with real-time updates and notifications.",
+        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
           "assets/images/BusinessAppsAndAutomation/ASUApp/1.png",
           "assets/images/BusinessAppsAndAutomation/ASUApp/2.jpg",
-          "assets/images/BusinessAppsAndAutomation/ASUApp/3.png",
-          "assets/images/BusinessAppsAndAutomation/ASUApp/4.png",
-          "assets/images/BusinessAppsAndAutomation/ASUApp/5.png",
-          "assets/images/BusinessAppsAndAutomation/ASUApp/6.png",
-          "assets/images/BusinessAppsAndAutomation/ASUApp/7.png",
-          "assets/images/BusinessAppsAndAutomation/ASUApp/8.png"
+          "assets/images/BusinessAppsAndAutomation/ASUApp/3.png"
         ]
       },
       {
         name: "Digital HR System Demo",
         thumbnail: "crm_thumbnail.jpg",
-         description: "A Digital HR System with an ATS for the recruitment and automated payroll",
-        images: ["assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png", "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png", "assets/images/BusinessAppsAndAutomation/Digital_HR_System/3.png", "assets/images/BusinessAppsAndAutomation/Digital_HR_System/4.png",, "assets/images/BusinessAppsAndAutomation/Digital_HR_System/5.png",, "assets/images/BusinessAppsAndAutomation/Digital_HR_System/6.png",, "assets/images/BusinessAppsAndAutomation/Digital_HR_System/7.png"]
-      },
-      {
-        name: "Global PO Tracker",
-        thumbnail: "po_thumbnail.jpg",
-         description: "A web app for students to register easily at Ain Shams University.",
-        images: ["po1.jpg", "po2.jpg", "po3.jpg", "po4.jpg"]
+        description: "A Digital HR System with an ATS for recruitment and automated payroll.",
+        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        images: [
+          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
+          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
+        ]
       }
     ]
   },
@@ -38,14 +33,13 @@ const projectData = {
       {
         name: "Data Visualization Excel Dashboard",
         thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/MainDashboard.jpg",
-         description: "Dashboards made Totally in Excel using pivot tables and VBA and Excel Charts ",
-        images: ["assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4", "assets/images/Data_Analysis/Excel_Dashboards/Dashboard1.png", "assets/images/Data_Analysis/Excel_Dashboards/Dashboard2.png","assets/images/Data_Analysis/Excel_Dashboards/Data Entry option.png"]
-      },
-      {
-        name: "SQL Performance Analysis",
-        thumbnail: "sql_thumbnail.jpg",
-         description: "A web app for students to register easily at Ain Shams University.",
-        images: ["sql1.jpg", "sql2.jpg", "sql3.jpg"]
+        description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
+        detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
+        video: "https://www.youtube.com/embed/your_video_id",
+        images: [
+          "assets/images/Data_Analysis/Excel_Dashboards/Dashboard1.png",
+          "assets/images/Data_Analysis/Excel_Dashboards/Dashboard2.png"
+        ]
       }
     ]
   },
@@ -55,14 +49,24 @@ const projectData = {
       {
         name: "Corporate Pitch Deck",
         thumbnail: "pitch_thumbnail.jpg",
-         description: "A web app for students to register easily at Ain Shams University.",
-        images: ["pitch1.jpg", "pitch2.jpg"]
+        description: "A professional business presentation for investors.",
+        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        images: [
+          "assets/images/Presentation/PitchDeck1.png",
+          "assets/images/Presentation/PitchDeck2.png"
+        ]
       }
     ]
   }
 };
 
+// Open the Category Modal
 function openGallery(category) {
+  if (!projectData[category]) {
+    console.error("Invalid category selected:", category);
+    return;
+  }
+
   const modal = document.getElementById("categoryModal");
   const title = document.getElementById("categoryTitle");
   const projectsList = document.getElementById("projectsList");
@@ -76,7 +80,7 @@ function openGallery(category) {
       <div class="project-item" onclick="openProject(${index}, '${category}')">
         <img src="${project.thumbnail}" alt="${project.name}">
         <h3>${project.name}</h3>
-        <p>${project.description}</p> <!-- Add description here -->
+        <p>${project.description}</p>
       </div>
     `
     )
@@ -85,58 +89,90 @@ function openGallery(category) {
   modal.style.display = "flex";
 }
 
-// Open the Project Image Modal
+// Open the Project Modal
 let currentProject = null;
 let currentImageIndex = 0;
 
 function openProject(index, category) {
   const modal = document.getElementById("projectModal");
+  const titleElement = document.getElementById("projectTitle");
+  const shortDesc = document.getElementById("projectShortDescription");
+  const fullDesc = document.getElementById("projectFullDescription");
   const mediaContainer = document.getElementById("projectMedia");
+  const viewImagesBtn = document.getElementById("viewImagesBtn");
+
+  if (!projectData[category] || !projectData[category].projects[index]) {
+    console.error("Invalid project selected.");
+    return;
+  }
 
   currentProject = projectData[category].projects[index];
   currentImageIndex = 0;
 
-  // Ensure mediaContainer exists and is empty before adding new content
-  if (mediaContainer) {
-    mediaContainer.innerHTML = "";
+  // Update content
+  titleElement.textContent = currentProject.name;
+  shortDesc.textContent = currentProject.description;
+  fullDesc.textContent = currentProject.detailedDescription;
+  mediaContainer.innerHTML = "";
+
+  // Display "View Images" button at the top
+  viewImagesBtn.style.display = currentProject.images.length > 0 ? "block" : "none";
+
+  // Display video if available
+  if (currentProject.video) {
+    const iframe = document.createElement("iframe");
+    iframe.src = currentProject.video;
+    iframe.width = "100%";
+    iframe.height = "400px";
+    iframe.allow = "autoplay; encrypted-media";
+    iframe.allowFullscreen = true;
+    mediaContainer.appendChild(iframe);
   }
 
-  updateProjectImage();
   modal.style.display = "flex";
 }
 
-
-// Update Displayed Image
-function updateProjectImage() {
+// Show Project Images
+function showProjectImages() {
   const mediaContainer = document.getElementById("projectMedia");
+  mediaContainer.innerHTML = ""; // Clear previous content
 
-  if (!currentProject || currentProject.images.length === 0) return;
+  const titleElement = document.getElementById("projectTitle");
+  titleElement.textContent = currentProject.name; // Keep only title
 
-  // Get the current file
-  const currentFile = currentProject.images[currentImageIndex];
+  // Hide descriptions and view images button in image mode
+  document.getElementById("projectShortDescription").style.display = "none";
+  document.getElementById("projectFullDescription").style.display = "none";
+  document.getElementById("viewImagesBtn").style.display = "none";
 
-  // Clear previous content
-  mediaContainer.innerHTML = "";
+  const imageElement = document.createElement("img");
+  imageElement.id = "projectImage";
+  imageElement.src = currentProject.images[currentImageIndex];
+  imageElement.style.objectFit = "contain";
+  imageElement.style.width = "100%";
+  imageElement.style.maxHeight = "80vh";
 
-  if (currentFile.endsWith(".mp4") || currentFile.endsWith(".webm") || currentFile.endsWith(".ogg")) {
-    // Create a video element if the file is a video
-    const videoElement = document.createElement("video");
-    videoElement.src = currentFile;
-    videoElement.controls = true;
-    videoElement.style.width = "100%";
-    videoElement.style.maxHeight = "80vh";
-    mediaContainer.appendChild(videoElement);
-  } else {
-    // Otherwise, display as an image
-    const imageElement = document.createElement("img");
-    imageElement.src = currentFile;
-    imageElement.style.objectFit = "contain";
-    imageElement.style.width = "100%";
-    imageElement.style.maxHeight = "80vh";
-    mediaContainer.appendChild(imageElement);
-  }
+  mediaContainer.appendChild(imageElement);
+
+  // Show navigation buttons
+  document.getElementById("prevImageBtn").style.display = "block";
+  document.getElementById("nextImageBtn").style.display = "block";
 }
 
+// Navigate Images
+function prevImage() {
+  if (!currentProject || currentProject.images.length === 0) return;
+
+  currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
+  document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
+}
+
+function nextImage() {
+  if (!currentProject || currentProject.images.length === 0) return;
+
+  currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
+  document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
+}
 
 // Close Modals
 function closeModal() {
@@ -147,24 +183,15 @@ function closeProjectModal() {
   document.getElementById("projectModal").style.display = "none";
   currentProject = null;
   currentImageIndex = 0;
-}
 
-// Navigate Images
-function prevImage() {
-  if (currentProject) {
-    currentImageIndex =
-      (currentImageIndex - 1 + currentProject.images.length) %
-      currentProject.images.length;
-    updateProjectImage();
-  }
-}
+  // Reset visibility of elements
+  document.getElementById("projectShortDescription").style.display = "block";
+  document.getElementById("projectFullDescription").style.display = "block";
+  document.getElementById("viewImagesBtn").style.display = "block";
 
-function nextImage() {
-  if (currentProject) {
-    currentImageIndex =
-      (currentImageIndex + 1) % currentProject.images.length;
-    updateProjectImage();
-  }
+  // Hide navigation buttons
+  document.getElementById("prevImageBtn").style.display = "none";
+  document.getElementById("nextImageBtn").style.display = "none";
 }
 
 // Keyboard Navigation
@@ -174,26 +201,4 @@ document.addEventListener("keydown", event => {
     if (event.key === "ArrowRight") nextImage();
     if (event.key === "Escape") closeProjectModal();
   }
-});
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-  const projectModal = document.getElementById("projectModal");
-  const categoryModal = document.getElementById("categoryModal");
-
-  if (event.target === projectModal) {
-    closeProjectModal();
-  }
-  if (event.target === categoryModal) {
-    closeModal();
-  }
-};
-
-// Select the hamburger menu button and navbar links
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const navbarLinks = document.querySelector('.navbar-links');
-
-// Add click event listener to toggle the "active" class
-hamburgerMenu.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active');
 });
