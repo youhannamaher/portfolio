@@ -147,7 +147,7 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+ <!-- Projects Section -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="project-categories">
@@ -175,15 +175,32 @@
   </div>
 </div>
 
-<!-- Modal for Project Images -->
+<!-- Modal for Project Details -->
 <div id="projectModal" class="modal">
   <div class="modal-content">
     <button class="close-modal" onclick="closeProjectModal()">&times;</button>
-    <div id="projectMedia" class="modal-media"></div>
-    <button class="prev-image" onclick="prevImage()">&#8249;</button>
-    <button class="next-image" onclick="nextImage()">&#8250;</button>
+
+    <!-- Project Title -->
+    <h2 id="projectTitle"></h2>
+
+    <!-- Short Description -->
+    <p id="projectShortDescription" class="short-description"></p>
+
+    <!-- View Images Button -->
+    <button id="viewImagesBtn" class="view-images-btn" onclick="showProjectImages()">View Images</button>
+
+    <!-- Media Container: Video or Images -->
+    <div id="projectMedia"></div>
+
+    <!-- Full Detailed Description -->
+    <p id="projectFullDescription" class="detailed-description"></p>
+
+    <!-- Navigation Buttons (Hidden by Default) -->
+    <button id="prevImageBtn" class="prev-image" onclick="prevImage()">&#8249;</button>
+    <button id="nextImageBtn" class="next-image" onclick="nextImage()">&#8250;</button>
   </div>
 </div>
+
 
 
 
@@ -224,3 +241,23 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+<!-- Modal for Project Details -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeProjectModal()">&times;</button>
+    
+    <!-- Project Title -->
+    <h2 id="projectTitle"></h2>
+
+    <!-- Short Description -->
+    <p id="projectShortDescription" class="short-description"></p>
+
+    <!-- Full Detailed Description -->
+    <p id="projectFullDescription" class="detailed-description"></p>
+
+    <!-- Media (Video or Images) -->
+    <div id="projectMedia"></div>
+  </div>
+</div>
