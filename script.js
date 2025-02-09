@@ -19,10 +19,10 @@ const projectData = {
         ]
       },
       {
-        name: "Change Request Management",
+        name: "Digital HR System Demo",
         thumbnail: "crm_thumbnail.jpg",
-         description: "A web app for students to register easily at Ain Shams University.",
-        images: ["crm1.jpg", "crm2.jpg"]
+         description: "A Digital HR System with an ATS for the recruitment and automated payroll",
+        images: ["assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png", "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png", "assets/images/BusinessAppsAndAutomation/Digital_HR_System/3.png", "assets/images/BusinessAppsAndAutomation/Digital_HR_System/4.png",, "assets/images/BusinessAppsAndAutomation/Digital_HR_System/5.png",, "assets/images/BusinessAppsAndAutomation/Digital_HR_System/6.png",, "assets/images/BusinessAppsAndAutomation/Digital_HR_System/7.png"]
       },
       {
         name: "Global PO Tracker",
