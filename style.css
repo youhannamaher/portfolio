@@ -550,3 +550,32 @@ body {
     display: flex; /* Show links when the menu is active */
   }
 }
+
+.short-description {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.detailed-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.view-images-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.view-images-btn:hover {
+  background-color: #0056b3;
+}
