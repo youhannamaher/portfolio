@@ -24,6 +24,26 @@ const projectData = {
           "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
           "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
         ]
+      },
+      {
+        name: "YM Store",
+        thumbnail: "crm_thumbnail.jpg",
+        description: "A Digital Store fully dynamic for the clients and administration",
+        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        images: [
+          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
+          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
+        ]
+      },
+      {
+        name: "Bondy Inventory Management",
+        thumbnail: "crm_thumbnail.jpg",
+        description: "A dynamic app that tracks all the inventory, production and all the transactions made",
+        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        images: [
+          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
+          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
+        ]
       }
     ]
   },
