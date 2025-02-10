@@ -119,6 +119,7 @@ function openProject(index, category) {
   currentProject = projectData[category].projects[index];
   currentImageIndex = 0;
 
+  // Update content
   titleElement.textContent = currentProject.name;
   shortDesc.textContent = currentProject.description;
   fullDesc.textContent = currentProject.detailedDescription;
@@ -126,6 +127,10 @@ function openProject(index, category) {
 
   // Ensure "View Images" button is visible when images exist
   viewImagesBtn.style.display = currentProject.images.length > 0 ? "block" : "none";
+
+  // Hide next & previous buttons on the homepage
+  document.getElementById("prevImageBtn").style.display = "none";
+  document.getElementById("nextImageBtn").style.display = "none";
 
   // Display video if available
   if (currentProject.video) {
@@ -145,25 +150,29 @@ function openProject(index, category) {
 function showProjectImages() {
   const mediaContainer = document.getElementById("projectMedia");
   mediaContainer.innerHTML = "";
-   const titleElement = document.getElementById("projectTitle");
-  titleElement.textContent = currentProject.name; // Keep only title
 
+  const titleElement = document.getElementById("projectTitle");
+  titleElement.textContent = currentProject.name; // Keep only the title
+
+  // Hide descriptions and view images button in image mode
   document.getElementById("projectShortDescription").style.display = "none";
   document.getElementById("projectFullDescription").style.display = "none";
   document.getElementById("viewImagesBtn").style.display = "none";
 
+  // Create and display first image
   const imageElement = document.createElement("img");
   imageElement.id = "projectImage";
   imageElement.src = currentProject.images[currentImageIndex];
-   imageElement.style.objectFit = "contain";
+  imageElement.style.objectFit = "contain";
   imageElement.style.width = "100%";
   imageElement.style.maxHeight = "80vh";
 
   mediaContainer.appendChild(imageElement);
+
+  // Show next & previous buttons for image navigation
   document.getElementById("prevImageBtn").style.display = "block";
   document.getElementById("nextImageBtn").style.display = "block";
 }
-
 
 // Navigate Images
 function prevImage() {
@@ -179,6 +188,7 @@ function nextImage() {
   currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
   document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
 }
+
 
 // Close Modals
 function closeModal() {
