@@ -82,28 +82,23 @@ const projectData = {
 
 // Open the Category Modal
 function openGallery(category) {
-  if (!projectData[category]) {
-    console.error("Invalid category selected:", category);
-    return;
-  }
+  if (!projectData[category]) return;
 
   const modal = document.getElementById("categoryModal");
   const title = document.getElementById("categoryTitle");
   const projectsList = document.getElementById("projectsList");
 
   const { title: categoryTitle, projects } = projectData[category];
-
   title.textContent = categoryTitle;
+  
   projectsList.innerHTML = projects
-    .map(
-      (project, index) => 
+    .map((project, index) => `
       <div class="project-item" onclick="openProject(${index}, '${category}')">
         <img src="${project.thumbnail}" alt="${project.name}">
         <h3>${project.name}</h3>
         <p>${project.description}</p>
       </div>
-    
-    )
+    `)
     .join("");
 
   modal.style.display = "flex";
@@ -121,21 +116,15 @@ function openProject(index, category) {
   const mediaContainer = document.getElementById("projectMedia");
   const viewImagesBtn = document.getElementById("viewImagesBtn");
 
-  if (!projectData[category] || !projectData[category].projects[index]) {
-    console.error("Invalid project selected.");
-    return;
-  }
-
   currentProject = projectData[category].projects[index];
   currentImageIndex = 0;
 
-  // Update content
   titleElement.textContent = currentProject.name;
   shortDesc.textContent = currentProject.description;
   fullDesc.textContent = currentProject.detailedDescription;
   mediaContainer.innerHTML = "";
 
-  // Display "View Images" button at the top
+  // Ensure "View Images" button is visible when images exist
   viewImagesBtn.style.display = currentProject.images.length > 0 ? "block" : "none";
 
   // Display video if available
@@ -155,12 +144,10 @@ function openProject(index, category) {
 // Show Project Images
 function showProjectImages() {
   const mediaContainer = document.getElementById("projectMedia");
-  mediaContainer.innerHTML = ""; // Clear previous content
-
-  const titleElement = document.getElementById("projectTitle");
+  mediaContainer.innerHTML = "";
+   const titleElement = document.getElementById("projectTitle");
   titleElement.textContent = currentProject.name; // Keep only title
 
-  // Hide descriptions and view images button in image mode
   document.getElementById("projectShortDescription").style.display = "none";
   document.getElementById("projectFullDescription").style.display = "none";
   document.getElementById("viewImagesBtn").style.display = "none";
@@ -168,16 +155,15 @@ function showProjectImages() {
   const imageElement = document.createElement("img");
   imageElement.id = "projectImage";
   imageElement.src = currentProject.images[currentImageIndex];
-  imageElement.style.objectFit = "contain";
+   imageElement.style.objectFit = "contain";
   imageElement.style.width = "100%";
   imageElement.style.maxHeight = "80vh";
 
   mediaContainer.appendChild(imageElement);
-
-  // Show navigation buttons
   document.getElementById("prevImageBtn").style.display = "block";
   document.getElementById("nextImageBtn").style.display = "block";
 }
+
 
 // Navigate Images
 function prevImage() {
@@ -201,20 +187,13 @@ function closeModal() {
 
 function closeProjectModal() {
   document.getElementById("projectModal").style.display = "none";
-  currentProject = null;
-  currentImageIndex = 0;
-
-  // Reset visibility of elements
   document.getElementById("projectShortDescription").style.display = "block";
   document.getElementById("projectFullDescription").style.display = "block";
   document.getElementById("viewImagesBtn").style.display = "block";
-
-  // Hide navigation buttons
   document.getElementById("prevImageBtn").style.display = "none";
   document.getElementById("nextImageBtn").style.display = "none";
 }
 
-// Keyboard Navigation
 document.addEventListener("keydown", event => {
   if (document.getElementById("projectModal").style.display === "flex") {
     if (event.key === "ArrowLeft") prevImage();
@@ -224,15 +203,9 @@ document.addEventListener("keydown", event => {
 });
 
 // Hamburger Menu Fix for Mobile
-// Keyboard Navigation
 const hamburgerMenu = document.querySelector(".hamburger-menu");
-document.addEventListener("keydown", event => {
 const navbarLinks = document.querySelector(".navbar-links");
-  if (document.getElementById("projectModal").style.display === "flex") {
 
-    if (event.key === "ArrowLeft") prevImage();
 hamburgerMenu.addEventListener("click", () => {
-    if (event.key === "ArrowRight") nextImage();
   navbarLinks.classList.toggle("active");
-    if (event.key === "Escape") closeProjectModal();
 });
