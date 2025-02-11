@@ -16,58 +16,59 @@ const projectData = {
         ]
       },
       {
-        name: "Digital HR System Demo",
-        thumbnail: "crm_thumbnail.jpg",
-        description: "A Digital HR System with an ATS for recruitment and automated payroll.",
-        video: "https://youtu.be/zJimL4T-EwU",
-        detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹
+    name: "Digital HR System Demo",
+    thumbnail: "crm_thumbnail.jpg",
+    description: "A Digital HR System with an ATS for recruitment and automated payroll.",
+    video: "https://youtu.be/zJimL4T-EwU",
+    detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹\n\n" +
+    "This HR digital system is a comprehensive, AI-powered solution designed to automate and enhance recruitment and payroll management, making HR operations faster, smarter, and more efficient.\n\n" +
+    
+    "📌 Features & Functionalities:\n" +
+    "1️⃣ Recruitment Automation (ATS System) – AI-Powered Talent Acquisition\n" +
+    "🚀 End-to-End Digitalized Hiring Process\n\n" +
+    "- Candidates apply through a Google Form, submitting their CVs.\n" +
+    "- The system fetches applications dynamically and extracts key skills using AI Builder.\n" +
+    "- Candidates are automatically ranked based on degree level and keyword matching.\n\n" +
 
-This HR digital system is a comprehensive, AI-powered solution designed to automate and enhance recruitment and payroll management, making HR operations faster, smarter, and more efficient.
+    "📌 Screening & Selection Process:\n" +
+    "- Recruiters can filter by gender, education level, or specific keywords.\n" +
+    "- The system provides an integrated CV viewer for direct document access.\n" +
+    "- Automated email notifications are sent for acceptance and rejection.\n\n" +
 
-📌 Features & Functionalities:
-1️⃣ Recruitment Automation (ATS System) – AI-Powered Talent Acquisition
-🚀 End-to-End Digitalized Hiring Process
+    "📌 Personalized CV Assessments:\n" +
+    "- Each applicant receives a customized report analyzing their CV, providing feedback and suggestions for improvement.\n\n" +
 
-Candidates apply through a Google Form, submitting their CVs.
-The system fetches applications dynamically and extracts key skills using AI Builder.
-Candidates are automatically ranked based on degree level and keyword matching.
-📌 Screening & Selection Process:
+    "2️⃣ Payroll & Attendance Management\n\n" +
+    "📌 Smart Employee Attendance Tracking:\n" +
+    "- Employees scan a QR code upon entering and leaving the office to register their work hours.\n" +
+    "- The system automatically calculates total hours worked and updates payroll records in real time.\n\n" +
 
-Recruiters can filter by gender, education level, or specific keywords.
-The system provides an integrated CV viewer for direct document access.
-Automated email notifications are sent for acceptance and rejection.
-📌 Personalized CV Assessments:
+    "📌 Automated Salary Processing:\n" +
+    "- Salaries are calculated based on hourly rate & total work hours.\n" +
+    "- A single button click can trigger payroll processing and salary transfers to employees.\n\n" +
 
-Each applicant receives a customized report analyzing their CV, providing feedback and suggestions for improvement.
-2️⃣ Payroll & Attendance Management
-📌 Smart Employee Attendance Tracking:
+    "3️⃣ Performance Analytics & Dashboard (Power BI Integration)\n\n" +
+    "📊 Real-Time HR Insights:\n" +
+    "- Visual dashboards displaying attendance trends, salary distribution, and recruitment statistics.\n" +
+    "- Helps HR managers make data-driven decisions for workforce planning.\n\n" +
 
-Employees scan a QR code upon entering and leaving the office to register their work hours.
-The system automatically calculates total hours worked and updates payroll records in real time.
-📌 Automated Salary Processing:
+    "🚀 Technologies Used:\n" +
+    "- PowerApps – Frontend interface for recruiters & employees.\n" +
+    "- Power Automate – Automated workflows for CV retrieval, screening, and payroll processing.\n" +
+    "- AI Builder – Intelligent CV analysis & keyword extraction.\n" +
+    "- Power BI – Interactive HR analytics dashboard.\n" +
+    "- SharePoint – Data storage & management.\n\n" +
 
-Salaries are calculated based on hourly rate & total work hours.
-A single button click can trigger payroll processing and salary transfers to employees.
-3️⃣ Performance Analytics & Dashboard (Power BI Integration)
-📊 Real-Time HR Insights:
-
-Visual dashboards displaying attendance trends, salary distribution, and recruitment statistics.
-Helps HR managers make data-driven decisions for workforce planning.
-🚀 Technologies Used:
-🔹 PowerApps – Frontend interface for recruiters & employees.
-🔹 Power Automate – Automated workflows for CV retrieval, screening, and payroll processing.
-🔹 AI Builder – Intelligent CV analysis & keyword extraction.
-🔹 Power BI – Interactive HR analytics dashboard.
-🔹 SharePoint – Data storage & management.
-
-This HR automation demo was developed to showcase how digitalization can transform traditional HR processes, reduce workload, improve accuracy, and enhance the overall employee & candidate experience.
-
-📌 This is just a demo—imagine the possibilities of a fully automated HR system! 🚀",
-        images: [
-          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
-          "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
-        ]
-      },
+    "This HR automation demo was developed to showcase how digitalization can transform traditional HR processes, reduce workload, improve accuracy, and enhance the overall employee & candidate experience.\n\n" +
+    
+    "📌 This is just a demo—imagine the possibilities of a fully automated HR system! 🚀",
+    
+    images: [
+        "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
+        "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
+    ]
+}
+,
       {
         name: "YM Store",
         thumbnail: "crm_thumbnail.jpg",
