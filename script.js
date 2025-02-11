@@ -19,7 +19,50 @@ const projectData = {
         name: "Digital HR System Demo",
         thumbnail: "crm_thumbnail.jpg",
         description: "A Digital HR System with an ATS for recruitment and automated payroll.",
-        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        video: "https://youtu.be/zJimL4T-EwU",
+        detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹
+
+This HR digital system is a comprehensive, AI-powered solution designed to automate and enhance recruitment and payroll management, making HR operations faster, smarter, and more efficient.
+
+📌 Features & Functionalities:
+1️⃣ Recruitment Automation (ATS System) – AI-Powered Talent Acquisition
+🚀 End-to-End Digitalized Hiring Process
+
+Candidates apply through a Google Form, submitting their CVs.
+The system fetches applications dynamically and extracts key skills using AI Builder.
+Candidates are automatically ranked based on degree level and keyword matching.
+📌 Screening & Selection Process:
+
+Recruiters can filter by gender, education level, or specific keywords.
+The system provides an integrated CV viewer for direct document access.
+Automated email notifications are sent for acceptance and rejection.
+📌 Personalized CV Assessments:
+
+Each applicant receives a customized report analyzing their CV, providing feedback and suggestions for improvement.
+2️⃣ Payroll & Attendance Management
+📌 Smart Employee Attendance Tracking:
+
+Employees scan a QR code upon entering and leaving the office to register their work hours.
+The system automatically calculates total hours worked and updates payroll records in real time.
+📌 Automated Salary Processing:
+
+Salaries are calculated based on hourly rate & total work hours.
+A single button click can trigger payroll processing and salary transfers to employees.
+3️⃣ Performance Analytics & Dashboard (Power BI Integration)
+📊 Real-Time HR Insights:
+
+Visual dashboards displaying attendance trends, salary distribution, and recruitment statistics.
+Helps HR managers make data-driven decisions for workforce planning.
+🚀 Technologies Used:
+🔹 PowerApps – Frontend interface for recruiters & employees.
+🔹 Power Automate – Automated workflows for CV retrieval, screening, and payroll processing.
+🔹 AI Builder – Intelligent CV analysis & keyword extraction.
+🔹 Power BI – Interactive HR analytics dashboard.
+🔹 SharePoint – Data storage & management.
+
+This HR automation demo was developed to showcase how digitalization can transform traditional HR processes, reduce workload, improve accuracy, and enhance the overall employee & candidate experience.
+
+📌 This is just a demo—imagine the possibilities of a fully automated HR system! 🚀",
         images: [
           "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
           "assets/images/BusinessAppsAndAutomation/Digital_HR_System/2.png"
