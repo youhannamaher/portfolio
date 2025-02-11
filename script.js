@@ -19,7 +19,7 @@ const projectData = {
     name: "Digital HR System Demo",
     thumbnail: "crm_thumbnail.jpg",
     description: "A Digital HR System with an ATS for recruitment and automated payroll.",
-    video: "https://www.youtube.com/watch?v=zJimL4T-EwU",
+    video: "https://www.youtube.com/embed/zJimL4T-EwU",
     detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹\n\n" +
     "This HR digital system is a comprehensive, AI-powered solution designed to automate and enhance recruitment and payroll management, making HR operations faster, smarter, and more efficient.",
     
