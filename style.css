@@ -433,35 +433,44 @@ body {
   margin: auto;
 }
 
-.modal-content {
+.modal-content { 
+  max-width: 90vw;
   width: 80%;
-  height: 85vh;
-  display: flex;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+   Zoom: 0.8;
+  display: grid;  /* Ensures flex behavior */
+  flex-wrap: wrap; /* Allows items to go to the next line */
 }
 
 
+/* --- Navigation Buttons for Images --- */
 .prev-image,
 .next-image {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
+  font-size: 20px;
   padding: 10px;
-  border-radius: 50%;
+  cursor: pointer;
 }
 
 .prev-image {
-  left: 20px;
+  left: 10px;
 }
 
 .next-image {
-  right: 20px;
+  right: 10px;
+}
+
+.prev-image:hover,
+.next-image:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* Project Thumbnails */
