@@ -149,9 +149,24 @@ const projectData = {
         thumbnail: "assets\images\Presentations\Bondy\1.png",
         description: "A professional business presentation for investors.",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        video: "https://www.youtube.com/embed/wl9UROO-Jhk",
         images: [
-          "assets/images/Presentation/PitchDeck1.png",
-          "assets/images/Presentation/PitchDeck2.png"
+"assets\images\Presentations\Bondy\1.png",
+"assets\images\Presentations\Bondy\2.png",
+"assets\images\Presentations\Bondy\3.png",
+"assets\images\Presentations\Bondy\4.png",
+"assets\images\Presentations\Bondy\5.png",
+"assets\images\Presentations\Bondy\6.png",
+"assets\images\Presentations\Bondy\7.PNG",
+"assets\images\Presentations\Bondy\8.png",
+"assets\images\Presentations\Bondy\9.png",
+"assets\images\Presentations\Bondy\10.png",
+"assets\images\Presentations\Bondy\11.png",
+"assets\images\Presentations\Bondy\12.png",
+"assets\images\Presentations\Bondy\13.png",
+"assets\images\Presentations\Bondy\14.png",
+"assets\images\Presentations\Bondy\15.png",
+"assets\images\Presentations\Bondy\16.png"
         ]
       },
       {
