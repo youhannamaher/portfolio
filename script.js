@@ -153,6 +153,16 @@ const projectData = {
           "assets/images/Presentation/PitchDeck1.png",
           "assets/images/Presentation/PitchDeck2.png"
         ]
+      },
+      {
+        name: "European Union Presentation",
+        thumbnail: "assets\images\Presentations\Bondy\1.png",
+        description: "A professional business presentation for investors.",
+        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        images: [
+          "assets/images/Presentation/PitchDeck1.png",
+          "assets/images/Presentation/PitchDeck2.png"
+        ]
       }
     ]
   }
