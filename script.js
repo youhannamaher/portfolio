@@ -168,6 +168,7 @@ const projectData = {
         thumbnail: "assets/images/Presentations/Union_Europeen/1.png",
         description: "European Union powerpoint presentation",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        video: "https://www.youtube.com/embed/eDer-QOAmlU",
         images: [
           "assets/images/Presentations/Union_Europeen/1.png",
           "assets/images/Presentations/Union_Europeen/2.png",
@@ -187,7 +188,7 @@ const projectData = {
         thumbnail: "assets/images/Presentations/Changement_Climatique/1.png",
         description: "A professional presentation to showcase the reasons behind the climate change",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
-        video: "https://www.youtube.com/embed/wl9UROO-Jhk",
+        video: "https://www.youtube.com/embed/d2hG1rO95AE",
         images: [
           "assets/images/Presentations/Changement_Climatique/1.png",
           "assets/images/Presentations/Changement_Climatique/2.png",
