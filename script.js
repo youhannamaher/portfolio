@@ -102,16 +102,15 @@ const projectData = {
     title: "Data Management & Analysis",
     projects: [
       {
-        name: "Data Visualization Excel Dashboard",
+        name: "Excel Tracking Dashboard with Automation",
         thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/1.png",
-        description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
-        detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
-        video: "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4/embed",
+        description: "A dynamic Excel dashboard for tracking income, expenses, and profit goals, featuring automated data entry forms, interactive charts, and VBA-powered insights for better financial management.",
+        detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
+        video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
           "assets/images/Data_Analysis/Excel_Dashboards/1.png",
           "assets/images/Data_Analysis/Excel_Dashboards/2.png",
-          "assets/images/Data_Analysis/Excel_Dashboards/3.png",
-          "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4"
+          "assets/images/Data_Analysis/Excel_Dashboards/3.png"
         ]
       },
       {
@@ -119,7 +118,7 @@ const projectData = {
         thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
         detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
-        video: "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4/embed",
+         video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
         "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         "assets/images/Data_Analysis/PowerApps_Dashboard/2.png",
@@ -142,7 +141,7 @@ const projectData = {
       {
         name: "Bondy Pitch Deck",
         thumbnail: "assets/images/Presentations/Bondy/1.png",
-        description: "A professional business presentation for investors.",
+        description: "A professional business presentation for Bondy's clothing brand",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
         video: "https://www.youtube.com/embed/wl9UROO-Jhk",
         images: [
@@ -166,12 +165,56 @@ const projectData = {
       },
       {
         name: "European Union Presentation",
-        thumbnail: "assets/images/Presentations/Bondy/1.png",
+        thumbnail: "assets/images/Presentations/Union_Europeen/1.png",
+        description: "European Union powerpoint presentation",
+        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        images: [
+          "assets/images/Presentations/Union_Europeen/1.png",
+          "assets/images/Presentations/Union_Europeen/2.png",
+          "assets/images/Presentations/Union_Europeen/3.png",
+          "assets/images/Presentations/Union_Europeen/4.png",
+          "assets/images/Presentations/Union_Europeen/5.png",
+          "assets/images/Presentations/Union_Europeen/6.png",
+          "assets/images/Presentations/Union_Europeen/7.png",
+          "assets/images/Presentations/Union_Europeen/8.png",
+          "assets/images/Presentations/Union_Europeen/9.png",
+          "assets/images/Presentations/Union_Europeen/10.png",
+          "assets/images/Presentations/Union_Europeen/11.png",
+        ]
+      },
+      {
+        name: "Climate Change",
+        thumbnail: "assets/images/Presentations/Changement_Climatique/1.png",
+        description: "A professional presentation to showcase the reasons behind the climate change",
+        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        video: "https://www.youtube.com/embed/wl9UROO-Jhk",
+        images: [
+          "assets/images/Presentations/Changement_Climatique/1.png",
+          "assets/images/Presentations/Changement_Climatique/2.png",
+          "assets/images/Presentations/Changement_Climatique/3.png",
+          "assets/images/Presentations/Changement_Climatique/4.png",
+          "assets/images/Presentations/Changement_Climatique/5.png",
+          "assets/images/Presentations/Changement_Climatique/6.png",
+          "assets/images/Presentations/Changement_Climatique/7.png",
+          "assets/images/Presentations/Changement_Climatique/8.png",
+          "assets/images/Presentations/Changement_Climatique/9.png",
+          "assets/images/Presentations/Changement_Climatique/10.png"
+        ]
+      },
+      {
+        name: "Digitalization in HR",
+        thumbnail: "assets/images/Presentations/HR_Digitilization/1.png",
         description: "A professional business presentation for investors.",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
         images: [
-          "assets/images/Presentation/PitchDeck1.png",
-          "assets/images/Presentation/PitchDeck2.png"
+           "assets/images/Presentations/HR_Digitilization/1.png",
+           "assets/images/Presentations/HR_Digitilization/2.png",
+           "assets/images/Presentations/HR_Digitilization/3.png",
+           "assets/images/Presentations/HR_Digitilization/4.png",
+           "assets/images/Presentations/HR_Digitilization/5.png",
+           "assets/images/Presentations/HR_Digitilization/6.png",
+           "assets/images/Presentations/HR_Digitilization/7.png",
+           "assets/images/Presentations/HR_Digitilization/8.png"
         ]
       }
     ]
