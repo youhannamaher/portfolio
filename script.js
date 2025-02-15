@@ -207,6 +207,7 @@ const projectData = {
         thumbnail: "assets/images/Presentations/HR_Digitilization/1.png",
         description: "A professional business presentation for investors.",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        video: "https://www.youtube.com/embed/Ywi048ZD6P0",
         images: [
            "assets/images/Presentations/HR_Digitilization/1.png",
            "assets/images/Presentations/HR_Digitilization/2.png",
