@@ -58,7 +58,6 @@ const projectData = {
         thumbnail: "assets/images/experience/bondy.png",
         description: "A dynamic app that tracks all the inventory, production and all the transactions made",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/1.png",
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/2.png",
@@ -74,7 +73,6 @@ const projectData = {
         thumbnail: "assets/images/experience/Orange.png",
         description: "A dynamic app that tracks all the inventory, production and all the transactions made",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
           "assets/images/BusinessAppsAndAutomation/Orange_APP/1.png",
           "assets/images/BusinessAppsAndAutomation/Orange_APP/2.png",
@@ -86,7 +84,6 @@ const projectData = {
         thumbnail: "assets/images/experience/RATP.png",
         description: "A dynamic app that tracks all the inventory, production and all the transactions made",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
           "assets/images/BusinessAppsAndAutomation/RATP_CRM/1.png",
           "assets/images/BusinessAppsAndAutomation/RATP_CRM/2.png",
