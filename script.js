@@ -63,9 +63,7 @@ const projectData = {
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/2.png",
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/3.png",
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/4.png",
-          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/5.png",
-          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/6.png",
-          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/7.png"
+          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/5.png"
         ]
       },
       {
