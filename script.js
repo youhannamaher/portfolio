@@ -82,7 +82,7 @@ const projectData = {
       }
     ]
   }
-};
+}
 
 
 
