@@ -119,7 +119,7 @@ const projectData = {
         thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
         detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
-        video: "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4/embed",
+         video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
         "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         "assets/images/Data_Analysis/PowerApps_Dashboard/2.png",
