@@ -22,10 +22,10 @@ const projectData = {
       },
       {
     name: "Digital HR System Demo",
-    thumbnail: "assets\images\experience\DGCI.png",
+    thumbnail: "assets/images/experience/DGCI.png",
     description: "A Digital HR System with an ATS for recruitment and automated payroll.",
     video: "https://www.youtube.com/embed/zJimL4T-EwU",
-    detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹\n\n" +
+    detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹/n/n" +
     "This HR digital system is a comprehensive, AI-powered solution designed to automate and enhance recruitment and payroll management, making HR operations faster, smarter, and more efficient.",
     
     images: [
@@ -41,56 +41,51 @@ const projectData = {
 ,
       {
         name: "YM Store",
-        thumbnail: "assets\images\experience\YM.png",
+        thumbnail: "assets/images/experience/YM.png",
         description: "A Digital Store fully dynamic for the clients and administration",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
         video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
-          "assets\images\BusinessAppsAndAutomation\YM_Store\1.png",
-          "assets\images\BusinessAppsAndAutomation\YM_Store\2.png",
-          "assets\images\BusinessAppsAndAutomation\YM_Store\3.png",
-          "assets\images\BusinessAppsAndAutomation\YM_Store\4.png"
+          "assets/images/BusinessAppsAndAutomation/YM_Store/1.png",
+          "assets/images/BusinessAppsAndAutomation/YM_Store/2.png",
+          "assets/images/BusinessAppsAndAutomation/YM_Store/3.png",
+          "assets/images/BusinessAppsAndAutomation/YM_Store/4.png"
   
         ]
       },
       {
         name: "Bondy Inventory Management",
-        thumbnail: "assets\images\experience\bondy.png",
+        thumbnail: "assets/images/experience/bondy.png",
         description: "A dynamic app that tracks all the inventory, production and all the transactions made",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\1.png",
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\2.png",
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\3.png",
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\4.png",
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\5.png",
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\6.png",
-          "assets\images\BusinessAppsAndAutomation\Bondy_Inventory_Management\7.png"
+          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/1.png",
+          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/2.png",
+          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/3.png",
+          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/4.png",
+          "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/5.png"
         ]
       },
       {
         name: "Orange App",
-        thumbnail: "assets\images\experience\Orange.png",
+        thumbnail: "assets/images/experience/Orange.png",
         description: "A dynamic app that tracks all the inventory, production and all the transactions made",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
-          "assets\images\BusinessAppsAndAutomation\Orange_APP\1.png",
-          "assets\images\BusinessAppsAndAutomation\Orange_APP\2.png",
-          "assets\images\BusinessAppsAndAutomation\Orange_APP\3.png"
+          "assets/images/BusinessAppsAndAutomation/Orange_APP/1.png",
+          "assets/images/BusinessAppsAndAutomation/Orange_APP/2.png",
+          "assets/images/BusinessAppsAndAutomation/Orange_APP/3.png"
         ]
       },
       {
         name: "RATP Change Request Management",
-        thumbnail: "assets\images\experience\RATP.png",
+        thumbnail: "assets/images/experience/RATP.png",
         description: "A dynamic app that tracks all the inventory, production and all the transactions made",
         detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
-          "assets\images\BusinessAppsAndAutomation\RATP_CRM\1.png",
-          "assets\images\BusinessAppsAndAutomation\RATP_CRM\2.png",
-          "assets\images\BusinessAppsAndAutomation\RATP_CRM\3.png",
+          "assets/images/BusinessAppsAndAutomation/RATP_CRM/1.png",
+          "assets/images/BusinessAppsAndAutomation/RATP_CRM/2.png",
+          "assets/images/BusinessAppsAndAutomation/RATP_CRM/3.png",
         ]
       }
     ]
@@ -108,26 +103,26 @@ const projectData = {
     projects: [
       {
         name: "Data Visualization Excel Dashboard",
-        thumbnail: "assets\images\Data_Analysis\Excel_Dashboards\1.png",
+        thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/1.png",
         description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
         detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
-        video: "assets\images\Data_Analysis\Excel_Dashboards\Dashboard.mp4/embed",
+        video: "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4/embed",
         images: [
-          "assets\images\Data_Analysis\Excel_Dashboards\1.png",
-          "assets\images\Data_Analysis\Excel_Dashboards\2.png",
-          "assets\images\Data_Analysis\Excel_Dashboards\3.png",
-          "assets\images\Data_Analysis\Excel_Dashboards\Dashboard.mp4"
+          "assets/images/Data_Analysis/Excel_Dashboards/1.png",
+          "assets/images/Data_Analysis/Excel_Dashboards/2.png",
+          "assets/images/Data_Analysis/Excel_Dashboards/3.png",
+          "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4"
         ]
       },
       {
         name: "Data Visualization PowerApps Dashboard",
-        thumbnail: "assets\images\Data_Analysis\PowerApps_Dashboard\1.png",
+        thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
         detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
-        video: "assets\images\Data_Analysis\Excel_Dashboards\Dashboard.mp4/embed",
+        video: "assets/images/Data_Analysis/Excel_Dashboards/Dashboard.mp4/embed",
         images: [
-        "assets\images\Data_Analysis\PowerApps_Dashboard\1.png",
-        "assets\images\Data_Analysis\PowerApps_Dashboard\2.png",
+        "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
+        "assets/images/Data_Analysis/PowerApps_Dashboard/2.png",
         ]
       }
     ]
@@ -146,7 +141,32 @@ const projectData = {
     projects: [
       {
         name: "Bondy Pitch Deck",
-        thumbnail: "assets\images\Presentations\Bondy\1.png",
+        thumbnail: "assets/images/Presentations/Bondy/1.png",
+        description: "A professional business presentation for investors.",
+        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        video: "https://www.youtube.com/embed/wl9UROO-Jhk",
+        images: [
+"assets/images/Presentations/Bondy/1.png",
+"assets/images/Presentations/Bondy/2.png",
+"assets/images/Presentations/Bondy/3.png",
+"assets/images/Presentations/Bondy/4.png",
+"assets/images/Presentations/Bondy/5.png",
+"assets/images/Presentations/Bondy/6.png",
+"assets/images/Presentations/Bondy/7.PNG",
+"assets/images/Presentations/Bondy/8.png",
+"assets/images/Presentations/Bondy/9.png",
+"assets/images/Presentations/Bondy/10.png",
+"assets/images/Presentations/Bondy/11.png",
+"assets/images/Presentations/Bondy/12.png",
+"assets/images/Presentations/Bondy/13.png",
+"assets/images/Presentations/Bondy/14.png",
+"assets/images/Presentations/Bondy/15.png",
+"assets/images/Presentations/Bondy/16.png"
+        ]
+      },
+      {
+        name: "European Union Presentation",
+        thumbnail: "assets/images/Presentations/Bondy/1.png",
         description: "A professional business presentation for investors.",
         detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
         images: [
