@@ -360,10 +360,9 @@ function nextImage() {
   document.getElementById("projectImage").src = currentProject.images[currentImageIndex];
 }
 
-
-// Close Modals
 function closeModal() {
   document.getElementById("categoryModal").style.display = "none";
+location.hash = "#projects";
 }
 
 function closeProjectModal() {
@@ -373,6 +372,12 @@ function closeProjectModal() {
   document.getElementById("viewImagesBtn").style.display = "block";
   document.getElementById("prevImageBtn").style.display = "none";
   document.getElementById("nextImageBtn").style.display = "none";
+
+  // Keep the user at the #projects section
+  location.hash = "#projects";
+
+  // Optional: Smooth scrolling to #projects
+  document.querySelector("#projects").scrollIntoView({ behavior: "smooth" });
 }
 
 document.addEventListener("keydown", event => {
@@ -382,6 +387,7 @@ document.addEventListener("keydown", event => {
     if (event.key === "Escape") closeProjectModal();
   }
 });
+
 
 // Hamburger Menu Fix for Mobile
 const hamburgerMenu = document.querySelector(".hamburger-menu");
