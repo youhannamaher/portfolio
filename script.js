@@ -104,7 +104,7 @@ const projectData = {
       {
         name: "Data Visualization Excel Dashboard",
         thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/1.png",
-        description: "A dynamic Excel dashboard for tracking income, expenses, and profit goals, featuring automated data entry forms, interactive charts, and VBA-powered insights for better financial management.",
+        description: "Excel dashboards for tracking income, expenses, and profit goals, featuring automated data entry forms, interactive charts, and VBA-powered insights for better financial management.",
         detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
         video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
@@ -117,7 +117,7 @@ const projectData = {
       {
         name: "Data Visualization PowerApps Dashboard",
         thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
-        description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
+        description: "PowerApps dashboards for visualization and filtration with extraction and more actions",
         detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
         images: [
         "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
@@ -127,12 +127,21 @@ const projectData = {
       {
         name: "Excel Analysis",
         thumbnail: "assets/images/Data_Analysis/Excel_Functions/1.png",
-        description: "A dynamic Excel dashboard for tracking income, expenses, and profit goals, featuring automated data entry forms, interactive charts, and VBA-powered insights for better financial management.",
+        description: "Excel Functions and pivot tables and data analysis",
         detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
         images: [
           "assets/images/Data_Analysis/Excel_Functions/1.png",
           "assets/images/Data_Analysis/Excel_Functions/2.png",
           "assets/images/Data_Analysis/Excel_Functions/3.png"
+        ]
+      },
+      {
+        name: "PowerBI Dashboards",
+        thumbnail: "assets/images/Data_Analysis/PowerBI_Dashboard/1.png",
+        description: "PowerBI Dashboards and data visualization",
+        detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
+        images: [
+          "assets/images/Data_Analysis/PowerBI_Dashboard/1.png"
         ]
       }
     ]
