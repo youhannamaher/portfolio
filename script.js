@@ -8,7 +8,7 @@ const projectData = {
         thumbnail: "assets/images/experience/ASU_Career_Center.png",
         description: "A web app for students to register at Ain Shams University easily.",
         detailedDescription: "This application was built to streamline the registration process, allowing students to register efficiently while reducing paperwork and human errors. It integrates a powerful backend to handle thousands of students with real-time updates and notifications.",
-        video: "https://www.youtube.com/embed/VkqxCcYTvqI",
+
         images: [
           "assets/images/BusinessAppsAndAutomation/ASUApp/1.png",
           "assets/images/BusinessAppsAndAutomation/ASUApp/2.png",
