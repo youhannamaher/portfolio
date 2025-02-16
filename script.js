@@ -110,7 +110,8 @@ const projectData = {
         images: [
           "assets/images/Data_Analysis/Excel_Dashboards/1.png",
           "assets/images/Data_Analysis/Excel_Dashboards/2.png",
-          "assets/images/Data_Analysis/Excel_Dashboards/3.png"
+          "assets/images/Data_Analysis/Excel_Dashboards/3.png",
+          "assets/images/Data_Analysis/Excel_Dashboards/4.png"
         ]
       },
       {
@@ -118,22 +119,20 @@ const projectData = {
         thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         description: "Excel dashboards with pivot tables, VBA, and advanced charts.",
         detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
-         video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
         "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         "assets/images/Data_Analysis/PowerApps_Dashboard/2.png",
         ]
       },
       {
-        name: "Data Visualization PowerBI Dashboard",
-        thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/1.png",
+        name: "Excel Analysis",
+        thumbnail: "assets/images/Data_Analysis/Excel_Functions/1.png",
         description: "A dynamic Excel dashboard for tracking income, expenses, and profit goals, featuring automated data entry forms, interactive charts, and VBA-powered insights for better financial management.",
         detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
-        video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
-          "assets/images/Data_Analysis/Excel_Dashboards/1.png",
-          "assets/images/Data_Analysis/Excel_Dashboards/2.png",
-          "assets/images/Data_Analysis/Excel_Dashboards/3.png"
+          "assets/images/Data_Analysis/Excel_Functions/1.png",
+          "assets/images/Data_Analysis/Excel_Functions/2.png",
+          "assets/images/Data_Analysis/Excel_Functions/3.png"
         ]
       }
     ]
@@ -163,7 +162,7 @@ const projectData = {
 "assets/images/Presentations/Bondy/4.png",
 "assets/images/Presentations/Bondy/5.png",
 "assets/images/Presentations/Bondy/6.png",
-"assets/images/Presentations/Bondy/7.PNG",
+"assets/images/Presentations/Bondy/7.png",
 "assets/images/Presentations/Bondy/8.png",
 "assets/images/Presentations/Bondy/9.png",
 "assets/images/Presentations/Bondy/10.png",
