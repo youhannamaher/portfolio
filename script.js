@@ -6,7 +6,7 @@ const projectData = {
       {
         name: "ASU Registration Application",
         thumbnail: "assets/images/experience/ASU_Career_Center.png",
-        description: "Developed a smart registration, verification, and analytics system for ASU Career Center’s Employment Fair 2025, handling 15,000+ participants with automated workflows and real-time insights.",
+        description: "Developed a smart registration & analytics system for ASU's Employment Fair 2025, handling 15,000+ participants.",
         video: "https://www.youtube.com/embed/M0VVYtuocNw",
         detailedDescription: "I designed a fully digital event management system for ASU Career Center using PowerApps, Power Automate, SharePoint, and Google Sheets. The system automates QR-based registration, tracks attendance, and enables real-time verification through two dedicated apps for volunteers and administrators. Additionally, an interactive Power BI dashboard provides dynamic filtering, advanced data insights, email automation, and report generation, transforming the way event data is managed and analyzed.",
 
