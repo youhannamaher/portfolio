@@ -116,7 +116,7 @@ const projectData = {
         ]
       },
       {
-        name: "Data Visualization PowerApps Dashboard",
+        name: "PowerApps Interactive Dashboards",
         thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         description: "Advanced business dashboards with export and email integration.",
         detailedDescription: "Designed PowerApps dashboards with real-time filtering, data export to Excel, and in-app email capabilities. Users can capture screenshots of filtered data, view detailed tables, and directly send reports via email with attachments. This enhances data manipulation and simplifies decision-making—all within PowerApps.",
