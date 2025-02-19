@@ -8,7 +8,7 @@ const projectData = {
         thumbnail: "assets/images/experience/ASU_Career_Center.png",
         description: "Developed a smart registration & analytics system for ASU's Employment Fair 2025, handling 15,000+ participants.",
         video: "https://www.youtube.com/embed/M0VVYtuocNw",
-        detailedDescription: "I designed a fully digital event management system for ASU Career Center using PowerApps, Power Automate, SharePoint, and Google Sheets. The system automates QR-based registration, tracks attendance, and enables real-time verification through two dedicated apps for volunteers and administrators. Additionally, an interactive Power BI dashboard provides dynamic filtering, advanced data insights, email automation, and report generation, transforming the way event data is managed and analyzed.",
+        detailedDescription: "I designed a fully digital event management system for ASU Career Center using PowerApps, Power Automate, SharePoint, and Google Sheets. The system automates QR-based registration, tracks attendance, and enables real-time verification through two dedicated apps for volunteers and administrators. An interactive Power BI dashboard provides dynamic filtering, advanced data insights, email automation, and report generation, revolutionizing event data management.",
 
         images: [
           "assets/images/BusinessAppsAndAutomation/ASUApp/1.png",
@@ -24,10 +24,10 @@ const projectData = {
       {
     name: "Digital HR System Demo",
     thumbnail: "assets/images/experience/DGCI.png",
-    description: "A Digital HR System with an ATS for recruitment and automated payroll.",
+    description: "Automated recruitment, ATS, CV assessment, email notifications, and payroll processing.",
     video: "https://www.youtube.com/embed/zJimL4T-EwU",
     detailedDescription: "🔹 HR Digital System – Automating Recruitment & Payroll 🔹/n/n" +
-    "This HR digital system is a comprehensive, AI-powered solution designed to automate and enhance recruitment and payroll management, making HR operations faster, smarter, and more efficient.",
+    "This PowerApps-driven HR solution transforms recruitment and employee management. The system automates CV assessments, tracks applications through an ATS, and sends personalized interview invitations. It also streamlines payroll processing, ensuring accurate salary calculations and tax deductions. Integrated with Power Automate for real-time notifications and SharePoint for secure data handling, this solution optimizes HR efficiency.",
     
     images: [
         "assets/images/BusinessAppsAndAutomation/Digital_HR_System/1.png",
@@ -43,8 +43,8 @@ const projectData = {
       {
         name: "YM Store",
         thumbnail: "assets/images/experience/YM.png",
-        description: "A Digital Store fully dynamic for the clients and administration",
-        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        description: "A Digital Store fully dynamic for customers and administrators",
+        detailedDescription: "YM Store provides a seamless e-commerce experience with separate portals for clients and administrators. Clients can sign up, receive email confirmations, browse products, purchase items, get invoices via email, track past purchases, and update account details. Administrators manage client data, monitor top buyers, track inventory, add products, and generate automated accounting reports like balance sheets and income statements. This system integrates Power Automate for notifications and Excel for financial analysis.",
         video: "https://www.youtube.com/embed/VkqxCcYTvqI",
         images: [
           "assets/images/BusinessAppsAndAutomation/YM_Store/1.png",
@@ -57,8 +57,8 @@ const projectData = {
       {
         name: "Bondy Inventory Management",
         thumbnail: "assets/images/experience/bondy.png",
-        description: "A dynamic app that tracks all the inventory, production and all the transactions made",
-        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        description: "Tracks transactions, inventory levels, and raw material transformation.",
+        detailedDescription: "This system monitors all Bondy’s transactions, from purchasing garments to transforming them into final products and tracking sales. It maintains real-time stock levels, calculates current inventory value, and monitors packaging materials and main product availability. PowerApps and Power Automate ensure smooth data tracking, helping optimize supply chain efficiency.",
         images: [
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/1.png",
           "assets/images/BusinessAppsAndAutomation/Bondy_Inventory_Management/2.png",
@@ -70,8 +70,8 @@ const projectData = {
       {
         name: "Orange App",
         thumbnail: "assets/images/experience/Orange.png",
-        description: "A dynamic app that tracks all the inventory, production and all the transactions made",
-        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        description: "Business applications for learning management and procurement tracking at Orange Business.",
+        detailedDescription: "Developed two PowerApps solutions for Orange Business: MSC Learning Studio, which streamlines training program management and course tracking, and PO Tracker, a procurement tracking tool integrating with Power Automate and SharePoint for real-time order status updates and workflow approvals. These solutions enhance internal operations and data-driven decision-making.",
         images: [
           "assets/images/BusinessAppsAndAutomation/Orange_APP/1.png",
           "assets/images/BusinessAppsAndAutomation/Orange_APP/2.png",
@@ -81,8 +81,8 @@ const projectData = {
       {
         name: "RATP Change Request Management",
         thumbnail: "assets/images/experience/RATP.png",
-        description: "A dynamic app that tracks all the inventory, production and all the transactions made",
-        detailedDescription: "A complete HR solution that allows organizations to manage recruitment, onboarding, payroll, and employee performance tracking with automation tools. It enhances decision-making with real-time reports and analytics.",
+        description: "Request tracking system for managing technical modifications.",
+        detailedDescription: "This PowerApps-based solution facilitates structured change request handling within RATP Dev, providing an efficient workflow for submission, approval, and implementation tracking. Integrated with Power Automate for notifications and SharePoint for data storage, it enhances transparency and accelerates approvals.",
         images: [
           "assets/images/BusinessAppsAndAutomation/RATP_CRM/1.png",
           "assets/images/BusinessAppsAndAutomation/RATP_CRM/2.png",
@@ -103,10 +103,10 @@ const projectData = {
     title: "Data Management & Analysis",
     projects: [
       {
-        name: "Data Visualization Excel Dashboard",
+        name: "Dynamic Excel Dashboards (Pivot Tables & VBA Automation)",
         thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/1.png",
-        description: "Excel dashboards for tracking income, expenses, and profit goals, featuring automated data entry forms, interactive charts, and VBA-powered insights for better financial management.",
-        detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
+        description: "Designed interactive Excel dashboards for advanced data analysis and business reporting.",
+        detailedDescription: "Developed Excel dashboards using pivot tables, slicers, and VBA-powered data entry forms. These dashboards enable dynamic filtering, maintaining data relationships, and automating repetitive tasks. Users can efficiently analyze business performance, generate reports, and interact with real-time insights through intuitive Excel interfaces.",
         video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
           "assets/images/Data_Analysis/Excel_Dashboards/1.png",
@@ -118,18 +118,18 @@ const projectData = {
       {
         name: "Data Visualization PowerApps Dashboard",
         thumbnail: "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
-        description: "PowerApps dashboards for visualization and filtration with extraction and more actions",
-        detailedDescription: "A powerful Excel-based business intelligence dashboard that enables users to analyze and visualize complex datasets. It includes interactive pivot tables, VBA automation, and Power Query integrations.",
+        description: "Advanced business dashboards with export and email integration.",
+        detailedDescription: "Designed PowerApps dashboards with real-time filtering, data export to Excel, and in-app email capabilities. Users can capture screenshots of filtered data, view detailed tables, and directly send reports via email with attachments. This enhances data manipulation and simplifies decision-making—all within PowerApps.",
         images: [
         "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
         "assets/images/Data_Analysis/PowerApps_Dashboard/2.png",
         ]
       },
       {
-        name: "Excel Analysis",
+        name: "Excel Data Transformation & Analysis",
         thumbnail: "assets/images/Data_Analysis/Excel_Functions/1.png",
-        description: "Excel Functions and pivot tables and data analysis",
-        detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
+        description: "Cleaned and transformed raw data for actionable insights.",
+        detailedDescription: "Converted disorganized raw data into structured, analysis-ready datasets. Using advanced Excel formulas, nested functions, and pivot tables, I extracted key insights, performed data cleansing, and optimized reports for business decision-making.",
         images: [
           "assets/images/Data_Analysis/Excel_Functions/1.png",
           "assets/images/Data_Analysis/Excel_Functions/2.png",
@@ -139,8 +139,8 @@ const projectData = {
       {
         name: "PowerBI Dashboards",
         thumbnail: "assets/images/Data_Analysis/PowerBI_Dashboard/1.png",
-        description: "PowerBI Dashboards and data visualization",
-        detailedDescription: "I developed a fully automated Excel dashboards to streamline financial tracking. These tools allow users to monitor income and expenses, visualize key financial metrics through interactive charts and KPIs, and compare earnings against profit goals.",
+        description: "Advanced visualization and dynamic reporting.",
+        detailedDescription: "Built Power BI dashboards with drill-down capabilities, predictive analytics, and real-time data integration. These dashboards enable organizations to visualize trends, monitor KPIs, and generate interactive reports for strategic decision-making.",
         images: [
           "assets/images/Data_Analysis/PowerBI_Dashboard/1.png"
         ]
@@ -162,8 +162,8 @@ const projectData = {
       {
         name: "Bondy Pitch Deck",
         thumbnail: "assets/images/Presentations/Bondy/1.png",
-        description: "A professional business presentation for Bondy's clothing brand",
-        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        description: "Business pitch covering Bondy's vision, strategy, and financials.",
+        detailedDescription: "Created an investor pitch deck for Bondy, presenting its mission, objectives, product portfolio, market strategy, and financial insights. The deck includes SWOT & PESTEL analysis, segmentation, targeting, positioning, 4Ps (Product, Price, Place, Promotion), market research, financial structure, budget allocation, and an interactive closing segment.",
         video: "https://www.youtube.com/embed/wl9UROO-Jhk",
         images: [
 "assets/images/Presentations/Bondy/1.png",
@@ -187,8 +187,8 @@ const projectData = {
       {
         name: "European Union Presentation",
         thumbnail: "assets/images/Presentations/Union_Europeen/1.png",
-        description: "European Union powerpoint presentation",
-        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        description: "Research-based presentation on EU history, benefits, and challenges.",
+        detailedDescription: "Developed an in-depth presentation exploring the European Union’s formation, benefits, economic strategies, and challenges. It features statistical analysis, engaging visual content, and a structured approach to understanding EU dynamics.",
         video: "https://www.youtube.com/embed/eDer-QOAmlU",
         images: [
           "assets/images/Presentations/Union_Europeen/1.png",
@@ -207,8 +207,8 @@ const projectData = {
       {
         name: "Climate Change",
         thumbnail: "assets/images/Presentations/Changement_Climatique/1.png",
-        description: "A professional presentation to showcase the reasons behind the climate change",
-        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        description: "Research-based study on climate change causes and solutions.",
+        detailedDescription: "This presentation examines climate change, its causes, environmental impact, and potential solutions. The content includes scientific research, statistical data, and engaging visuals, raising awareness about sustainability and climate action.",
         video: "https://www.youtube.com/embed/d2hG1rO95AE",
         images: [
           "assets/images/Presentations/Changement_Climatique/1.png",
@@ -226,8 +226,8 @@ const projectData = {
       {
         name: "Digitalization in HR",
         thumbnail: "assets/images/Presentations/HR_Digitilization/1.png",
-        description: "A professional business presentation for investors.",
-        detailedDescription: "A visually stunning presentation designed for investor meetings and business proposals. It uses high-impact slides, clear storytelling, and engaging data visualizations to impress stakeholders.",
+        description: "Presentation on digital transformation and enterprise challenges.",
+        detailedDescription: "Explored the impact of digitalization on businesses, detailing benefits, adoption challenges, and strategies for seamless implementation. Demonstrated a PowerApps solution as part of the presentation, showcasing practical digital transformation tools.",
         video: "https://www.youtube.com/embed/Ywi048ZD6P0",
         images: [
            "assets/images/Presentations/HR_Digitilization/1.png",
