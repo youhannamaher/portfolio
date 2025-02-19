@@ -103,9 +103,9 @@ const projectData = {
     title: "Data Management & Analysis",
     projects: [
       {
-        name: "Dynamic Excel Dashboards (Pivot Tables & VBA Automation)",
+        name: "Dynamic Excel Dashboards",
         thumbnail: "assets/images/Data_Analysis/Excel_Dashboards/1.png",
-        description: "Designed interactive Excel dashboards for advanced data analysis and business reporting.",
+        description: "Designed interactive Excel dashboards for advanced data analysis and business reporting using Charts, Pivot Tables & VBA Automation.",
         detailedDescription: "Developed Excel dashboards using pivot tables, slicers, and VBA-powered data entry forms. These dashboards enable dynamic filtering, maintaining data relationships, and automating repetitive tasks. Users can efficiently analyze business performance, generate reports, and interact with real-time insights through intuitive Excel interfaces.",
         video: "https://www.youtube.com/embed/1YLmsf0g3-U",
         images: [
