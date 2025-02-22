@@ -134,7 +134,9 @@ const projectData = {
         images: [
           "assets/images/Data_Analysis/Excel_Functions/1.png",
           "assets/images/Data_Analysis/Excel_Functions/2.png",
-          "assets/images/Data_Analysis/Excel_Functions/3.png"
+          "assets/images/Data_Analysis/Excel_Functions/3.png",
+           "assets/images/Data_Analysis/Excel_Functions/4.png"
+           "assets/images/Data_Analysis/Excel_Functions/5.png"
         ]
       },
       {
