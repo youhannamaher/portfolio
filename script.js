@@ -123,7 +123,7 @@ const projectData = {
         video: "https://www.youtube.com/embed/M0VVYtuocNw",
         images: [
         "assets/images/Data_Analysis/PowerApps_Dashboard/1.png",
-        "assets/images/Data_Analysis/PowerApps_Dashboard/2.png",
+        "assets/images/Data_Analysis/PowerApps_Dashboard/2.png"
         ]
       },
       {
@@ -135,7 +135,7 @@ const projectData = {
           "assets/images/Data_Analysis/Excel_Functions/1.png",
           "assets/images/Data_Analysis/Excel_Functions/2.png",
           "assets/images/Data_Analysis/Excel_Functions/3.png",
-           "assets/images/Data_Analysis/Excel_Functions/4.png"
+           "assets/images/Data_Analysis/Excel_Functions/4.png",
            "assets/images/Data_Analysis/Excel_Functions/5.png"
         ]
       },
