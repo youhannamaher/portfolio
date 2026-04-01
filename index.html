@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youhanna Maher Abadir - Power Platform Developer</title>
-    <meta name="description" content="Portfolio of Youhanna Maher Abadir, a Microsoft Power Platform Developer specialized in business process automation, HR digital transformation, and internal operations apps.">
+    <meta name="description"
+        content="Portfolio of Youhanna Maher Abadir, a Microsoft Power Platform Developer specialized in business process automation, HR digital transformation, and internal operations apps.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome (for icons like github, linkedin, close) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="dark-theme">
     <!-- Header / Navigation -->
     <header class="navbar" id="navbar">
@@ -21,7 +27,7 @@
             <a href="#hero" class="brand">
                 <span class="brand-name">YMA</span>
             </a>
-            
+
             <nav class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#expertise" class="nav-link">Expertise</a>
@@ -56,7 +62,7 @@
                     <p class="hero-greeting">Hi, I'm <span id="hero-name" class="highlight"></span></p>
                     <h1 class="hero-title" id="hero-title"></h1>
                     <p class="hero-subtitle" id="hero-subtitle"></p>
-                    
+
                     <div class="hero-highlights" id="hero-highlights">
                         <!-- Populated by JS -->
                     </div>
@@ -68,7 +74,9 @@
                     </div>
                 </div>
                 <div class="hero-image" id="hero-image-container">
-                    <img src="portfolio/images/profile.jpg" alt="Youhanna Maher Abadir - Power Platform Developer" id="hero-profile-img" onerror="this.src='https://placehold.co/500x500/121216/ededf0?text=Please+add+portfolio/images/profile.jpg';">
+                    <img src="portfolio/images/profile.jpg" alt="Youhanna Maher Abadir - Power Platform Developer"
+                        id="hero-profile-img"
+                        onerror="this.src='https://placehold.co/500x500/121216/ededf0?text=Please+add+portfolio/images/profile.jpg';">
                 </div>
             </div>
             <!-- Decorative background element -->
@@ -120,7 +128,7 @@
                 <h2>Project Library</h2>
                 <div class="divider"></div>
             </div>
-            
+
             <div class="library-controls">
                 <div class="search-bar">
                     <i class="fa-solid fa-search"></i>
@@ -189,7 +197,8 @@
                 </div>
                 <div class="contact-form-container">
                     <!-- Formspree Integration -->
-                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjgpowbw" method="POST" enctype="multipart/form-data">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjgpowbw" method="POST"
+                        enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -212,10 +221,13 @@
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
                                 <span>Select a file to attach</span>
                             </label>
-                            <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg" style="display: none;">
+                            <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg"
+                                style="display: none;">
                         </div>
-                        <button type="submit" class="btn btn-primary w-100" id="contact-submit-btn">Send Message</button>
-                        <div id="contact-status" style="margin-top: 1.5rem; text-align: center; font-weight: 500;"></div>
+                        <button type="submit" class="btn btn-primary w-100" id="contact-submit-btn">Send
+                            Message</button>
+                        <div id="contact-status" style="margin-top: 1.5rem; text-align: center; font-weight: 500;">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -282,4 +294,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
