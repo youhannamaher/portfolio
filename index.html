@@ -1,268 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="assets/images/YM_Logo.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Open Graph Meta Tags for Social Media -->
-<meta property="og:title" content="Youhanna Maher - Portfolio">
-<meta property="og:description" content="A Dynamic business student specializing in International Business – Management & Accounting with a strong passion for digitalization.">
-<meta property="og:image" content="https://i.postimg.cc/02mRQqW2/YM.png">
-<meta property="og:url" content="https://youhannamaher.github.io/portfolio/">
-<meta property="og:type" content="website">
-
-  <title>Youhanna Maher | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <style>
-    /* Temporary inline styles for demonstration */
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    nav {
-      background-color: #333;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00aaff;
-    }
-    #about {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-    }
-    #about img {
-      max-width: 150px;
-      border-radius: 10px;
-    }
-    h1 {
-      color: #ffffff; /* Changed text color */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youhanna Maher Abadir - Power Platform Developer</title>
+    <meta name="description" content="Portfolio of Youhanna Maher Abadir, a Microsoft Power Platform Developer specialized in business process automation, HR digital transformation, and internal operations apps.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome (for icons like github, linkedin, close) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
- <!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="navbar-container">
-    <span class="brand-name">My Portfolio</span>
-    <button class="hamburger-menu" aria-label="Toggle navigation">
-      ☰
-    </button>
-  </div>
-  <div class="navbar-links">
-    <a href="#home">Home</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<body class="dark-theme">
+    <!-- Header / Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#hero" class="brand">
+                <span class="brand-name">YMA</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#featured" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
 
+            <button class="theme-toggle-btn" aria-label="Toggle theme" id="theme-toggle-btn">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#expertise" class="mobile-nav-link">Expertise</a>
+            <a href="#featured" class="mobile-nav-link">Projects</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#certifications" class="mobile-nav-link">Certifications</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </header>
 
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-greeting">Hi, I'm <span id="hero-name" class="highlight"></span></p>
+                    <h1 class="hero-title" id="hero-title"></h1>
+                    <p class="hero-subtitle" id="hero-subtitle"></p>
+                    
+                    <div class="hero-highlights" id="hero-highlights">
+                        <!-- Populated by JS -->
+                    </div>
 
+                    <div class="cta-group">
+                        <a href="#featured" class="btn btn-primary">View Projects</a>
+                        <a href="#" id="hero-cv-btn" class="btn btn-secondary" target="_blank" download>Download CV</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image" id="hero-image-container">
+                    <img src="portfolio/images/profile.jpg" alt="Youhanna Maher Abadir - Power Platform Developer" id="hero-profile-img" onerror="this.src='https://placehold.co/500x500/121216/ededf0?text=Please+add+portfolio/images/profile.jpg';">
+                </div>
+            </div>
+            <!-- Decorative background element -->
+            <div class="hero-glow"></div>
+        </section>
 
-  <!-- Header Section -->
-  <header id="home" style="background-color: #007bff; color: white; text-align: center; padding: 50px 20px;">
-    <div class="header-content">
-      <h1 style="color: #ffffff;"><p></p>Youhanna Maher</h1> <!-- Changed color to gold -->
-      <p>Business Analyst & Developer | Innovating Solutions</p>
-      <div class="header-buttons">
-        <a href="https://youhannamaher.github.io/portfolio/assets/documents/Youhanna_Maher_CV.pdf" target="_blank" class="btn">View CV</a>
-        <a href="https://linkedin.com/in/youhanna-maher" target="_blank" class="btn">LinkedIn</a>
-        <a href="https://www.upwork.com/freelancers/~019889086399afa1bb?mp_source=share" target="_blank" class="btn">Upwork</a>
-        <a href="#projects" class="btn">My Projects</a>
-      </div>
+        <!-- About Section -->
+        <section id="about" class="section container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text" id="about-text">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="about-stats" id="about-stats">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section container bg-alt">
+            <div class="section-header">
+                <h2>Core Expertise</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="expertise-grid" id="expertise-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="featured" class="section container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle">Real-world solutions built for real business problems.</p>
+            </div>
+            <div class="projects-grid" id="featured-projects-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Project Library Section -->
+        <section id="library" class="section container bg-alt">
+            <div class="section-header">
+                <h2>Project Library</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="library-controls">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="project-search" placeholder="Search projects, technologies...">
+                </div>
+                <!-- Categories filter -->
+                <div class="filter-group" id="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <!-- other buttons generated by JS dynamically -->
+                </div>
+            </div>
+
+            <div class="projects-grid mt-4" id="library-projects-grid">
+                <!-- Populated by JS -->
+            </div>
+
+            <div class="text-center" id="library-pagination" style="display: none; margin-top: 3rem;">
+                <button class="btn btn-secondary" id="show-more-projects-btn" style="padding: 0.75rem 2rem;">
+                    Show More Projects <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem;"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="section container">
+            <div class="section-header">
+                <h2>Professional Experience</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="timeline" id="experience-timeline">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section container bg-alt">
+            <div class="section-header">
+                <h2>Certifications</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="certifications-grid" id="certifications-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section container">
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="education-grid" id="education-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-info" id="contact-info">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="contact-form-container">
+                    <!-- Formspree Integration -->
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjgpowbw" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Hello..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Attachment (Optional)</label>
+                            <label for="attachment" class="file-upload-btn" id="file-upload-label">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <span>Select a file to attach</span>
+                            </label>
+                            <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg" style="display: none;">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" id="contact-submit-btn">Send Message</button>
+                        <div id="contact-status" style="margin-top: 1.5rem; text-align: center; font-weight: 500;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Youhanna Maher Abadir</h3>
+                <p>Power Platform Developer</p>
+            </div>
+            <div class="footer-social" id="footer-social">
+                <!-- Populated by JS -->
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; <span id="current-year"></span> Youhanna Maher Abadir. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-overlay" tabindex="-1" data-close="modal"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal" data-close="modal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <div class="modal-body" id="project-modal-body">
+                <!-- Populated by JS -->
+            </div>
+        </div>
     </div>
-  </header>
 
-  <section class="about-me">
-  <div class="about-me-image">
-    <img src="assets/images/profile_picture.jpg" alt="Profile Picture">
-  </div>
-  <div class="about-me-text">
-    <h1>About Me</h1>
-    <p>
-      Adept in PowerApps, Power Automate, Power BI, Excel, and AI-driven automation tools to enhance operational efficiency.
-      Experienced in combining business knowledge with technology to optimize workflows, improve HR processes, and enable
-      data-backed decisions. Proven ability to develop custom applications, automate processes, and generate analytical
-      reports to drive strategic impact.
-    </p>
-  </div>
-</section>
-
-
-
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience-item">
-      <img src="assets/images/experience/ASU_Career_Center.png" alt="Company Logo">
-      <h3>ASU Career Center</h3>
-      <p>Power Platform Developer - Nov 2024 - Feb 2025</p>
-      <ul>
-        <li>• Developed an automated registration & verification system for 15,000+ participants at Employment Fair 2025 using PowerApps & Power Automate.</li>
-        <li>• Automated QR code generation & email confirmations, streamlining event check-ins and activity registrations.</li>
-        <li>• Built a real-time PowerApps dashboard for tracking participant data, filtering insights, and generating reports.</li>
-        <li>• Enabling direct email communication & data extraction from within the app.</li>
-        <li>• Provided technical training to 100+ volunteers ensuring smooth execution of the digital registration system.</li>
-
-      </ul>
-      <span class="skills">PowerApps | Power Automate | Power BI</span>
+    <!-- Certificate Modal -->
+    <div id="cert-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-overlay" tabindex="-1" data-close="modal"></div>
+        <div class="modal-content cert-modal-content">
+            <button class="modal-close" aria-label="Close modal" data-close="modal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <div class="modal-body text-center" id="cert-modal-body">
+                <!-- Populated by JS -->
+            </div>
+        </div>
     </div>
-    <div class="experience-item">
-      <img src="assets/images/experience/Orange.png" alt="Company Logo">
-      <h3>Orange Business</h3>
-      <p>HR Data Management Intern - Oct 2024 – Jan 2025</p>
-      <ul>
-       <li>• Developed a Global PO Tracker using PowerApps, Power Automate & SharePoint, enhancing tracking efficiency.</li>
-       <li>• Created the Egypt MSC Learning Studio PowerApp, consolidating learning resources for 2500+ employees, enhancing accessibility.</li>
-       <li>• Generated data-driven HR reports using advanced Excel functions, pivot tables, and lookups, optimizing decision-making.</li>
 
-      </ul>
-      <span class="skills">Excel | PowerApps | Power Automate</span>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" aria-label="Close lightbox" onclick="closeLightbox()">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <button class="lightbox-prev" aria-label="Previous image" id="lightbox-prev" onclick="prevLightboxImage(event)">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-content" id="lightbox-content-wrapper" onclick="closeLightbox()">
+            <img src="" alt="Fullscreen image" id="lightbox-img" class="lightbox-img" onclick="event.stopPropagation()">
+        </div>
+        <button class="lightbox-next" aria-label="Next image" id="lightbox-next" onclick="nextLightboxImage(event)">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
-    <div class="experience-item">
-      <img src="assets/images/experience/RATP.png" alt="Company Logo">
-      <h3>RATP Dev</h3>
-      <p>Power Platform Developer - July 2024 – Sep 2024</p>
-      <ul>
-        <li>• Developed a Change Request Management application using PowerApps, Power Automate & SharePoint facilitating the request process and management.</li>
-        <li>• Implemented automated workflows with Power Automate, improving communication and efficiency.</li>
-        <li>• Created user-specific dashboards for real-time insights, enhancing decision-making and operational transparency.</li>
-      </ul>
-      <span class="skills">PowerApps | Power Automate | Power BI</span>
-    </div>
-  </section>
 
- <!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="project-categories">
-    <div class="project-category">
-      <h3>Business Apps & Automation</h3>
-      <a href="#" class="btn" onclick="openGallery('automation')">View Projects</a>
-    </div>
-    <div class="project-category">
-      <h3>Data Management & Analysis</h3>
-      <a href="#" class="btn" onclick="openGallery('data')">View Projects</a>
-    </div>
-    <div class="project-category">
-      <h3>Presentation & Documentation</h3>
-      <a href="#" class="btn" onclick="openGallery('presentation')">View Projects</a>
-    </div>
-  </div>
-</section>
-
-<!-- Modal for Category -->
-<div id="categoryModal" class="modal">
-  <div class="modal-content">
-    <button class="close-modal" onclick="closeModal()">&times;</button>
-    <h3 id="categoryTitle"></h3>
-    <div id="projectsList" class="projects-list"></div>
-  </div>
-</div>
-
-<!-- Modal for Project Details -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <button class="close-modal" onclick="closeProjectModal()">&times;</button>
-
-    <!-- Project Title -->
-    <h2 id="projectTitle"></h2>
-
-    <!-- Short Description -->
-    <p id="projectShortDescription" class="short-description"></p>
-
-    <!-- View Images Button -->
-    <button id="viewImagesBtn" class="view-images-btn" onclick="showProjectImages()">View Images</button>
-
-    <!-- Media Container: Video or Images -->
-    <div id="projectMedia"></div>
-
-    <!-- Full Detailed Description -->
-    <p id="projectFullDescription" class="detailed-description"></p>
-
-    <!-- Navigation Buttons (Hidden by Default) -->
-    <button id="prevImageBtn" class="prev-image" onclick="prevImage()">&#8249;</button>
-    <button id="nextImageBtn" class="next-image" onclick="nextImage()">&#8250;</button>
-  </div>
-</div>
-
-
-
-
-  <!-- Education and Training Section -->
-  <section id="education">
-    <h2>Education & Training</h2>
-    <div class="education-item">
-      <h3>Ain Shams University & IAE de Poitiers</h3>
-      <p>• Bachelor’s in International Business - Oct 2022 - Jul 2026</p>
-      <p>• Specialized in Management & Accounting, currently ranked Excellent.</p>
-    </div>
-    <div class="education-item">
-      <h3>Microsoft</h3>
-      <p>• PL-900: Microsoft Power Platform Fundamentals</p>
-      <p>• Covered fundamental PowerApps, PowerAutomate, PowerBI & PowerPages usage.</p>
-    </div>
-    <div class="education-item">
-      <h3>Harvard University</h3>
-      <p>• CS50: Introduction to Computer Science - 2024</p>
-      <p>• Covered fundamental programming and data structures.</p>
-    </div>
-    <div class="education-item">
-      <h3>SAS Institute</h3>
-      <p>• Data Literacy Essentials & Data Literacy in Practice - 2024</p>
-      <p>• Developed strong analytical and data-driven decision-making skills.</p>
-    </div>
-  </section>
-
- <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="https://linkedin.com/in/youhanna-maher" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:youhannamaher24@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
-
-<script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
-
-<!-- Modal for Project Details -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <button class="close-modal" onclick="closeProjectModal()">&times;</button>
-    
-    <!-- Project Title -->
-    <h2 id="projectTitle"></h2>
-
-    <!-- Short Description -->
-    <p id="projectShortDescription" class="short-description"></p>
-
-    <!-- Full Detailed Description -->
-    <p id="projectFullDescription" class="detailed-description"></p>
-
-    <!-- Media (Video or Images) -->
-    <div id="projectMedia"></div>
-  </div>
-</div>
