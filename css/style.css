@@ -1393,25 +1393,58 @@ img {
     max-width: 480px;
 }
 
-/* Category Scroller */
+/* Category Scroller with Buttons */
 .projects-categories-wrapper {
-    overflow: hidden;
     position: relative;
     width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 40px; /* Space for buttons */
 }
 
 .projects-categories {
     display: flex;
     gap: 0.75rem;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
-    justify-content: center;
+    scroll-behavior: smooth;
+    padding: 0.5rem 0;
     scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
 }
 
 .projects-categories::-webkit-scrollbar {
     display: none;
 }
+
+.scroll-btn {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.scroll-btn:hover {
+    background-color: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    transform: scale(1.1);
+}
+
+.scroll-btn.prev { left: 0; }
+.scroll-btn.next { right: 0; }
 
 .cat-btn {
     background-color: var(--bg-surface);
@@ -1423,26 +1456,34 @@ img {
     white-space: nowrap;
     cursor: pointer;
     transition: all var(--transition-fast);
+    /* Ensure the 'All' card doesn't shrink or get lost */
+    flex-shrink: 0; 
 }
 
 .cat-btn:hover {
-    border-color: var(--text-muted);
+    border-color: var(--accent-primary);
     color: var(--text-primary);
-    transform: translateY(-2px);
 }
 
 .cat-btn.active {
     border-color: var(--accent-primary);
     color: var(--accent-primary);
     background-color: rgba(59, 130, 246, 0.05);
+    font-weight: 600;
 }
 
 /* Responsive Hub */
 @media (max-width: 768px) {
+    .projects-categories-wrapper {
+        padding: 0;
+    }
+    
+    .scroll-btn {
+        display: none; /* Hide buttons on mobile, use native scroll */
+    }
+    
     .projects-categories {
-        justify-content: flex-start;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 0.5rem 1rem;
     }
     
     .search-bar-premium input:focus {

@@ -585,6 +585,38 @@ function renderProjects() {
                 <button class="cat-btn" data-filter="${cat.toLowerCase()}">${cat}</button>
             `).join('')}
         `;
+        
+        // Setup Scroll Buttons Logic
+        const prevBtn = document.getElementById('cat-scroll-prev');
+        const nextBtn = document.getElementById('cat-scroll-next');
+        
+        if (prevBtn && nextBtn && categoryContainer) {
+            const scrollAmount = 200;
+            
+            prevBtn.onclick = () => {
+                categoryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            };
+            
+            nextBtn.onclick = () => {
+                categoryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            };
+
+            // Optional: Toggle visibility of buttons based on scroll
+            const updateScrollButtons = () => {
+                const { scrollLeft, scrollWidth, clientWidth } = categoryContainer;
+                prevBtn.style.opacity = scrollLeft > 0 ? '1' : '0.3';
+                prevBtn.style.pointerEvents = scrollLeft > 0 ? 'auto' : 'none';
+                
+                nextBtn.style.opacity = scrollLeft + clientWidth < scrollWidth - 5 ? '1' : '0.3';
+                nextBtn.style.pointerEvents = scrollLeft + clientWidth < scrollWidth - 5 ? 'auto' : 'none';
+            };
+
+            categoryContainer.addEventListener('scroll', updateScrollButtons);
+            window.addEventListener('resize', updateScrollButtons);
+            
+            // Initial check
+            setTimeout(updateScrollButtons, 100);
+        }
     };
 
     // 4. Setup Events
