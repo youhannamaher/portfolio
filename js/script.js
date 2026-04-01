@@ -233,19 +233,62 @@ function setupUI() {
     }
 }
 
+// Global Observer for Scroll Reveals
+let revealObserver;
+
 function setupObservers() {
-    const observer = new IntersectionObserver((entries) => {
+    // 1. Hero Animation Trigger
+    const hero = document.getElementById('hero');
+    if (hero) {
+        setTimeout(() => {
+            hero.classList.add('hero-animate');
+        }, 100);
+    }
+
+    // 2. Initialize Reveal Observer
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-                observer.unobserve(entry.target);
+                revealObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    document.querySelectorAll('.section-header, .expertise-card, .project-card, .timeline-item, .cert-card, .education-card').forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
+    // Initial Static Elements Reveal
+    const staticElements = document.querySelectorAll('.section-header, .timeline-item, .about-text, .contact-form');
+    revealOnScroll(staticElements);
+
+    // Apply staggering to grid children specifically for initial load
+    const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid');
+    gridContainers.forEach(container => {
+        applyStagger(container.children);
+        revealOnScroll(container.children);
+    });
+}
+
+/**
+ * Adds reveal class, observes elements, and optionally applies staggering
+ * @param {NodeList|Array} elements 
+ */
+function revealOnScroll(elements) {
+    if (!elements || !revealObserver) return;
+    elements.forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+    });
+}
+
+function applyStagger(elements, limit = 5) {
+    Array.from(elements).forEach((child, index) => {
+        if (index < limit) {
+            child.classList.add(`stagger-${index + 1}`);
+        }
     });
 }
 
@@ -322,6 +365,10 @@ function renderExpertise() {
             <p>${item.desc}</p>
         </div>
     `).join('');
+    
+    const expertiseCards = document.querySelectorAll('#expertise-grid .expertise-card');
+    applyStagger(expertiseCards);
+    revealOnScroll(expertiseCards);
 }
 
 function createProjectCard(project) {
@@ -348,7 +395,12 @@ function renderFeaturedProjects() {
     if (!state.projects || state.projects.length === 0) return;
 
     const featured = state.projects.filter(p => p.featured).sort((a,b) => (a.order || 99) - (b.order || 99)).slice(0, 6);
-    document.getElementById('featured-projects-grid').innerHTML = featured.map(p => createProjectCard(p)).join('');
+    const container = document.getElementById('featured-projects-grid');
+    container.innerHTML = featured.map(p => createProjectCard(p)).join('');
+    
+    const cards = container.querySelectorAll('.project-card');
+    applyStagger(cards);
+    revealOnScroll(cards);
 }
 
 function renderProjectLibrary() {
@@ -388,6 +440,10 @@ function renderProjectLibrary() {
         } else {
             const visibleProjects = currentFilteredProjects.slice(0, currentLimit);
             container.innerHTML = visibleProjects.map(p => createProjectCard(p)).join('');
+            
+            const cards = container.querySelectorAll('.project-card');
+            applyStagger(cards);
+            revealOnScroll(cards);
             
             if (paginationDiv && showMoreBtn) {
                 if (currentFilteredProjects.length > currentLimit) {
@@ -480,6 +536,10 @@ function renderCertificates() {
             </div>
         </div>
     `).join('');
+
+    const certCards = document.querySelectorAll('#certifications-grid .cert-card');
+    applyStagger(certCards);
+    revealOnScroll(certCards);
 }
 
 function renderEducation() {
@@ -495,6 +555,10 @@ function renderEducation() {
             </ul>
         </div>
     `).join('');
+
+    const eduCards = document.querySelectorAll('#education-grid .education-card');
+    applyStagger(eduCards);
+    revealOnScroll(eduCards);
 }
 
 /* =========================================================================

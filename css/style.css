@@ -891,7 +891,8 @@ img {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 0.75rem 1rem;
     background-color: var(--bg-main);
@@ -900,10 +901,22 @@ img {
     color: var(--text-primary);
     font-family: var(--font-body);
     transition: border-color var(--transition-fast);
+    appearance: none; /* Hide default arrow */
+    -webkit-appearance: none;
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a1a1aa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--accent-primary);
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
@@ -1334,16 +1347,70 @@ img {
     border-color: var(--text-primary);
 }
 
-/* Animations */
-.fade-in {
+/* --- Premium Animation System --- */
+
+/* Base Reveal State */
+.reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(2rem) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
 }
 
-.fade-in.appear {
+.reveal.appear {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+}
+
+/* Staggering Utilities (Applied via JS or CSS classes) */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* Hero Entrance Sequence */
+.hero-greeting, .hero-title, .hero-subtitle, .hero-highlights, .cta-group, .hero-image {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-animate .hero-greeting { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.hero-animate .hero-title { opacity: 1; transform: translateY(0); transition-delay: 0.25s; }
+.hero-animate .hero-subtitle { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.hero-animate .hero-highlights { opacity: 1; transform: translateY(0); transition-delay: 0.55s; }
+.hero-animate .cta-group { opacity: 1; transform: translateY(0); transition-delay: 0.7s; }
+.hero-animate .hero-image { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+
+/* Mobile Animation Adjustments */
+@media (max-width: 768px) {
+    .reveal {
+        transform: translateY(1rem) scale(1); /* Less movement on mobile */
+        transition-duration: 0.6s;
+    }
+    
+    .hero-greeting, .hero-title, .hero-subtitle, .hero-highlights, .cta-group, .hero-image {
+        transform: translateY(1rem);
+        transition-duration: 0.8s;
+    }
+
+    .stagger-1, .stagger-2, .stagger-3, .stagger-4, .stagger-5 {
+        transition-delay: 0.05s !important; /* Faster stagger on mobile */
+    }
+}
+
+/* Refined Hover Effects */
+.expertise-card, .project-card, .stat-card, .cert-card, .timeline-content {
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.expertise-card:hover, .project-card:hover, .stat-card:hover, .cert-card:hover, .timeline-content:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-primary);
 }
 
 /* Responsive */

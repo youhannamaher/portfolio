@@ -2,8 +2,8 @@
 setlocal
 cd /d "%~dp0"
 
-:: Configuration: Path to the Git executable from GitHub Desktop
-set "GIT_EXE=C:\Users\youha_bcdqcy2\AppData\Local\GitHubDesktop\app-3.5.7\resources\app\git\mingw64\bin\git.exe"
+:: Configuration: Path to the Git executable
+set "GIT_EXE=C:\Program Files\Git\cmd\git.exe"
 
 echo ===================================================
 echo        PORTFOLIO CONTENT GENERATOR & SYNC
