@@ -311,67 +311,17 @@ function renderProfile() {
         `).join('');
     }
 
-    // Contact
+    // Contact Social Icons (Footer only)
     if (p.contact) {
-        document.getElementById('contact-info').innerHTML = `
-            ${p.contact.email ? `
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                <div class="contact-text">
-                    <h4>Email</h4>
-                    <a href="mailto:${p.contact.email}">${p.contact.email}</a>
-                </div>
-            </div>` : ''}
+        const c = p.contact;
+        const iconLinks = [];
 
-            ${p.contact.phone ? `
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="contact-text">
-                    <h4>Phone</h4>
-                    <a href="tel:${p.contact.phone}">${p.contact.phone}</a>
-                </div>
-            </div>` : ''}
-            
-            ${p.contact.location ? `
-            <div class="contact-item">
-                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="contact-text">
-                    <h4>Location</h4>
-                    <p>${p.contact.location}</p>
-                </div>
-            </div>` : ''}
-        `;
+        if (c.email) iconLinks.push(`<a href="mailto:${c.email}" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>`);
+        if (c.phone) iconLinks.push(`<a href="tel:${c.phone}" class="social-link" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>`);
+        if (c.social?.linkedin) iconLinks.push(`<a href="${c.social.linkedin}" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>`);
+        if (c.social?.upwork) iconLinks.push(`<a href="${c.social.upwork}" target="_blank" class="social-link" aria-label="Upwork"><span style="--icon: url('https://img.icons8.com/ios-filled/50/upwork.png'); -webkit-mask: var(--icon) no-repeat center / contain; mask: var(--icon) no-repeat center / contain; width: 22px; height: 22px; display: inline-block; background-color: currentColor; vertical-align: middle;"></span></a>`);
 
-        // Social Links
-        if (p.contact.social) {
-            const sLinks = Object.keys(p.contact.social).map(key => {
-                const url = p.contact.social[key];
-                
-                let iconContent = '';
-                if(key === 'linkedin') iconContent = `<i class="fa-brands fa-linkedin-in"></i>`;
-                else if(key === 'github') iconContent = `<i class="fa-brands fa-github"></i>`;
-                else if(key === 'upwork') {
-                    // Using CSS mask with the requested icons8 logo to inherit hover colors perfectly
-                    iconContent = `<span style="--icon: url('https://img.icons8.com/ios-filled/50/upwork.png'); -webkit-mask: var(--icon) no-repeat center / contain; mask: var(--icon) no-repeat center / contain; width: 22px; height: 22px; display: inline-block; background-color: currentColor; vertical-align: middle;"></span>`;
-                } else iconContent = `<i class="fa-solid fa-link"></i>`;
-                
-                return `<a href="${url}" target="_blank" class="social-link" aria-label="${key}">
-                    ${iconContent}
-                </a>`;
-            }).join('');
-            
-            document.getElementById('footer-social').innerHTML = sLinks;
-            
-            // Append social links to the left contact info area as well
-            document.getElementById('contact-info').innerHTML += `
-               <div class="contact-item" style="margin-top:2.5rem;">
-                   <div class="contact-text w-100">
-                       <h4 style="margin-bottom:1rem;">Follow Me On</h4>
-                       <div style="display:flex; gap:1rem;">${sLinks}</div>
-                   </div>
-               </div>
-            `;
-        }
+        document.getElementById('footer-social').innerHTML = iconLinks.join('');
     }
 }
 

@@ -831,9 +831,13 @@ img {
 
 /* Contact Section */
 .contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
 }
 
 .contact-item {
