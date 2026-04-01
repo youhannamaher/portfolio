@@ -468,37 +468,25 @@ function renderProjects() {
     if (!state.projects || state.projects.length === 0) return;
 
     const container = document.getElementById('projects-grid');
-    const tabsContainer = document.getElementById('project-tabs');
+    const viewModes = document.getElementById('view-modes');
+    const filtersArea = document.getElementById('projects-filters-area');
+    const categoryContainer = document.getElementById('project-categories');
     const searchInput = document.getElementById('project-search');
     const paginationDiv = document.getElementById('projects-pagination');
     const showMoreBtn = document.getElementById('show-more-projects-btn');
 
-    if (!container || !tabsContainer || !searchInput) return;
+    if (!container || !viewModes || !filtersArea || !categoryContainer || !searchInput) return;
 
-    // 1. Extract and Build Dynamic Category Tabs
+    // 1. Build Dynamic Categories
     const uniqueCategories = new Set();
     state.projects.forEach(p => {
         if (p.categories && Array.isArray(p.categories)) {
             p.categories.forEach(cat => uniqueCategories.add(cat));
         }
     });
-
-    // Sort categories alphabetically
     const sortedCategories = Array.from(uniqueCategories).sort();
 
-    // Re-render only category tabs (keep Featured and All static)
-    const categoryTabsHtml = sortedCategories.map(cat => `
-        <button class="tab-btn" data-tab="category" data-filter="${cat.toLowerCase()}">${cat}</button>
-    `).join('');
-
-    // Keep the "Featured" and "All" buttons, then append dynamic ones
-    tabsContainer.innerHTML = `
-        <button class="tab-btn active" data-tab="featured">Featured</button>
-        <button class="tab-btn" data-tab="all">All Projects</button>
-        ${categoryTabsHtml}
-    `;
-
-    // 2. Logic State
+    // 2. Logic & State
     const getInitialLimit = () => window.innerWidth <= 768 ? 3 : 6;
     let currentLimit = getInitialLimit();
     let currentFilteredProjects = [];
@@ -515,7 +503,6 @@ function renderProjects() {
             applyStagger(cards);
             revealOnScroll(cards);
             
-            // Handle Pagination
             if (currentFilteredProjects.length > currentLimit) {
                 paginationDiv.style.display = 'block';
                 showMoreBtn.innerHTML = 'Show More Projects <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem;"></i>';
@@ -538,50 +525,91 @@ function renderProjects() {
     };
 
     const applyView = () => {
-        const activeTab = tabsContainer.querySelector('.tab-btn.active');
-        const tabType = activeTab.dataset.tab;
-        const categoryFilter = activeTab.dataset.filter;
+        const activeViewBtn = viewModes.querySelector('.view-btn.active');
+        const viewMode = activeViewBtn.dataset.view;
         const searchTerm = searchInput.value.toLowerCase();
+        
+        // Hide/Show Filter Area based on view mode
+        if (viewMode === 'all') {
+            filtersArea.style.display = 'flex';
+        } else {
+            filtersArea.style.display = 'none';
+            // Optional: reset search when hiding? User said "Featured remains curated and focused".
+            // I'll clear the search for a truly curated featured view.
+            if (searchTerm) {
+                searchInput.value = '';
+            }
+        }
+
+        const activeCatBtn = categoryContainer.querySelector('.cat-btn.active');
+        const activeCategory = activeCatBtn ? activeCatBtn.dataset.filter : 'all';
 
         currentFilteredProjects = state.projects.filter(p => {
-            // Search match
-            const matchSearch = p.title.toLowerCase().includes(searchTerm) || 
-                                (p.stack && p.stack.some(s => s.toLowerCase().includes(searchTerm))) ||
-                                (p.summary && p.summary.toLowerCase().includes(searchTerm));
-            
-            if (!matchSearch) return false;
+            // mode filter
+            if (viewMode === 'featured' && !p.featured) return false;
 
-            // Tab filter match
-            if (tabType === 'featured') return p.featured === true;
-            if (tabType === 'all') return true;
-            if (tabType === 'category') {
-                return p.categories && p.categories.some(cat => cat.toLowerCase() === categoryFilter);
+            // search filter (only in 'all' mode or if we want search in featured too)
+            // The user wants Featured to be curated, so I'll only apply search in 'all' mode.
+            if (viewMode === 'all') {
+                const matchSearch = p.title.toLowerCase().includes(searchTerm) || 
+                                    (p.stack && p.stack.some(s => s.toLowerCase().includes(searchTerm))) ||
+                                    (p.summary && p.summary.toLowerCase().includes(searchTerm));
+                
+                if (!matchSearch) return false;
+
+                // category filter
+                if (activeCategory !== 'all') {
+                    const matchCat = p.categories && p.categories.some(c => c.toLowerCase() === activeCategory.toLowerCase());
+                    if (!matchCat) return false;
+                }
             }
+
             return true;
         });
 
-        // Always sort by order within the view
-        currentFilteredProjects.sort((a, b) => (a.order || 99) - (b.order || 99));
+        // Unique projects only (no duplicates)
+        currentFilteredProjects = [...new Set(currentFilteredProjects)];
+        
+        // Sort
+        currentFilteredProjects.sort((a,b) => (a.order || 99) - (b.order || 99));
 
-        currentLimit = getInitialLimit(); 
+        currentLimit = getInitialLimit();
         updateGrid();
     };
 
-    // 3. Setup Events
-    searchInput.addEventListener('input', applyView);
+    // 3. Render Initial Category Buttons
+    const renderCategories = () => {
+        categoryContainer.innerHTML = `
+            <button class="cat-btn active" data-filter="all">All</button>
+            ${sortedCategories.map(cat => `
+                <button class="cat-btn" data-filter="${cat.toLowerCase()}">${cat}</button>
+            `).join('')}
+        `;
+    };
 
-    tabsContainer.addEventListener('click', (e) => {
-        const btn = e.target.closest('.tab-btn');
+    // 4. Setup Events
+    viewModes.addEventListener('click', (e) => {
+        const btn = e.target.closest('.view-btn');
         if (btn) {
-            tabsContainer.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            viewModes.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            // Clear search when switching tabs for a clean view? 
-            // The user didn't specify, but usually search persists. I'll persist it.
             applyView();
         }
     });
 
-    // Initial Render
+    categoryContainer.addEventListener('click', (e) => {
+        const btn = e.target.closest('.cat-btn');
+        if (btn) {
+            categoryContainer.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyView();
+        }
+    });
+
+    searchInput.addEventListener('input', applyView);
+
+    // Initial load
+    renderCategories();
     applyView();
 }
 

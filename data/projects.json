@@ -1,28 +1,31 @@
 [
   {
-    "title": "TEST",
-    "shortTitle": "OK Title",
+    "title": "Nestlé HR Digital Solutions",
+    "shortTitle": "Nestlé HR Portal",
     "categories": [
-      "Power Apps"
+      "HR Digital Transformation",
+      "Automation"
     ],
-    "clientOrOrganization": "Internal / Client Name",
-    "role": "Lead Developer",
+    "clientOrOrganization": "Nestlé",
+    "role": "Lead Power Platform Developer",
     "period": "01/2024 - 03/2024",
     "stack": [
       "Power Apps",
       "Power Automate",
-      "Dataverse"
+      "Dataverse",
+      "SharePoint"
     ],
-    "summary": "A 1-sentence summary of what this project accomplished.",
+    "summary": "Digitalized the HR request and approval process for Nestlé, integrating automation to reduce manual overhead.",
     "featured": true,
     "order": 1,
     "impact": [
-      "Replaced an old Excel system saving 40 hours per week.",
-      "Integrated deeply with SharePoint."
+      "Replaced fragmented manual systems with a centralized HR portal.",
+      "Automated approval workflows for over 15,000 employees.",
+      "Reduced request turnaround time by 60%."
     ],
     "videoEmbed": "",
     "folder": "1-YM_Store",
-    "id": "test",
+    "id": "nestl-hr-digital-solutions",
     "images": [
       "2.png",
       "3.png",
@@ -34,11 +37,13 @@
     "thumbnail": "1.png"
   },
   {
-    "slug": "project-01-federon-contract-management",
+    "slug": "project-01-federon-procurement",
     "title": "Federon Procurement Solutions",
     "shortTitle": "Federon Apps",
     "categories": [
-      "Internal Operations Systems"
+      "Internal Operations Systems",
+      "Automation",
+      "Power Apps"
     ],
     "clientOrOrganization": "Federon",
     "role": "Power Platform Developer",
@@ -49,7 +54,7 @@
       "SharePoint",
       "Dataverse"
     ],
-    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows.",
+    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows at Federon.",
     "featured": true,
     "order": 1,
     "metrics": [
@@ -57,92 +62,96 @@
     ],
     "thumbnail": "thumbnail.png",
     "folder": "project-01-federon-contract-management",
-    "id": "project-01-federon-contract-management",
+    "id": "project-01-federon-procurement",
     "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
     "images": []
   },
   {
-    "slug": "project-01-federon-contract-management",
-    "title": "Federon Procurement Solutions",
-    "shortTitle": "Federon Apps",
+    "slug": "orange-data-hub",
+    "title": "Orange Operational Data Hub",
+    "shortTitle": "Orange Data Hub",
     "categories": [
-      "Internal Operations Systems"
+      "Data Management & Reporting",
+      "HR Digital Transformation"
     ],
-    "clientOrOrganization": "Federon",
-    "role": "Power Platform Developer",
-    "period": "2023 - Present",
+    "clientOrOrganization": "Orange",
+    "role": "Data Analyst & Developer",
+    "period": "2023 - 2024",
     "stack": [
-      "Power Apps",
+      "Power BI",
       "Power Automate",
       "SharePoint",
       "Dataverse"
     ],
-    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows.",
-    "featured": true,
-    "order": 1,
+    "summary": "Designed a centralized data hub for Orange HR department, automating reporting and improving data accessibility.",
+    "featured": false,
+    "order": 2,
     "metrics": [
-      "Reduced internal processing time by 40%"
+      "Automated 80% of quarterly HR reports",
+      "Unified 5+ disparate data sources"
     ],
     "thumbnail": "thumbnail.png",
     "folder": "project-01-federon-contract-wfwfe-Copy",
-    "id": "project-01-federon-contract-management",
+    "id": "orange-data-hub",
     "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
     "images": []
   },
   {
-    "slug": "project-01-federon-contract-management",
-    "title": "Federon Procurement Solutions",
-    "shortTitle": "Federon Apps",
+    "slug": "suez-crm-automation",
+    "title": "Suez CRM & Process Automation",
+    "shortTitle": "Suez Automation",
     "categories": [
+      "Automation",
       "Internal Operations Systems"
     ],
-    "clientOrOrganization": "Federon",
+    "clientOrOrganization": "Suez",
     "role": "Power Platform Developer",
-    "period": "2023 - Present",
+    "period": "2024",
     "stack": [
-      "Power Apps",
       "Power Automate",
-      "SharePoint",
+      "Power Apps",
       "Dataverse"
     ],
-    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows.",
-    "featured": true,
-    "order": 1,
+    "summary": "Automated the lead-to-service workflow for Suez, integrating CRM data with internal operational systems.",
+    "featured": false,
+    "order": 3,
     "metrics": [
-      "Reduced internal processing time by 40%"
+      "Eliminated 15+ hours of manual data entry per week",
+      "100% data accuracy in CRM sync"
     ],
-    "thumbnail": "thumbnail.png",
     "folder": "wfefef",
-    "id": "project-01-federon-contract-management",
+    "id": "suez-crm-automation",
     "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
     "images": []
   },
   {
-    "title": "Interactive Analytics Dashboard (100% Local Demo)",
-    "shortTitle": "Analytics Demo",
+    "title": "ASU Career Center Portal",
+    "shortTitle": "ASU Career Portal",
     "categories": [
-      "Dashboards & Analytics"
+      "Event Management",
+      "Power Apps",
+      "Power BI"
     ],
-    "clientOrOrganization": "Example Corp",
-    "role": "Lead Architect",
+    "clientOrOrganization": "Arizona State University",
+    "role": "Power Platform Architect",
     "period": "01/2026 - Present",
     "stack": [
+      "Power Apps",
       "Power BI",
       "Dataverse",
       "Power Automate"
     ],
-    "summary": "This is a fully-populated local demo project. Open the modal to see the gallery and embed video!",
-    "longDescription": "Welcome to the fully-populated demo case study!\n\nThis project demonstrates how a completed setup appears on your local server. It uses 100% local images downloaded natively into the `/portfolio/projects/0-demo-case-study/` folder, proving that no external hosting is required for images to work perfectly.\n\nNotice that the gallery images in this modal loaded in their exact alphabetical order, exactly as intended.",
+    "summary": "Centralized student engagement and event tracking for ASU Career Center, providing real-time data insights.",
     "featured": true,
     "order": 0,
     "impact": [
-      "Loaded local photos natively using the updated generator logic.",
-      "Proved that images are automatically sorted alphabetically (1_dashboard, 2_reports, 3_mobile).",
-      "Showcased the robust video player."
+      "Improved event attendance tracking by 45%.",
+      "Developed real-time ROI dashboards for career fair sponsors.",
+      "Integrated mobile check-in for thousands of students."
     ],
     "videoEmbed": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0",
     "folder": "0-demo-case-study",
-    "id": "interactive-analytics-dashboard-100-local-demo",
+    "id": "asu-career-center-portal",
     "images": [
       "1_dashboard.png",
       "2_reports.png",

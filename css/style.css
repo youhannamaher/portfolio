@@ -1280,85 +1280,173 @@ img {
     gap: 1rem;
 }
 
-/* Projects Section (Unified) */
+/* --- Unified Projects Hub Refinements --- */
 .projects-controls {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 3rem;
     align-items: center;
 }
 
-.projects-tabs-wrapper {
-    width: 100%;
+/* 1. View Modes (Pills) */
+.view-modes-wrapper {
+    background-color: var(--bg-surface);
+    padding: 0.4rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.view-modes {
     display: flex;
-    justify-content: center;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1px;
+    gap: 0.25rem;
 }
 
-.projects-tabs {
-    display: flex;
-    gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-    max-width: 100%;
-    justify-content: center;
-}
-
-.projects-tabs::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-}
-
-.tab-btn {
+.view-btn {
     background: transparent;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
     color: var(--text-secondary);
-    font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     cursor: pointer;
-    white-space: nowrap;
-    position: relative;
-    transition: color var(--transition-fast);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.tab-btn:hover {
+.view-btn i {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.view-btn:hover {
     color: var(--text-primary);
 }
 
-.tab-btn.active {
-    color: var(--accent-primary);
-}
-
-.tab-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 2px;
+.view-btn.active {
     background-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-.projects-search-wrapper {
+.view-btn.active i {
+    opacity: 1;
+}
+
+/* 2. Filters Area (Search + Categories) */
+.projects-filters-area {
     width: 100%;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideDownFade 0.4s ease-out;
 }
 
-.projects-search-wrapper .search-bar {
-    max-width: none;
+@keyframes slideDownFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile Adjustments for Tabs */
+/* Premium Compact Search Bar */
+.projects-search-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-premium {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    transition: all 0.3s ease;
+}
+
+.search-bar-premium i {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.search-bar-premium input {
+    width: 100%;
+    padding: 0.8rem 1.5rem 0.8rem 3rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.search-bar-premium input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1), var(--shadow-md);
+    max-width: 480px;
+}
+
+/* Category Scroller */
+.projects-categories-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.projects-categories {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    scrollbar-width: none;
+}
+
+.projects-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.cat-btn {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.cat-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.cat-btn.active {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Responsive Hub */
 @media (max-width: 768px) {
-    .projects-tabs {
+    .projects-categories {
         justify-content: flex-start;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    
+    .search-bar-premium input:focus {
+        max-width: 100%;
     }
 }
 
