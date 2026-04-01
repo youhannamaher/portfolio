@@ -1,0 +1,15 @@
+{
+  "slug": "project-01-federon-procurement",
+  "title": "Federon Procurement Solutions",
+  "shortTitle": "Federon Apps",
+  "categories": ["Internal Operations Systems", "Automation", "Power Apps"],
+  "clientOrOrganization": "Federon",
+  "role": "Power Platform Developer",
+  "period": "2023 - Present",
+  "stack": ["Power Apps", "Power Automate", "SharePoint", "Dataverse"],
+  "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows at Federon.",
+  "featured": true,
+  "order": 1,
+  "metrics": ["Reduced internal processing time by 40%"],
+  "thumbnail": "thumbnail.png"
+}

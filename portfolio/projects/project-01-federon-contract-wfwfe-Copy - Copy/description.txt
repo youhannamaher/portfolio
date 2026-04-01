@@ -1,0 +1,7 @@
+At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.
+
+The legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.
+
+By architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.
+
+The final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.

@@ -1,0 +1,15 @@
+{
+  "slug": "orange-data-hub",
+  "title": "Orange Operational Data Hub",
+  "shortTitle": "Orange Data Hub",
+  "categories": ["Data Management & Reporting", "HR Digital Transformation"],
+  "clientOrOrganization": "Orange",
+  "role": "Data Analyst & Developer",
+  "period": "2023 - 2024",
+  "stack": ["Power BI", "Power Automate", "SharePoint", "Dataverse"],
+  "summary": "Designed a centralized data hub for Orange HR department, automating reporting and improving data accessibility.",
+  "featured": false,
+  "order": 2,
+  "metrics": ["Automated 80% of quarterly HR reports", "Unified 5+ disparate data sources"],
+  "thumbnail": "thumbnail.png"
+}

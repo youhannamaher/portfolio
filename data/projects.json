@@ -67,6 +67,36 @@
     "images": []
   },
   {
+    "slug": "project-01-federon-procurement",
+    "title": "Federon Procurement Solutions",
+    "shortTitle": "Federon Apps",
+    "categories": [
+      "Internal Operations Systems",
+      "Automation",
+      "Power Apps"
+    ],
+    "clientOrOrganization": "Federon",
+    "role": "Power Platform Developer",
+    "period": "2023 - Present",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint",
+      "Dataverse"
+    ],
+    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows at Federon.",
+    "featured": true,
+    "order": 1,
+    "metrics": [
+      "Reduced internal processing time by 40%"
+    ],
+    "thumbnail": "thumbnail.png",
+    "folder": "project-01-federon-contract-management - Copy",
+    "id": "project-01-federon-procurement",
+    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
+    "images": []
+  },
+  {
     "slug": "orange-data-hub",
     "title": "Orange Operational Data Hub",
     "shortTitle": "Orange Data Hub",
@@ -97,6 +127,36 @@
     "images": []
   },
   {
+    "slug": "orange-data-hub",
+    "title": "Orange Operational Data Hub",
+    "shortTitle": "Orange Data Hub",
+    "categories": [
+      "Data Management & Reporting",
+      "HR Digital Transformation"
+    ],
+    "clientOrOrganization": "Orange",
+    "role": "Data Analyst & Developer",
+    "period": "2023 - 2024",
+    "stack": [
+      "Power BI",
+      "Power Automate",
+      "SharePoint",
+      "Dataverse"
+    ],
+    "summary": "Designed a centralized data hub for Orange HR department, automating reporting and improving data accessibility.",
+    "featured": false,
+    "order": 2,
+    "metrics": [
+      "Automated 80% of quarterly HR reports",
+      "Unified 5+ disparate data sources"
+    ],
+    "thumbnail": "thumbnail.png",
+    "folder": "project-01-federon-contract-wfwfe-Copy - Copy",
+    "id": "orange-data-hub",
+    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
+    "images": []
+  },
+  {
     "slug": "suez-crm-automation",
     "title": "Suez CRM & Process Automation",
     "shortTitle": "Suez Automation",
@@ -120,6 +180,34 @@
       "100% data accuracy in CRM sync"
     ],
     "folder": "wfefef",
+    "id": "suez-crm-automation",
+    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
+    "images": []
+  },
+  {
+    "slug": "suez-crm-automation",
+    "title": "Suez CRM & Process Automation",
+    "shortTitle": "Suez Automation",
+    "categories": [
+      "Automation",
+      "Internal Operations Systems"
+    ],
+    "clientOrOrganization": "Suez",
+    "role": "Power Platform Developer",
+    "period": "2024",
+    "stack": [
+      "Power Automate",
+      "Power Apps",
+      "Dataverse"
+    ],
+    "summary": "Automated the lead-to-service workflow for Suez, integrating CRM data with internal operational systems.",
+    "featured": false,
+    "order": 3,
+    "metrics": [
+      "Eliminated 15+ hours of manual data entry per week",
+      "100% data accuracy in CRM sync"
+    ],
+    "folder": "wfefef - Copy",
     "id": "suez-crm-automation",
     "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
     "images": []
