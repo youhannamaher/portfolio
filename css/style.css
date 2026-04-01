@@ -437,10 +437,14 @@ img {
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
-    background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    display: block; /* Essential for WebKit clipping */
+    background-image: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for Safari */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .hero-subtitle {
@@ -1655,12 +1659,16 @@ img {
 /* 2. Hero Title Gradient Sweep */
 .highlight {
     position: relative;
-    background: linear-gradient(90deg, var(--accent-primary), #60a5fa, var(--accent-primary));
+    display: inline-block; /* Crucial for clipping to work on spans in Safari */
+    background-image: linear-gradient(90deg, var(--accent-primary), #60a5fa, var(--accent-primary));
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for Safari */
     animation: gradientSweep 4s linear infinite;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 @keyframes gradientSweep {
