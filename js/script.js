@@ -231,26 +231,6 @@ function setupUI() {
             btn.disabled = false;
         });
     }
-
-    // Dynamic File Upload UI
-    const fileInput = document.getElementById('attachment');
-    if (fileInput) {
-        fileInput.addEventListener('change', function(e) {
-            const label = document.getElementById('file-upload-label');
-            const span = label.querySelector('span');
-            const icon = label.querySelector('i');
-            
-            if (this.files && this.files.length > 0) {
-                span.textContent = this.files[0].name;
-                icon.className = 'fa-solid fa-file-circle-check';
-                label.classList.add('has-file');
-            } else {
-                span.textContent = 'Select a file to attach';
-                icon.className = 'fa-solid fa-cloud-arrow-up';
-                label.classList.remove('has-file');
-            }
-        });
-    }
 }
 
 function setupObservers() {
