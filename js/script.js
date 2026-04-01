@@ -262,13 +262,84 @@ function setupObservers() {
 
     // Initial Static Elements Reveal
     const staticElements = document.querySelectorAll('.section-header, .timeline-item, .about-text, .contact-form');
-    revealOnScroll(staticElements);
+    staticElements.forEach(el => {
+        el.classList.add('reveal');
+        revealObserver.observe(el);
+    });
 
     // Apply staggering to grid children specifically for initial load
     const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid');
     gridContainers.forEach(container => {
         applyStagger(container.children);
         revealOnScroll(container.children);
+    });
+
+    // 3. Catchy Interactive Enhancements (Desktop Only)
+    if (window.innerWidth > 768) {
+        initMagneticButtons();
+        initBackgroundParallax();
+        initSmoothScroll();
+    }
+}
+
+/**
+ * Premium Smooth Scroll using Lenis
+ */
+function initSmoothScroll() {
+    if (typeof Lenis === 'undefined') return;
+    
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+}
+
+/**
+ * Magnetic Button Effect: Buttons subtly follow the cursor
+ */
+function initMagneticButtons() {
+    const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .theme-toggle-btn');
+    
+    buttons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            // Move button 30% of mouse distance from center
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.02)`;
+            btn.style.boxShadow = '0 20px 40px -10px rgba(0, 0, 0, 0.5)';
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = '';
+            btn.style.boxShadow = '';
+        });
+    });
+}
+
+/**
+ * Parallax Background: Glows move slowly with mouse
+ */
+function initBackgroundParallax() {
+    const glows = document.querySelectorAll('.bg-glow');
+    
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 50; // Move max 50px
+        const y = (e.clientY / window.innerHeight - 0.5) * 50;
+        
+        glows.forEach((glow, index) => {
+            const factor = (index + 1) * 0.5;
+            glow.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+        });
     });
 }
 

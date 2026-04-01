@@ -1488,3 +1488,60 @@ img {
         padding-left: 45px;
     }
 }
+
+/* --- Catchy Interactive Enhancements --- */
+
+/* 1. Background Glows (Parallax) */
+.bg-glow {
+    position: fixed;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 70%);
+    filter: blur(100px);
+    z-index: -2;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+}
+
+#glow-1 { top: -10%; left: -10%; background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
+#glow-2 { bottom: -10%; right: -10%; background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%); }
+#glow-3 { top: 40%; left: 30%; width: 40vw; height: 40vw; background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%); }
+
+/* 2. Hero Title Gradient Sweep */
+.highlight {
+    position: relative;
+    background: linear-gradient(90deg, var(--accent-primary), #60a5fa, var(--accent-primary));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientSweep 4s linear infinite;
+}
+
+@keyframes gradientSweep {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* 3. Pulsing Button Glow */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:active {
+    transform: scale(0.96);
+}
+
+/* 4. Responsive Adjustments for Catchy Effects */
+@media (max-width: 768px) {
+    .bg-glow {
+        display: none; /* Avoid performance issues on low-end mobile */
+    }
+    
+    .highlight {
+        animation-duration: 6s; /* Slower animation for less distraction */
+    }
+}
