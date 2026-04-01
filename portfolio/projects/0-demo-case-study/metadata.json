@@ -1,0 +1,19 @@
+{
+  "title": "Interactive Analytics Dashboard (100% Local Demo)",
+  "shortTitle": "Analytics Demo",
+  "category": "Dashboards & Analytics",
+  "clientOrOrganization": "Example Corp",
+  "role": "Lead Architect",
+  "period": "01/2026 - Present",
+  "stack": ["Power BI", "Dataverse", "Power Automate"],
+  "summary": "This is a fully-populated local demo project. Open the modal to see the gallery and embed video!",
+  "longDescription": "Welcome to the fully-populated demo case study!\n\nThis project demonstrates how a completed setup appears on your local server. It uses 100% local images downloaded natively into the `/portfolio/projects/0-demo-case-study/` folder, proving that no external hosting is required for images to work perfectly.\n\nNotice that the gallery images in this modal loaded in their exact alphabetical order, exactly as intended.",
+  "featured": true,
+  "order": 0,
+  "impact": [
+    "Loaded local photos natively using the updated generator logic.",
+    "Proved that images are automatically sorted alphabetically (1_dashboard, 2_reports, 3_mobile).",
+    "Showcased the robust video player."
+  ],
+  "videoEmbed": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0"
+}

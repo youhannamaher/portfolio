@@ -1,0 +1,69 @@
+[
+  {
+    "period": "06/2023 - Present",
+    "role": "Power Platform Developer",
+    "company": "Federon Procurement Solutions",
+    "achievements": [
+      "Built operational tools, apps, and automations to optimize complex procurement and internal workflows.",
+      "Developed robust Power Apps connected to SharePoint and Dataverse for daily operational management.",
+      "Ensured data consistency and integrity through rigorous automated workflows in Power Automate."
+    ]
+  },
+  {
+    "period": "04/2024 - Present",
+    "role": "Working Student - HRBS Process Optimizer",
+    "company": "Nestlé",
+    "achievements": [
+      "Deployed Microsoft Power Platform solutions across the regional scale to optimize critical HR workflows.",
+      "Significantly improved data reliability and automated repetitive reporting loops.",
+      "Gained comprehensive HR operations exposure, supporting payroll systems and data alignment efforts."
+    ]
+  },
+  {
+    "period": "01/2024 - 05/2024",
+    "role": "Freelance Power Platform Developer",
+    "company": "Mstack360",
+    "achievements": [
+      "Designed and delivered custom business applications and end-to-end automations for multiple international clients across Europe, UK, and the US.",
+      "Gathered complex business requirements and translated them into scalable low-code solutions.",
+      "Integrated systems using custom endpoints and Power Automate flows."
+    ]
+  },
+  {
+    "period": "09/2023 - 01/2024",
+    "role": "Consultant - HR/L&D Digital Tools",
+    "company": "Orange Business",
+    "achievements": [
+      "Built 'PO Tracker' and 'Learning Studio' management solutions from scratch using Power Apps, Power Automate, SharePoint, and advanced Excel logic.",
+      "Modernized legacy tracking methods into a user-friendly tracking portal, dramatically reducing reporting times and human error rates."
+    ]
+  },
+  {
+    "period": "11/2022 - 08/2023",
+    "role": "Developer & IT Coordinator",
+    "company": "Ain Shams Career Center",
+    "achievements": [
+      "Built an enterprise-scale registration and verification system utilized by over 15,000 participants.",
+      "Integrated automated dynamic QR code generation, mass email confirmations, and live attendance dashboards.",
+      "Trained and managed technical volunteers to assist with onsite registration operations."
+    ]
+  },
+  {
+    "period": "08/2022 - 10/2022",
+    "role": "Intern - Change Management App Developer",
+    "company": "RATP Dev",
+    "achievements": [
+      "Built a change request management application directly improving operational communication and internal transparency.",
+      "Used Power Apps to digitize paper-based approval and routing workflows."
+    ]
+  },
+  {
+    "period": "06/2022 - 08/2022",
+    "role": "Data Analysis Intern",
+    "company": "CIB (Commercial International Bank)",
+    "achievements": [
+      "Performed advanced data exploration and data analysis across extensive financial datasets.",
+      "Developed interactive dashboards to visualize key data trends."
+    ]
+  }
+]
