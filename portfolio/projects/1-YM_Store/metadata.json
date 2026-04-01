@@ -1,7 +1,7 @@
 {
   "title": "TEST",
   "shortTitle": "OK Title",
-  "category": "Power Apps",
+  "categories": ["Power Apps"],
   "clientOrOrganization": "Internal / Client Name",
   "role": "Lead Developer",
   "period": "01/2024 - 03/2024",

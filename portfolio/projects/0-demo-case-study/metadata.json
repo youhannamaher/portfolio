@@ -1,7 +1,7 @@
 {
   "title": "Interactive Analytics Dashboard (100% Local Demo)",
   "shortTitle": "Analytics Demo",
-  "category": "Dashboards & Analytics",
+  "categories": ["Dashboards & Analytics"],
   "clientOrOrganization": "Example Corp",
   "role": "Lead Architect",
   "period": "01/2026 - Present",

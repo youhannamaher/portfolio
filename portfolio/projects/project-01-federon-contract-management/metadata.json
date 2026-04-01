@@ -2,7 +2,7 @@
   "slug": "project-01-federon-contract-management",
   "title": "Federon Procurement Solutions",
   "shortTitle": "Federon Apps",
-  "category": "Internal Operations Systems",
+  "categories": ["Internal Operations Systems"],
   "clientOrOrganization": "Federon",
   "role": "Power Platform Developer",
   "period": "2023 - Present",

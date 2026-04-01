@@ -65,8 +65,7 @@ function showCorsWarning() {
 function renderApp() {
     renderProfile();
     renderExpertise();
-    renderFeaturedProjects();
-    renderProjectLibrary();
+    renderProjects();
     renderExperience();
     renderCertificates();
     renderEducation();
@@ -446,11 +445,14 @@ function createProjectCard(project) {
     const stackTags = project.stack ? project.stack.slice(0, 3).map(s => `<span class="stack-tag">${s}</span>`).join('') : '';
     const imgUrl = project.thumbnail ? `portfolio/projects/${project.folder}/${project.thumbnail}` : 'https://placehold.co/600x400/121216/ededf0?text=No+Preview';
     
+    // Display the first category if available
+    const primaryCategory = project.categories && project.categories.length > 0 ? project.categories[0] : '';
+
     return `
         <div class="project-card" data-id="${project.id}">
             <div class="project-img-wrapper" style="cursor:pointer;" onclick="openProjectModal('${project.id}')">
                 <img src="${imgUrl}" alt="${project.title}" class="project-img" loading="lazy">
-                ${project.category ? `<span class="project-category">${project.category}</span>` : ''}
+                ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
             </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
@@ -462,52 +464,49 @@ function createProjectCard(project) {
     `;
 }
 
-function renderFeaturedProjects() {
+function renderProjects() {
     if (!state.projects || state.projects.length === 0) return;
 
-    const featured = state.projects.filter(p => p.featured).sort((a,b) => (a.order || 99) - (b.order || 99)).slice(0, 6);
-    const container = document.getElementById('featured-projects-grid');
-    container.innerHTML = featured.map(p => createProjectCard(p)).join('');
-    
-    const cards = container.querySelectorAll('.project-card');
-    applyStagger(cards);
-    revealOnScroll(cards);
-}
-
-function renderProjectLibrary() {
-    if (!state.projects || state.projects.length === 0) return;
-
-    const container = document.getElementById('library-projects-grid');
-    const filtersContainer = document.getElementById('project-filters');
+    const container = document.getElementById('projects-grid');
+    const tabsContainer = document.getElementById('project-tabs');
     const searchInput = document.getElementById('project-search');
+    const paginationDiv = document.getElementById('projects-pagination');
+    const showMoreBtn = document.getElementById('show-more-projects-btn');
 
-    // Extract unique categories
-    const categories = ['all'];
+    if (!container || !tabsContainer || !searchInput) return;
+
+    // 1. Extract and Build Dynamic Category Tabs
+    const uniqueCategories = new Set();
     state.projects.forEach(p => {
-        if (p.category && !categories.includes(p.category.toLowerCase())) {
-            categories.push(p.category.toLowerCase());
+        if (p.categories && Array.isArray(p.categories)) {
+            p.categories.forEach(cat => uniqueCategories.add(cat));
         }
     });
 
-    // Render filter buttons
-    filtersContainer.innerHTML = categories.map(cat => `
-        <button class="filter-btn ${cat === 'all' ? 'active' : ''}" data-filter="${cat}">
-            ${cat.charAt(0).toUpperCase() + cat.slice(1)}
-        </button>
+    // Sort categories alphabetically
+    const sortedCategories = Array.from(uniqueCategories).sort();
+
+    // Re-render only category tabs (keep Featured and All static)
+    const categoryTabsHtml = sortedCategories.map(cat => `
+        <button class="tab-btn" data-tab="category" data-filter="${cat.toLowerCase()}">${cat}</button>
     `).join('');
 
-    // Determine limit dynamically based on screen size (3 for mobile, 6 for desktop)
+    // Keep the "Featured" and "All" buttons, then append dynamic ones
+    tabsContainer.innerHTML = `
+        <button class="tab-btn active" data-tab="featured">Featured</button>
+        <button class="tab-btn" data-tab="all">All Projects</button>
+        ${categoryTabsHtml}
+    `;
+
+    // 2. Logic State
     const getInitialLimit = () => window.innerWidth <= 768 ? 3 : 6;
     let currentLimit = getInitialLimit();
     let currentFilteredProjects = [];
 
-    const renderLibraryGrid = () => {
-        const paginationDiv = document.getElementById('library-pagination');
-        const showMoreBtn = document.getElementById('show-more-projects-btn');
-
+    const updateGrid = () => {
         if (currentFilteredProjects.length === 0) {
             container.innerHTML = `<div class="w-100 text-center text-muted py-5 col-span-full">No projects found matching your criteria.</div>`;
-            if (paginationDiv) paginationDiv.style.display = 'none';
+            paginationDiv.style.display = 'none';
         } else {
             const visibleProjects = currentFilteredProjects.slice(0, currentLimit);
             container.innerHTML = visibleProjects.map(p => createProjectCard(p)).join('');
@@ -516,65 +515,79 @@ function renderProjectLibrary() {
             applyStagger(cards);
             revealOnScroll(cards);
             
-            if (paginationDiv && showMoreBtn) {
-                if (currentFilteredProjects.length > currentLimit) {
-                    paginationDiv.style.display = 'block';
-                    showMoreBtn.innerHTML = 'Show More Projects <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem;"></i>';
-                    showMoreBtn.onclick = () => {
-                        currentLimit += 6;
-                        renderLibraryGrid();
-                    };
-                } else if (currentLimit > 6 && currentFilteredProjects.length > 6) {
-                    paginationDiv.style.display = 'block';
-                    showMoreBtn.innerHTML = 'Show Less Projects <i class="fa-solid fa-chevron-up" style="margin-left: 0.5rem;"></i>';
-                    showMoreBtn.onclick = () => {
-                        currentLimit = 6;
-                        document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
-                        renderLibraryGrid();
-                    };
-                } else {
-                    paginationDiv.style.display = 'none';
-                }
+            // Handle Pagination
+            if (currentFilteredProjects.length > currentLimit) {
+                paginationDiv.style.display = 'block';
+                showMoreBtn.innerHTML = 'Show More Projects <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem;"></i>';
+                showMoreBtn.onclick = () => {
+                    currentLimit += 6;
+                    updateGrid();
+                };
+            } else if (currentLimit > 6 && currentFilteredProjects.length > 6) {
+                paginationDiv.style.display = 'block';
+                showMoreBtn.innerHTML = 'Show Less Projects <i class="fa-solid fa-chevron-up" style="margin-left: 0.5rem;"></i>';
+                showMoreBtn.onclick = () => {
+                    currentLimit = 6;
+                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                    updateGrid();
+                };
+            } else {
+                paginationDiv.style.display = 'none';
             }
         }
     };
 
-    // Filter Logic Function
-    const applyFilters = () => {
+    const applyView = () => {
+        const activeTab = tabsContainer.querySelector('.tab-btn.active');
+        const tabType = activeTab.dataset.tab;
+        const categoryFilter = activeTab.dataset.filter;
         const searchTerm = searchInput.value.toLowerCase();
-        const activeFilterBtn = document.querySelector('.filter-btn.active');
-        const activeCategory = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
 
         currentFilteredProjects = state.projects.filter(p => {
+            // Search match
             const matchSearch = p.title.toLowerCase().includes(searchTerm) || 
-                              (p.stack && p.stack.some(s => s.toLowerCase().includes(searchTerm))) ||
-                              (p.summary && p.summary.toLowerCase().includes(searchTerm));
+                                (p.stack && p.stack.some(s => s.toLowerCase().includes(searchTerm))) ||
+                                (p.summary && p.summary.toLowerCase().includes(searchTerm));
             
-            const matchCat = activeCategory === 'all' || (p.category && p.category.toLowerCase() === activeCategory);
-            
-            return matchSearch && matchCat;
+            if (!matchSearch) return false;
+
+            // Tab filter match
+            if (tabType === 'featured') return p.featured === true;
+            if (tabType === 'all') return true;
+            if (tabType === 'category') {
+                return p.categories && p.categories.some(cat => cat.toLowerCase() === categoryFilter);
+            }
+            return true;
         });
 
-        // Reset the limit to default responsive threshold any time the user searches or clicks a new category tab
+        // Always sort by order within the view
+        currentFilteredProjects.sort((a, b) => (a.order || 99) - (b.order || 99));
+
         currentLimit = getInitialLimit(); 
-        renderLibraryGrid();
+        updateGrid();
     };
 
-    // Events
-    searchInput.addEventListener('input', applyFilters);
-    
-    filtersContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('filter-btn')) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            e.target.classList.add('active');
-            applyFilters();
+    // 3. Setup Events
+    searchInput.addEventListener('input', applyView);
+
+    tabsContainer.addEventListener('click', (e) => {
+        const btn = e.target.closest('.tab-btn');
+        if (btn) {
+            tabsContainer.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // Clear search when switching tabs for a clean view? 
+            // The user didn't specify, but usually search persists. I'll persist it.
+            applyView();
         }
     });
 
-    // Initial render
-    applyFilters();
+    // Initial Render
+    applyView();
 }
 
+/**
+ * Professional Timeline Rendering
+ */
 function renderExperience() {
     if (!state.experience || state.experience.length === 0) return;
 

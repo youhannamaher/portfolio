@@ -2,7 +2,9 @@
   {
     "title": "TEST",
     "shortTitle": "OK Title",
-    "category": "Power Apps",
+    "categories": [
+      "Power Apps"
+    ],
     "clientOrOrganization": "Internal / Client Name",
     "role": "Lead Developer",
     "period": "01/2024 - 03/2024",
@@ -35,7 +37,9 @@
     "slug": "project-01-federon-contract-management",
     "title": "Federon Procurement Solutions",
     "shortTitle": "Federon Apps",
-    "category": "Internal Operations Systems",
+    "categories": [
+      "Internal Operations Systems"
+    ],
     "clientOrOrganization": "Federon",
     "role": "Power Platform Developer",
     "period": "2023 - Present",
@@ -61,7 +65,9 @@
     "slug": "project-01-federon-contract-management",
     "title": "Federon Procurement Solutions",
     "shortTitle": "Federon Apps",
-    "category": "Internal Operations Systems",
+    "categories": [
+      "Internal Operations Systems"
+    ],
     "clientOrOrganization": "Federon",
     "role": "Power Platform Developer",
     "period": "2023 - Present",
@@ -87,7 +93,9 @@
     "slug": "project-01-federon-contract-management",
     "title": "Federon Procurement Solutions",
     "shortTitle": "Federon Apps",
-    "category": "Internal Operations Systems",
+    "categories": [
+      "Internal Operations Systems"
+    ],
     "clientOrOrganization": "Federon",
     "role": "Power Platform Developer",
     "period": "2023 - Present",
@@ -112,7 +120,9 @@
   {
     "title": "Interactive Analytics Dashboard (100% Local Demo)",
     "shortTitle": "Analytics Demo",
-    "category": "Dashboards & Analytics",
+    "categories": [
+      "Dashboards & Analytics"
+    ],
     "clientOrOrganization": "Example Corp",
     "role": "Lead Architect",
     "period": "01/2026 - Present",

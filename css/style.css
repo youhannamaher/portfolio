@@ -1280,71 +1280,86 @@ img {
     gap: 1rem;
 }
 
-/* Library Filter Controls */
-.library-controls {
+/* Projects Section (Unified) */
+.projects-controls {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
 }
 
-.search-bar {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
+.projects-tabs-wrapper {
     width: 100%;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 0.75rem 1rem 0.75rem 2.5rem;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    color: var(--text-primary);
-    font-family: var(--font-body);
-}
-
-.search-bar input:focus {
-    outline: none;
-    border-color: var(--accent-primary);
-}
-
-.search-bar i {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-}
-
-.filter-group {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1px;
+}
+
+.projects-tabs {
+    display: flex;
     gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    max-width: 100%;
+    justify-content: center;
 }
 
-.filter-btn {
+.projects-tabs::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.tab-btn {
     background: transparent;
-    border: 1px solid var(--border-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
     color: var(--text-secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    font-size: 0.875rem;
-    transition: all var(--transition-fast);
+    white-space: nowrap;
+    position: relative;
+    transition: color var(--transition-fast);
 }
 
-.filter-btn:hover {
-    border-color: var(--text-muted);
+.tab-btn:hover {
     color: var(--text-primary);
 }
 
-.filter-btn.active {
-    background-color: var(--text-primary);
-    color: var(--bg-main);
-    border-color: var(--text-primary);
+.tab-btn.active {
+    color: var(--accent-primary);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-primary);
+}
+
+.projects-search-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.projects-search-wrapper .search-bar {
+    max-width: none;
+}
+
+/* Mobile Adjustments for Tabs */
+@media (max-width: 768px) {
+    .projects-tabs {
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 /* --- Premium Animation System --- */
