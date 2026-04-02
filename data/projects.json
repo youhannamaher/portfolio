@@ -105,7 +105,7 @@
       "Replaced manual Excel-based processes with a fully automated digital system.",
       "Enabled real-time analytics, filtering, and targeted communication during and after the event."
     ],
-    "videoEmbed": "https://www.youtube.com/watch?v=M0VVYtuocNw",
+    "videoEmbed": "https://www.youtube.com/embed/M0VVYtuocNw",
     "folder": "3- ASU Caree Center",
     "id": "asu-employment-fair-registration-system",
     "longDescription": "I developed a smart registration and event management system for the ASU Career Center, designed to handle over 15,000 participants during the Employment Fair. The solution replaced manual Excel-based processes with a fully automated and centralized digital system, improving efficiency, accuracy, and real-time visibility across event operations.\r\n\r\nParticipants registered through an online form, triggering an automated workflow that generated a unique QR code and sent it via a professionally designed email. During the event, volunteers used a mobile Power Apps application to scan QR codes or search participants using identifiers such as phone number or ID, enabling fast and accurate attendance tracking. The system also supported workshop access control with capacity limitations.\r\n\r\nAn administrative interface allowed organizers to manage workshops and monitor operations through an interactive dashboard, providing real-time insights before, during, and after the event. Users could filter participant data, export results, and send targeted communications directly from the system. Built using Power Apps, Power Automate, SharePoint, Power BI, Google Sheets, and App Script, the solution significantly improved event management efficiency and enabled data-driven decision-making.",
@@ -335,7 +335,7 @@
       "Integrated order management with invoice generation and email notifications.",
       "Centralized financial tracking with transaction history and reporting."
     ],
-    "videoEmbed": "https://www.youtube.com/watch?v=VkqxCcYTvqI&t=125s",
+    "videoEmbed": "https://www.youtube.com/embed/VkqxCcYTvqI?si=0IQBk67z-cbwBqmx",
     "folder": "9- YM Store",
     "id": "internal-e-commerce-inventory-system",
     "longDescription": "I developed an internal digital store system designed to manage purchasing, inventory, and financial tracking within a centralized platform. The solution allows users to create accounts, browse available products, add items to a cart, and complete purchases directly within the application, with automated email notifications and PDF invoice generation.\r\n\r\nThe system also includes an administrative interface for managing products, updating stock levels, and monitoring customer activity. Inventory is automatically updated based on purchases, ensuring real-time stock accuracy. Administrators can also track top customers, monitor product performance, and analyze transaction data.\r\n\r\nIn addition, the application records all financial activities in an accounting-style journal, capturing incoming and outgoing transactions, payments, and revenue. Built using Power Apps, Power Automate, and Excel, the project demonstrates a complete end-to-end system covering customer management, order processing, inventory control, and financial tracking.",
