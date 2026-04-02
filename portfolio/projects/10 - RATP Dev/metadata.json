@@ -1,13 +1,20 @@
 {
   "title": "Change Request Management System",
   "shortTitle": "RATP Dev System",
-  "categories": ["Internal Operations Systems", "Business Apps & Automation"],
+  "categories": [
+    "Internal Operations Systems",
+    "Business Apps & Automation"
+  ],
   "clientOrOrganization": "RATP Dev",
   "role": "Power Platform Developer",
   "period": "2025",
-  "stack": ["Power Apps", "Power Automate", "SharePoint"],
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "SharePoint"
+  ],
   "summary": "Workflow-driven system managing change requests from submission to approval and implementation.",
-  "featured": true,
+  "featured": false,
   "order": 9,
   "impact": [
     "Structured and standardized change request lifecycle across multiple stakeholders.",
