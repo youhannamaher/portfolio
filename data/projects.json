@@ -258,7 +258,7 @@
       "Excel"
     ],
     "summary": "Developed internal apps for learning management and procurement tracking used across enterprise teams.",
-    "featured": true,
+    "featured": false,
     "order": 6,
     "impact": [
       "Improved access to training programs for over 2,500 employees.",
@@ -452,7 +452,7 @@
       "Interview Scheduled.png",
       "Scheduling The Interview Through PowerApp.png"
     ],
-    "thumbnail": "Scheduling The Interview Through PowerApp.png"
+    "thumbnail": "Screenshot 2026-03-17 022803.png"
   },
   {
     "title": "Interactive Financial Dashboard",
