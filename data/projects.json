@@ -240,6 +240,7 @@
     "videoEmbed": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0",
     "folder": "0-demo-case-study",
     "id": "asu-career-center-portal",
+    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
     "images": [
       "1_dashboard.png",
       "2_reports.png",
