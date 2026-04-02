@@ -212,45 +212,79 @@
         <!-- Contact Section -->
         <section id="contact" class="section container">
             <div class="section-header">
-                <h2>Get in Touch</h2>
+                <h2>Let’s Discuss Your Project</h2>
                 <div class="divider"></div>
             </div>
-            <div class="contact-layout">
-                <div class="contact-form-container">
-                    <!-- Formspree Integration -->
-                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjgpowbw" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
+
+            <div class="contact-hub-wrapper">
+                <!-- Tab Switcher (Similar to Projects) -->
+                <div class="contact-tabs-wrapper">
+                    <div class="contact-tabs" id="contact-tabs">
+                        <button class="contact-tab-btn active" data-mode="message">
+                            <i class="fa-solid fa-envelope"></i> Send a Message
+                        </button>
+                        <button class="contact-tab-btn" data-mode="booking">
+                            <i class="fa-solid fa-calendar-check"></i> Book a Free Discovery Call
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mode 1: Send a Message (Existing Form) -->
+                <div class="contact-mode-container active" id="contact-mode-message">
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjgpowbw" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-type">Message Type</label>
+                                <select id="message-type" name="message-type" required>
+                                    <option value="" disabled selected>Select message type</option>
+                                    <option value="New Project Inquiry">New Project Inquiry</option>
+                                    <option value="Freelance / Consultancy">Freelance / Consultancy</option>
+                                    <option value="Collaboration Opportunity">Collaboration Opportunity</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="General Question">General Question</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Hello..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" id="contact-submit-btn">Send Message</button>
+                            <div id="contact-status" style="margin-top: 1.5rem; text-align: center; font-weight: 500;"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Mode 2: Book a Consultation (Google Embed) -->
+                <div class="contact-mode-container" id="contact-mode-booking">
+                    <div class="booking-card-premium">
+                        <div class="booking-intro">
+                            <div class="booking-icon-wrapper">
+                                <i class="fa-solid fa-comments-dollar"></i>
+                            </div>
+                            <div class="booking-text">
+                                <h3>Free 15-Minute Discovery Call</h3>
+                                <p>Book a short call to discuss your Power Platform, Excel, or SharePoint needs, explore possible solutions, and see whether I’m the right fit for your project.</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+
+                        <!-- Google Calendar Appointment Scheduling begin -->
+                        <div class="booking-iframe-shell">
+                            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0bJREEX7WaSSO5_i8W617hyH9LWvu9FAlGFocGpL1BOfYLGNf4E1MtJhdZquR4aMD74bJAOw7N?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
                         </div>
-                        <div class="form-group">
-                            <label for="message-type">Message Type</label>
-                            <select id="message-type" name="message-type" required>
-                                <option value="" disabled selected>Select message type</option>
-                                <option value="New Project Inquiry">New Project Inquiry</option>
-                                <option value="Freelance / Consultancy">Freelance / Consultancy</option>
-                                <option value="Collaboration Opportunity">Collaboration Opportunity</option>
-                                <option value="Feedback">Feedback</option>
-                                <option value="General Question">General Question</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Hello..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100" id="contact-submit-btn">Send
-                            Message</button>
-                        <div id="contact-status" style="margin-top: 1.5rem; text-align: center; font-weight: 500;">
-                        </div>
-                    </form>
+                        <!-- end Google Calendar Appointment Scheduling -->
+                    </div>
                 </div>
             </div>
         </section>

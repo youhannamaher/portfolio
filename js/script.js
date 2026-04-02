@@ -230,6 +230,8 @@ function setupUI() {
             btn.disabled = false;
         });
     }
+
+    initContactHub();
 }
 
 // Global Observer for Scroll Reveals
@@ -945,3 +947,35 @@ window.openCertModal = function(id) {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 };
+
+/**
+ * Initialize the Dual-Mode Contact/Booking Hub
+ */
+function initContactHub() {
+    const tabs = document.getElementById('contact-tabs');
+    const messageContainer = document.getElementById('contact-mode-message');
+    const bookingContainer = document.getElementById('contact-mode-booking');
+
+    if (!tabs || !messageContainer || !bookingContainer) return;
+
+    const btns = tabs.querySelectorAll('.contact-tab-btn');
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const mode = btn.dataset.mode;
+
+            // Update Tabs
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update Containers
+            if (mode === 'message') {
+                messageContainer.classList.add('active');
+                bookingContainer.classList.remove('active');
+            } else {
+                messageContainer.classList.remove('active');
+                bookingContainer.classList.add('active');
+            }
+        });
+    });
+}
