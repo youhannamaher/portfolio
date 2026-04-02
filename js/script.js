@@ -291,8 +291,7 @@ function initFAQ() {
     });
 }
 
-// Global Observer for Scroll Reveals
-let revealObserver;
+
 
 function setupObservers() {
     // 1. Hero Animation Trigger
@@ -303,61 +302,20 @@ function setupObservers() {
         }, 100);
     }
 
-    // 2. Initialize Reveal Observer
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
-            }
-        });
-    }, observerOptions);
-
-    // Dynamic Elements Reveal (Initial and New)
-    const revealTargets = document.querySelectorAll('.section-header, .timeline-item, .about-text, .contact-form, .problem-card, .process-step, .faq-item, .metrics-strip');
-    revealTargets.forEach(el => {
-        el.classList.add('reveal');
-        revealObserver.observe(el);
-    });
-
-    // Apply staggering to grid children specifically for initial load
+    // Staggering for initial load
     const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid');
     gridContainers.forEach(container => {
         applyStagger(container.children);
     });
 
-    // 3. Catchy Interactive Enhancements (Desktop Only)
+    // Interactive Enhancements (Hero only for now)
     if (window.innerWidth > 768) {
         initMagneticButtons();
         initBackgroundParallax();
-        initSmoothScroll();
     }
 }
 
-/**
- * Premium Smooth Scroll using Lenis
- */
-function initSmoothScroll() {
-    if (typeof Lenis === 'undefined') return;
-    if (window.lenis) return; // FIX: Singleton Pattern
-    
-    window.lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true
-    });
 
-    function raf(time) {
-        window.lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-}
 
 /**
  * Magnetic Button Effect: Buttons subtly follow the cursor
