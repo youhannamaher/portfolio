@@ -1,13 +1,22 @@
 {
   "title": "ASU Career Center Portal",
   "shortTitle": "ASU Career Portal",
-  "categories": ["Event Management", "Power Apps", "Power BI"],
+  "categories": [
+    "Event Management",
+    "Power Apps",
+    "Power BI"
+  ],
   "clientOrOrganization": "Arizona State University",
   "role": "Power Platform Architect",
   "period": "01/2026 - Present",
-  "stack": ["Power Apps", "Power BI", "Dataverse", "Power Automate"],
+  "stack": [
+    "Power Apps",
+    "Power BI",
+    "Dataverse",
+    "Power Automate"
+  ],
   "summary": "Centralized student engagement and event tracking for ASU Career Center, providing real-time data insights.",
-  "featured": true,
+  "featured": false,
   "order": 0,
   "impact": [
     "Improved event attendance tracking by 45%.",

@@ -56,7 +56,7 @@
       "SharePoint"
     ],
     "summary": "Digitalized the HR request and approval process for Nestlé, integrating automation to reduce manual overhead.",
-    "featured": true,
+    "featured": false,
     "order": 1,
     "impact": [
       "Replaced fragmented manual systems with a centralized HR portal.",
@@ -137,7 +137,7 @@
     ],
     "summary": "End-to-end event registration and QR-based verification system handling 15,000+ participants.",
     "featured": true,
-    "order": 2,
+    "order": 3,
     "impact": [
       "Managed registration and attendance tracking for over 15,000 participants.",
       "Replaced manual Excel-based processes with a fully automated digital system.",
@@ -162,6 +162,84 @@
     "thumbnail": "WhatsApp Image 2025-02-28 at 02.05.25_119dc703.jpg"
   },
   {
+    "title": "Employee Recognition & Nomination Platform",
+    "shortTitle": "Nestlé Nomination App",
+    "categories": [
+      "HR Digital Transformation",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Nestlé",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint"
+    ],
+    "summary": "Digital nomination platform streamlining employee recognition with role-based workflows and modern UI/UX.",
+    "featured": false,
+    "order": 4,
+    "impact": [
+      "Digitized and streamlined the employee nomination and recognition process.",
+      "Improved user engagement through a modern and intuitive UI/UX experience.",
+      "Automated multi-stage approval workflow and communication across HR and management."
+    ],
+    "videoEmbed": "",
+    "folder": "4 - Nestle Nominations",
+    "id": "employee-recognition-nomination-platform",
+    "longDescription": "I developed an Employee Recognition and Nomination platform for Nestlé to digitize and streamline the process of recognizing employee achievements across the organization. The application allows users to nominate colleagues through a guided multi-step experience, capturing nominator details, nominee information, nomination context, and supporting documents in a structured and user-friendly way.\r\n\r\nThe solution features a role-based workflow involving nominators, HR teams, and management, enabling efficient review, decision-making, and communication. HR can evaluate nominations, provide feedback through threaded comments, and approve submissions, after which nominees receive automated notifications and can contribute additional content such as supporting videos. The process continues through management review, where final decisions are made across different recognition categories.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the platform emphasizes a modern UI/UX design, providing a smooth, engaging, and intuitive user experience. The system centralizes the entire nomination lifecycle, enhances transparency, and improves participation in employee recognition programs.",
+    "images": [
+      "All New Nomination - HR View.png",
+      "Attachments.png",
+      "Email to Nominee.png",
+      "Mancom View After Video Upload.png",
+      "Nomination Details.png",
+      "Nominator Details.png",
+      "Nominee - Modern People Picker.png",
+      "Nominee Details.png",
+      "Nominee Opening Page - Deep Linking.png"
+    ],
+    "thumbnail": "Mancom View After Video Upload.png"
+  },
+  {
+    "title": "Quality Tracking & Ticket Management System",
+    "shortTitle": "Nestlé Ticketing System",
+    "categories": [
+      "Internal Operations Systems",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Nestlé",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint",
+      "Power BI"
+    ],
+    "summary": "End-to-end ticketing system centralizing issue tracking, resolution workflows, and performance monitoring.",
+    "featured": false,
+    "order": 5,
+    "impact": [
+      "Centralized issue tracking and eliminated reliance on emails and manual follow-ups.",
+      "Automated ticket lifecycle with role-based workflows and notifications.",
+      "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
+    ],
+    "videoEmbed": "",
+    "folder": "5- Nestle Quality Tracking",
+    "id": "quality-tracking-ticket-management-system",
+    "longDescription": "I developed a Quality Tracking and Ticket Management system for Nestlé to centralize and streamline the process of reporting, tracking, and resolving operational issues across teams. The platform allows employees to submit tickets with detailed information and attachments, after which each ticket is automatically assigned a unique reference number and routed to the responsible processor through automated workflows.\r\n\r\nThe system manages the full ticket lifecycle, including issue investigation, root cause analysis, managerial review, and requester validation or escalation. All communications and actions are handled within the application, supported by automated HTML email notifications with deep linking to ensure seamless user interaction and follow-up. Scheduled reminders are also implemented to notify stakeholders when tickets remain pending beyond defined timeframes.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Power BI, the solution provides role-based views for requesters, processors, managers, and administrators, along with dashboards that offer real-time insights into ticket volume, resolution performance, and team activity. The system improves operational transparency, accountability, and efficiency while delivering a structured and scalable issue management process.",
+    "images": [
+      "Screenshot 2026-03-17 145306.png",
+      "Screenshot 2026-03-17 145503.png",
+      "Screenshot 2026-03-17 145536.png",
+      "Screenshot 2026-03-17 145601.png",
+      "Screenshot 2026-03-17 145621.png",
+      "Screenshot 2026-03-17 145655.png"
+    ],
+    "thumbnail": "Screenshot 2026-03-17 145621.png"
+  },
+  {
     "title": "ASU Career Center Portal",
     "shortTitle": "ASU Career Portal",
     "categories": [
@@ -179,7 +257,7 @@
       "Power Automate"
     ],
     "summary": "Centralized student engagement and event tracking for ASU Career Center, providing real-time data insights.",
-    "featured": true,
+    "featured": false,
     "order": 0,
     "impact": [
       "Improved event attendance tracking by 45%.",

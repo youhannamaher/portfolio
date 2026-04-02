@@ -1,0 +1,25 @@
+{
+  "title": "Employee Recognition & Nomination Platform",
+  "shortTitle": "Nestlé Nomination App",
+  "categories": [
+    "HR Digital Transformation",
+    "Business Apps & Automation"
+  ],
+  "clientOrOrganization": "Nestlé",
+  "role": "Power Platform Developer",
+  "period": "2025",
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "SharePoint"
+  ],
+  "summary": "Digital nomination platform streamlining employee recognition with role-based workflows and modern UI/UX.",
+  "featured": false,
+  "order": 4,
+  "impact": [
+    "Digitized and streamlined the employee nomination and recognition process.",
+    "Improved user engagement through a modern and intuitive UI/UX experience.",
+    "Automated multi-stage approval workflow and communication across HR and management."
+  ],
+  "videoEmbed": ""
+}

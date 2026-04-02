@@ -1,0 +1,26 @@
+{
+  "title": "Quality Tracking & Ticket Management System",
+  "shortTitle": "Nestlé Ticketing System",
+  "categories": [
+    "Internal Operations Systems",
+    "Business Apps & Automation"
+  ],
+  "clientOrOrganization": "Nestlé",
+  "role": "Power Platform Developer",
+  "period": "2025",
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "SharePoint",
+    "Power BI"
+  ],
+  "summary": "End-to-end ticketing system centralizing issue tracking, resolution workflows, and performance monitoring.",
+  "featured": false,
+  "order": 5,
+  "impact": [
+    "Centralized issue tracking and eliminated reliance on emails and manual follow-ups.",
+    "Automated ticket lifecycle with role-based workflows and notifications.",
+    "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
+  ],
+  "videoEmbed": ""
+}
