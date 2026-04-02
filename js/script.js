@@ -267,7 +267,6 @@ function setupUI() {
 
     initContactHub();
     initFAQ();
-    setupObservers();
 }
 
 /**
@@ -344,15 +343,16 @@ function setupObservers() {
  */
 function initSmoothScroll() {
     if (typeof Lenis === 'undefined') return;
+    if (window.lenis) return; // FIX: Singleton Pattern
     
-    const lenis = new Lenis({
+    window.lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         smoothWheel: true
     });
 
     function raf(time) {
-        lenis.raf(time);
+        window.lenis.raf(time);
         requestAnimationFrame(raf);
     }
 
