@@ -946,16 +946,31 @@ img {
 
 /* Booking Content Layout */
 .booking-card-body {
+    padding: 0; /* Remove default to allow full-width calendar if needed */
+}
+
+.booking-intro-content {
     padding: 2.5rem;
-    padding-top: 1.5rem;
+    padding-bottom: 0;
 }
 
 .booking-benefits {
     list-style: none;
-    padding: 0;
-    margin: 0 0 2.5rem 0;
+    padding: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    margin: 0;
     display: grid;
     gap: 1rem;
+}
+
+.booking-cal-container {
+    width: 100%;
+    margin-top: -1rem; /* Pull up to meet bullets */
+}
+
+.booking-cal-container iframe {
+    border-radius: 0 0 16px 16px;
 }
 
 .booking-benefits li {
