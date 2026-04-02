@@ -673,7 +673,10 @@ function renderProjects() {
 function renderExperience() {
     if (!state.experience || state.experience.length === 0) return;
 
-    document.getElementById('experience-timeline').innerHTML = state.experience.map(item => `
+    // Sort by order field (lower = first)
+    const sorted = [...state.experience].sort((a, b) => (a.order || 99) - (b.order || 99));
+
+    document.getElementById('experience-timeline').innerHTML = sorted.map(item => `
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -693,7 +696,10 @@ function renderExperience() {
 function renderCertificates() {
     if (!state.certificates || state.certificates.length === 0) return;
 
-    document.getElementById('certifications-grid').innerHTML = state.certificates.map(cert => `
+    // Sort by order field (lower = first)
+    const sorted = [...state.certificates].sort((a, b) => (a.order || 99) - (b.order || 99));
+
+    document.getElementById('certifications-grid').innerHTML = sorted.map(cert => `
         <div class="cert-card" onclick="openCertModal('${cert.id}')">
             <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
             <div class="cert-info">
