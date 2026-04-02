@@ -1,11 +1,11 @@
 [
   {
-    "title": "Microsoft Certified: Power Platform App Maker Associate",
+    "title": "Career Essentials in Data Analysis by Microsoft and LinkedIn",
     "issuer": "Microsoft",
-    "year": "2024",
-    "link": "https://credly.com/your-verify-link",
-    "folder": "!_certificate-template",
-    "id": "microsoft-certified-power-platform-app-maker-associate",
+    "year": "2026",
+    "link": "https://www.linkedin.com/learning/certificates/adf299bbe9a78824141be90395a8fc57499c6ddcc23b4b99381c4addc0ec9df3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bj%2BNz33pbSzmQ2WOrvcSBIQ%3D%3D",
+    "folder": "Microsoft Data Analysis",
+    "id": "career-essentials-in-data-analysis-by-microsoft-and-linkedin",
     "pdf": "Youhanna Maher - Microsoft Power Platform.pdf",
     "image": "C1 Back.png",
     "images": [
@@ -14,17 +14,16 @@
     ]
   },
   {
-    "title": "Microsoft Certified: Power Platform App Maker Associate",
+    "title": "PL-900: Microsoft Power Platform Fundamentals",
     "issuer": "Microsoft",
-    "year": "2024",
-    "link": "https://credly.com/your-verify-link",
-    "folder": "!_certificate-template-Copy",
-    "id": "microsoft-certified-power-platform-app-maker-associate",
+    "year": "2025",
+    "link": "https://learn.microsoft.com/en-us/users/youhannamaher/achievements/yq3zkuvr?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+    "folder": "PL900",
+    "id": "pl-900-microsoft-power-platform-fundamentals",
     "pdf": "Youhanna Maher - Microsoft Power Platform.pdf",
-    "image": "C1 Back.png",
+    "image": "Screenshot 2026-04-02 135308.png",
     "images": [
-      "C1 Back.png",
-      "C1 Front.png"
+      "Screenshot 2026-04-02 135308.png"
     ]
   }
 ]

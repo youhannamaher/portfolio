@@ -1,13 +1,25 @@
 {
   "name": "Youhanna Maher",
-  "title": "I Build Business Applications That Actually Save Time",
+  "title": "Power Platform Developer",
   "subtitle": "I help businesses automate repetitive workflows and build efficient Power Platform systems that streamline operations and improve data visibility.",
   "cvLink": "portfolio/files/Youhanna_Maher_CV.pdf",
   "highlights": [
-    { "text": "15k+ Users Managed", "icon": "fa-users" },
-    { "text": "Ranked 1st in Class", "icon": "fa-trophy" },
-    { "text": "Power Apps / Automate / BI", "icon": "fa-microsoft" },
-    { "text": "HR & Operations Digitalization", "icon": "fa-network-wired" }
+    {
+      "text": "15k+ Users Managed",
+      "icon": "fa-users"
+    },
+    {
+      "text": "Ranked 1st in Class",
+      "icon": "fa-trophy"
+    },
+    {
+      "text": "Power Apps / Automate / BI",
+      "icon": "fa-microsoft"
+    },
+    {
+      "text": "HR & Operations Digitalization",
+      "icon": "fa-network-wired"
+    }
   ],
   "about": [
     "As a dual-degree management student ranked first in my class at both Ain Shams University and the University of Poitiers, I offer a unique combination of business logic and technical execution.",
@@ -15,18 +27,54 @@
     "With experience managing systems for over 15,000 users, I understand how to build for scale while keeping the user experience simple and effective."
   ],
   "stats": [
-    { "value": "15k+", "label": "Users Managed" },
-    { "value": "4+", "label": "Enterprise Systems" },
-    { "value": "1st", "label": "Academic Ranking" },
-    { "value": "6+", "label": "Core Technologies" }
+    {
+      "value": "15k+",
+      "label": "Users Managed"
+    },
+    {
+      "value": "4+",
+      "label": "Enterprise Systems"
+    },
+    {
+      "value": "1st",
+      "label": "Academic Ranking"
+    },
+    {
+      "value": "6+",
+      "label": "Core Technologies"
+    }
   ],
   "expertise": [
-    { "title": "Power Apps", "icon": "fa-mobile-screen", "desc": "Custom business applications, role-based workflows, operational systems, and internal tools designed for high usability and scale." },
-    { "title": "Power Automate", "icon": "fa-bolt", "desc": "End-to-end process automation, complex approval flows, notification triggers, and integrated logic across enterprise apps." },
-    { "title": "Power BI", "icon": "fa-chart-pie", "desc": "Dynamic reporting, KPI dashboards, operational analytics, data visualization, and real-time operational insights." },
-    { "title": "SharePoint & Dataverse", "icon": "fa-database", "desc": "Structured and relational enterprise data structuring, application backends, and robust document-linked workflows." },
-    { "title": "Excel & Power Query", "icon": "fa-file-excel", "desc": "Advanced data cleaning, pipeline integration, macro automation, and operational process support." },
-    { "title": "Business Analysis", "icon": "fa-magnifying-glass-chart", "desc": "Deep process mapping and requirement analysis to translate operational barriers into effective digital architectures." }
+    {
+      "title": "Power Apps",
+      "icon": "fa-mobile-screen",
+      "desc": "Custom business applications, role-based workflows, operational systems, and internal tools designed for high usability and scale."
+    },
+    {
+      "title": "Power Automate",
+      "icon": "fa-bolt",
+      "desc": "End-to-end process automation, complex approval flows, notification triggers, and integrated logic across enterprise apps."
+    },
+    {
+      "title": "Power BI",
+      "icon": "fa-chart-pie",
+      "desc": "Dynamic reporting, KPI dashboards, operational analytics, data visualization, and real-time operational insights."
+    },
+    {
+      "title": "SharePoint & Dataverse",
+      "icon": "fa-database",
+      "desc": "Structured and relational enterprise data structuring, application backends, and robust document-linked workflows."
+    },
+    {
+      "title": "Excel & Power Query",
+      "icon": "fa-file-excel",
+      "desc": "Advanced data cleaning, pipeline integration, macro automation, and operational process support."
+    },
+    {
+      "title": "Business Analysis",
+      "icon": "fa-magnifying-glass-chart",
+      "desc": "Deep process mapping and requirement analysis to translate operational barriers into effective digital architectures."
+    }
   ],
   "contact": {
     "email": "youhannamaher24@gmail.com",

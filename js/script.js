@@ -105,6 +105,7 @@ function renderApp() {
     renderEducation();
     
     setupObservers();
+    initAnimations();
 }
 
 /* =========================================================================
@@ -302,60 +303,65 @@ function setupObservers() {
         }, 100);
     }
 
-    // Staggering for initial load
-    const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid');
+    // 2. Add reveal classes to dynamically rendered elements
+    document.querySelectorAll('.expertise-card').forEach((el, i) => {
+        el.classList.add('reveal-scale');
+        if (i < 5) el.classList.add(`stagger-${i + 1}`);
+    });
+    document.querySelectorAll('.timeline-item').forEach(el => {
+        el.classList.add('reveal-left');
+    });
+    document.querySelectorAll('.cert-card').forEach((el, i) => {
+        el.classList.add('reveal');
+        if (i < 5) el.classList.add(`stagger-${i + 1}`);
+    });
+    document.querySelectorAll('.education-card').forEach(el => {
+        el.classList.add('reveal-right');
+    });
+    document.querySelectorAll('.stat-card').forEach((el, i) => {
+        el.classList.add('reveal-scale');
+        if (i < 5) el.classList.add(`stagger-${i + 1}`);
+    });
+
+    // 3. IntersectionObserver for all reveal variants
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    // Observe all reveal variants
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // 4. Staggering for initial load
+    const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid, .certifications-grid');
     gridContainers.forEach(container => {
         applyStagger(container.children);
     });
-
-    // Interactive Enhancements (Hero only for now)
-    if (window.innerWidth > 768) {
-        initMagneticButtons();
-        initBackgroundParallax();
-    }
 }
 
 
 
 /**
- * Magnetic Button Effect: Buttons subtly follow the cursor
+ * Magnetic Button Effect: Disabled
  */
 function initMagneticButtons() {
-    const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .theme-toggle-btn');
-    
-    buttons.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            
-            // Move button 30% of mouse distance from center
-            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) scale(1.02)`;
-            btn.style.boxShadow = '0 20px 40px -10px rgba(0, 0, 0, 0.5)';
-        });
-        
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = '';
-            btn.style.boxShadow = '';
-        });
-    });
+    // Effect disabled for stability
 }
 
 /**
- * Parallax Background: Glows move slowly with mouse
+ * Parallax Background: Disabled
  */
 function initBackgroundParallax() {
-    const glows = document.querySelectorAll('.bg-glow');
-    
-    document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 50; // Move max 50px
-        const y = (e.clientY / window.innerHeight - 0.5) * 50;
-        
-        glows.forEach((glow, index) => {
-            const factor = (index + 1) * 0.5;
-            glow.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
-        });
-    });
+    // Effect disabled for stability
 }
 
 /**
@@ -989,5 +995,186 @@ function initContactHub() {
                 bookingContainer.classList.add('active');
             }
         });
+    });
+}
+
+/* =========================================================================
+   PREMIUM ANIMATION SYSTEM
+   ========================================================================= */
+
+/**
+ * Master animation initializer — called after all content is rendered
+ */
+function initAnimations() {
+    initScrollProgress();
+    initCounters();
+    initCardTilt();
+    initRipple();
+    initParallaxGlows();
+    initBackToTop();
+}
+
+/**
+ * 1. Scroll Progress Bar — glowing bar at the very top of the viewport
+ */
+function initScrollProgress() {
+    const bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    document.body.prepend(bar);
+
+    const update = () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (docHeight > 0) {
+            bar.style.width = ((scrollTop / docHeight) * 100) + '%';
+        }
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+}
+
+/**
+ * 2. Animated Counters — metric values count up when scrolled into view
+ */
+function initCounters() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const text = el.textContent.trim();
+                const match = text.match(/^(\d+)(.*)$/);
+                if (match) {
+                    animateCounter(el, parseInt(match[1]), match[2]);
+                }
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.metric-value').forEach(el => observer.observe(el));
+}
+
+function animateCounter(element, target, suffix, duration = 2000) {
+    const start = performance.now();
+    const initial = element.textContent; // Store in case of error
+
+    function update(currentTime) {
+        const elapsed = currentTime - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease-out cubic for smooth deceleration
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+
+        element.textContent = current + suffix;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+
+    requestAnimationFrame(update);
+}
+
+/**
+ * 3. 3D Card Tilt — cards follow mouse with perspective transform
+ */
+function initCardTilt() {
+    // Only on devices with a fine pointer (mouse)
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+    const cards = document.querySelectorAll('.expertise-card, .stat-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
+/**
+ * 4. Button Ripple — material-design style click ripple on all buttons
+ */
+function initRipple() {
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const rect = this.getBoundingClientRect();
+            const ripple = document.createElement('span');
+            const size = Math.max(rect.width, rect.height);
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            ripple.className = 'ripple';
+
+            this.style.position = 'relative';
+            this.style.overflow = 'hidden';
+            this.appendChild(ripple);
+
+            ripple.addEventListener('animationend', () => ripple.remove());
+        });
+    });
+}
+
+/**
+ * 5. Parallax Background Glows — glows follow mouse position
+ */
+function initParallaxGlows() {
+    const glows = document.querySelectorAll('.bg-glow');
+    if (glows.length === 0) return;
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
+    let ticking = false;
+
+    window.addEventListener('mousemove', (e) => {
+        if (ticking) return;
+        ticking = true;
+
+        requestAnimationFrame(() => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2;
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+            glows.forEach((glow, i) => {
+                const speed = (i + 1) * 12;
+                glow.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+            ticking = false;
+        });
+    }, { passive: true });
+}
+
+/**
+ * 6. Back-to-Top Button — appears after scrolling, smooth scroll back up
+ */
+function initBackToTop() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    btn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
