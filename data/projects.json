@@ -148,7 +148,7 @@
       "Automated multi-stage approval workflow and communication across HR and management."
     ],
     "videoEmbed": "",
-    "folder": "4 - Nestle Nominations",
+    "folder": "5 - Nestle Nominations",
     "id": "employee-recognition-nomination-platform",
     "longDescription": "I developed an Employee Recognition and Nomination platform for Nestlé to digitize and streamline the process of recognizing employee achievements across the organization. The application allows users to nominate colleagues through a guided multi-step experience, capturing nominator details, nominee information, nomination context, and supporting documents in a structured and user-friendly way.\r\n\r\nThe solution features a role-based workflow involving nominators, HR teams, and management, enabling efficient review, decision-making, and communication. HR can evaluate nominations, provide feedback through threaded comments, and approve submissions, after which nominees receive automated notifications and can contribute additional content such as supporting videos. The process continues through management review, where final decisions are made across different recognition categories.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the platform emphasizes a modern UI/UX design, providing a smooth, engaging, and intuitive user experience. The system centralizes the entire nomination lifecycle, enhances transparency, and improves participation in employee recognition programs.",
     "images": [
@@ -163,6 +163,45 @@
       "Nominee Opening Page - Deep Linking.png"
     ],
     "thumbnail": "Mancom View After Video Upload.png"
+  },
+  {
+    "title": "AI-Powered HR & ATS Automation System",
+    "shortTitle": "HR ATS System",
+    "categories": [
+      "HR Digital Transformation",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "AI Builder",
+      "SharePoint"
+    ],
+    "summary": "AI-driven recruitment system automating CV screening, candidate ranking, and HR workflows.",
+    "featured": true,
+    "order": 5,
+    "impact": [
+      "Automated CV screening and keyword extraction using AI Builder.",
+      "Reduced manual recruitment effort through dynamic candidate filtering and ranking.",
+      "Enabled personalized communication with candidates through automated email workflows."
+    ],
+    "videoEmbed": "https://youtu.be/zJimL4T-EwU?si=mNcIXrKfLnv7_gMN",
+    "folder": "4 - HR Demo System",
+    "id": "ai-powered-hr-ats-automation-system",
+    "longDescription": "I developed an AI-powered HR system prototype to demonstrate how recruitment and HR processes can be fully automated using Microsoft Power Platform. The solution includes a complete Applicant Tracking System (ATS) that allows recruiters to create job postings, collect candidate applications through online forms, and manage the recruitment pipeline in a structured and efficient way.\r\n\r\nCandidate applications and CVs are automatically processed using Power Automate and AI Builder, which extract key information and relevant skills from uploaded CVs and store them in a structured format. Recruiters can then review candidates through a PowerApps interface, filter applicants by criteria such as degree level or keywords, and prioritize candidates based on AI-driven relevance. The system also allows viewing CVs directly within the application and managing candidate progression through different recruitment stages.\r\n\r\nThe platform includes automated communication workflows, sending personalized HTML emails to candidates, including interview invitations for selected applicants and detailed feedback for rejected candidates. In addition, a payroll module is integrated to track working hours, calculate compensation, and automate salary notifications. Built using Power Apps, Power Automate, AI Builder, and SharePoint, this project demonstrates how HR operations can be transformed into a scalable, automated, and data-driven system.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png"
+    ],
+    "thumbnail": "3.png"
   },
   {
     "title": "Quality Tracking & Ticket Management System",
@@ -189,7 +228,7 @@
       "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
     ],
     "videoEmbed": "",
-    "folder": "5- Nestle Quality Tracking",
+    "folder": "6- Nestle Quality Tracking",
     "id": "quality-tracking-ticket-management-system",
     "longDescription": "I developed a Quality Tracking and Ticket Management system for Nestlé to centralize and streamline the process of reporting, tracking, and resolving operational issues across teams. The platform allows employees to submit tickets with detailed information and attachments, after which each ticket is automatically assigned a unique reference number and routed to the responsible processor through automated workflows.\r\n\r\nThe system manages the full ticket lifecycle, including issue investigation, root cause analysis, managerial review, and requester validation or escalation. All communications and actions are handled within the application, supported by automated HTML email notifications with deep linking to ensure seamless user interaction and follow-up. Scheduled reminders are also implemented to notify stakeholders when tickets remain pending beyond defined timeframes.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Power BI, the solution provides role-based views for requesters, processors, managers, and administrators, along with dashboards that offer real-time insights into ticket volume, resolution performance, and team activity. The system improves operational transparency, accountability, and efficiency while delivering a structured and scalable issue management process.",
     "images": [
@@ -201,5 +240,149 @@
       "Screenshot 2026-03-17 145655.png"
     ],
     "thumbnail": "Screenshot 2026-03-17 145621.png"
+  },
+  {
+    "title": "Internal Operations Applications",
+    "shortTitle": "Orange Business Apps",
+    "categories": [
+      "Business Apps & Automation",
+      "Internal Operations Systems"
+    ],
+    "clientOrOrganization": "Orange Business",
+    "role": "Power Platform Developer Intern",
+    "period": "2024",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint",
+      "Excel"
+    ],
+    "summary": "Developed internal apps for learning management and procurement tracking used across enterprise teams.",
+    "featured": true,
+    "order": 6,
+    "impact": [
+      "Improved access to training programs for over 2,500 employees.",
+      "Streamlined procurement tracking and approval workflows.",
+      "Enabled better operational visibility through centralized applications."
+    ],
+    "videoEmbed": "",
+    "folder": "7- Orange Business Apps",
+    "id": "internal-operations-applications",
+    "longDescription": "During my time at Orange Business, I developed two PowerApps solutions aimed at improving internal operations and supporting data-driven decision-making across teams. The first solution, MSC Learning Studio, was designed for the Learning & Development function to provide more than 2,500 employees with a centralized platform to access training programs, learning resources, and development opportunities in a structured and user-friendly way.\r\n\r\nThe second solution, Global PO Tracker, focuses on procurement operations by enabling teams to track purchase orders, monitor their status, and follow approval workflows in real time. The system reduces reliance on manual tracking and improves coordination between different stakeholders involved in the procurement process.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Excel, these applications enhanced operational efficiency, improved visibility on internal processes, and contributed to a more structured and scalable way of managing learning and procurement activities within the organization.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "Screenshot 2024-12-27 133129.png"
+    ],
+    "thumbnail": "Screenshot 2024-12-27 133129.png"
+  },
+  {
+    "title": "Inventory Management System",
+    "shortTitle": "Bondy Inventory",
+    "categories": [
+      "Internal Operations Systems",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Bondy",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate"
+    ],
+    "summary": "Inventory tracking system managing stock levels, product transformation, and sales operations.",
+    "featured": false,
+    "order": 7,
+    "impact": [
+      "Enabled real-time tracking of inventory and stock levels.",
+      "Improved visibility on product lifecycle from raw materials to finished goods.",
+      "Centralized transaction tracking for purchases, production, and sales."
+    ],
+    "videoEmbed": "",
+    "folder": "8- Bondy Inventory System",
+    "id": "inventory-management-system",
+    "longDescription": "I developed an inventory management system for Bondy to track product transactions, stock levels, and the transformation of raw materials into finished goods. The solution monitors the full inventory lifecycle, from purchasing garments as raw materials to converting them into final products and tracking their sales.\r\n\r\nThe application provides real-time visibility into stock levels, current inventory value, and the availability of both packaging materials and finished products. It centralizes all inventory-related operations, including purchases, production, and sales transactions, ensuring accurate and up-to-date tracking.\r\n\r\nBuilt using Power Apps and Power Automate, the system improves operational visibility and enables more efficient management of inventory and supply chain activities.\r\n",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.jpg"
+    ],
+    "thumbnail": "2.png"
+  },
+  {
+    "title": "Internal E-Commerce & Inventory System",
+    "shortTitle": "YM Store",
+    "categories": [
+      "Business Apps & Automation",
+      "Internal Operations Systems"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2024",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "Excel"
+    ],
+    "summary": "Internal store system managing customers, orders, inventory, and financial tracking.",
+    "featured": false,
+    "order": 8,
+    "impact": [
+      "Automated purchasing process with real-time inventory updates.",
+      "Integrated order management with invoice generation and email notifications.",
+      "Centralized financial tracking with transaction history and reporting."
+    ],
+    "videoEmbed": "https://youtu.be/VkqxCcYTvqI?si=fGiZJn-3eLyOGIBt",
+    "folder": "9- YM Store",
+    "id": "internal-e-commerce-inventory-system",
+    "longDescription": "I developed an internal digital store system designed to manage purchasing, inventory, and financial tracking within a centralized platform. The solution allows users to create accounts, browse available products, add items to a cart, and complete purchases directly within the application, with automated email notifications and PDF invoice generation.\r\n\r\nThe system also includes an administrative interface for managing products, updating stock levels, and monitoring customer activity. Inventory is automatically updated based on purchases, ensuring real-time stock accuracy. Administrators can also track top customers, monitor product performance, and analyze transaction data.\r\n\r\nIn addition, the application records all financial activities in an accounting-style journal, capturing incoming and outgoing transactions, payments, and revenue. Built using Power Apps, Power Automate, and Excel, the project demonstrates a complete end-to-end system covering customer management, order processing, inventory control, and financial tracking.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "Screenshot 2026-03-14 231743.png",
+      "Screenshot 2026-03-14 231816.png",
+      "Screenshot 2026-03-14 232102.png"
+    ],
+    "thumbnail": "2.png"
+  },
+  {
+    "title": "Change Request Management System",
+    "shortTitle": "RATP Dev System",
+    "categories": [
+      "Internal Operations Systems",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "RATP Dev",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint"
+    ],
+    "summary": "Workflow-driven system managing change requests from submission to approval and implementation.",
+    "featured": true,
+    "order": 9,
+    "impact": [
+      "Structured and standardized change request lifecycle across multiple stakeholders.",
+      "Automated communication and approval workflows, reducing manual coordination.",
+      "Improved transparency and tracking of requests through dashboards and status monitoring."
+    ],
+    "videoEmbed": "",
+    "folder": "10 - RATP Dev",
+    "id": "change-request-management-system",
+    "longDescription": "I developed a Change Request Management system for RATP Dev to digitize and streamline the process of handling internal system updates, issues, and improvement requests. The platform allows employees to submit change requests, including bugs, enhancements, or recommendations, which are then tracked through a structured and centralized workflow.\r\n\r\nThe system manages the full lifecycle of each request, starting with technical assessment, followed by potential budget evaluation, and progressing through business approval before implementation. Once completed, stakeholders are notified, ensuring clear communication and accountability throughout the process.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the solution includes automated workflows, role-based interactions, and dashboards that provide real-time visibility into request status and operational performance. The system improves efficiency, reduces reliance on manual coordination, and ensures a more transparent and controlled change management process.",
+    "images": [
+      "1.png",
+      "2.png",
+      "Flow.jpeg"
+    ],
+    "thumbnail": "1.png"
   }
 ]

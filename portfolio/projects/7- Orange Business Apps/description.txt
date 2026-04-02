@@ -1,0 +1,5 @@
+During my time at Orange Business, I developed two PowerApps solutions aimed at improving internal operations and supporting data-driven decision-making across teams. The first solution, MSC Learning Studio, was designed for the Learning & Development function to provide more than 2,500 employees with a centralized platform to access training programs, learning resources, and development opportunities in a structured and user-friendly way.
+
+The second solution, Global PO Tracker, focuses on procurement operations by enabling teams to track purchase orders, monitor their status, and follow approval workflows in real time. The system reduces reliance on manual tracking and improves coordination between different stakeholders involved in the procurement process.
+
+Built using Power Apps, Power Automate, SharePoint, and Excel, these applications enhanced operational efficiency, improved visibility on internal processes, and contributed to a more structured and scalable way of managing learning and procurement activities within the organization.

@@ -1,0 +1,5 @@
+I developed an inventory management system for Bondy to track product transactions, stock levels, and the transformation of raw materials into finished goods. The solution monitors the full inventory lifecycle, from purchasing garments as raw materials to converting them into final products and tracking their sales.
+
+The application provides real-time visibility into stock levels, current inventory value, and the availability of both packaging materials and finished products. It centralizes all inventory-related operations, including purchases, production, and sales transactions, ensuring accurate and up-to-date tracking.
+
+Built using Power Apps and Power Automate, the system improves operational visibility and enables more efficient management of inventory and supply chain activities.

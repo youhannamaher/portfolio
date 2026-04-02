@@ -1,0 +1,26 @@
+{
+  "title": "Internal Operations Applications",
+  "shortTitle": "Orange Business Apps",
+  "categories": [
+    "Business Apps & Automation",
+    "Internal Operations Systems"
+  ],
+  "clientOrOrganization": "Orange Business",
+  "role": "Power Platform Developer Intern",
+  "period": "2024",
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "SharePoint",
+    "Excel"
+  ],
+  "summary": "Developed internal apps for learning management and procurement tracking used across enterprise teams.",
+  "featured": true,
+  "order": 6,
+  "impact": [
+    "Improved access to training programs for over 2,500 employees.",
+    "Streamlined procurement tracking and approval workflows.",
+    "Enabled better operational visibility through centralized applications."
+  ],
+  "videoEmbed": ""
+}

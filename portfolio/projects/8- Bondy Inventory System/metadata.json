@@ -1,0 +1,24 @@
+{
+  "title": "Inventory Management System",
+  "shortTitle": "Bondy Inventory",
+  "categories": [
+    "Internal Operations Systems",
+    "Business Apps & Automation"
+  ],
+  "clientOrOrganization": "Bondy",
+  "role": "Power Platform Developer",
+  "period": "2025",
+  "stack": [
+    "Power Apps",
+    "Power Automate"
+  ],
+  "summary": "Inventory tracking system managing stock levels, product transformation, and sales operations.",
+  "featured": false,
+  "order": 7,
+  "impact": [
+    "Enabled real-time tracking of inventory and stock levels.",
+    "Improved visibility on product lifecycle from raw materials to finished goods.",
+    "Centralized transaction tracking for purchases, production, and sales."
+  ],
+  "videoEmbed": ""
+}

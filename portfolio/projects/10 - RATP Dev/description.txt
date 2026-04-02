@@ -1,0 +1,5 @@
+I developed a Change Request Management system for RATP Dev to digitize and streamline the process of handling internal system updates, issues, and improvement requests. The platform allows employees to submit change requests, including bugs, enhancements, or recommendations, which are then tracked through a structured and centralized workflow.
+
+The system manages the full lifecycle of each request, starting with technical assessment, followed by potential budget evaluation, and progressing through business approval before implementation. Once completed, stakeholders are notified, ensuring clear communication and accountability throughout the process.
+
+Built using Power Apps, Power Automate, and SharePoint, the solution includes automated workflows, role-based interactions, and dashboards that provide real-time visibility into request status and operational performance. The system improves efficiency, reduces reliance on manual coordination, and ensures a more transparent and controlled change management process.
