@@ -1,0 +1,26 @@
+{
+  "title": "Contract Lifecycle Management System",
+  "shortTitle": "Federon CMS",
+  "categories": [
+    "Internal Operations Systems",
+    "Business Apps & Automation"
+  ],
+  "clientOrOrganization": "Federon Procurement Solutions",
+  "role": "Power Platform Developer",
+  "period": "2026 - Present",
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "Dataverse",
+    "Power BI"
+  ],
+  "summary": "Enterprise contract management platform centralizing procurement workflows from discovery to submission.",
+  "featured": true,
+  "order": 2,
+  "impact": [
+    "Centralized contract operations and reduced reliance on emails and spreadsheets.",
+    "Implemented structured workflow across multiple roles (discovery, partner, specialist, submission).",
+    "Enabled real-time tracking and reporting of contract lifecycle and team performance."
+  ],
+  "videoEmbed": ""
+}

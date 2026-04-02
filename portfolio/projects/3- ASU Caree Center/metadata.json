@@ -1,0 +1,29 @@
+{
+  "title": "ASU Employment Fair Registration System",
+  "shortTitle": "ASU Registration System",
+  "categories": [
+    "Business Apps & Automation",
+    "Event Management",
+    "Dashboards & Analytics"
+  ],
+  "clientOrOrganization": "ASU Career Center",
+  "role": "Power Platform Developer",
+  "period": "2025",
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "SharePoint",
+    "Power BI",
+    "Google Sheets",
+    "App Script"
+  ],
+  "summary": "End-to-end event registration and QR-based verification system handling 15,000+ participants.",
+  "featured": true,
+  "order": 2,
+  "impact": [
+    "Managed registration and attendance tracking for over 15,000 participants.",
+    "Replaced manual Excel-based processes with a fully automated digital system.",
+    "Enabled real-time analytics, filtering, and targeted communication during and after the event."
+  ],
+  "videoEmbed": "https://youtu.be/M0VVYtuocNw?si=KfPKDV9FFn861K8E"
+}

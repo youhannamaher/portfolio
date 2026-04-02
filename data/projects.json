@@ -77,6 +77,91 @@
     "thumbnail": "1.png"
   },
   {
+    "title": "Contract Lifecycle Management System",
+    "shortTitle": "Federon CMS",
+    "categories": [
+      "Internal Operations Systems",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Federon Procurement Solutions",
+    "role": "Power Platform Developer",
+    "period": "2026 - Present",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "Dataverse",
+      "Power BI"
+    ],
+    "summary": "Enterprise contract management platform centralizing procurement workflows from discovery to submission.",
+    "featured": true,
+    "order": 2,
+    "impact": [
+      "Centralized contract operations and reduced reliance on emails and spreadsheets.",
+      "Implemented structured workflow across multiple roles (discovery, partner, specialist, submission).",
+      "Enabled real-time tracking and reporting of contract lifecycle and team performance."
+    ],
+    "videoEmbed": "",
+    "folder": "2- CMS - Federon",
+    "id": "contract-lifecycle-management-system",
+    "longDescription": "I am currently developing a Contract Lifecycle Management System for Federon Procurement Solutions, designed to centralize and digitize complex procurement workflows across multiple teams. The platform integrates external contract data into a unified system and manages the full operational lifecycle from initial discovery through internal evaluation, assignment, and submission processes.\r\n\r\nThe solution supports a structured, role-based workflow involving discovery teams, partners, specialists, and submission teams. Contracts are tracked through multiple stages, enabling clear visibility of their status, ownership, and progression. The system ensures that all actions, updates, and decisions are recorded within a centralized platform, reducing dependency on manual communication and disconnected tools.\r\n\r\nBuilt using Power Apps, Power Automate, Dataverse, and Power BI, the platform provides role-based interfaces, automated workflows, and real-time dashboards to enhance operational transparency and decision-making. The ongoing vision of the system is to evolve into a fully integrated operations platform, further centralizing procurement activities, performance tracking, and reporting across the entire contract lifecycle.",
+    "images": [
+      "All Contracts Tabular.png",
+      "Contract Line Items and Gant Chart.png",
+      "Creating Line Items.png",
+      "Home Page.png",
+      "Kanban View.png",
+      "One of the Many Flows.png",
+      "Powerbi Dashboard.png",
+      "Specific Contract Page.png"
+    ],
+    "thumbnail": "Home Page.png"
+  },
+  {
+    "title": "ASU Employment Fair Registration System",
+    "shortTitle": "ASU Registration System",
+    "categories": [
+      "Business Apps & Automation",
+      "Event Management",
+      "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "ASU Career Center",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint",
+      "Power BI",
+      "Google Sheets",
+      "App Script"
+    ],
+    "summary": "End-to-end event registration and QR-based verification system handling 15,000+ participants.",
+    "featured": true,
+    "order": 2,
+    "impact": [
+      "Managed registration and attendance tracking for over 15,000 participants.",
+      "Replaced manual Excel-based processes with a fully automated digital system.",
+      "Enabled real-time analytics, filtering, and targeted communication during and after the event."
+    ],
+    "videoEmbed": "https://youtu.be/M0VVYtuocNw?si=KfPKDV9FFn861K8E",
+    "folder": "3- ASU Caree Center",
+    "id": "asu-employment-fair-registration-system",
+    "longDescription": "I developed a smart registration and event management system for the ASU Career Center, designed to handle over 15,000 participants during the Employment Fair. The solution replaced manual Excel-based processes with a fully automated and centralized digital system, improving efficiency, accuracy, and real-time visibility across event operations.\r\n\r\nParticipants registered through an online form, triggering an automated workflow that generated a unique QR code and sent it via a professionally designed email. During the event, volunteers used a mobile Power Apps application to scan QR codes or search participants using identifiers such as phone number or ID, enabling fast and accurate attendance tracking. The system also supported workshop access control with capacity limitations.\r\n\r\nAn administrative interface allowed organizers to manage workshops and monitor operations through an interactive dashboard, providing real-time insights before, during, and after the event. Users could filter participant data, export results, and send targeted communications directly from the system. Built using Power Apps, Power Automate, SharePoint, Power BI, Google Sheets, and App Script, the solution significantly improved event management efficiency and enabled data-driven decision-making.",
+    "images": [
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png",
+      "MainPage.png",
+      "Screenshot 2025-01-23 150346.png",
+      "Screenshot 2025-02-19 003104.png",
+      "WhatsApp Image 2025-02-28 at 02.05.25_119dc703.jpg"
+    ],
+    "thumbnail": "WhatsApp Image 2025-02-28 at 02.05.25_119dc703.jpg"
+  },
+  {
     "title": "ASU Career Center Portal",
     "shortTitle": "ASU Career Portal",
     "categories": [
