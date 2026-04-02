@@ -380,6 +380,8 @@ img {
     display: flex;
     align-items: center;
     padding-top: var(--navbar-height);
+    padding-bottom: 3rem;
+
     overflow: hidden;
 }
 
