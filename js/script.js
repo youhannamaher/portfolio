@@ -21,9 +21,11 @@ let currentGalleryImages = [];
 let currentGalleryIndex = 0;
 
 async function initApp() {
+    console.log("🚀 App Initializing...");
     setupUI();
     
     try {
+        console.log("📂 Fetching data files...");
         await Promise.all([
             fetchData('profile'),
             fetchData('projects'),
@@ -32,9 +34,10 @@ async function initApp() {
             fetchData('education')
         ]);
         
+        console.log("✅ Data loaded. Starting renderApp...");
         renderApp();
     } catch (error) {
-        console.error("Failed to load portfolio data:", error);
+        console.error("❌ Failed to load portfolio data:", error);
     }
 }
 
@@ -46,6 +49,11 @@ async function fetchData(type) {
         state[type] = data;
     } catch (e) {
         console.error(`Fetch failed for ${type}.json.`, e);
+        const debugInfo = document.createElement('div');
+        debugInfo.style.cssText = 'padding:10px; background:rgba(239, 68, 68, 0.1); border:1px solid rgba(239, 68, 68, 0.3); border-radius:4px; margin-top:5px; font-size:12px; font-family:monospace; color:#ef4444;';
+        debugInfo.textContent = `❌ [DEBUG] Fetch failed for data/${type}.json: ${e.message}`;
+        document.body.appendChild(debugInfo);
+        
         if (window.location.protocol === 'file:') {
             showCorsWarning();
         }
@@ -295,7 +303,6 @@ function setupObservers() {
     const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid');
     gridContainers.forEach(container => {
         applyStagger(container.children);
-        revealOnScroll(container.children);
     });
 
     // 3. Catchy Interactive Enhancements (Desktop Only)
