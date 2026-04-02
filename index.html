@@ -266,12 +266,12 @@
                     </div>
                 </div>
 
-                <!-- Mode 2: Book a Consultation (Google Embed) -->
+                <!-- Mode 2: Book a Consultation (Cal.com Popup) -->
                 <div class="contact-mode-container" id="contact-mode-booking">
                     <div class="booking-card-premium">
                         <div class="booking-intro">
                             <div class="booking-icon-wrapper">
-                                <i class="fa-solid fa-comments-dollar"></i>
+                                <i class="fa-solid fa-calendar-check"></i>
                             </div>
                             <div class="booking-text">
                                 <h3>Free 15-Minute Discovery Call</h3>
@@ -279,11 +279,24 @@
                             </div>
                         </div>
 
-                        <!-- Google Calendar Appointment Scheduling begin -->
-                        <div class="booking-iframe-shell">
-                            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0bJREEX7WaSSO5_i8W617hyH9LWvu9FAlGFocGpL1BOfYLGNf4E1MtJhdZquR4aMD74bJAOw7N?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+                        <div class="booking-card-body">
+                            <ul class="booking-benefits">
+                                <li><i class="fa-solid fa-check-circle"></i> Discuss your project idea</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Explore automation opportunities</li>
+                                <li><i class="fa-solid fa-check-circle"></i> Get quick expert guidance</li>
+                            </ul>
+
+                            <div class="booking-cta">
+                                <button 
+                                    class="btn btn-primary btn-booking"
+                                    data-cal-link="youhanna-maher/free-15-mins-consultancy"
+                                    data-cal-namespace="free-15-mins-consultancy"
+                                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                                >
+                                    Book My Free Call <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
-                        <!-- end Google Calendar Appointment Scheduling -->
                     </div>
                 </div>
             </div>
@@ -347,6 +360,14 @@
         </button>
         <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
+
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "free-15-mins-consultancy", {origin:"https://app.cal.com"});
+      Cal.ns["free-15-mins-consultancy"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <!-- Cal element-click embed code ends -->
 
     <!-- Smooth Scroll (Lenis) -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
