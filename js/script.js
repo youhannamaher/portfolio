@@ -400,10 +400,9 @@ function renderProfile() {
     if (p.title) document.getElementById('hero-title').textContent = p.title;
     if (p.subtitle) document.getElementById('hero-subtitle').textContent = p.subtitle;
     
-    if (p.cvLink) {
-        document.getElementById('hero-cv-btn').href = p.cvLink;
-    } else {
-        document.getElementById('hero-cv-btn').style.display = 'none';
+    const cvBtn = document.getElementById('hero-cv-btn');
+    if (cvBtn && p.cvLink) {
+        cvBtn.href = p.cvLink;
     }
 
     if (p.highlights && p.highlights.length) {
@@ -431,15 +430,18 @@ function renderProfile() {
 
     // Contact Social Icons (Footer only)
     if (p.contact) {
-        const c = p.contact;
-        const iconLinks = [];
+        const footerSocial = document.getElementById('footer-social');
+        if (footerSocial) {
+            const c = p.contact;
+            const iconLinks = [];
 
-        if (c.email) iconLinks.push(`<a href="mailto:${c.email}" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>`);
-        if (c.phone) iconLinks.push(`<a href="tel:${c.phone}" class="social-link" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>`);
-        if (c.social?.linkedin) iconLinks.push(`<a href="${c.social.linkedin}" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>`);
-        if (c.social?.upwork) iconLinks.push(`<a href="${c.social.upwork}" target="_blank" class="social-link" aria-label="Upwork"><span style="--icon: url('https://img.icons8.com/ios-filled/50/upwork.png'); -webkit-mask: var(--icon) no-repeat center / contain; mask: var(--icon) no-repeat center / contain; width: 22px; height: 22px; display: inline-block; background-color: currentColor; vertical-align: middle;"></span></a>`);
+            if (c.email) iconLinks.push(`<a href="mailto:${c.email}" class="social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>`);
+            if (c.phone) iconLinks.push(`<a href="tel:${c.phone}" class="social-link" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>`);
+            if (c.social?.linkedin) iconLinks.push(`<a href="${c.social.linkedin}" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>`);
+            if (c.social?.upwork) iconLinks.push(`<a href="${c.social.upwork}" target="_blank" class="social-link" aria-label="Upwork"><span style="--icon: url('https://img.icons8.com/ios-filled/50/upwork.png'); -webkit-mask: var(--icon) no-repeat center / contain; mask: var(--icon) no-repeat center / contain; width: 22px; height: 22px; display: inline-block; background-color: currentColor; vertical-align: middle;"></span></a>`);
 
-        document.getElementById('footer-social').innerHTML = iconLinks.join('');
+            footerSocial.innerHTML = iconLinks.join('');
+        }
     }
 }
 
@@ -463,7 +465,6 @@ function renderExpertise() {
     
     const expertiseCards = document.querySelectorAll('#expertise-grid .expertise-card');
     applyStagger(expertiseCards);
-    revealOnScroll(expertiseCards);
 }
 
 function createProjectCard(project) {
@@ -526,7 +527,6 @@ function renderProjects() {
             
             const cards = container.querySelectorAll('.project-card');
             applyStagger(cards);
-            revealOnScroll(cards);
             
             if (currentFilteredProjects.length > currentLimit) {
                 paginationDiv.style.display = 'block';
@@ -708,7 +708,6 @@ function renderCertificates() {
 
     const certCards = document.querySelectorAll('#certifications-grid .cert-card');
     applyStagger(certCards);
-    revealOnScroll(certCards);
 }
 
 function renderEducation() {
@@ -727,7 +726,6 @@ function renderEducation() {
 
     const eduCards = document.querySelectorAll('#education-grid .education-card');
     applyStagger(eduCards);
-    revealOnScroll(eduCards);
 }
 
 /* =========================================================================
