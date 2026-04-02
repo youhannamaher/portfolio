@@ -1,23 +1,25 @@
 {
-  "title": "Nestlé HR Digital Solutions",
-  "shortTitle": "Nestlé HR Portal",
-  "categories": ["HR Digital Transformation", "Automation"],
-  "clientOrOrganization": "Nestlé",
-  "role": "Lead Power Platform Developer",
-  "period": "01/2024 - 03/2024",
+  "title": "MStack360 CRM System",
+  "shortTitle": "MStack360 CRM",
+  "categories": [
+    "Business Apps & Automation",
+    "Internal Operations Systems"
+  ],
+  "clientOrOrganization": "MStack360",
+  "role": "Power Platform Developer",
+  "period": "2025",
   "stack": [
     "Power Apps",
     "Power Automate",
-    "Dataverse",
     "SharePoint"
   ],
-  "summary": "Digitalized the HR request and approval process for Nestlé, integrating automation to reduce manual overhead.",
+  "summary": "End-to-end CRM system managing clients, projects, freelancers, and financial operations in one unified platform.",
   "featured": true,
   "order": 1,
   "impact": [
-    "Replaced fragmented manual systems with a centralized HR portal.",
-    "Automated approval workflows for over 15,000 employees.",
-    "Reduced request turnaround time by 60%."
+    "Centralized client, project, and freelancer management into a single system.",
+    "Automated invoice generation and email communication workflows.",
+    "Improved visibility on financials, payments, and project performance."
   ],
   "videoEmbed": ""
 }

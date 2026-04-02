@@ -1,31 +1,30 @@
 [
   {
-    "title": "Nestlé HR Digital Solutions",
-    "shortTitle": "Nestlé HR Portal",
+    "title": "MStack360 CRM System",
+    "shortTitle": "MStack360 CRM",
     "categories": [
-      "HR Digital Transformation",
-      "Automation"
+      "Business Apps & Automation",
+      "Internal Operations Systems"
     ],
-    "clientOrOrganization": "Nestlé",
-    "role": "Lead Power Platform Developer",
-    "period": "01/2024 - 03/2024",
+    "clientOrOrganization": "MStack360",
+    "role": "Power Platform Developer",
+    "period": "2025",
     "stack": [
       "Power Apps",
       "Power Automate",
-      "Dataverse",
       "SharePoint"
     ],
-    "summary": "Digitalized the HR request and approval process for Nestlé, integrating automation to reduce manual overhead.",
+    "summary": "End-to-end CRM system managing clients, projects, freelancers, and financial operations in one unified platform.",
     "featured": true,
     "order": 1,
     "impact": [
-      "Replaced fragmented manual systems with a centralized HR portal.",
-      "Automated approval workflows for over 15,000 employees.",
-      "Reduced request turnaround time by 60%."
+      "Centralized client, project, and freelancer management into a single system.",
+      "Automated invoice generation and email communication workflows.",
+      "Improved visibility on financials, payments, and project performance."
     ],
     "videoEmbed": "",
     "folder": "1- CRM - Mstack360",
-    "id": "nestl-hr-digital-solutions",
+    "id": "mstack360-crm-system",
     "longDescription": "I designed and developed a custom CRM system for MStack360, a freelance-based company where employees operate as freelancers and clients are primarily technical organizations. The solution centralizes the management of clients, employees, projects, tasks, leads, and financial operations into a single unified platform, enabling efficient tracking of work, payments, and client relationships.\r\n\r\nThe system includes a comprehensive Client Management module providing a 360° view of each client, including project history, active work, payments, and follow-ups. Users can generate invoices directly from the application by adding line items, after which a Power Automate workflow automatically creates a professionally formatted PDF invoice and sends it via email. The platform also integrates a built-in HTML email system to send customized communications to clients.\r\n\r\nIn addition, the solution features Employee Management, allowing tracking of freelancer performance, workload, payments, and assigned projects. A structured Projects & Tasks module supports milestone tracking and operational follow-up, while the Finance module provides visibility on payments received, payments due, and overall financial status. The system also includes a Follow-Up module to manage client communication and an integrated dashboard to visualize business activity.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the CRM significantly reduces manual work, improves operational visibility, and provides a scalable foundation for managing freelance-based business operations.",
     "images": [
       "Client Management page.jpeg",
