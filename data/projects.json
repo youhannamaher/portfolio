@@ -24,17 +24,21 @@
       "Reduced request turnaround time by 60%."
     ],
     "videoEmbed": "",
-    "folder": "1-YM_Store",
+    "folder": "1- CRM - Mstack360",
     "id": "nestl-hr-digital-solutions",
+    "longDescription": "I designed and developed a custom CRM system for MStack360, a freelance-based company where employees operate as freelancers and clients are primarily technical organizations. The solution centralizes the management of clients, employees, projects, tasks, leads, and financial operations into a single unified platform, enabling efficient tracking of work, payments, and client relationships.\r\n\r\nThe system includes a comprehensive Client Management module providing a 360° view of each client, including project history, active work, payments, and follow-ups. Users can generate invoices directly from the application by adding line items, after which a Power Automate workflow automatically creates a professionally formatted PDF invoice and sends it via email. The platform also integrates a built-in HTML email system to send customized communications to clients.\r\n\r\nIn addition, the solution features Employee Management, allowing tracking of freelancer performance, workload, payments, and assigned projects. A structured Projects & Tasks module supports milestone tracking and operational follow-up, while the Finance module provides visibility on payments received, payments due, and overall financial status. The system also includes a Follow-Up module to manage client communication and an integrated dashboard to visualize business activity.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the CRM significantly reduces manual work, improves operational visibility, and provides a scalable foundation for managing freelance-based business operations.",
     "images": [
-      "2.png",
-      "3.png",
-      "4.png",
-      "Screenshot 2026-03-14 231743.png",
-      "Screenshot 2026-03-14 231816.png",
-      "Screenshot 2026-03-14 232102.png"
+      "Client Management page.jpeg",
+      "Employee Management Page.jpeg",
+      "Finance.jpeg",
+      "Follow Up HTML Email .jpeg",
+      "Invoice Creation.jpeg",
+      "Invoice Email.jpeg",
+      "Invoice PDF and Email.jpeg",
+      "Invoice PDF.jpeg",
+      "Projects.jpeg"
     ],
-    "thumbnail": "1.png"
+    "thumbnail": "Thumbnail.jpeg"
   },
   {
     "title": "Nestlé HR Digital Solutions",
@@ -61,21 +65,17 @@
       "Reduced request turnaround time by 60%."
     ],
     "videoEmbed": "",
-    "folder": "1-YM_Store - Copy",
+    "folder": "1-YM_Store",
     "id": "nestl-hr-digital-solutions",
-    "longDescription": "I designed and developed a custom CRM system for MStack360, a freelance-based company where employees operate as freelancers and clients are primarily technical organizations. The solution centralizes the management of clients, employees, projects, tasks, leads, and financial operations into a single unified platform, enabling efficient tracking of work, payments, and client relationships.\r\n\r\nThe system includes a comprehensive Client Management module providing a 360° view of each client, including project history, active work, payments, and follow-ups. Users can generate invoices directly from the application by adding line items, after which a Power Automate workflow automatically creates a professionally formatted PDF invoice and sends it via email. The platform also integrates a built-in HTML email system to send customized communications to clients.\r\n\r\nIn addition, the solution features Employee Management, allowing tracking of freelancer performance, workload, payments, and assigned projects. A structured Projects & Tasks module supports milestone tracking and operational follow-up, while the Finance module provides visibility on payments received, payments due, and overall financial status. The system also includes a Follow-Up module to manage client communication and an integrated dashboard to visualize business activity.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the CRM significantly reduces manual work, improves operational visibility, and provides a scalable foundation for managing freelance-based business operations.",
     "images": [
-      "Client Management page.jpeg",
-      "Employee Management Page.jpeg",
-      "Finance.jpeg",
-      "Follow Up HTML Email .jpeg",
-      "Invoice Creation.jpeg",
-      "Invoice Email.jpeg",
-      "Invoice PDF and Email.jpeg",
-      "Invoice PDF.jpeg",
-      "Projects.jpeg"
+      "2.png",
+      "3.png",
+      "4.png",
+      "Screenshot 2026-03-14 231743.png",
+      "Screenshot 2026-03-14 231816.png",
+      "Screenshot 2026-03-14 232102.png"
     ],
-    "thumbnail": "Thumbnail.jpeg"
+    "thumbnail": "1.png"
   },
   {
     "title": "ASU Career Center Portal",
