@@ -232,6 +232,33 @@ function setupUI() {
     }
 
     initContactHub();
+    initFAQ();
+    
+    // Initial scroll reveal for elements already in DOM
+    const revealElements = document.querySelectorAll('.reveal');
+    revealOnScroll(revealElements);
+}
+
+/**
+ * FAQ Accordion Logic
+ */
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(i => i.classList.remove('active'));
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
 }
 
 // Global Observer for Scroll Reveals
@@ -248,7 +275,7 @@ function setupObservers() {
 
     // 2. Initialize Reveal Observer
     const observerOptions = {
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
@@ -256,14 +283,13 @@ function setupObservers() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
-                revealObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Initial Static Elements Reveal
-    const staticElements = document.querySelectorAll('.section-header, .timeline-item, .about-text, .contact-form');
-    staticElements.forEach(el => {
+    // Dynamic Elements Reveal (Initial and New)
+    const revealTargets = document.querySelectorAll('.section-header, .timeline-item, .about-text, .contact-form, .problem-card, .process-step, .faq-item, .metrics-strip');
+    revealTargets.forEach(el => {
         el.classList.add('reveal');
         revealObserver.observe(el);
     });

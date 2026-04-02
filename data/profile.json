@@ -1,24 +1,24 @@
 {
   "name": "Youhanna Maher",
-  "title": "Power Platform Developer",
-  "subtitle": "I build business applications, workflow automations, and reporting solutions using Microsoft Power Platform to streamline operations, improve visibility, and reduce manual work.",
+  "title": "I Build Business Applications That Actually Save Time",
+  "subtitle": "I help businesses automate repetitive workflows and build efficient Power Platform systems that streamline operations and improve data visibility.",
   "cvLink": "portfolio/files/Youhanna_Maher_CV.pdf",
   "highlights": [
+    { "text": "15k+ Users Managed", "icon": "fa-users" },
     { "text": "Ranked 1st in Class", "icon": "fa-trophy" },
     { "text": "Power Apps / Automate / BI", "icon": "fa-microsoft" },
-    { "text": "HR & Operations Digitalization", "icon": "fa-network-wired" },
-    { "text": "Ain Shams & Poitiers Alumni", "icon": "fa-graduation-cap" }
+    { "text": "HR & Operations Digitalization", "icon": "fa-network-wired" }
   ],
   "about": [
-    "As a dual-degree management student ranked first in my class at both Ain Shams University and the University of Poitiers, I have developed a unique blend of business acumen and deep technical expertise.",
-    "Driven by process optimization and digital transformation, I specialize in translating complex business needs into streamlined, scalable digital solutions. Using the Microsoft Power Platform suite, I construct internal tools, automate repetitive workflows, and build robust dashboards that empower enterprise teams.",
-    "Whether it is HR process automation, procurement tracking, or operational analytics, my primary goal is simple: deliver high-impact digital solutions that accelerate business efficiency and eliminate manual overhead."
+    "As a dual-degree management student ranked first in my class at both Ain Shams University and the University of Poitiers, I offer a unique combination of business logic and technical execution.",
+    "I focus on solving real-world problems. Whether it's replacing a messy Excel file with a robust app or automating an approval process that used to take days, my goal is to build systems that are efficient, reliable, and easy to use.",
+    "With experience managing systems for over 15,000 users, I understand how to build for scale while keeping the user experience simple and effective."
   ],
   "stats": [
-    { "value": "15k+", "label": "Users Managed in Systems" },
-    { "value": "4+", "label": "Enterprise Deployment Contexts" },
-    { "value": "6+", "label": "Core Technologies Mastered" },
-    { "value": "1st", "label": "Academic Ranking" }
+    { "value": "15k+", "label": "Users Managed" },
+    { "value": "4+", "label": "Enterprise Systems" },
+    { "value": "1st", "label": "Academic Ranking" },
+    { "value": "6+", "label": "Core Technologies" }
   ],
   "expertise": [
     { "title": "Power Apps", "icon": "fa-mobile-screen", "desc": "Custom business applications, role-based workflows, operational systems, and internal tools designed for high usability and scale." },

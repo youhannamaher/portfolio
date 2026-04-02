@@ -87,9 +87,8 @@
                     </div>
 
                     <div class="cta-group">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#" id="hero-cv-btn" class="btn btn-secondary" target="_blank" download>Download CV</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary" onclick="document.querySelector('[data-mode=booking]').click();">Book a Free Call</a>
                     </div>
                 </div>
                 <div class="hero-image" id="hero-image-container">
@@ -102,8 +101,56 @@
             <div class="hero-glow"></div>
         </section>
 
+        <!-- Metrics Strip -->
+        <div class="metrics-strip">
+            <div class="container metrics-container" id="metrics-container">
+                <div class="metric-item">
+                    <span class="metric-value">15k+</span>
+                    <span class="metric-label">Users Managed</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">4+</span>
+                    <span class="metric-label">Enterprise Systems</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">1st</span>
+                    <span class="metric-label">Academic Rank</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-value">6+</span>
+                    <span class="metric-label">Core Technologies</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem Recognition Section -->
+        <section id="problems" class="section container">
+            <div class="section-header text-center">
+                <h2>Is Your Business Held Back by Manual Processes?</h2>
+                <p class="section-subtitle">Identifying the bottlenecks that prevent your team from scaling.</p>
+                <div class="divider mx-auto"></div>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card reveal">
+                    <div class="problem-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>Too Many Manual Tasks</h3>
+                    <p>Repetitive data entry and manual approvals are pulling your team away from high-value work and slowing down operations.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-icon"><i class="fa-solid fa-file-excel"></i></div>
+                    <h3>Messy & Error-Prone Excel</h3>
+                    <p>Fragile, shared spreadsheets often lead to broken formulas, lost data, and a lack of a single source of truth.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-icon"><i class="fa-solid fa-eye-slash"></i></div>
+                    <h3>No Visibility on Data</h3>
+                    <p>Without automated dashboards, you're guessing instead of knowing. Real-time insights are buried in static reports.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
-        <section id="about" class="section container">
+        <section id="about" class="section container bg-alt">
             <div class="section-header">
                 <h2>About Me</h2>
                 <div class="divider"></div>
@@ -118,14 +165,51 @@
             </div>
         </section>
 
-        <!-- Expertise Section -->
-        <section id="expertise" class="section container bg-alt">
+        <!-- How I Can Help (Expertise) -->
+        <section id="expertise" class="section container">
             <div class="section-header">
-                <h2>Core Expertise</h2>
+                <h2>How I Can Help</h2>
+                <p class="section-subtitle">Scalable digital systems designed to solve specific business problems.</p>
                 <div class="divider"></div>
             </div>
             <div class="expertise-grid" id="expertise-grid">
                 <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section container bg-alt">
+            <div class="section-header text-center">
+                <h2>The Process</h2>
+                <p class="section-subtitle">A structured roadmap from understanding your needs to delivering a refined solution.</p>
+                <div class="divider mx-auto"></div>
+            </div>
+            <div class="process-roadmap">
+                <div class="process-step reveal">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h4>1. Discovery</h4>
+                    <p>We discuss your current challenges and define clear goals.</p>
+                </div>
+                <div class="process-step reveal stagger-1">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+                    <h4>2. Understanding</h4>
+                    <p>I analyze your existing data and map out the required process.</p>
+                </div>
+                <div class="process-step reveal stagger-2">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4>3. Design</h4>
+                    <p>I architect a custom, scalable digital system that fits your workflow.</p>
+                </div>
+                <div class="process-step reveal stagger-3">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-code"></i></div>
+                    <h4>4. Implementation</h4>
+                    <p>I build and deploy your application or automation with quality in mind.</p>
+                </div>
+                <div class="process-step reveal stagger-4">
+                    <div class="step-icon-wrapper"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+                    <h4>5. Improvement</h4>
+                    <p>We refine the system based on real-world feedback and data.</p>
+                </div>
             </div>
         </section>
 
@@ -209,11 +293,73 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section id="faq" class="section container">
+            <div class="section-header text-center">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about the process, timelines, and results.</p>
+                <div class="divider mx-auto"></div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        What specific results can I expect?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can expect significant time savings by automating manual data entry, improved accuracy by removing human error, and real-time visibility into your business metrics through automated dashboards.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        How long does it typically take to build a solution?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Timelines depend on complexity. A simple automation might take 3–5 days, while a comprehensive Power Apps system typically ranges from 2–4 weeks from discovery to deployment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        Do you provide support after the implementation?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. I believe in iterative improvement. After the initial launch, I offer support to ensure the team adopts the system and to make any necessary refinements based on real-world usage.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        Can you help if my existing data is a mess?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>That is where I start. Most of my projects begin with messy Excel files or scattered data. Part of my 'Understanding' phase involves cleaning, structuring, and migrating your data into a reliable system.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        Which platforms do you use for your solutions?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I specialize in the Microsoft Power Platform, specifically Power Apps (for interfaces), Power Automate (for logic), and Power BI (for data). I also use SharePoint and Dataverse for robust data storage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section id="contact" class="section container">
-            <div class="section-header">
-                <h2>Let’s Discuss Your Project</h2>
-                <div class="divider"></div>
+        <section id="contact" class="section container bg-alt">
+            <div class="section-header text-center">
+                <h2>Ready to Start Your Digital Transformation?</h2>
+                <p class="section-subtitle">Let's discuss how we can build a system that saves you time and scales your business.</p>
+                <div class="divider mx-auto"></div>
             </div>
 
             <div class="contact-hub-wrapper">

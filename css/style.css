@@ -1849,3 +1849,220 @@ img {
         animation-duration: 6s; /* Slower animation for less distraction */
     }
 }
+
+/* --- UX & CONVERSION UPGRADES --- */
+
+/* 1. Metrics Strip */
+.metrics-strip {
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    margin-top: -1px; /* Overlap slightly for cleaner border look */
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.metric-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 2. Problem Recognition */
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.problem-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem;
+    border-radius: 16px;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-card:hover {
+    border-color: rgba(239, 68, 68, 0.3); /* Subtle red for "problem" cards */
+    transform: translateY(-5px);
+}
+
+.problem-icon {
+    font-size: 2rem;
+    color: #ef4444;
+    margin-bottom: 1.5rem;
+}
+
+.problem-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.problem-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* 3. Process Section (Roadmap) */
+.process-roadmap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-surface);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--accent-primary);
+    font-size: 1.25rem;
+    transition: all var(--transition-base);
+}
+
+.process-step:hover .step-icon-wrapper {
+    background-color: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.process-step h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Connector Line (Desktop Only) */
+@media (min-width: 1024px) {
+    .process-roadmap::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        right: 50px;
+        height: 2px;
+        background: repeating-linear-gradient(90deg, var(--border-color), var(--border-color) 10px, transparent 10px, transparent 20px);
+        z-index: 0;
+    }
+}
+
+/* 4. FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background-color var(--transition-fast);
+}
+
+.faq-question:hover {
+    background-color: var(--bg-surface-hover);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-bottom: 1.5rem;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+    color: var(--accent-primary);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* 5. Responsive Adjustments */
+@media (max-width: 768px) {
+    .metrics-container {
+        gap: 1.5rem;
+    }
+    .metric-item {
+        flex: 1 1 40%;
+    }
+    .process-roadmap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .process-step {
+        width: 100%;
+        max-width: 300px;
+    }
+}
