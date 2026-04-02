@@ -1,6 +1,20 @@
 [
   {
     "order": 1,
+    "title": "DALF C1",
+    "issuer": "French Institut",
+    "year": "2025",
+    "folder": "DALF C1",
+    "id": "dalf-c1",
+    "pdf": "Dalf C1 - Institut Francais.pdf",
+    "image": "C1 Back.png",
+    "images": [
+      "C1 Back.png",
+      "C1 Front.png"
+    ]
+  },
+  {
+    "order": 1,
     "title": "PL-900: Microsoft Power Platform Fundamentals",
     "issuer": "Microsoft",
     "year": "2025",
