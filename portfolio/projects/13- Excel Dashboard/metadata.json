@@ -1,0 +1,18 @@
+{
+  "title": "Interactive Financial Dashboard",
+  "shortTitle": "Excel Dashboard",
+  "categories": ["Dashboards & Analytics"],
+  "clientOrOrganization": "Personal Project",
+  "role": "Data Analyst / Developer",
+  "period": "2023",
+  "stack": ["Excel", "VBA", "Pivot Tables"],
+  "summary": "Dynamic financial dashboard with automated tracking, interactive charts, and real-time data updates.",
+  "featured": false,
+  "order": 12,
+  "impact": [
+    "Built a fully dynamic dashboard with real-time updates based on user input.",
+    "Automated data handling and reporting using VBA and Excel forms.",
+    "Delivered clear financial insights through interactive charts and KPI tracking."
+  ],
+  "videoEmbed": ""
+}

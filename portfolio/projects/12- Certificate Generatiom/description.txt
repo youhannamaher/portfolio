@@ -1,0 +1,5 @@
+I designed and developed an automated certificate generation system to streamline the process of creating and sending personalized certificates at scale. The solution uses a structured Excel file as a data source, where each row represents a recipient, including their name and email address.
+
+Using Power Automate, the system reads the data, dynamically injects recipient information into a professionally designed HTML certificate template, and generates a PDF-ready document for each individual. The process is fully automated, allowing certificates to be created consistently without any manual editing or formatting.
+
+The workflow also sends personalized HTML emails to each recipient, attaching their certificate and delivering a cohesive, branded communication experience. Built using Power Automate, Excel, and HTML/CSS, the solution transforms a repetitive manual process into a scalable and efficient automation while maintaining a high level of design quality and professionalism.

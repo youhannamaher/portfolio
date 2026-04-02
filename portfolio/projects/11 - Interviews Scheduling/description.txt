@@ -1,0 +1,5 @@
+I developed a smart interview scheduling system to demonstrate how recruitment processes can be streamlined while enhancing candidate experience and employer branding. The application allows recruiters to select candidates, define interview duration, and generate available time slots dynamically based on working hours and availability.
+
+Once a time slot is selected, the system automatically creates a meeting integrated with Outlook and Microsoft Teams and sends a professionally designed HTML invitation to the candidate. The process is fully automated and can be completed in just a few clicks, eliminating manual coordination and scheduling effort.
+
+Built using Power Apps, Power Automate, Outlook, and Microsoft Teams integration, the solution highlights how simple automation can significantly improve recruitment efficiency and deliver a more professional and structured communication experience.

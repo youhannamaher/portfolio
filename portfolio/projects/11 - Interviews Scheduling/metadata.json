@@ -1,0 +1,18 @@
+{
+  "title": "Smart Interview Scheduling System",
+  "shortTitle": "Interview Scheduler",
+  "categories": ["HR Digital Transformation", "Business Apps & Automation"],
+  "clientOrOrganization": "Personal Project",
+  "role": "Power Platform Developer",
+  "period": "2025",
+  "stack": ["Power Apps", "Power Automate", "Outlook", "Microsoft Teams"],
+  "summary": "Automated interview scheduling with dynamic time slots and integrated Outlook & Teams invitations.",
+  "featured": false,
+  "order": 10,
+  "impact": [
+    "Automated interview scheduling with dynamic availability-based time slots.",
+    "Integrated Outlook and Teams to create meetings and send professional invitations.",
+    "Enhanced candidate experience through structured and branded communication."
+  ],
+  "videoEmbed": ""
+}

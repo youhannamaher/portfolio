@@ -106,7 +106,7 @@
       "Replaced manual Excel-based processes with a fully automated digital system.",
       "Enabled real-time analytics, filtering, and targeted communication during and after the event."
     ],
-    "videoEmbed": "https://youtu.be/M0VVYtuocNw?si=KfPKDV9FFn861K8E",
+    "videoEmbed": "https://www.youtube.com/watch?v=M0VVYtuocNw",
     "folder": "3- ASU Caree Center",
     "id": "asu-employment-fair-registration-system",
     "longDescription": "I developed a smart registration and event management system for the ASU Career Center, designed to handle over 15,000 participants during the Employment Fair. The solution replaced manual Excel-based processes with a fully automated and centralized digital system, improving efficiency, accuracy, and real-time visibility across event operations.\r\n\r\nParticipants registered through an online form, triggering an automated workflow that generated a unique QR code and sent it via a professionally designed email. During the event, volunteers used a mobile Power Apps application to scan QR codes or search participants using identifiers such as phone number or ID, enabling fast and accurate attendance tracking. The system also supported workshop access control with capacity limitations.\r\n\r\nAn administrative interface allowed organizers to manage workshops and monitor operations through an interactive dashboard, providing real-time insights before, during, and after the event. Users could filter participant data, export results, and send targeted communications directly from the system. Built using Power Apps, Power Automate, SharePoint, Power BI, Google Sheets, and App Script, the solution significantly improved event management efficiency and enabled data-driven decision-making.",
@@ -336,7 +336,7 @@
       "Integrated order management with invoice generation and email notifications.",
       "Centralized financial tracking with transaction history and reporting."
     ],
-    "videoEmbed": "https://youtu.be/VkqxCcYTvqI?si=fGiZJn-3eLyOGIBt",
+    "videoEmbed": "https://www.youtube.com/watch?v=VkqxCcYTvqI&t=125s",
     "folder": "9- YM Store",
     "id": "internal-e-commerce-inventory-system",
     "longDescription": "I developed an internal digital store system designed to manage purchasing, inventory, and financial tracking within a centralized platform. The solution allows users to create accounts, browse available products, add items to a cart, and complete purchases directly within the application, with automated email notifications and PDF invoice generation.\r\n\r\nThe system also includes an administrative interface for managing products, updating stock levels, and monitoring customer activity. Inventory is automatically updated based on purchases, ensuring real-time stock accuracy. Administrators can also track top customers, monitor product performance, and analyze transaction data.\r\n\r\nIn addition, the application records all financial activities in an accounting-style journal, capturing incoming and outgoing transactions, payments, and revenue. Built using Power Apps, Power Automate, and Excel, the project demonstrates a complete end-to-end system covering customer management, order processing, inventory control, and financial tracking.",
@@ -384,5 +384,108 @@
       "Flow.jpeg"
     ],
     "thumbnail": "1.png"
+  },
+  {
+    "title": "Smart Interview Scheduling System",
+    "shortTitle": "Interview Scheduler",
+    "categories": [
+      "HR Digital Transformation",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "Outlook",
+      "Microsoft Teams"
+    ],
+    "summary": "Automated interview scheduling with dynamic time slots and integrated Outlook & Teams invitations.",
+    "featured": false,
+    "order": 10,
+    "impact": [
+      "Automated interview scheduling with dynamic availability-based time slots.",
+      "Integrated Outlook and Teams to create meetings and send professional invitations.",
+      "Enhanced candidate experience through structured and branded communication."
+    ],
+    "videoEmbed": "",
+    "folder": "11 - Interviews Scheduling",
+    "id": "smart-interview-scheduling-system",
+    "longDescription": "I developed a smart interview scheduling system to demonstrate how recruitment processes can be streamlined while enhancing candidate experience and employer branding. The application allows recruiters to select candidates, define interview duration, and generate available time slots dynamically based on working hours and availability.\r\n\r\nOnce a time slot is selected, the system automatically creates a meeting integrated with Outlook and Microsoft Teams and sends a professionally designed HTML invitation to the candidate. The process is fully automated and can be completed in just a few clicks, eliminating manual coordination and scheduling effort.\r\n\r\nBuilt using Power Apps, Power Automate, Outlook, and Microsoft Teams integration, the solution highlights how simple automation can significantly improve recruitment efficiency and deliver a more professional and structured communication experience.",
+    "images": [
+      "Getting the Interview Email.png",
+      "Interview Scheduled.png",
+      "Scheduling The Interview Through PowerApp.png"
+    ],
+    "thumbnail": "Scheduling The Interview Through PowerApp.png"
+  },
+  {
+    "title": "Automated Certificate Generation System",
+    "shortTitle": "Certificate Automation",
+    "categories": [
+      "Business Apps & Automation",
+      "HR Digital Transformation"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Automate",
+      "Excel",
+      "HTML/CSS"
+    ],
+    "summary": "Automated system generating and sending personalized certificates at scale using dynamic templates.",
+    "featured": false,
+    "order": 11,
+    "impact": [
+      "Eliminated manual certificate creation and email sending processes.",
+      "Enabled scalable generation of personalized PDF certificates.",
+      "Delivered consistent and professional branded communication experience."
+    ],
+    "videoEmbed": "",
+    "folder": "12- Certificate Generatiom",
+    "id": "automated-certificate-generation-system",
+    "longDescription": "I designed and developed an automated certificate generation system to streamline the process of creating and sending personalized certificates at scale. The solution uses a structured Excel file as a data source, where each row represents a recipient, including their name and email address.\r\n\r\nUsing Power Automate, the system reads the data, dynamically injects recipient information into a professionally designed HTML certificate template, and generates a PDF-ready document for each individual. The process is fully automated, allowing certificates to be created consistently without any manual editing or formatting.\r\n\r\nThe workflow also sends personalized HTML emails to each recipient, attaching their certificate and delivering a cohesive, branded communication experience. Built using Power Automate, Excel, and HTML/CSS, the solution transforms a repetitive manual process into a scalable and efficient automation while maintaining a high level of design quality and professionalism.",
+    "images": [
+      "Getting the Interview Email.png",
+      "Interview Scheduled.png",
+      "Scheduling The Interview Through PowerApp.png"
+    ],
+    "thumbnail": "Scheduling The Interview Through PowerApp.png"
+  },
+  {
+    "title": "Interactive Financial Dashboard",
+    "shortTitle": "Excel Dashboard",
+    "categories": [
+      "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Data Analyst / Developer",
+    "period": "2023",
+    "stack": [
+      "Excel",
+      "VBA",
+      "Pivot Tables"
+    ],
+    "summary": "Dynamic financial dashboard with automated tracking, interactive charts, and real-time data updates.",
+    "featured": false,
+    "order": 12,
+    "impact": [
+      "Built a fully dynamic dashboard with real-time updates based on user input.",
+      "Automated data handling and reporting using VBA and Excel forms.",
+      "Delivered clear financial insights through interactive charts and KPI tracking."
+    ],
+    "videoEmbed": "",
+    "folder": "13- Excel Dashboard",
+    "id": "interactive-financial-dashboard",
+    "longDescription": "I developed an interactive financial dashboard in Excel to track income, expenses, and overall financial performance in a dynamic and automated way. The solution includes multiple visual components such as income and expense tracking, profit analysis with highlighted peak values, net revenue comparison, and goal tracking indicators.\r\n\r\nThe dashboard is fully dynamic, with data entered through forms and automatically reflected across all visualizations in real time. It leverages Pivot Tables, slicers, and interactive charts to provide a clear and structured overview of financial data, enabling better analysis and decision-making.\r\n\r\nTo enhance automation, I implemented VBA and Excel forms to streamline data input and processing, reducing manual effort and ensuring data consistency. This project demonstrates how Excel can be transformed into a powerful reporting and visualization tool capable of delivering advanced analytics without relying on external BI platforms.",
+    "images": [
+      "Slide1.PNG",
+      "Slide2.PNG",
+      "Slide3.PNG",
+      "Slide4.PNG"
+    ],
+    "thumbnail": "Slide1.PNG"
   }
 ]

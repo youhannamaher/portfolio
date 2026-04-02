@@ -1,0 +1,18 @@
+{
+  "title": "Automated Certificate Generation System",
+  "shortTitle": "Certificate Automation",
+  "categories": ["Business Apps & Automation", "HR Digital Transformation"],
+  "clientOrOrganization": "Personal Project",
+  "role": "Power Platform Developer",
+  "period": "2025",
+  "stack": ["Power Automate", "Excel", "HTML/CSS"],
+  "summary": "Automated system generating and sending personalized certificates at scale using dynamic templates.",
+  "featured": false,
+  "order": 11,
+  "impact": [
+    "Eliminated manual certificate creation and email sending processes.",
+    "Enabled scalable generation of personalized PDF certificates.",
+    "Delivered consistent and professional branded communication experience."
+  ],
+  "videoEmbed": ""
+}
