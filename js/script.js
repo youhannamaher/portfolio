@@ -49,6 +49,32 @@ async function fetchData(type) {
         state[type] = data;
     } catch (e) {
         console.error(`Fetch failed for ${type}.json.`, e);
+        
+        // --- EMERGENCY FAIL-SAFE FOR LOCAL FILE BROWSING ---
+        if (type === 'profile') {
+            state.profile = {
+                "name": "Youhanna Maher",
+                "title": "I Build Business Applications That Actually Save Time",
+                "subtitle": "Specializing in Power Platform, SharePoint, and Business Automation to transform manual processes into scalable digital systems.",
+                "about": [
+                    "As a dual-degree management student and power platform developer, I bridge the gap between business needs and technical solutions.",
+                    "I don't just build apps; I create systems that save hundreds of hours by automating what shouldn't be manual."
+                ],
+                "highlights": [
+                    { "icon": "fa-bolt", "text": "Rapid Deployment" },
+                    { "icon": "fa-shield-halved", "text": "Scalable Architecture" },
+                    { "icon": "fa-users", "text": "15k+ Users Managed" }
+                ],
+                "stats": [
+                    { "value": "15k+", "label": "Users Managed" },
+                    { "value": "4+", "label": "Enterprise Systems" },
+                    { "value": "1st", "label": "In Class Performance" }
+                ]
+            };
+            console.warn("⚠️ Using Emergency Inline Profile Data (Local File Mode)");
+            renderApp();
+        }
+
         const debugInfo = document.createElement('div');
         debugInfo.style.cssText = 'padding:10px; background:rgba(239, 68, 68, 0.1); border:1px solid rgba(239, 68, 68, 0.3); border-radius:4px; margin-top:5px; font-size:12px; font-family:monospace; color:#ef4444;';
         debugInfo.textContent = `❌ [DEBUG] Fetch failed for data/${type}.json: ${e.message}`;
@@ -57,7 +83,7 @@ async function fetchData(type) {
         if (window.location.protocol === 'file:') {
             showCorsWarning();
         }
-        state[type] = type === 'profile' ? {} : [];
+        state[type] = type === 'profile' ? state.profile : [];
     }
 }
 

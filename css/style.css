@@ -87,7 +87,6 @@
 }
 
 html {
-    scroll-behavior: smooth;
     scroll-padding-top: var(--navbar-height);
 }
 
@@ -2049,7 +2048,66 @@ img {
     transform: rotate(180deg);
 }
 
-/* 5. Responsive Adjustments */
+/* 5. Scroll Reveal Utilities */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--transition-slow);
+    visibility: hidden; /* Prevent interaction until visible */
+}
+
+.reveal.appear {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Stagger Helpers (Already in index.html) */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+/* 6. Premium Background Aesthetics */
+.bg-glow {
+    position: fixed;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+    animation: float-glow 20s infinite alternate ease-in-out;
+}
+
+#glow-1 {
+    top: -10%;
+    right: -10%;
+    background-color: var(--accent-primary);
+}
+
+#glow-2 {
+    bottom: -10%;
+    left: -10%;
+    background-color: var(--accent-secondary);
+    animation-delay: -5s;
+}
+
+#glow-3 {
+    top: 40%;
+    left: 20%;
+    background-color: #7c3aed; /* Purple-ish for depth */
+    animation-delay: -10s;
+}
+
+@keyframes float-glow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(10%, 15%) scale(1.1); }
+}
+
+/* 7. Responsive Adjustments (Extended) */
 @media (max-width: 768px) {
     .metrics-container {
         gap: 1.5rem;
@@ -2064,5 +2122,8 @@ img {
     .process-step {
         width: 100%;
         max-width: 300px;
+    }
+    .bg-glow {
+        display: none; /* Less intensive on mobile */
     }
 }
