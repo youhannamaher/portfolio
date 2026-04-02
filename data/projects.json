@@ -187,7 +187,7 @@
       "Reduced manual recruitment effort through dynamic candidate filtering and ranking.",
       "Enabled personalized communication with candidates through automated email workflows."
     ],
-    "videoEmbed": "https://youtu.be/zJimL4T-EwU?si=mNcIXrKfLnv7_gMN",
+    "videoEmbed": "https://www.youtube.com/embed/zJimL4T-EwU",
     "folder": "4 - HR Demo System",
     "id": "ai-powered-hr-ats-automation-system",
     "longDescription": "I developed an AI-powered HR system prototype to demonstrate how recruitment and HR processes can be fully automated using Microsoft Power Platform. The solution includes a complete Applicant Tracking System (ATS) that allows recruiters to create job postings, collect candidate applications through online forms, and manage the recruitment pipeline in a structured and efficient way.\r\n\r\nCandidate applications and CVs are automatically processed using Power Automate and AI Builder, which extract key information and relevant skills from uploaded CVs and store them in a structured format. Recruiters can then review candidates through a PowerApps interface, filter applicants by criteria such as degree level or keywords, and prioritize candidates based on AI-driven relevance. The system also allows viewing CVs directly within the application and managing candidate progression through different recruitment stages.\r\n\r\nThe platform includes automated communication workflows, sending personalized HTML emails to candidates, including interview invitations for selected applicants and detailed feedback for rejected candidates. In addition, a payroll module is integrated to track working hours, calculate compensation, and automate salary notifications. Built using Power Apps, Power Automate, AI Builder, and SharePoint, this project demonstrates how HR operations can be transformed into a scalable, automated, and data-driven system.",
@@ -335,7 +335,7 @@
       "Integrated order management with invoice generation and email notifications.",
       "Centralized financial tracking with transaction history and reporting."
     ],
-    "videoEmbed": "https://www.youtube.com/embed/VkqxCcYTvqI?si=0IQBk67z-cbwBqmx",
+    "videoEmbed": "https://www.youtube.com/embed/VkqxCcYTvqI",
     "folder": "9- YM Store",
     "id": "internal-e-commerce-inventory-system",
     "longDescription": "I developed an internal digital store system designed to manage purchasing, inventory, and financial tracking within a centralized platform. The solution allows users to create accounts, browse available products, add items to a cart, and complete purchases directly within the application, with automated email notifications and PDF invoice generation.\r\n\r\nThe system also includes an administrative interface for managing products, updating stock levels, and monitoring customer activity. Inventory is automatically updated based on purchases, ensuring real-time stock accuracy. Administrators can also track top customers, monitor product performance, and analyze transaction data.\r\n\r\nIn addition, the application records all financial activities in an accounting-style journal, capturing incoming and outgoing transactions, payments, and revenue. Built using Power Apps, Power Automate, and Excel, the project demonstrates a complete end-to-end system covering customer management, order processing, inventory control, and financial tracking.",
