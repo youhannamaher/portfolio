@@ -233,10 +233,7 @@ function setupUI() {
 
     initContactHub();
     initFAQ();
-    
-    // Initial scroll reveal for elements already in DOM
-    const revealElements = document.querySelectorAll('.reveal');
-    revealOnScroll(revealElements);
+    setupObservers();
 }
 
 /**
