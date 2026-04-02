@@ -946,7 +946,7 @@ img {
 
 /* Booking Content Layout */
 .booking-card-body {
-    padding: 0; /* Remove default to allow full-width calendar if needed */
+    padding: 0; 
 }
 
 .booking-intro-content {
@@ -958,7 +958,7 @@ img {
     list-style: none;
     padding: 2.5rem;
     padding-top: 1.5rem;
-    padding-bottom: 0;
+    padding-bottom: 2rem; /* Add space for the calendar */
     margin: 0;
     display: grid;
     gap: 1rem;
@@ -966,7 +966,6 @@ img {
 
 .booking-cal-container {
     width: 100%;
-    margin-top: -1rem; /* Pull up to meet bullets */
 }
 
 .booking-cal-container iframe {
