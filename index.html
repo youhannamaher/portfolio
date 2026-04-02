@@ -266,7 +266,7 @@
                     </div>
                 </div>
 
-                <!-- Mode 2: Book a Consultation (Cal.com Popup) -->
+                <!-- Mode 2: Book a Consultation (Cal.com Inline) -->
                 <div class="contact-mode-container" id="contact-mode-booking">
                     <div class="booking-card-premium">
                         <div class="booking-intro">
@@ -286,16 +286,8 @@
                                 <li><i class="fa-solid fa-check-circle"></i> Get quick expert guidance</li>
                             </ul>
 
-                            <div class="booking-cta">
-                                <button 
-                                    class="btn btn-primary btn-booking"
-                                    data-cal-link="youhanna-maher/free-15-mins-consultancy"
-                                    data-cal-namespace="free-15-mins-consultancy"
-                                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-                                >
-                                    Book My Free Call <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
+                            <!-- Cal inline embed container -->
+                            <div id="my-cal-inline-free-15-mins-consultancy" style="width:100%; height:700px; overflow:scroll; border-radius: 12px; border: 1px solid var(--border-color); background: var(--bg-surface);"></div>
                         </div>
                     </div>
                 </div>
@@ -361,13 +353,20 @@
         <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
 
-    <!-- Cal element-click embed code begins -->
+    <!-- Cal inline embed code begins -->
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
       Cal("init", "free-15-mins-consultancy", {origin:"https://app.cal.com"});
-      Cal.ns["free-15-mins-consultancy"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+
+      Cal.ns["free-15-mins-consultancy"]("inline", {
+        elementOrSelector:"#my-cal-inline-free-15-mins-consultancy",
+        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+        calLink: "youhanna-maher/free-15-mins-consultancy",
+      });
+
+      Cal.ns["free-15-mins-consultancy"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#3b82f6"},"dark":{"cal-brand":"#3b82f6"}},"hideEventTypeDetails":false,"layout":"month_view"});
     </script>
-    <!-- Cal element-click embed code ends -->
+    <!-- Cal inline embed code ends -->
 
     <!-- Smooth Scroll (Lenis) -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
