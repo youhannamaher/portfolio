@@ -1,0 +1,23 @@
+{
+  "title": "Nestlé HR Digital Solutions",
+  "shortTitle": "Nestlé HR Portal",
+  "categories": ["HR Digital Transformation", "Automation"],
+  "clientOrOrganization": "Nestlé",
+  "role": "Lead Power Platform Developer",
+  "period": "01/2024 - 03/2024",
+  "stack": [
+    "Power Apps",
+    "Power Automate",
+    "Dataverse",
+    "SharePoint"
+  ],
+  "summary": "Digitalized the HR request and approval process for Nestlé, integrating automation to reduce manual overhead.",
+  "featured": true,
+  "order": 1,
+  "impact": [
+    "Replaced fragmented manual systems with a centralized HR portal.",
+    "Automated approval workflows for over 15,000 employees.",
+    "Reduced request turnaround time by 60%."
+  ],
+  "videoEmbed": ""
+}

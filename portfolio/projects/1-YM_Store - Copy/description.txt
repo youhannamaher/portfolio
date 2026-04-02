@@ -1,0 +1,7 @@
+I designed and developed a custom CRM system for MStack360, a freelance-based company where employees operate as freelancers and clients are primarily technical organizations. The solution centralizes the management of clients, employees, projects, tasks, leads, and financial operations into a single unified platform, enabling efficient tracking of work, payments, and client relationships.
+
+The system includes a comprehensive Client Management module providing a 360° view of each client, including project history, active work, payments, and follow-ups. Users can generate invoices directly from the application by adding line items, after which a Power Automate workflow automatically creates a professionally formatted PDF invoice and sends it via email. The platform also integrates a built-in HTML email system to send customized communications to clients.
+
+In addition, the solution features Employee Management, allowing tracking of freelancer performance, workload, payments, and assigned projects. A structured Projects & Tasks module supports milestone tracking and operational follow-up, while the Finance module provides visibility on payments received, payments due, and overall financial status. The system also includes a Follow-Up module to manage client communication and an integrated dashboard to visualize business activity.
+
+Built using Power Apps, Power Automate, and SharePoint, the CRM significantly reduces manual work, improves operational visibility, and provides a scalable foundation for managing freelance-based business operations.

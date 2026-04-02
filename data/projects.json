@@ -37,180 +37,45 @@
     "thumbnail": "1.png"
   },
   {
-    "slug": "project-01-federon-procurement",
-    "title": "Federon Procurement Solutions",
-    "shortTitle": "Federon Apps",
+    "title": "Nestlé HR Digital Solutions",
+    "shortTitle": "Nestlé HR Portal",
     "categories": [
-      "Internal Operations Systems",
-      "Automation",
-      "Power Apps"
+      "HR Digital Transformation",
+      "Automation"
     ],
-    "clientOrOrganization": "Federon",
-    "role": "Power Platform Developer",
-    "period": "2023 - Present",
+    "clientOrOrganization": "Nestlé",
+    "role": "Lead Power Platform Developer",
+    "period": "01/2024 - 03/2024",
     "stack": [
       "Power Apps",
       "Power Automate",
-      "SharePoint",
-      "Dataverse"
+      "Dataverse",
+      "SharePoint"
     ],
-    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows at Federon.",
+    "summary": "Digitalized the HR request and approval process for Nestlé, integrating automation to reduce manual overhead.",
     "featured": true,
     "order": 1,
-    "metrics": [
-      "Reduced internal processing time by 40%"
+    "impact": [
+      "Replaced fragmented manual systems with a centralized HR portal.",
+      "Automated approval workflows for over 15,000 employees.",
+      "Reduced request turnaround time by 60%."
     ],
-    "thumbnail": "thumbnail.png",
-    "folder": "project-01-federon-contract-management",
-    "id": "project-01-federon-procurement",
-    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
-    "images": []
-  },
-  {
-    "slug": "project-01-federon-procurement",
-    "title": "Federon Procurement Solutions",
-    "shortTitle": "Federon Apps",
-    "categories": [
-      "Internal Operations Systems",
-      "Automation",
-      "Power Apps"
+    "videoEmbed": "",
+    "folder": "1-YM_Store - Copy",
+    "id": "nestl-hr-digital-solutions",
+    "longDescription": "I designed and developed a custom CRM system for MStack360, a freelance-based company where employees operate as freelancers and clients are primarily technical organizations. The solution centralizes the management of clients, employees, projects, tasks, leads, and financial operations into a single unified platform, enabling efficient tracking of work, payments, and client relationships.\r\n\r\nThe system includes a comprehensive Client Management module providing a 360° view of each client, including project history, active work, payments, and follow-ups. Users can generate invoices directly from the application by adding line items, after which a Power Automate workflow automatically creates a professionally formatted PDF invoice and sends it via email. The platform also integrates a built-in HTML email system to send customized communications to clients.\r\n\r\nIn addition, the solution features Employee Management, allowing tracking of freelancer performance, workload, payments, and assigned projects. A structured Projects & Tasks module supports milestone tracking and operational follow-up, while the Finance module provides visibility on payments received, payments due, and overall financial status. The system also includes a Follow-Up module to manage client communication and an integrated dashboard to visualize business activity.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the CRM significantly reduces manual work, improves operational visibility, and provides a scalable foundation for managing freelance-based business operations.",
+    "images": [
+      "Client Management page.jpeg",
+      "Employee Management Page.jpeg",
+      "Finance.jpeg",
+      "Follow Up HTML Email .jpeg",
+      "Invoice Creation.jpeg",
+      "Invoice Email.jpeg",
+      "Invoice PDF and Email.jpeg",
+      "Invoice PDF.jpeg",
+      "Projects.jpeg"
     ],
-    "clientOrOrganization": "Federon",
-    "role": "Power Platform Developer",
-    "period": "2023 - Present",
-    "stack": [
-      "Power Apps",
-      "Power Automate",
-      "SharePoint",
-      "Dataverse"
-    ],
-    "summary": "Built operational tools, apps, and automations to optimize complex procurement and internal workflows at Federon.",
-    "featured": true,
-    "order": 1,
-    "metrics": [
-      "Reduced internal processing time by 40%"
-    ],
-    "thumbnail": "thumbnail.png",
-    "folder": "project-01-federon-contract-management - Copy",
-    "id": "project-01-federon-procurement",
-    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
-    "images": []
-  },
-  {
-    "slug": "orange-data-hub",
-    "title": "Orange Operational Data Hub",
-    "shortTitle": "Orange Data Hub",
-    "categories": [
-      "Data Management & Reporting",
-      "HR Digital Transformation"
-    ],
-    "clientOrOrganization": "Orange",
-    "role": "Data Analyst & Developer",
-    "period": "2023 - 2024",
-    "stack": [
-      "Power BI",
-      "Power Automate",
-      "SharePoint",
-      "Dataverse"
-    ],
-    "summary": "Designed a centralized data hub for Orange HR department, automating reporting and improving data accessibility.",
-    "featured": false,
-    "order": 2,
-    "metrics": [
-      "Automated 80% of quarterly HR reports",
-      "Unified 5+ disparate data sources"
-    ],
-    "thumbnail": "thumbnail.png",
-    "folder": "project-01-federon-contract-wfwfe-Copy",
-    "id": "orange-data-hub",
-    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
-    "images": []
-  },
-  {
-    "slug": "orange-data-hub",
-    "title": "Orange Operational Data Hub",
-    "shortTitle": "Orange Data Hub",
-    "categories": [
-      "Data Management & Reporting",
-      "HR Digital Transformation"
-    ],
-    "clientOrOrganization": "Orange",
-    "role": "Data Analyst & Developer",
-    "period": "2023 - 2024",
-    "stack": [
-      "Power BI",
-      "Power Automate",
-      "SharePoint",
-      "Dataverse"
-    ],
-    "summary": "Designed a centralized data hub for Orange HR department, automating reporting and improving data accessibility.",
-    "featured": false,
-    "order": 2,
-    "metrics": [
-      "Automated 80% of quarterly HR reports",
-      "Unified 5+ disparate data sources"
-    ],
-    "thumbnail": "thumbnail.png",
-    "folder": "project-01-federon-contract-wfwfe-Copy - Copy",
-    "id": "orange-data-hub",
-    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
-    "images": []
-  },
-  {
-    "slug": "suez-crm-automation",
-    "title": "Suez CRM & Process Automation",
-    "shortTitle": "Suez Automation",
-    "categories": [
-      "Automation",
-      "Internal Operations Systems"
-    ],
-    "clientOrOrganization": "Suez",
-    "role": "Power Platform Developer",
-    "period": "2024",
-    "stack": [
-      "Power Automate",
-      "Power Apps",
-      "Dataverse"
-    ],
-    "summary": "Automated the lead-to-service workflow for Suez, integrating CRM data with internal operational systems.",
-    "featured": false,
-    "order": 3,
-    "metrics": [
-      "Eliminated 15+ hours of manual data entry per week",
-      "100% data accuracy in CRM sync"
-    ],
-    "folder": "wfefef",
-    "id": "suez-crm-automation",
-    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
-    "images": []
-  },
-  {
-    "slug": "suez-crm-automation",
-    "title": "Suez CRM & Process Automation",
-    "shortTitle": "Suez Automation",
-    "categories": [
-      "Automation",
-      "Internal Operations Systems"
-    ],
-    "clientOrOrganization": "Suez",
-    "role": "Power Platform Developer",
-    "period": "2024",
-    "stack": [
-      "Power Automate",
-      "Power Apps",
-      "Dataverse"
-    ],
-    "summary": "Automated the lead-to-service workflow for Suez, integrating CRM data with internal operational systems.",
-    "featured": false,
-    "order": 3,
-    "metrics": [
-      "Eliminated 15+ hours of manual data entry per week",
-      "100% data accuracy in CRM sync"
-    ],
-    "folder": "wfefef - Copy",
-    "id": "suez-crm-automation",
-    "longDescription": "At Federon, I was responsible for overhauling the procurement and contract management workflows using the Microsoft Power Platform.\n\nThe legacy system relied heavily on manual data entry across disconnected spreadsheets and email threads, which led to frequent errors and slow turnaround times.\n\nBy architecting a solution with Power Apps as the front-end interface and Dataverse as the robust back-end, we centralized all request data. I implemented complex Power Automate flows to handle role-based approvals, dynamic email notifications, and SLA tracking.\n\nThe final solution not only improved data transparency across the organization but directly optimized the daily operational workflows, drastically reducing administrative overhead.\n",
-    "images": []
+    "thumbnail": "Thumbnail.jpeg"
   },
   {
     "title": "ASU Career Center Portal",
