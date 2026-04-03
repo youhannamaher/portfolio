@@ -45,7 +45,7 @@
 }
 
 /* Light Theme Overrides */
-:root.light-theme {
+:root.light-theme, body.light-theme {
     --bg-main: #f8fafc;
     --bg-surface: #ffffff;
     --bg-surface-hover: #f1f5f9;
@@ -57,6 +57,9 @@
 
     --border-color: rgba(0, 0, 0, 0.08);
     --border-hover: rgba(0, 0, 0, 0.15);
+
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.08);
 
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -73,6 +76,25 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Global Dynamic Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
 }
 
 /* 0.75x Zoom Logic - Global High-Density View */
@@ -380,7 +402,7 @@ img {
     left: 0;
     width: 100%;
     height: calc(100vh - 72px); /* Fill the whole screen */
-    background-color: #050507; /* 100% Solid Solid */
+    background-color: var(--bg-main); 
     border-top: 1px solid var(--border-color);
     flex-direction: column;
     padding: 2rem 0;
@@ -396,7 +418,7 @@ img {
     color: var(--text-primary);
     font-size: 1.25rem;
     font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .mobile-nav-link:active {
@@ -1026,6 +1048,7 @@ img {
 
 .booking-cal-container iframe {
     border-radius: 0 0 16px 16px;
+    min-height: 750px !important;
 }
 
 .booking-benefits li {
@@ -2169,11 +2192,11 @@ img {
     /* Fix: Mobile Navbar Visibility - SOLID and Opaque */
     .navbar.scrolled,
     .navbar.scrolled .mobile-nav.active {
-        background-color: #050507 !important; /* Matches --bg-main perfectly */
+        background-color: var(--bg-surface) !important;
         background-image: none !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-bottom: 1px solid var(--border-color) !important;
     }
 }
 
@@ -3003,9 +3026,9 @@ img {
     }
 }
 
-.modal-nav { display: flex; gap: 1.5rem; padding: 0 0 0.5rem 0; justify-content: flex-start; background: transparent; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; overflow-x: auto; } .modal-nav-link { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); padding: 0.5rem 0.25rem 0.75rem; background: transparent; border: none; border-bottom: 3px solid transparent; cursor: pointer; text-decoration: none !important; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: -1px; white-space: nowrap; } .modal-nav-link:hover { color: var(--text-primary); border-bottom-color: rgba(255,255,255,0.2); } .modal-nav-link.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); } .modal-section { padding-top: 1rem; scroll-margin-top: 8rem; } .modal-body h3 { font-size: 1.35rem; margin-top: 1.5rem; border-left: 3px solid var(--accent-primary); padding-left: 0.8rem; } .modal-body p { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); }
+.modal-nav { display: flex; gap: 1.5rem; padding: 0 0 0.5rem 0; justify-content: flex-start; background: transparent; position: relative; border-bottom: 1px solid var(--border-color); width: 100%; overflow-x: auto; } .modal-nav-link { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); padding: 0.5rem 0.25rem 0.75rem; background: transparent; border: none; border-bottom: 3px solid transparent; cursor: pointer; text-decoration: none !important; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: -1px; white-space: nowrap; } .modal-nav-link:hover { color: var(--text-primary); border-bottom-color: var(--border-hover); } .modal-nav-link.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); } .modal-section { padding-top: 1rem; scroll-margin-top: 8rem; } .modal-body h3 { font-size: 1.35rem; margin-top: 1.5rem; border-left: 3px solid var(--accent-primary); padding-left: 0.8rem; } .modal-body p { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); }
 
-/* --- Premium Pagination Styles --- */ .projects-pagination-premium { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding: 1.2rem 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid var(--border-color); flex-wrap: wrap; gap: 1.5rem; } .pagination-limit-wrapper { display: flex; align-items: center; gap: 0.8rem; } .limit-label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; } .limit-select-container { position: relative; } .limit-select { appearance: none; background: #1a1a20; border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.45rem 2.2rem 0.45rem 1rem; border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; min-width: 85px; outline: none; } .limit-select:hover { border-color: var(--accent-primary); background: #202028; box-shadow: 0 0 15px rgba(59, 130, 246, 0.15); } .select-icon { position: absolute; right: 0.85rem; top: 50%; transform: translateY(-50%); font-size: 0.7rem; color: var(--accent-primary); pointer-events: none; } .pagination-pages { display: flex; align-items: center; gap: 0.4rem; } .page-btn { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: transparent; border: 1px solid transparent; color: var(--text-secondary); cursor: pointer; transition: all 0.2s ease; font-weight: 700; font-size: 0.9rem; } .page-btn.active { background: var(--accent-primary); color: white; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); } .page-btn.nav { background: rgba(255, 255, 255, 0.04); color: var(--text-primary); } .page-btn.nav:hover { background: var(--accent-primary); color: white; }
+/* --- Premium Pagination Styles --- */ .projects-pagination-premium { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding: 1.2rem 2rem; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid var(--border-color); flex-wrap: wrap; gap: 1.5rem; } .pagination-limit-wrapper { display: flex; align-items: center; gap: 0.8rem; } .limit-label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; } .limit-select-container { position: relative; } .limit-select { appearance: none; background: var(--bg-surface); border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.45rem 2.2rem 0.45rem 1rem; border-radius: 10px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; min-width: 85px; outline: none; } .limit-select:hover { border-color: var(--accent-primary); background: var(--bg-surface-hover); box-shadow: 0 0 15px rgba(59, 130, 246, 0.15); } .select-icon { position: absolute; right: 0.85rem; top: 50%; transform: translateY(-50%); font-size: 0.7rem; color: var(--accent-primary); pointer-events: none; } .pagination-pages { display: flex; align-items: center; gap: 0.4rem; } .page-btn { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: transparent; border: 1px solid transparent; color: var(--text-secondary); cursor: pointer; transition: all 0.2s ease; font-weight: 700; font-size: 0.9rem; } .page-btn.active { background: var(--accent-primary); color: white; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); } .page-btn.nav { background: rgba(255, 255, 255, 0.04); color: var(--text-primary); } .page-btn.nav:hover { background: var(--accent-primary); color: white; }
 
 /* Responsive Mobile Pagination */
 @media (max-width: 768px) {
@@ -3053,5 +3076,42 @@ img {
         scroll-snap-align: center;
         min-width: 280px;
         margin-bottom: 0 !important;
+        transition: all 0.3s ease;
+    }
+    
+    .problem-card.mobile-active {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        border-color: rgba(59, 130, 246, 0.3);
+    }
+    .problem-card.mobile-active .problem-icon {
+        background-color: var(--accent-primary);
+        color: white;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+    }
+
+    .booking-benefits {
+        display: none !important;
+    }
+
+    .mobile-carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: -0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .mobile-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border-color);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-dot.active {
+        background: var(--accent-primary);
+        transform: scale(1.3);
     }
 }

@@ -222,14 +222,28 @@ function setupUI() {
     
     // Check saved theme
     const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    const root = document.documentElement;
+    const body = document.body;
+
     if (savedTheme === 'light') {
-        document.documentElement.classList.add('light-theme');
+        root.classList.add('light-theme');
+        root.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        body.classList.remove('dark-theme');
         themeIcon.className = 'fa-solid fa-moon';
+    } else {
+        root.classList.add('dark-theme');
+        root.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        body.classList.remove('light-theme');
     }
 
     themeBtn.addEventListener('click', () => {
-        const root = document.documentElement;
         root.classList.toggle('light-theme');
+        root.classList.toggle('dark-theme');
+        
+        body.classList.toggle('light-theme');
+        body.classList.toggle('dark-theme');
         
         if (root.classList.contains('light-theme')) {
             themeIcon.className = 'fa-solid fa-moon';
@@ -953,7 +967,7 @@ window.openProjectModal = function(id) {
     let html = `
         <img src="${imgUrl}" alt="${project.title}" class="modal-hero">
         <div class="modal-details">
-            <div class="modal-top-bar" style="position: sticky; top: 0; z-index: 100; background: rgba(18, 18, 22, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin: -2.5rem -2.5rem 1.5rem; padding: 2rem 2.5rem 0; display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid transparent;">
+            <div class="modal-top-bar" style="position: sticky; top: 0; z-index: 100; background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin: -2.5rem -2.5rem 1.5rem; padding: 2rem 2.5rem 0; display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid transparent;">
                 <h2 class="modal-title" style="margin: 0; font-size: 1.5rem;">${project.title}</h2>
                 <!-- Modal Internal Navigation Bar -->
                 <nav class="modal-nav">
@@ -1380,6 +1394,7 @@ function initAnimations() {
     initRipple();
     initParallaxGlows();
     initBackToTop();
+    initMobileCarousel();
 }
 
 /**
@@ -1545,4 +1560,64 @@ function initBackToTop() {
     btn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+}
+
+/**
+ * 7. Mobile Swipe Carousel Logic
+ */
+function initMobileCarousel() {
+    const problemGrid = document.querySelector('.problem-grid');
+    if (!problemGrid) return;
+
+    // We only want dots on mobile matching the CSS media query
+    const checkMobile = () => window.innerWidth <= 768;
+
+    // Generate dots once
+    let dotsContainer = document.querySelector('.mobile-carousel-dots');
+    if (!dotsContainer) {
+        dotsContainer = document.createElement('div');
+        dotsContainer.className = 'mobile-carousel-dots';
+        const cards = problemGrid.querySelectorAll('.problem-card');
+        cards.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = `mobile-dot ${i === 0 ? 'active' : ''}`;
+            dotsContainer.appendChild(dot);
+        });
+        problemGrid.parentNode.insertBefore(dotsContainer, problemGrid.nextSibling);
+    }
+
+    const dots = dotsContainer.querySelectorAll('.mobile-dot');
+    const cards = problemGrid.querySelectorAll('.problem-card');
+
+    const updateCarouselState = () => {
+        if (!checkMobile()) {
+            dotsContainer.style.display = 'none';
+            cards.forEach(c => c.classList.remove('mobile-active'));
+            return;
+        }
+
+        dotsContainer.style.display = 'flex';
+        let centerPos = problemGrid.scrollLeft + (problemGrid.clientWidth / 2);
+        let minDiff = Infinity;
+        let activeIdx = 0;
+
+        // Calculate physical distance from the center of the scrollbox to the center of each card
+        cards.forEach((card, idx) => {
+            let cardCenter = card.offsetLeft + (card.offsetWidth / 2) - problemGrid.offsetLeft;
+            let diff = Math.abs(centerPos - cardCenter);
+            if (diff < minDiff) {
+                minDiff = diff;
+                activeIdx = idx;
+            }
+        });
+
+        dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+        cards.forEach((c, i) => c.classList.toggle('mobile-active', i === activeIdx));
+    };
+
+    problemGrid.addEventListener('scroll', updateCarouselState);
+    window.addEventListener('resize', updateCarouselState);
+    
+    // Initial paint
+    updateCarouselState();
 }
