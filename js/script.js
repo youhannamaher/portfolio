@@ -164,15 +164,6 @@ function setupUI() {
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
         
-        // Header Text Parallax
-        document.querySelectorAll('.section-header h2').forEach(h2 => {
-            const rect = h2.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                const centerShift = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.05;
-                h2.style.letterSpacing = `${Math.max(0, 1 + (centerShift / 10))}px`;
-            }
-        });
-
         // 3. Navbar scroll effect
         const isDesktop = window.innerWidth > 768;
         const zoomFactor = isDesktop ? 0.75 : 1;
