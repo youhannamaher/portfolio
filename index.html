@@ -257,10 +257,20 @@
                 <!-- Populated by JS -->
             </div>
 
-            <div class="text-center" id="projects-pagination" style="display: none; margin-top: 3rem;">
-                <button class="btn btn-secondary" id="show-more-projects-btn" style="padding: 0.75rem 2rem;">
-                    Show More Projects <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem;"></i>
-                </button>
+            <div class="projects-pagination-premium" id="projects-pagination" style="display: none;">
+                <div class="pagination-limit-wrapper">
+                    <span class="limit-label">Projects Per Page:</span>
+                    <div class="limit-select-container">
+                        <select id="project-limit-select" class="limit-select">
+                            <!-- Options injected by JS -->
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="pagination-pages" id="projects-page-numbers">
+                    <!-- Page numbers injected by JS -->
+                </div>
             </div>
         </section>
 

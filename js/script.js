@@ -499,40 +499,92 @@ function renderProjects() {
     });
     const sortedCategories = Array.from(uniqueCategories).sort();
 
-    // 2. Logic & State
-    const getInitialLimit = () => window.innerWidth <= 768 ? 3 : 6;
-    let currentLimit = getInitialLimit();
+    // 2. Pagination & Filter State
+    const isMobile = () => window.innerWidth <= 768;
+    const limitSelect = document.getElementById('project-limit-select');
+    const pageNumbersDiv = document.getElementById('projects-page-numbers');
+    
+    let currentPage = 1;
+    let projectsPerPage = isMobile() ? 4 : 6;
     let currentFilteredProjects = [];
+
+    const initializeLimitSelect = () => {
+        const options = isMobile() ? [2, 4, 6] : [3, 6, 9];
+        limitSelect.innerHTML = options.map(opt => `<option value="${opt}" ${opt === projectsPerPage ? 'selected' : ''}>${opt}</option>`).join('');
+        
+        limitSelect.onchange = (e) => {
+            const newLimit = parseInt(e.target.value);
+            const isDecreasing = newLimit < projectsPerPage;
+            
+            projectsPerPage = newLimit;
+            currentPage = 1;
+            updateGrid();
+            
+            // Only scroll when shrinking view (prevents jumping to experience section)
+            if (isDecreasing) {
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        };
+    };
+
+    const renderPagination = (totalItems) => {
+        const totalPages = Math.ceil(totalItems / projectsPerPage);
+        
+        // Selector always appears, Page Numbers only if multi-page
+        paginationDiv.style.display = 'flex';
+        pageNumbersDiv.style.display = totalPages > 1 ? 'flex' : 'none';
+        
+        if (totalPages <= 1) return;
+        let pagesHtml = `
+            <button class="page-btn nav" id="prev-page" ${currentPage === 1 ? 'disabled' : ''} aria-label="Previous page">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        `;
+
+        for (let i = 1; i <= totalPages; i++) {
+            pagesHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+
+        pagesHtml += `
+            <button class="page-btn nav" id="next-page" ${currentPage === totalPages ? 'disabled' : ''} aria-label="Next page">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        `;
+
+        pageNumbersDiv.innerHTML = pagesHtml;
+
+        // Attach pagination events
+        pageNumbersDiv.querySelectorAll('.page-btn').forEach(btn => {
+            btn.onclick = () => {
+                if (btn.id === 'prev-page') currentPage--;
+                else if (btn.id === 'next-page') currentPage++;
+                else currentPage = parseInt(btn.dataset.page);
+                
+                updateGrid();
+                
+                // IMPORTANT: Only scroll when clicking page numbers/nav, not when changing limit
+                // Scroll specifically to the #projects section for orientation
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+        });
+    };
 
     const updateGrid = () => {
         if (currentFilteredProjects.length === 0) {
             container.innerHTML = `<div class="w-100 text-center text-muted py-5 col-span-full">No projects found matching your criteria.</div>`;
+            // Even if empty, we may want to show the limit selector?
+            // But if empty, pagination is irrelevant.
             paginationDiv.style.display = 'none';
         } else {
-            const visibleProjects = currentFilteredProjects.slice(0, currentLimit);
+            const startIdx = (currentPage - 1) * projectsPerPage;
+            const visibleProjects = currentFilteredProjects.slice(startIdx, startIdx + projectsPerPage);
+            
             container.innerHTML = visibleProjects.map(p => createProjectCard(p)).join('');
             
             const cards = container.querySelectorAll('.project-card');
             applyStagger(cards);
             
-            if (currentFilteredProjects.length > currentLimit) {
-                paginationDiv.style.display = 'block';
-                showMoreBtn.innerHTML = 'Show More Projects <i class="fa-solid fa-chevron-down" style="margin-left: 0.5rem;"></i>';
-                showMoreBtn.onclick = () => {
-                    currentLimit += 6;
-                    updateGrid();
-                };
-            } else if (currentLimit > 6 && currentFilteredProjects.length > 6) {
-                paginationDiv.style.display = 'block';
-                showMoreBtn.innerHTML = 'Show Less Projects <i class="fa-solid fa-chevron-up" style="margin-left: 0.5rem;"></i>';
-                showMoreBtn.onclick = () => {
-                    currentLimit = 6;
-                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-                    updateGrid();
-                };
-            } else {
-                paginationDiv.style.display = 'none';
-            }
+            renderPagination(currentFilteredProjects.length);
         }
     };
 
@@ -585,9 +637,11 @@ function renderProjects() {
         // Sort
         currentFilteredProjects.sort((a,b) => (a.order || 99) - (b.order || 99));
 
-        currentLimit = getInitialLimit();
+        currentPage = 1;
         updateGrid();
     };
+
+    initializeLimitSelect();
 
     // 3. Render Initial Category Buttons
     const renderCategories = () => {
