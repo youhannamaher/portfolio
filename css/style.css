@@ -112,8 +112,10 @@ body {
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden !important; /* Total viewport protection - NO ZOOM OUT allowed */
     -webkit-font-smoothing: antialiased;
+    width: 100vw;
+    position: relative;
 }
 
 h1,
@@ -1813,8 +1815,19 @@ img {
     }
 }
 
-/* Premium Compact Search Bar */
+/* --- Project Filters area (Search + Categories) --- */
+.projects-filters-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 2rem 0;
+    animation: slideDownFade 0.4s ease forwards;
+    align-items: center;
+}
+
 .projects-search-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -1978,8 +1991,16 @@ img {
 
 /* Responsive Hub */
 @media (max-width: 768px) {
+    .projects-filters-area {
+        gap: 1.25rem;
+        margin: 1.5rem 0;
+    }
+
     .projects-categories-wrapper {
         padding: 0;
+        width: calc(100% + 2rem); /* Reach edges */
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
 
     .scroll-btn {
@@ -1989,6 +2010,16 @@ img {
 
     .projects-categories {
         padding: 0.5rem 1rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .search-bar-premium {
+        max-width: 100%;
+    }
+
+    .search-bar-premium input {
+        border-radius: 12px; /* Less rounded for more space on mobile search */
+        font-size: 0.9rem;
     }
 
     .search-bar-premium input:focus {
