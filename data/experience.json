@@ -2,75 +2,72 @@
   {
     "order": 1,
     "period": "04/2024 - Present",
-    "role": "Working Student - HRBS Process Optimizer",
+    "role": "Power Platform Developer | HR Process Optimization",
     "company": "Nestlé",
     "achievements": [
-      "Deployed Microsoft Power Platform solutions across the regional scale to optimize critical HR workflows.",
-      "Significantly improved data reliability and automated repetitive reporting loops.",
-      "Gained comprehensive HR operations exposure, supporting payroll systems and data alignment efforts."
+      "Designed and deployed scalable Microsoft Power Platform solutions across regional HR operations, optimizing critical workflows and reporting cycles.",
+      "Automated complex HR processes including payroll support, performance tracking, and data validation, significantly reducing manual effort and errors.",
+      "Enhanced data reliability and reporting accuracy by building integrated Power Apps, Power Automate flows, and structured data pipelines.",
+      "Collaborated with cross-functional HR teams to align business requirements with digital solutions, contributing to large-scale HR digital transformation initiatives."
     ]
   },
   {
     "order": 2,
     "period": "06/2023 - Present",
-    "role": "Power Platform Developer",
+    "role": "Power Platform Developer | Procurement Systems",
     "company": "Federon Procurement Solutions",
     "achievements": [
-      "Built operational tools, apps, and automations to optimize complex procurement and internal workflows.",
-      "Developed robust Power Apps connected to SharePoint and Dataverse for daily operational management.",
-      "Ensured data consistency and integrity through rigorous automated workflows in Power Automate."
+      "Architected and developed a full Contract Management System (CMS) using Power Apps, Dataverse, and Power Automate to manage the end-to-end procurement lifecycle.",
+      "Integrated external APIs (e.g., SAM.gov) into Dataverse to automate opportunity sourcing and eliminate manual data entry.",
+      "Designed complex workflow automation for multi-role processes (Discovery, Partner, Specialist, Submission), ensuring full traceability and auditability.",
+      "Built advanced reporting dashboards and tracking mechanisms to monitor contract progression, performance, and operational KPIs."
     ]
   },
   {
     "order": 3,
     "period": "01/2024 - 05/2024",
-    "role": "Freelance Power Platform Developer",
+    "role": "Power Platform Developer | Business Applications",
     "company": "Mstack360",
     "achievements": [
-      "Designed and delivered custom business applications and end-to-end automations for multiple international clients across Europe, UK, and the US.",
-      "Gathered complex business requirements and translated them into scalable low-code solutions.",
-      "Integrated systems using custom endpoints and Power Automate flows."
+      "Delivered end-to-end Power Platform solutions for international clients across Europe, the UK, and the US, covering automation, data management, and business applications.",
+      "Translated complex business requirements into scalable Power Apps and Power Automate architectures.",
+      "Developed integrations using APIs, custom connectors, and automated workflows to connect multiple systems.",
+      "Optimized operational efficiency by replacing manual processes with fully automated digital solutions."
     ]
   },
   {
     "order": 4,
     "period": "09/2023 - 01/2024",
-    "role": "Consultant - HR/L&D Digital Tools",
+    "role": "Power Platform Developer | HR & Learning Systems",
     "company": "Orange Business",
     "achievements": [
-      "Built 'PO Tracker' and 'Learning Studio' management solutions from scratch using Power Apps, Power Automate, SharePoint, and advanced Excel logic.",
-      "Modernized legacy tracking methods into a user-friendly tracking portal, dramatically reducing reporting times and human error rates."
+      "Designed and built HR and Learning management solutions ('PO Tracker' and 'Learning Studio') using Power Apps, Power Automate, SharePoint, and Excel.",
+      "Digitized legacy tracking systems into centralized, user-friendly platforms, significantly reducing reporting time and operational friction.",
+      "Supported regional HR teams (MEAR) with data-driven tools to improve visibility and decision-making.",
+      "Enhanced user experience and system adoption through intuitive UI/UX design and automation."
     ]
   },
   {
     "order": 5,
     "period": "11/2022 - 08/2023",
-    "role": "Developer & IT Coordinator",
+    "role": "Power Platform Developer | Event & Operations Systems",
     "company": "Ain Shams Career Center",
     "achievements": [
-      "Built an enterprise-scale registration and verification system utilized by over 15,000 participants.",
-      "Integrated automated dynamic QR code generation, mass email confirmations, and live attendance dashboards.",
-      "Trained and managed technical volunteers to assist with onsite registration operations."
+      "Developed a large-scale event management and registration platform supporting 15,000+ participants using Power Apps and Power Automate.",
+      "Implemented QR-based check-in systems, automated email confirmations, and real-time attendance dashboards.",
+      "Built end-to-end data pipelines for live reporting, analytics, and participant tracking.",
+      "Led technical coordination and system deployment during high-volume events, ensuring operational efficiency."
     ]
   },
   {
     "order": 6,
     "period": "08/2022 - 10/2022",
-    "role": "Intern - Change Management App Developer",
+    "role": "Power Platform Developer | Process Automation",
     "company": "RATP Dev",
     "achievements": [
-      "Built a change request management application directly improving operational communication and internal transparency.",
-      "Used Power Apps to digitize paper-based approval and routing workflows."
-    ]
-  },
-  {
-    "order": 7,
-    "period": "06/2022 - 08/2022",
-    "role": "Data Analysis Intern",
-    "company": "CIB (Commercial International Bank)",
-    "achievements": [
-      "Performed advanced data exploration and data analysis across extensive financial datasets.",
-      "Developed interactive dashboards to visualize key data trends."
+      "Built a change request management system using Power Apps to digitize internal workflows and approval processes.",
+      "Replaced manual and paper-based processes with automated solutions, improving communication and transparency.",
+      "Streamlined request tracking and decision-making through structured data and automated routing logic."
     ]
   }
 ]
