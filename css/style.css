@@ -3,43 +3,45 @@
    ========================================================================= */
 
 :root {
-    /* Color Palette - Premium Dark Theme */
-    --bg-main: #0a0a0c;
-    --bg-surface: #121216;
-    --bg-surface-hover: #1a1a20;
-    --bg-alt: #0e0e11;
+    /* Color Palette - Deeper Premium Dark Theme */
+    --bg-main: #050507;
+    --bg-surface: rgba(18, 18, 22, 0.7);
+    --bg-surface-solid: #121216;
+    --bg-surface-hover: rgba(26, 26, 32, 0.8);
+    --bg-alt: #08080a;
 
-    --text-primary: #ededf0;
-    --text-secondary: #a1a1aa;
-    --text-muted: #71717a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
 
     --accent-primary: #3b82f6;
-    /* Trustworthy tech blue */
-    --accent-primary-hover: #2563eb;
+    --accent-glow: rgba(59, 130, 246, 0.4);
     --accent-secondary: #10b981;
-    /* Success green for automation/impact */
 
-    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(10, 10, 15, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.08);
+
+    --border-color: rgba(255, 255, 255, 0.06);
     --border-hover: rgba(255, 255, 255, 0.15);
 
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    /* Transitions */
-    --transition-fast: 0.15s ease-in-out;
-    --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transitions - Fluid Motion */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Layout */
+    --container-width: 1200px;
+    --navbar-height: 80px;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
-
-    /* Layout */
-    --container-width: 1200px;
-    --navbar-height: 72px;
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.35);
 }
 
 /* Light Theme Overrides */
@@ -241,24 +243,41 @@ img {
     border-radius: 2px;
 }
 
-/* Navbar */
+/* Navbar & Global Header Overhaul */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--navbar-height);
-    background-color: var(--bg-surface);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 100;
-    transition: transform var(--transition-base), background-color var(--transition-base);
+    z-index: 1000;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    background-color: transparent;
 }
 
-:root:not(.light-theme) .navbar {
-    background-color: rgba(10, 10, 12, 0.85);
-    /* specific opacity for dark mode blur */
+.navbar.scrolled {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    height: 72px;
+}
+
+/* Glass Card Global Base */
+.glass-panel {
+    background: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    transition: all var(--transition-base);
+}
+
+.glass-panel:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--accent-primary);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(59, 130, 246, 0.1);
 }
 
 .nav-content {
@@ -453,20 +472,16 @@ img {
 }
 
 .hero-title {
-    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
     display: block;
-    /* Essential for WebKit clipping */
-    background-image: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+    background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
-    /* Fallback for Safari */
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+    color: var(--text-primary); /* Color fallback for Safari */
 }
 
 .hero-subtitle {
@@ -599,9 +614,11 @@ img {
 }
 
 .project-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+    background: var(--bg-surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
     overflow: hidden;
     transition: all var(--transition-base);
     display: flex;
@@ -822,6 +839,14 @@ img {
     border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 12px;
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(59, 130, 246, 0.2);
 }
 
 .edu-school {
@@ -1882,71 +1907,13 @@ img {
     transition-delay: 0.5s;
 }
 
-/* Hero Entrance Sequence */
-.hero-greeting,
-.hero-title,
-.hero-subtitle,
-.hero-highlights,
-.cta-group,
-.hero-image {
-    opacity: 0;
-    transform: translateY(1.5rem);
-    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1),
-        transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.hero-animate .hero-greeting {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.1s;
-}
-
-.hero-animate .hero-title {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.25s;
-}
-
-.hero-animate .hero-subtitle {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.4s;
-}
-
-.hero-animate .hero-highlights {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.55s;
-}
-
-.hero-animate .cta-group {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.7s;
-}
-
-.hero-animate .hero-image {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.3s;
-}
+/* Transitions for reveal handled by .reveal system above */
 
 /* Mobile Animation Adjustments */
 @media (max-width: 768px) {
     .reveal {
-        transform: translateY(1rem) scale(1);
-        /* Less movement on mobile */
-        transition-duration: 0.6s;
-    }
-
-    .hero-greeting,
-    .hero-title,
-    .hero-subtitle,
-    .hero-highlights,
-    .cta-group,
-    .hero-image {
         transform: translateY(1rem);
-        transition-duration: 0.8s;
+        transition-duration: 0.6s;
     }
 
     .stagger-1,
@@ -2775,44 +2742,26 @@ img {
     transition: color 0.3s ease;
 }
 
-/* 20. Reveal Animation Variants */
-.reveal-left {
+/* 20. Premium Reveal System - Global */
+.reveal {
     opacity: 0;
-    transform: translateX(-3rem);
+    transform: translateY(30px) scale(0.98);
     transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+                transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     will-change: opacity, transform;
 }
 
-.reveal-right {
-    opacity: 0;
-    transform: translateX(3rem);
-    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    will-change: opacity, transform;
-}
-
-.reveal-scale {
-    opacity: 0;
-    transform: scale(0.85);
-    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    will-change: opacity, transform;
-}
-
-.reveal-left.appear {
+.reveal.reveal-active {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) scale(1);
 }
 
-.reveal-right.appear {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.reveal-scale.appear {
-    opacity: 1;
-    transform: scale(1);
+/* Fallback - ensures visibility if JS is restricted */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
 
 /* 21. Mobile Optimizations for Animations */
@@ -2851,11 +2800,6 @@ img {
         display: none;
     }
 
-    .reveal-left,
-    .reveal-right {
-        transform: translateY(1.5rem);
-        /* Fall back to vertical reveal on mobile */
-    }
 
     .cert-card::before {
         display: none;

@@ -135,11 +135,12 @@ function scanCertificates() {
             certData.folder = folder;
             certData.id = slugify(certData.title || folder);
 
-            // 1. Auto-detect valid PDF
+            // 1. Auto-detect all PDFs
             const files = fs.readdirSync(folderPath);
-            const pdfFile = files.find(file => /\.pdf$/i.test(file));
-            if (pdfFile) {
-                certData.pdf = pdfFile;
+            const pdfFiles = files.filter(file => /\.pdf$/i.test(file)).sort();
+            if (pdfFiles.length > 0) {
+                certData.pdfs = pdfFiles;
+                certData.pdf = pdfFiles[0];
             }
 
             // 2. Auto-detect Multiple Images and sort them alphabetically
@@ -196,8 +197,11 @@ function scanEducation() {
             eduData.id = slugify(eduData.school || folder);
 
             const files = fs.readdirSync(folderPath);
-            const pdfFile = files.find(file => /\.pdf$/i.test(file));
-            if (pdfFile) eduData.pdf = pdfFile;
+            const pdfFiles = files.filter(file => /\.pdf$/i.test(file)).sort();
+            if (pdfFiles.length > 0) {
+                eduData.pdfs = pdfFiles;
+                eduData.pdf = pdfFiles[0];
+            }
 
             const imageFiles = files
                 .filter(file => /\.(png|jpe?g|gif|webp)$/i.test(file) && file !== 'metadata.json')

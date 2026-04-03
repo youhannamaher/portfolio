@@ -104,8 +104,11 @@ function renderApp() {
     renderCertificates();
     renderEducation();
     
-    setupObservers();
-    initAnimations();
+    // Slight delay to ensure DOM is paint-ready
+    setTimeout(() => {
+        setupObservers();
+        initAnimations();
+    }, 500);
 }
 
 /* =========================================================================
@@ -145,16 +148,16 @@ function setupUI() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
-        // Correct for 0.75x zoom on desktop (window.scrollY remains 1:1 with pixels, but offsetTop is scaled down)
+        // Correct for 0.75x zoom on desktop
         const isDesktop = window.innerWidth > 768;
         const zoomFactor = isDesktop ? 0.75 : 1;
         const adjustedScroll = window.scrollY / zoomFactor;
 
-        // Sticky nav shadow
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = 'var(--shadow-md)';
+        // Sticky nav glass effect
+        if (window.scrollY > 20) {
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
 
         // Active link highlighting
@@ -299,56 +302,30 @@ function initFAQ() {
 
 
 function setupObservers() {
-    // 1. Hero Animation Trigger
+    // 1. Initial Hero Fade / Active - High Priority
     const hero = document.getElementById('hero');
     if (hero) {
-        setTimeout(() => {
-            hero.classList.add('hero-animate');
-        }, 100);
+        // Force hero visible immediately
+        hero.classList.add('reveal-active');
+        // Double check hero children
+        hero.querySelectorAll('.reveal').forEach(el => el.classList.add('reveal-active'));
     }
 
-    // 2. Add reveal classes to dynamically rendered elements
-    document.querySelectorAll('.expertise-card').forEach((el, i) => {
-        el.classList.add('reveal-scale');
-        if (i < 5) el.classList.add(`stagger-${i + 1}`);
-    });
-    document.querySelectorAll('.timeline-item').forEach(el => {
-        el.classList.add('reveal-left');
-    });
-    document.querySelectorAll('.cert-card').forEach((el, i) => {
-        el.classList.add('reveal');
-        if (i < 5) el.classList.add(`stagger-${i + 1}`);
-    });
-    document.querySelectorAll('.education-card').forEach(el => {
-        el.classList.add('reveal-right');
-    });
-    document.querySelectorAll('.stat-card').forEach((el, i) => {
-        el.classList.add('reveal-scale');
-        if (i < 5) el.classList.add(`stagger-${i + 1}`);
-    });
-
-    // 3. IntersectionObserver for all reveal variants
+    // 2. Observer for items
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
-                revealObserver.unobserve(entry.target);
+                entry.target.classList.add('reveal-active');
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
+        rootMargin: '0px 0px -60px 0px'
     });
 
-    // Observe all reveal variants
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+    // Observe EVERYTHING with .reveal class
+    document.querySelectorAll('.reveal').forEach(el => {
         revealObserver.observe(el);
-    });
-
-    // 4. Staggering for initial load
-    const gridContainers = document.querySelectorAll('.expertise-grid, .about-stats, .education-grid, .certifications-grid');
-    gridContainers.forEach(container => {
-        applyStagger(container.children);
     });
 }
 
@@ -996,7 +973,15 @@ window.openCertModal = function (id) {
 
     const navigate = (dir) => {
         certIdx = (certIdx - dir + certImages.length) % certImages.length;
-        updateCertView();
+        
+        // Surgical update for smooth transitions
+        const img = body.querySelector('.cert-main-img');
+        const counter = body.querySelector('.cert-counter');
+        const wrapper = body.querySelector('.cert-img-wrapper');
+        
+        if (img) img.src = certImages[certIdx];
+        if (counter) counter.innerText = `${certIdx + 1} / ${certImages.length}`;
+        if (wrapper) wrapper.onclick = () => openLightbox(certIdx);
     };
 
     // Keyboard Support
@@ -1040,13 +1025,15 @@ window.openEduModal = function (id) {
     let eduIdx = 0;
 
     const updateEduView = () => {
+        const hasMultiplePdfs = edu.pdfs && edu.pdfs.length > 1;
+
         body.innerHTML = `
             <div class="cert-modal-header" style="text-align: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
                 <h2 class="cert-modal-title" style="font-size: 1.5rem;">${edu.school}</h2>
                 <p class="cert-modal-issuer" style="color: var(--text-secondary); margin-bottom: 0;">${edu.degree} • ${edu.period}</p>
             </div>
 
-            <div class="cert-visual-container" style="margin-bottom: 1.5rem;">
+            <div class="cert-visual-container" style="margin-bottom: 1rem;">
                 ${eduImages.length > 0 ? `
                     <div class="cert-slider">
                         ${eduImages.length > 1 ? `
@@ -1062,19 +1049,23 @@ window.openEduModal = function (id) {
                             <button class="cert-nav-btn next" id="edu-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                         ` : ''}
                     </div>
-                ` : !edu.pdf ? `
-                    <div class="cert-placeholder">No image available</div>
-                ` : ''}
+                ` : `
+                    <div class="cert-placeholder" style="padding: 5rem 2rem;">Will upload certificate later</div>
+                `}
             </div>
 
-            <div class="cert-modal-actions">
-                ${edu.pdf ? `
+            <div class="cert-modal-actions" style="flex-wrap: wrap; gap: 0.5rem;">
+                ${edu.pdfs ? edu.pdfs.map((pdf, pIdx) => `
+                    <a href="portfolio/education/${edu.folder}/${pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Access PDF ${hasMultiplePdfs ? (pIdx + 1) : ''}
+                    </a>
+                `).join('') : edu.pdf ? `
                     <a href="portfolio/education/${edu.folder}/${edu.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
                         <i class="fa-solid fa-file-pdf"></i> Access PDF
                     </a>
                 ` : ''}
             </div>
-            ${eduImages.length > 1 ? `<div class="cert-counter" style="margin-top: 1rem; text-align: center; color: var(--text-secondary);">${eduIdx + 1} / ${eduImages.length}</div>` : ''}
+            ${eduImages.length > 1 ? `<div class="cert-counter" style="margin-top: 1rem; text-align: center; color: var(--text-secondary); background: none; font-weight: 500;">${eduIdx + 1} / ${eduImages.length}</div>` : ''}
         `;
 
         // Re-attach navigation logic
@@ -1092,7 +1083,15 @@ window.openEduModal = function (id) {
 
     const navigate = (dir) => {
         eduIdx = (eduIdx - dir + eduImages.length) % eduImages.length;
-        updateEduView();
+
+        // Surgical update for smooth transitions
+        const img = body.querySelector('.cert-main-img');
+        const counter = body.querySelector('.cert-counter');
+        const wrapper = body.querySelector('.cert-img-wrapper');
+        
+        if (img) img.src = eduImages[eduIdx];
+        if (counter) counter.innerText = `${eduIdx + 1} / ${eduImages.length}`;
+        if (wrapper) wrapper.onclick = () => openLightbox(eduIdx);
     };
 
     // Keyboard Support
