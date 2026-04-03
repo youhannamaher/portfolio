@@ -925,27 +925,53 @@ window.openProjectModal = function(id) {
     const modalContent = modal.querySelector('.modal-content');
     if (modalContent) modalContent.scrollTop = 0;
 
-    // Add Internal Modal Navigation Logic
-    const internalLinks = body.querySelectorAll('.modal-nav-link');
-    internalLinks.forEach(link => {
+    // Set up Modal Scroll Observer (Scroll Spy)
+    const sections = body.querySelectorAll('.modal-section');
+    const navLinks = body.querySelectorAll('.modal-nav-link');
+    
+    // IntersectionObserver logic for modal sections
+    const observerOptions = {
+        root: modalContent,
+        threshold: 0.2, // Trigger when 20% of section is visible
+        rootMargin: '-80px 0px 0px 0px' // Compensation for sticky header height
+    };
+
+    const modalObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => modalObserver.observe(section));
+
+    // Internal navigation logic (smooth scroll)
+    navLinks.forEach(link => {
         link.onclick = (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             const targetEl = body.querySelector(`#${targetId}`);
             if (targetEl && modalContent) {
-                // Scroll relative to the modal content container
                 const targetOffset = targetEl.offsetTop - modalContent.offsetTop;
-                modalContent.scrollTo({ top: targetOffset - 60, behavior: 'smooth' });
-                
-                // Update active state manually
-                internalLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
+                modalContent.scrollTo({ top: targetOffset - 65, behavior: 'smooth' });
             }
         };
     });
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+    // Clean up observer when modal closes (important for performance)
+    const closeBtn = modal.querySelector('[data-close="modal"]');
+    const oldCloseHandler = closeBtn.onclick;
+    closeBtn.onclick = () => {
+        modalObserver.disconnect();
+        if(oldCloseHandler) oldCloseHandler();
+    };
 };
 
 window.openCertModal = function (id) {
