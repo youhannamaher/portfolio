@@ -2152,6 +2152,14 @@ img {
         gap: 1rem;
     }
 
+    .cert-card {
+        flex-direction: column !important;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem 0.5rem;
+        gap: 1rem;
+    }
+
     .education-grid {
         grid-template-columns: 1fr; /* 1x1 for Education to maintain text clarity */
         gap: 1.5rem;
