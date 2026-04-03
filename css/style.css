@@ -604,7 +604,7 @@ img {
     border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 12px;
-    transition: all var(--transition-base);
+    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .expertise-card:hover {
@@ -638,12 +638,10 @@ img {
 
 .project-card {
     background: var(--bg-surface);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
     overflow: hidden;
-    transition: all var(--transition-base);
+    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -818,7 +816,7 @@ img {
     align-items: center;
     gap: 1.25rem;
     cursor: pointer;
-    transition: all var(--transition-base);
+    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .cert-card:hover {
@@ -862,7 +860,7 @@ img {
     border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 12px;
-    transition: all var(--transition-base);
+    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
     cursor: pointer;
 }
 
@@ -2003,16 +2001,19 @@ img {
 /* Base Reveal State */
 .reveal {
     opacity: 0;
-    transform: translateY(2rem) scale(0.98);
+    transform: translateY(30px) scale(0.9);
+    filter: blur(10px);
     transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-        transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    will-change: opacity, transform;
+                transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+                filter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform, filter;
 }
 
 .reveal.appear,
 .reveal.reveal-active {
     opacity: 1;
     transform: translateY(0) scale(1);
+    filter: blur(0);
 }
 
 /* Staggering Utilities (Applied via JS or CSS classes) */
@@ -2037,8 +2038,9 @@ img {
 /* Mobile Animation Adjustments */
 @media (max-width: 768px) {
     .reveal {
-        transform: translateY(1rem);
-        transition-duration: 0.6s;
+        transform: translateY(20px) scale(0.92);
+        filter: blur(8px);
+        transition-duration: 0.7s;
     }
 
     .stagger-1,
@@ -3019,31 +3021,22 @@ img {
     }
 
     .hero-animate .hero-image img {
-        animation: none;
-        /* Reduce mobile battery drain */
+        animation: heroFloat 6s ease-in-out infinite, heroGlowPulse 4s ease-in-out infinite;
     }
 
     .timeline-dot {
-        animation: none;
+        animation: timelinePulse 2.5s ease-in-out infinite;
     }
 
     .divider {
-        animation: none;
+        animation: dividerGlow 3s ease-in-out infinite;
     }
 
     .project-card::after,
-    .expertise-card::after {
-        display: none;
-        /* Gradient borders are mouse-driven */
-    }
-
+    .expertise-card::after,
     .problem-card::after {
-        display: none;
-    }
-
-
-    .cert-card::before {
-        display: none;
+        opacity: 0.4; /* Set a base visibility on mobile so they look premium without hover */
+        display: block;
     }
 }
 
@@ -3079,9 +3072,11 @@ img {
     .problem-grid {
         display: flex !important;
         overflow-x: auto !important;
+        overflow-y: hidden !important; /* Strictly prevent vertical scrolling */
         scroll-snap-type: x mandatory;
         gap: 1rem !important;
-        padding-bottom: 1.5rem; /* Room for shadow */
+        padding-top: 1.5rem; /* Room for card lift */
+        padding-bottom: 2.5rem; /* Extra room for deep shadows */
         -webkit-overflow-scrolling: touch;
         margin-left: -1.5rem; /* Break out of container constraints */
         margin-right: -1.5rem;
@@ -3101,14 +3096,19 @@ img {
     }
     
     .problem-card.mobile-active {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
-        border-color: rgba(59, 130, 246, 0.3);
+        transform: translateY(-10px) scale(1.02); /* Matches PC hover lift */
+        box-shadow: 0 15px 35px rgba(239, 68, 68, 0.2); 
+        border-color: rgba(239, 68, 68, 0.3);
     }
+    
+    .problem-card.mobile-active::before {
+        opacity: 1; /* Shows the top red line line on swipe */
+    }
+
     .problem-card.mobile-active .problem-icon {
-        background-color: var(--accent-primary);
+        background: linear-gradient(135deg, #ef4444, #f97316);
         color: white;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
     }
 
     .booking-benefits {

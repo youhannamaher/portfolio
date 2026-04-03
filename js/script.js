@@ -125,13 +125,27 @@ function setupUI() {
     mobileBtn.addEventListener('click', () => {
         mobileNav.classList.toggle('active');
         const icon = mobileBtn.querySelector('i');
-        if (mobileNav.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
+        
+        const isOpen = mobileNav.classList.contains('active');
+        icon.className = isOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars';
+        
+        // Staggered arrival for mobile links
+        const links = mobileNav.querySelectorAll('.mobile-nav-link');
+        links.forEach((link, index) => {
+            if (isOpen) {
+                link.style.opacity = '0';
+                link.style.transform = 'translateX(-20px)';
+                link.style.transition = `all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${0.1 + (index * 0.08)}s`;
+                setTimeout(() => {
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateX(0)';
+                }, 10);
+            } else {
+                link.style.opacity = '0';
+                link.style.transform = 'translateX(-10px)';
+                link.style.transition = 'all 0.2s ease';
+            }
+        });
     });
 
     // Close mobile menu on link click
@@ -148,12 +162,22 @@ function setupUI() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
-        // Correct for 0.75x zoom on desktop
+        const scrolled = window.scrollY;
+        
+        // Header Text Parallax
+        document.querySelectorAll('.section-header h2').forEach(h2 => {
+            const rect = h2.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                const centerShift = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * 0.05;
+                h2.style.letterSpacing = `${Math.max(0, 1 + (centerShift / 10))}px`;
+            }
+        });
+
+        // 3. Navbar scroll effect
         const isDesktop = window.innerWidth > 768;
         const zoomFactor = isDesktop ? 0.75 : 1;
         const adjustedScroll = window.scrollY / zoomFactor;
 
-        // Sticky nav glass effect
         if (window.scrollY > 20) {
             navbar.classList.add('scrolled');
         } else {
