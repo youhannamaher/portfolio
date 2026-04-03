@@ -339,11 +339,14 @@ function setupObservers() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal-active');
+            } else {
+                // Remove the class when scrolled out of view to trigger animation again later
+                entry.target.classList.remove('reveal-active');
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -60px 0px'
+        rootMargin: '0px 0px -20px 0px' // Slightly tighter margin so they definitely disappear before coming back
     });
 
     // Observe EVERYTHING with .reveal class
@@ -1425,12 +1428,15 @@ function initCounters() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const el = entry.target;
+                // Since the counter ends at its target value, we can safely re-read it here
                 const text = el.textContent.trim();
                 const match = text.match(/^(\d+)(.*)$/);
                 if (match) {
+                    // Set to 0 instantly so it doesn't flicker before standard animation loop starts
+                    el.textContent = "0" + match[2];
                     animateCounter(el, parseInt(match[1]), match[2]);
                 }
-                observer.unobserve(el);
+                // Removed unobserve to keep re-triggering over and over!
             }
         });
     }, { threshold: 0.5 });

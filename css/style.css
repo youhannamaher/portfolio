@@ -2009,30 +2009,27 @@ img {
     will-change: opacity, transform;
 }
 
-.reveal.appear {
+.reveal.appear,
+.reveal.reveal-active {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
 
 /* Staggering Utilities (Applied via JS or CSS classes) */
-.stagger-1 {
-    transition-delay: 0.1s;
-}
+.stagger-1 { transition-delay: 0.15s !important; }
+.stagger-2 { transition-delay: 0.3s !important; }
+.stagger-3 { transition-delay: 0.45s !important; }
+.stagger-4 { transition-delay: 0.6s !important; }
+.stagger-5 { transition-delay: 0.75s !important; }
 
-.stagger-2 {
-    transition-delay: 0.2s;
-}
-
-.stagger-3 {
-    transition-delay: 0.3s;
-}
-
-.stagger-4 {
-    transition-delay: 0.4s;
-}
-
-.stagger-5 {
-    transition-delay: 0.5s;
+/* Desktop-specific Left-to-Right Reveal */
+@media (min-width: 1024px) {
+    .process-step.reveal {
+        transform: translateX(-30px) scale(0.95);
+    }
+    .process-step.reveal.reveal-active {
+        transform: translateX(0) scale(1);
+    }
 }
 
 /* Transitions for reveal handled by .reveal system above */
@@ -2428,7 +2425,7 @@ img {
 .step-icon-wrapper {
     width: 60px;
     height: 60px;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-alt); /* Solid color to completely hide the line behind */
     border: 2px solid var(--border-color);
     border-radius: 50%;
     display: flex;
@@ -2464,10 +2461,18 @@ img {
         position: absolute;
         top: 30px;
         left: 50px;
-        right: 50px;
+        width: 0; /* Animated with clip or width */
         height: 2px;
-        background: repeating-linear-gradient(90deg, var(--border-color), var(--border-color) 10px, transparent 10px, transparent 20px);
+        background: repeating-linear-gradient(90deg, var(--accent-primary), var(--accent-primary) 10px, transparent 10px, transparent 20px);
         z-index: 0;
+        transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0.3s;
+        opacity: 0.6; /* Slightly subtle but much more visible than before */
+    }
+    
+    /* When the parent section is revealed, animate the line */
+    #process.reveal-active .process-roadmap::before {
+        width: calc(100% - 100px);
     }
 }
 
@@ -2575,8 +2580,16 @@ img {
         bottom: 0;
         left: calc(1.5rem + 27px); /* Perfectly aligns with center of 56px icon after 1.5rem padding */
         width: 2px;
-        background: repeating-linear-gradient(0deg, var(--border-color), var(--border-color) 10px, transparent 10px, transparent 20px);
+        height: 0; /* Vertical loading animation */
+        background: repeating-linear-gradient(0deg, var(--accent-primary), var(--accent-primary) 10px, transparent 10px, transparent 20px);
         z-index: 0;
+        transition: height 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0.4s;
+        opacity: 0.6;
+    }
+
+    #process.reveal-active .process-roadmap::before {
+        height: 100%;
     }
 
     .process-step {
@@ -2592,7 +2605,7 @@ img {
         margin: 0;
         flex-shrink: 0;
         z-index: 2;
-        background-color: var(--bg-main) !important;
+        background-color: var(--bg-alt) !important; /* Solid to match desktop fix */
         width: 56px; /* Slightly smaller for mobile precision */
         height: 56px;
     }
