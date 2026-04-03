@@ -5,9 +5,10 @@
     "role": "Power Platform Developer | Procurement Systems",
     "company": "Federon Procurement Solutions",
     "achievements": [
-      "Developing advanced operational tools, applications, and automations using Microsoft Power Platform to optimize internal procurement processes.",
-      "Designing scalable business applications leveraging Power Apps, Dataverse, and Power Automate for workflow automation and data management.",
-      "Enhancing system efficiency and visibility across procurement operations through structured digital solutions."
+      "Architecting and developing a full Contract Management System (CMS) using Power Apps, Dataverse, and Power Automate to manage the end-to-end procurement lifecycle.",
+      "Integrating external APIs (e.g., SAM.gov) into Dataverse to automate opportunity sourcing and eliminate manual data entry.",
+      "Designing complex workflow automation for multi-role processes (Discovery, Partner, Specialist, Submission), ensuring full traceability and auditability.",
+      "Building advanced reporting dashboards and tracking mechanisms to monitor contract progression, performance, and operational KPIs."
     ]
   },
   {
@@ -16,9 +17,9 @@
     "role": "Power Platform Developer | HR Process Optimization",
     "company": "Nestlé",
     "achievements": [
-      "Deploying Microsoft Power Platform solutions across regional HR operations (2,500+ employees) to automate workflows and improve efficiency.",
-      "Supporting payroll-related processes for large-scale workforce operations (3,000+ employees), ensuring data consistency and reporting accuracy.",
-      "Building automation flows and HR tools to enhance data reliability and streamline operational processes."
+      "Designing and deploying scalable Microsoft Power Platform solutions across regional HR operations (2,500+ employees), optimizing critical workflows and reporting cycles.",
+      "Enhancing data reliability, reporting accuracy and complex HR processes through integrated Power Apps, Power Automate flows, and structured data pipelines.",
+      "Collaborating with cross-functional HR teams to align business requirements with digital solutions, contributing to large-scale HR digital transformation initiatives."
     ]
   },
   {
@@ -27,9 +28,10 @@
     "role": "Power Platform Developer | Business Applications",
     "company": "Mstack360",
     "achievements": [
-      "Designed and delivered multiple business applications (Payroll Systems, ATS, CRM, Contract Management, Mailing Systems, Store Systems) using Power Apps and Power Automate.",
-      "Worked with international clients across Europe, the UK, and the US to build scalable low-code solutions.",
-      "Improved operational workflows and developed dashboards to support data-driven decision-making."
+      "Designed and delivered end-to-end business applications (Payroll Systems, ATS, CRM, Contract Management, Mailing Systems, Store Systems) using Power Apps and Power Automate.",
+      "Translated complex business requirements into scalable Power Platform architectures for international clients across Europe, the UK, and the US.",
+      "Developed integrations using APIs, custom connectors, and automated workflows to connect multiple systems.",
+      "Optimized operational efficiency by replacing manual processes with fully automated digital solutions and data-driven dashboards."
     ]
   },
   {
@@ -38,9 +40,10 @@
     "role": "Power Platform Developer | Event & Operations Systems",
     "company": "Ain Shams Career Center",
     "achievements": [
-      "Built a large-scale Power Apps system for event registration and verification supporting 15,000+ participants.",
-      "Implemented QR code generation, automated email confirmations, and real-time reporting dashboards.",
-      "Led technical onboarding and training of 100+ volunteers, ensuring smooth operational execution."
+      "Developed a large-scale Power Apps system for event registration and verification supporting 15,000+ participants.",
+      "Implemented QR-based check-in systems, automated email confirmations, and real-time reporting dashboards.",
+      "Built end-to-end data pipelines for live tracking, analytics, and operational reporting.",
+      "Led technical onboarding and training of 100+ volunteers to ensure smooth system adoption and event execution."
     ]
   },
   {
@@ -49,9 +52,10 @@
     "role": "Power Platform Developer | HR & Learning Systems",
     "company": "Orange Business",
     "achievements": [
-      "Developed digital HR tools including Global PO Tracker and Learning Studio using Power Apps, Power Automate, and SharePoint.",
-      "Improved training operations and reporting efficiency for 2,500+ employees across the MEAR region.",
-      "Built data-driven HR reports and contributed to large-scale L&D digital transformation initiatives."
+      "Designed and developed digital HR solutions including Global PO Tracker and Learning Studio using Power Apps, Power Automate, and SharePoint.",
+      "Digitized legacy tracking systems into centralized, user-friendly platforms, significantly reducing reporting time and operational friction.",
+      "Supported regional HR teams (MEAR) with data-driven tools to improve visibility and decision-making for 2,500+ employees.",
+      "Contributed to large-scale L&D digital transformation initiatives through automation and advanced reporting."
     ]
   },
   {
@@ -60,9 +64,9 @@
     "role": "Power Platform Developer | Process Automation",
     "company": "RATP Dev",
     "achievements": [
-      "Developed a Change Request Management system using Power Apps, Power Automate, and SharePoint.",
-      "Digitized internal workflows and improved operational communication and transparency.",
-      "Automated approval processes and centralized request tracking."
+      "Developed a Change Request Management system using Power Apps, Power Automate, and SharePoint to digitize internal workflows.",
+      "Replaced manual and paper-based processes with automated solutions, improving communication and operational transparency.",
+      "Streamlined approval processes and request tracking through structured data and automated routing logic."
     ]
   }
 ]
