@@ -1293,24 +1293,22 @@ img {
     transform: translateY(0);
 }
 
+.cert-modal-content {
+    overflow: hidden !important;
+    height: 88vh; /* Perfectly matched to standard project modal height */
+    max-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-surface);
+    border-radius: 16px !important;
+}
+
 .cert-modal-content .modal-body {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.cert-modal-content {
-    overflow: hidden !important;
-    height: 85vh; /* Matched to projects modal feel */
-    max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.cert-modal-content::-webkit-scrollbar {
-    display: none !important;
+    overflow: hidden; /* No scrolling in the body anymore */
 }
 
 .cert-modal-header {
@@ -1331,11 +1329,13 @@ img {
 
 .cert-visual-container {
     position: relative;
-    margin-bottom: 1rem;
-    background: var(--bg-alt);
+    margin-bottom: 0.5rem;
+    background: transparent; /* Cleaner display for full image fit */
     border-radius: 12px;
-    border: 1px solid var(--border-color);
     overflow: hidden;
+    flex: 1; /* Expand to use all available space */
+    display: flex;
+    flex-direction: column;
 }
 
 .cert-slider {
@@ -1358,9 +1358,10 @@ img {
 
 .cert-main-img {
     max-width: 100%;
-    max-height: 55vh; /* Increased to maximize image visibility */
-    object-fit: contain;
+    max-height: 100%; /* Use full container space without cropping */
+    object-fit: contain !important; /* Forces the image to FIT within its box */
     display: block;
+    margin: auto;
 }
 
 .cert-img-hint {
@@ -1414,14 +1415,15 @@ img {
 
 .cert-counter {
     text-align: center;
-    padding: 0.4rem 1rem;
-    background: rgba(59, 130, 246, 0.1); /* Subtle accent background */
+    padding: 0.35rem 0.8rem;
+    background: rgba(59, 130, 246, 0.08); 
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--accent-primary);
-    letter-spacing: 2px;
-    margin: 0.8rem 0; /* Reduced to gain space for image */
+    letter-spacing: 1px;
+    margin: 0.25rem auto 0.5rem; /* Drastic reduction in vertical space */
+    width: fit-content;
 }
 
 .cert-modal-actions {
@@ -1429,7 +1431,9 @@ img {
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
-    margin-top: 0.5rem; /* Tighter spacing for bigger image */
+    margin-top: auto; 
+    padding: 0.75rem 0 0.25rem; /* Tighter footer bar */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cert-modal-actions .btn {
