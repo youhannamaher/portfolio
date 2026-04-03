@@ -541,8 +541,27 @@ function renderProjects() {
             </button>
         `;
 
-        for (let i = 1; i <= totalPages; i++) {
-            pagesHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        if (totalPages <= 4) {
+            for (let i = 1; i <= totalPages; i++) {
+                pagesHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+            }
+        } else {
+            const arr = [1, 2, 3, '...', totalPages];
+            if (currentPage > 3 && currentPage < totalPages) {
+                arr[1] = '...';
+                arr[2] = currentPage;
+            } else if (currentPage === totalPages) {
+                arr[1] = '...';
+                arr[2] = totalPages - 1;
+            }
+            
+            arr.forEach(item => {
+                if (item === '...') {
+                    pagesHtml += `<span class="page-ellipsis" style="color:var(--text-muted); align-self:center; font-weight:bold; letter-spacing:1px; margin:0 4px;">...</span>`;
+                } else {
+                    pagesHtml += `<button class="page-btn ${item === currentPage ? 'active' : ''}" data-page="${item}">${item}</button>`;
+                }
+            });
         }
 
         pagesHtml += `
@@ -615,10 +634,20 @@ function renderProjects() {
             // search filter (only in 'all' mode or if we want search in featured too)
             // The user wants Featured to be curated, so I'll only apply search in 'all' mode.
             if (viewMode === 'all') {
-                const matchSearch = p.title.toLowerCase().includes(searchTerm) || 
-                                    (p.stack && p.stack.some(s => s.toLowerCase().includes(searchTerm))) ||
-                                    (p.summary && p.summary.toLowerCase().includes(searchTerm));
-                
+                // Deep search across ALL textual project data
+                const searchContent = [
+                    p.title,
+                    p.short_title,
+                    p.role,
+                    p.summary,
+                    p.description,
+                    p.impact,
+                    ...(p.categories || []),
+                    ...(p.stack || [])
+                ].filter(Boolean).join(' ').toLowerCase();
+
+                const matchSearch = searchContent.includes(searchTerm);
+
                 if (!matchSearch) return false;
 
                 // category filter
@@ -685,7 +714,7 @@ function renderProjects() {
         }
     };
 
-    // 4. Setup Events
+    // Primary Content Filtering (Featured vs All)
     viewModes.addEventListener('click', (e) => {
         const btn = e.target.closest('.view-btn');
         if (btn) {
@@ -695,6 +724,26 @@ function renderProjects() {
         }
     });
 
+    // Secondary Layout Switcher (Grid vs List)
+    const layoutToggle = document.getElementById('layout-toggle');
+    if (layoutToggle) {
+        layoutToggle.addEventListener('click', (e) => {
+            const btn = e.target.closest('.layout-btn');
+            if (btn) {
+                const layout = btn.dataset.layout;
+                layoutToggle.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                if (layout === 'list') {
+                    container.classList.add('list-view');
+                } else {
+                    container.classList.remove('list-view');
+                }
+            }
+        });
+    }
+
+    // Category Filtering
     categoryContainer.addEventListener('click', (e) => {
         const btn = e.target.closest('.cat-btn');
         if (btn) {
@@ -704,6 +753,7 @@ function renderProjects() {
         }
     });
 
+    // Search Input
     searchInput.addEventListener('input', applyView);
 
     // Initial load
@@ -903,27 +953,30 @@ window.openProjectModal = function(id) {
     let html = `
         <img src="${imgUrl}" alt="${project.title}" class="modal-hero">
         <div class="modal-details">
-            <div class="modal-header">
-                <h2 class="modal-title">${project.title}</h2>
-                <div class="modal-meta">
-                    ${project.clientOrOrganization ? `<span><i class="fa-solid fa-briefcase"></i> ${project.clientOrOrganization}</span>` : ''}
-                    ${project.period ? `<span><i class="fa-regular fa-calendar"></i> ${project.period}</span>` : ''}
-                    ${project.role ? `<span><i class="fa-solid fa-user"></i> ${project.role}</span>` : ''}
-                </div>
-                <div class="project-stack">
-                    ${project.stack ? project.stack.map(s => `<span class="stack-tag">${s}</span>`).join('') : ''}
-                </div>
+            <div class="modal-top-bar" style="position: sticky; top: 0; z-index: 100; background: rgba(18, 18, 22, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin: -2.5rem -2.5rem 1.5rem; padding: 2rem 2.5rem 0; display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid transparent;">
+                <h2 class="modal-title" style="margin: 0; font-size: 1.5rem;">${project.title}</h2>
+                <!-- Modal Internal Navigation Bar -->
+                <nav class="modal-nav">
+                    <a href="#proj-overview" class="modal-nav-link active">Overview</a>
+                    ${project.impact && project.impact.length ? `<a href="#proj-impact" class="modal-nav-link">Impact</a>` : ''}
+                    ${project.videoEmbed ? `<a href="#proj-video" class="modal-nav-link">Video</a>` : ''}
+                    ${project.images && project.images.length > 0 ? `<a href="#proj-gallery" class="modal-nav-link">Gallery</a>` : ''}
+                </nav>
             </div>
 
-            <!-- Modal Internal Navigation Bar -->
-            <nav class="modal-nav">
-                <a href="#proj-overview" class="modal-nav-link active">Overview</a>
-                ${project.impact && project.impact.length ? `<a href="#proj-impact" class="modal-nav-link">Impact</a>` : ''}
-                ${project.images && project.images.length > 0 ? `<a href="#proj-gallery" class="modal-nav-link">Gallery</a>` : ''}
-            </nav>
+            <div class="modal-body" style="padding-top: 0;">
+                <div class="modal-meta-section" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed var(--border-color);">
+                    <div class="modal-meta" style="margin-bottom: 1rem;">
+                        ${project.clientOrOrganization ? `<span><i class="fa-solid fa-briefcase"></i> ${project.clientOrOrganization}</span>` : ''}
+                        ${project.period ? `<span><i class="fa-regular fa-calendar"></i> ${project.period}</span>` : ''}
+                        ${project.role ? `<span><i class="fa-solid fa-user"></i> ${project.role}</span>` : ''}
+                    </div>
+                    <div class="project-stack">
+                        ${project.stack ? project.stack.map(s => `<span class="stack-tag">${s}</span>`).join('') : ''}
+                    </div>
+                </div>
 
-            <div class="modal-body">
-                <div id="proj-overview" class="modal-section">
+                <div id="proj-overview" class="modal-section" style="padding-top: 0;">
                     ${project.longDescription ? `
                         <h3>Overview</h3>
                         <p>${project.longDescription.replace(/\\n/g, '<br>')}</p>
@@ -932,7 +985,7 @@ window.openProjectModal = function(id) {
                     ${project.problem ? `<h3>Problem</h3><p>${project.problem}</p>` : ''}
                     ${project.solution ? `<h3>Solution</h3><p>${project.solution}</p>` : ''}
                 </div>
-                
+
                 ${project.impact && project.impact.length ? `
                     <div id="proj-impact" class="modal-section">
                         <h3>Business Impact & Results</h3>
@@ -943,7 +996,7 @@ window.openProjectModal = function(id) {
                 ` : ''}
 
                 ${project.videoEmbed ? `
-                    <div class="modal-section">
+                    <div id="proj-video" class="modal-section">
                         <h3>Video Demonstration</h3>
                         <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
                             <iframe src="${project.videoEmbed}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -986,19 +1039,38 @@ window.openProjectModal = function(id) {
     // IntersectionObserver logic for modal sections
     const observerOptions = {
         root: modalContent,
-        threshold: 0.2, // Trigger when 20% of section is visible
-        rootMargin: '-80px 0px 0px 0px' // Compensation for sticky header height
+        threshold: 0.1, 
+        rootMargin: '-80px 0px -50% 0px' // Creates an 'active band' just below the header
     };
 
+    let activeSections = new Set();
     const modalObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
             if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                });
+                activeSections.add(id);
+            } else {
+                activeSections.delete(id);
             }
         });
+
+        if (activeSections.size > 0) {
+            // Find the active section further down the page to prioritize new arrivals!
+            let currentId = null;
+            let maxIndex = -1;
+            sections.forEach((sec, idx) => {
+                if (activeSections.has(sec.id) && idx > maxIndex) {
+                    maxIndex = idx;
+                    currentId = sec.id;
+                }
+            });
+
+            if (currentId) {
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+                });
+            }
+        }
     }, observerOptions);
 
     sections.forEach(section => modalObserver.observe(section));
@@ -1009,9 +1081,14 @@ window.openProjectModal = function(id) {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             const targetEl = body.querySelector(`#${targetId}`);
+            
+            // Immediate manual highlight for snappy UX
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+
             if (targetEl && modalContent) {
                 const targetOffset = targetEl.offsetTop - modalContent.offsetTop;
-                modalContent.scrollTo({ top: targetOffset - 65, behavior: 'smooth' });
+                modalContent.scrollTo({ top: targetOffset - 110, behavior: 'smooth' }); // -110 pushes it below the sticky header cleanly
             }
         };
     });

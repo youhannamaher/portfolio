@@ -191,28 +191,38 @@
             <div class="process-roadmap">
                 <div class="process-step reveal">
                     <div class="step-icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h4>1. Discovery</h4>
-                    <p>We discuss your current challenges and define clear goals.</p>
+                    <div class="step-content">
+                        <h4>1. Discovery</h4>
+                        <p>We discuss your current challenges and define clear goals.</p>
+                    </div>
                 </div>
                 <div class="process-step reveal stagger-1">
                     <div class="step-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-                    <h4>2. Understanding</h4>
-                    <p>I analyze your existing data and map out the required process.</p>
+                    <div class="step-content">
+                        <h4>2. Understanding</h4>
+                        <p>I analyze your existing data and map out the required process.</p>
+                    </div>
                 </div>
                 <div class="process-step reveal stagger-2">
                     <div class="step-icon-wrapper"><i class="fa-solid fa-pen-ruler"></i></div>
-                    <h4>3. Design</h4>
-                    <p>I architect a custom, scalable digital system that fits your workflow.</p>
+                    <div class="step-content">
+                        <h4>3. Design</h4>
+                        <p>I architect a custom, scalable digital system that fits your workflow.</p>
+                    </div>
                 </div>
                 <div class="process-step reveal stagger-3">
                     <div class="step-icon-wrapper"><i class="fa-solid fa-code"></i></div>
-                    <h4>4. Implementation</h4>
-                    <p>I build and deploy your application or automation with quality in mind.</p>
+                    <div class="step-content">
+                        <h4>4. Implementation</h4>
+                        <p>I build and deploy your application or automation with quality in mind.</p>
+                    </div>
                 </div>
                 <div class="process-step reveal stagger-4">
                     <div class="step-icon-wrapper"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
-                    <h4>5. Improvement</h4>
-                    <p>We refine the system based on real-world feedback and data.</p>
+                    <div class="step-content">
+                        <h4>5. Improvement</h4>
+                        <p>We refine the system based on real-world feedback and data.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,11 +236,23 @@
             </div>
 
             <div class="projects-controls">
-                <!-- 1. Top Level Toggle (View Modes) -->
+                <!-- Primary Content Filtering (Featured vs All) -->
                 <div class="view-modes-wrapper">
                     <div class="view-modes" id="view-modes">
                         <button class="view-btn active" data-view="featured"><i class="fa-solid fa-star"></i> Featured</button>
                         <button class="view-btn" data-view="all"><i class="fa-solid fa-layer-group"></i> All Projects</button>
+                    </div>
+                </div>
+
+                <!-- Secondary Layout Switcher (Grid vs List) -->
+                <div class="layout-toggle-wrapper">
+                    <div class="layout-toggle" id="layout-toggle">
+                        <button class="layout-btn active" data-layout="grid" title="Grid View">
+                            <i class="fa-solid fa-grip"></i>
+                        </button>
+                        <button class="layout-btn" data-layout="list" title="List View">
+                            <i class="fa-solid fa-list"></i>
+                        </button>
                     </div>
                 </div>
 

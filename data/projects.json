@@ -475,7 +475,7 @@
       "Automated data handling and reporting using VBA and Excel forms.",
       "Delivered clear financial insights through interactive charts and KPI tracking."
     ],
-    "videoEmbed": "",
+    "videoEmbed": "https://www.youtube.com/embed/1YLmsf0g3-U",
     "folder": "13- Excel Dashboard",
     "id": "interactive-financial-dashboard",
     "longDescription": "I developed an interactive financial dashboard in Excel to track income, expenses, and overall financial performance in a dynamic and automated way. The solution includes multiple visual components such as income and expense tracking, profit analysis with highlighted peak values, net revenue comparison, and goal tracking indicators.\r\n\r\nThe dashboard is fully dynamic, with data entered through forms and automatically reflected across all visualizations in real time. It leverages Pivot Tables, slicers, and interactive charts to provide a clear and structured overview of financial data, enabling better analysis and decision-making.\r\n\r\nTo enhance automation, I implemented VBA and Excel forms to streamline data input and processing, reducing manual effort and ensuring data consistency. This project demonstrates how Excel can be transformed into a powerful reporting and visualization tool capable of delivering advanced analytics without relying on external BI platforms.",
