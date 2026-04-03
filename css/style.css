@@ -75,16 +75,14 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 0.75x Zoom Logic - Advanced Structure */
-@media screen and (min-width: 769px) {
-    .page-scaler {
-        zoom: 0.75;
-    }
+/* 0.75x Zoom Logic - Global High-Density View */
+.page-scaler {
+    zoom: 0.75;
+}
 
-    /* Scale the internal content of popups/modals - 0.8 as requested */
-    .modal-content, .lightbox-content {
-        zoom: 0.8;
-    }
+/* Scale the internal content of popups/modals - 0.8 as requested */
+.modal-content, .lightbox-content {
+    zoom: 0.8;
 }
 
 body {
@@ -1266,15 +1264,26 @@ img {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow-y: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;
+    /* High-Performance Themed Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) var(--bg-surface);
     transform: translateY(20px);
     transition: transform var(--transition-base);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
 }
 
 .modal-content::-webkit-scrollbar {
-    display: none;
+    display: block;
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--bg-surface);
 }
 
 .modal.active .modal-content {
@@ -2805,3 +2814,5 @@ img {
         display: none;
     }
 }
+
+.modal-nav { display: flex; gap: 0.6rem; padding: 0.8rem; justify-content: center; background: var(--bg-surface); position: sticky; top: 0; z-index: 100; margin: 0 -2.5rem 1.5rem; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); } .modal-nav-link { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); padding: 0.5rem 1.2rem; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); cursor: pointer; text-decoration: none !important; transition: all 0.2s ease; } .modal-nav-link:hover { background: rgba(255,255,255,0.08); color: var(--text-primary); } .modal-nav-link.active { background: var(--accent-primary); color: white; border-color: transparent; } .modal-section { padding-top: 0.5rem; scroll-margin-top: 5rem; } .modal-body h3 { font-size: 1.35rem; margin-top: 1.5rem; border-left: 3px solid var(--accent-primary); padding-left: 0.8rem; } .modal-body p { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); }

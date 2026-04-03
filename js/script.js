@@ -181,7 +181,16 @@ function setupUI() {
     const modals = document.querySelectorAll('.modal');
     document.querySelectorAll('[data-close="modal"]').forEach(btn => {
         btn.addEventListener('click', () => {
-            modals.forEach(m => m.classList.remove('active'));
+            modals.forEach(m => {
+                m.classList.remove('active');
+                // Stop any playing videos by clearing iframes
+                const iframes = m.querySelectorAll('iframe');
+                iframes.forEach(iframe => {
+                    const src = iframe.src;
+                    iframe.src = '';
+                    iframe.src = src;
+                });
+            });
             document.body.style.overflow = ''; // Restore scrolling
         });
     });
@@ -852,38 +861,53 @@ window.openProjectModal = function(id) {
                 </div>
             </div>
 
+            <!-- Modal Internal Navigation Bar -->
+            <nav class="modal-nav">
+                <a href="#proj-overview" class="modal-nav-link active">Overview</a>
+                ${project.impact && project.impact.length ? `<a href="#proj-impact" class="modal-nav-link">Impact</a>` : ''}
+                ${project.images && project.images.length > 0 ? `<a href="#proj-gallery" class="modal-nav-link">Gallery</a>` : ''}
+            </nav>
+
             <div class="modal-body">
-                ${project.longDescription ? `
-                    <h3>Overview</h3>
-                    <p>${project.longDescription.replace(/\\n/g, '<br>')}</p>
-                ` : `<p>${project.summary}</p>`}
-                
-                ${project.problem ? `<h3>Problem</h3><p>${project.problem}</p>` : ''}
-                ${project.solution ? `<h3>Solution</h3><p>${project.solution}</p>` : ''}
+                <div id="proj-overview" class="modal-section">
+                    ${project.longDescription ? `
+                        <h3>Overview</h3>
+                        <p>${project.longDescription.replace(/\\n/g, '<br>')}</p>
+                    ` : `<p>${project.summary}</p>`}
+                    
+                    ${project.problem ? `<h3>Problem</h3><p>${project.problem}</p>` : ''}
+                    ${project.solution ? `<h3>Solution</h3><p>${project.solution}</p>` : ''}
+                </div>
                 
                 ${project.impact && project.impact.length ? `
-                    <h3>Business Impact & Results</h3>
-                    <ul>
-                        ${project.impact.map(i => `<li>${i}</li>`).join('')}
-                    </ul>
+                    <div id="proj-impact" class="modal-section">
+                        <h3>Business Impact & Results</h3>
+                        <ul>
+                            ${project.impact.map(i => `<li>${i}</li>`).join('')}
+                        </ul>
+                    </div>
                 ` : ''}
 
                 ${project.videoEmbed ? `
-                    <h3>Video Demonstration</h3>
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
-                        <iframe src="${project.videoEmbed}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="modal-section">
+                        <h3>Video Demonstration</h3>
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin-bottom: 2rem; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+                            <iframe src="${project.videoEmbed}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 ` : ''}
 
                 ${project.images && project.images.length > 0 ? `
-                    <h3>Gallery</h3>
-                    <div class="modal-gallery">
-                        ${(() => {
-                            // Assign image URLs to our global state for the Lightbox router
-                            currentGalleryImages = project.images.map(img => `portfolio/projects/${project.folder}/images/${img}`);
-                            // Generate the clickable thumbnail tags
-                            return project.images.map((img, idx) => `<img src="portfolio/projects/${project.folder}/images/${img}" alt="Project screenshot" loading="lazy" onclick="openLightbox(${idx})" aria-label="View fullscreen image">`).join('');
-                        })()}
+                    <div id="proj-gallery" class="modal-section">
+                        <h3>Gallery</h3>
+                        <div class="modal-gallery">
+                            ${(() => {
+                                // Assign image URLs to our global state for the Lightbox router
+                                currentGalleryImages = project.images.map(img => `portfolio/projects/${project.folder}/images/${img}`);
+                                // Generate the clickable thumbnail tags
+                                return project.images.map((img, idx) => `<img src="portfolio/projects/${project.folder}/images/${img}" alt="Project screenshot" loading="lazy" onclick="openLightbox(${idx})" aria-label="View fullscreen image">`).join('');
+                            })()}
+                        </div>
                     </div>
                 ` : ''}
             </div>
@@ -896,6 +920,30 @@ window.openProjectModal = function(id) {
     `;
 
     body.innerHTML = html;
+
+    // Reset modal scroll to top when opened
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) modalContent.scrollTop = 0;
+
+    // Add Internal Modal Navigation Logic
+    const internalLinks = body.querySelectorAll('.modal-nav-link');
+    internalLinks.forEach(link => {
+        link.onclick = (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetEl = body.querySelector(`#${targetId}`);
+            if (targetEl && modalContent) {
+                // Scroll relative to the modal content container
+                const targetOffset = targetEl.offsetTop - modalContent.offsetTop;
+                modalContent.scrollTo({ top: targetOffset - 60, behavior: 'smooth' });
+                
+                // Update active state manually
+                internalLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            }
+        };
+    });
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
 };
