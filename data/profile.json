@@ -9,16 +9,16 @@
       "icon": "fa-users"
     },
     {
-      "text": "Ranked 1st in Class",
-      "icon": "fa-trophy"
-    },
-    {
       "text": "Power Apps / Automate / BI",
       "icon": "fa-microsoft"
     },
     {
       "text": "HR & Operations Digitalization",
       "icon": "fa-network-wired"
+    },
+    {
+      "text": "Business Process Automation",
+      "icon": "fa-bolt"
     }
   ],
   "about": [

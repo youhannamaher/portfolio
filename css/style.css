@@ -2105,8 +2105,33 @@ img {
 
     .hero-container {
         flex-direction: column-reverse;
+        gap: 1.5rem;
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .hero-highlights {
+        display: none !important; /* Remove redundant / space-consuming tags on mobile */
+    }
+
+    .cta-group {
+        display: flex !important;
+        flex-direction: row !important; /* Force Horizontal */
+        flex-wrap: nowrap !important; /* No two-line splitting */
+        justify-content: center;
+        gap: 0.5rem !important;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .cta-group .btn {
+        flex: 1; /* Equal width buttons */
+        padding: 0.75rem 0.25rem !important; /* Thinner padding to fit row */
+        font-size: 0.75rem !important; /* Smaller text for single-row safety */
+        white-space: nowrap;
+        min-width: 0;
+        letter-spacing: 0;
+        text-transform: capitalize; /* Shorter than uppercase usually */
     }
 
     .hero-image img {
@@ -2116,12 +2141,15 @@ img {
     }
 
     .hero-subtitle {
-        margin: 0 auto 2rem auto;
+        margin: 0 auto 1.5rem auto;
+        font-size: 1rem;
     }
 
-    .hero-highlights,
-    .cta-group {
-        justify-content: center;
+    /* .hero-highlights already hidden above */
+    
+    .metrics-strip {
+        padding: 1.5rem 0;
+        margin-top: 2rem;
     }
 
     .section {
