@@ -145,6 +145,11 @@ function setupUI() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
+        // Correct for 0.75x zoom on desktop (window.scrollY remains 1:1 with pixels, but offsetTop is scaled down)
+        const isDesktop = window.innerWidth > 768;
+        const zoomFactor = isDesktop ? 0.75 : 1;
+        const adjustedScroll = window.scrollY / zoomFactor;
+
         // Sticky nav shadow
         if (window.scrollY > 50) {
             navbar.style.boxShadow = 'var(--shadow-md)';
@@ -156,8 +161,7 @@ function setupUI() {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 150)) {
+            if (adjustedScroll >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
         });

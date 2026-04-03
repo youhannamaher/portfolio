@@ -71,7 +71,18 @@
 
 html {
     scroll-behavior: smooth;
-    zoom: 1;
+}
+
+/* 0.75x Zoom Logic - Advanced Structure */
+@media screen and (min-width: 769px) {
+    .page-scaler {
+        zoom: 0.75;
+    }
+
+    /* Scale the internal content of popups/modals */
+    .modal-content, .lightbox-content {
+        zoom: 0.75;
+    }
 }
 
 body {
