@@ -1017,6 +1017,12 @@ window.openCertModal = function (id) {
                 ` : ''}
             </div>
 
+            ${certImages.length > 1 ? `
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <div class="cert-counter">${certIdx + 1} / ${certImages.length}</div>
+                </div>
+            ` : ''}
+
             <div class="cert-modal-actions">
                 ${cert.link ? `
                     <a href="${cert.link}" target="_blank" class="btn btn-outline cert-verify-btn">
@@ -1029,7 +1035,6 @@ window.openCertModal = function (id) {
                     </a>
                 ` : ''}
             </div>
-            ${certImages.length > 1 ? `<div class="cert-counter" style="margin-top: 1rem; text-align: center; color: var(--text-secondary);">${certIdx + 1} / ${certImages.length}</div>` : ''}
         `;
 
         // Re-attach navigation logic
@@ -1128,7 +1133,13 @@ window.openEduModal = function (id) {
                 `}
             </div>
 
-            <div class="cert-modal-actions" style="flex-wrap: wrap; gap: 0.5rem;">
+            ${eduImages.length > 1 ? `
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <div class="cert-counter">${eduIdx + 1} / ${eduImages.length}</div>
+                </div>
+            ` : ''}
+
+            <div class="cert-modal-actions" style="flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
                 ${edu.pdfs ? edu.pdfs.map((pdf, pIdx) => `
                     <a href="portfolio/education/${edu.folder}/${pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
                         <i class="fa-solid fa-file-pdf"></i> Access PDF ${hasMultiplePdfs ? (pIdx + 1) : ''}
@@ -1139,7 +1150,6 @@ window.openEduModal = function (id) {
                     </a>
                 ` : ''}
             </div>
-            ${eduImages.length > 1 ? `<div class="cert-counter" style="margin-top: 1rem; text-align: center; color: var(--text-secondary); background: none; font-weight: 500;">${eduIdx + 1} / ${eduImages.length}</div>` : ''}
         `;
 
         // Re-attach navigation logic

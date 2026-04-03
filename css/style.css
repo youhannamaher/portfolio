@@ -375,14 +375,16 @@ img {
 
 .mobile-nav {
     display: none;
-    position: absolute;
-    top: var(--navbar-height);
+    position: fixed; /* Fixed is better for covering content */
+    top: 72px; /* Set directly to avoid any calculation gaps */
     left: 0;
     width: 100%;
-    background-color: var(--bg-surface);
-    border-bottom: 1px solid var(--border-color);
+    height: calc(100vh - 72px); /* Fill the whole screen */
+    background-color: #050507; /* 100% Solid Solid */
+    border-top: 1px solid var(--border-color);
     flex-direction: column;
-    padding: 1rem 0;
+    padding: 2rem 0;
+    z-index: 999;
 }
 
 .mobile-nav.active {
@@ -390,15 +392,16 @@ img {
 }
 
 .mobile-nav-link {
-    padding: 1rem 1.5rem;
-    color: var(--text-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 1.5rem 2rem;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.mobile-nav-link:hover,
-.mobile-nav-link.active {
-    background-color: var(--bg-surface-hover);
-    color: var(--text-primary);
+.mobile-nav-link:active {
+    background-color: var(--accent-primary);
+    color: white;
 }
 
 /* Hero Section */
@@ -1292,11 +1295,22 @@ img {
 
 .cert-modal-content .modal-body {
     padding: 1.5rem 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cert-modal-content {
     overflow: hidden !important;
-    max-height: 90vh;
+    height: 85vh; /* Matched to projects modal feel */
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-modal-content::-webkit-scrollbar {
+    display: none !important;
 }
 
 .cert-modal-header {
@@ -1344,7 +1358,7 @@ img {
 
 .cert-main-img {
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 55vh; /* Increased to maximize image visibility */
     object-fit: contain;
     display: block;
 }
@@ -1400,11 +1414,14 @@ img {
 
 .cert-counter {
     text-align: center;
-    padding: 0.75rem;
-    background: rgba(0, 0, 0, 0.2);
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    letter-spacing: 1px;
+    padding: 0.4rem 1rem;
+    background: rgba(59, 130, 246, 0.1); /* Subtle accent background */
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    letter-spacing: 2px;
+    margin: 0.8rem 0; /* Reduced to gain space for image */
 }
 
 .cert-modal-actions {
@@ -1412,6 +1429,7 @@ img {
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
+    margin-top: 0.5rem; /* Tighter spacing for bigger image */
 }
 
 .cert-modal-actions .btn {
