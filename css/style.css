@@ -2016,17 +2016,19 @@ img {
     filter: blur(0);
 }
 
-/* Fix: Reset stagger delay after reveal to ensure hovers are instant (No 1sec lag!) */
-.reveal-active:hover {
-    transition-delay: 0s !important;
-}
-
 /* Staggering Utilities (Applied via JS or CSS classes) */
 .stagger-1 { transition-delay: 0.15s !important; }
 .stagger-2 { transition-delay: 0.3s !important; }
 .stagger-3 { transition-delay: 0.45s !important; }
 .stagger-4 { transition-delay: 0.6s !important; }
 .stagger-5 { transition-delay: 0.75s !important; }
+
+/* FIX: Absolute Hover Priority (Must be after staggers to override the delay) */
+.reveal.reveal-active:hover,
+.reveal.appear:hover {
+    transition-delay: 0s !important;
+    transition-duration: 0.22s !important; /* Force snappy speed on hover */
+}
 
 /* Desktop-specific Left-to-Right Reveal */
 @media (min-width: 1024px) {

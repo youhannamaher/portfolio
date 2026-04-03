@@ -1,73 +1,68 @@
 [
   {
     "order": 1,
-    "period": "04/2024 - Present",
-    "role": "Power Platform Developer | HR Process Optimization",
-    "company": "Nestlé",
+    "period": "11/2025 - Present",
+    "role": "Power Platform Developer | Procurement Systems",
+    "company": "Federon Procurement Solutions",
     "achievements": [
-      "Designed and deployed scalable Microsoft Power Platform solutions across regional HR operations, optimizing critical workflows and reporting cycles.",
-      "Automated complex HR processes including payroll support, performance tracking, and data validation, significantly reducing manual effort and errors.",
-      "Enhanced data reliability and reporting accuracy by building integrated Power Apps, Power Automate flows, and structured data pipelines.",
-      "Collaborated with cross-functional HR teams to align business requirements with digital solutions, contributing to large-scale HR digital transformation initiatives."
+      "Developing advanced operational tools, applications, and automations using Microsoft Power Platform to optimize internal procurement processes.",
+      "Designing scalable business applications leveraging Power Apps, Dataverse, and Power Automate for workflow automation and data management.",
+      "Enhancing system efficiency and visibility across procurement operations through structured digital solutions."
     ]
   },
   {
     "order": 2,
-    "period": "06/2023 - Present",
-    "role": "Power Platform Developer | Procurement Systems",
-    "company": "Federon Procurement Solutions",
+    "period": "07/2025 - Present",
+    "role": "Power Platform Developer | HR Process Optimization",
+    "company": "Nestlé",
     "achievements": [
-      "Architected and developed a full Contract Management System (CMS) using Power Apps, Dataverse, and Power Automate to manage the end-to-end procurement lifecycle.",
-      "Integrated external APIs (e.g., SAM.gov) into Dataverse to automate opportunity sourcing and eliminate manual data entry.",
-      "Designed complex workflow automation for multi-role processes (Discovery, Partner, Specialist, Submission), ensuring full traceability and auditability.",
-      "Built advanced reporting dashboards and tracking mechanisms to monitor contract progression, performance, and operational KPIs."
+      "Deploying Microsoft Power Platform solutions across regional HR operations (2,500+ employees) to automate workflows and improve efficiency.",
+      "Supporting payroll-related processes for large-scale workforce operations (3,000+ employees), ensuring data consistency and reporting accuracy.",
+      "Building automation flows and HR tools to enhance data reliability and streamline operational processes."
     ]
   },
   {
     "order": 3,
-    "period": "01/2024 - 05/2024",
+    "period": "05/2025 - 11/2025",
     "role": "Power Platform Developer | Business Applications",
     "company": "Mstack360",
     "achievements": [
-      "Delivered end-to-end Power Platform solutions for international clients across Europe, the UK, and the US, covering automation, data management, and business applications.",
-      "Translated complex business requirements into scalable Power Apps and Power Automate architectures.",
-      "Developed integrations using APIs, custom connectors, and automated workflows to connect multiple systems.",
-      "Optimized operational efficiency by replacing manual processes with fully automated digital solutions."
+      "Designed and delivered multiple business applications (Payroll Systems, ATS, CRM, Contract Management, Mailing Systems, Store Systems) using Power Apps and Power Automate.",
+      "Worked with international clients across Europe, the UK, and the US to build scalable low-code solutions.",
+      "Improved operational workflows and developed dashboards to support data-driven decision-making."
     ]
   },
   {
     "order": 4,
-    "period": "09/2023 - 01/2024",
-    "role": "Power Platform Developer | HR & Learning Systems",
-    "company": "Orange Business",
+    "period": "11/2024 - 02/2025",
+    "role": "Power Platform Developer | Event & Operations Systems",
+    "company": "Ain Shams Career Center",
     "achievements": [
-      "Designed and built HR and Learning management solutions ('PO Tracker' and 'Learning Studio') using Power Apps, Power Automate, SharePoint, and Excel.",
-      "Digitized legacy tracking systems into centralized, user-friendly platforms, significantly reducing reporting time and operational friction.",
-      "Supported regional HR teams (MEAR) with data-driven tools to improve visibility and decision-making.",
-      "Enhanced user experience and system adoption through intuitive UI/UX design and automation."
+      "Built a large-scale Power Apps system for event registration and verification supporting 15,000+ participants.",
+      "Implemented QR code generation, automated email confirmations, and real-time reporting dashboards.",
+      "Led technical onboarding and training of 100+ volunteers, ensuring smooth operational execution."
     ]
   },
   {
     "order": 5,
-    "period": "11/2022 - 08/2023",
-    "role": "Power Platform Developer | Event & Operations Systems",
-    "company": "Ain Shams Career Center",
+    "period": "10/2024 - 02/2025",
+    "role": "Power Platform Developer | HR & Learning Systems",
+    "company": "Orange Business",
     "achievements": [
-      "Developed a large-scale event management and registration platform supporting 15,000+ participants using Power Apps and Power Automate.",
-      "Implemented QR-based check-in systems, automated email confirmations, and real-time attendance dashboards.",
-      "Built end-to-end data pipelines for live reporting, analytics, and participant tracking.",
-      "Led technical coordination and system deployment during high-volume events, ensuring operational efficiency."
+      "Developed digital HR tools including Global PO Tracker and Learning Studio using Power Apps, Power Automate, and SharePoint.",
+      "Improved training operations and reporting efficiency for 2,500+ employees across the MEAR region.",
+      "Built data-driven HR reports and contributed to large-scale L&D digital transformation initiatives."
     ]
   },
   {
     "order": 6,
-    "period": "08/2022 - 10/2022",
+    "period": "08/2024 - 09/2024",
     "role": "Power Platform Developer | Process Automation",
     "company": "RATP Dev",
     "achievements": [
-      "Built a change request management system using Power Apps to digitize internal workflows and approval processes.",
-      "Replaced manual and paper-based processes with automated solutions, improving communication and transparency.",
-      "Streamlined request tracking and decision-making through structured data and automated routing logic."
+      "Developed a Change Request Management system using Power Apps, Power Automate, and SharePoint.",
+      "Digitized internal workflows and improved operational communication and transparency.",
+      "Automated approval processes and centralized request tracking."
     ]
   }
 ]
