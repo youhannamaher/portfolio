@@ -3,20 +3,32 @@
     "school": "University of Poitiers",
     "degree": "Bachelor in Management Sciences (Dual-Degree)",
     "period": "2020 - 2024",
+    "order": 1,
     "details": [
       "Ranked 1st in Class",
       "Specialized in Digital Transformation, Data-Driven Operations, and Process Optimization",
       "Class Representative"
+    ],
+    "folder": "university-of-poitiers",
+    "id": "university-of-poitiers",
+    "pdf": "Diplome DU Youhanna.pdf",
+    "image": "1.png",
+    "images": [
+      "1.png",
+      "2.png"
     ]
   },
   {
     "school": "Ain Shams University",
     "degree": "French Business Administration Track (Dual-Degree)",
     "period": "2020 - 2024",
+    "order": 2,
     "details": [
       "Ranked 1st in Class",
       "Focus on Finance, HR, and Operations Management",
       "Participated actively in Career Center automation projects"
-    ]
+    ],
+    "folder": "ain-shams-university",
+    "id": "ain-shams-university"
   }
 ]

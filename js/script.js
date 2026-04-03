@@ -721,7 +721,7 @@ function renderEducation() {
     if (!state.education || state.education.length === 0) return;
 
     document.getElementById('education-grid').innerHTML = state.education.map(edu => `
-        <div class="education-card">
+        <div class="education-card" onclick="openEduModal('${edu.id}')" style="cursor: pointer;">
             <h3 class="edu-school">${edu.school}</h3>
             <div class="edu-degree">${edu.degree}</div>
             <p class="text-secondary mb-3" style="font-size:0.9rem; margin-bottom:1rem;">${edu.period}</p>
@@ -923,55 +923,199 @@ window.openProjectModal = function(id) {
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
 };
 
-window.openCertModal = function(id) {
+window.openCertModal = function (id) {
     const cert = state.certificates.find(c => c.id === id);
     if (!cert) return;
 
     const modal = document.getElementById('cert-modal');
     const body = document.getElementById('cert-modal-body');
 
-    body.innerHTML = `
-        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem; margin-top: -1rem; padding: 0 1rem;">
-            <div style="width: 72px; height: 72px; background-color: rgba(59, 130, 246, 0.1); color: var(--accent-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1.25rem;">
-                <i class="fa-solid fa-award"></i>
-            </div>
-            <h2 style="margin-bottom: 0.5rem; line-height: 1.3; font-size: 1.5rem;">${cert.title}</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 0; font-size: 1rem;">${cert.issuer} ${cert.year ? `• ${cert.year}` : ''}</p>
-        </div>
-        
-        ${cert.pdf ? `
-            <div style="margin-bottom: 2rem;">
-                <a href="portfolio/certificates/${cert.folder}/${cert.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: flex; gap: 0.5rem; justify-content: center; background-color: #ef4444; border: none; color: white;">
-                    <i class="fa-solid fa-file-pdf" style="font-size: 1.25rem;"></i> Access PDF Certificate
-                </a>
-            </div>
-        ` : ''}
+    // Create a list of all images for this cert (handling both image and images array)
+    const certImages = cert.images && cert.images.length > 0 
+        ? cert.images.map(img => `portfolio/certificates/${cert.folder}/${img}`)
+        : (cert.image ? [`portfolio/certificates/${cert.folder}/${cert.image}`] : []);
 
-        ${cert.images && cert.images.length > 0 ? `
-            <div class="modal-gallery mt-2" style="justify-content: center; gap: 0.5rem;">
-                ${(() => {
-                    // Assign image URLs to our global state for the Lightbox router
-                    currentGalleryImages = cert.images.map(img => 'portfolio/certificates/' + cert.folder + '/' + img);
-                    return cert.images.map((img, idx) => 
-                        '<img src="portfolio/certificates/' + cert.folder + '/' + img + '" alt="Certificate Document" loading="lazy" onclick="openLightbox(' + idx + ')" aria-label="View fullscreen image" style="max-height: 400px; width: auto; object-fit: contain; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">'
-                    ).join('');
-                })()}
-            </div>
-        ` : cert.image ? `
-            <img src="portfolio/certificates/${cert.folder}/${cert.image}" alt="${cert.title}" style="max-height: 50vh; max-width: 100%; object-fit: contain; margin: 1rem auto; display: block; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
-        ` : !cert.pdf ? `
-            <div style="padding: 3rem; margin: 1rem 0; background: var(--bg-alt); border-radius:8px; border: 1px dashed var(--border-color); color: var(--text-muted);">No image available</div>
-        ` : ''}
-        
-        ${cert.link ? `
-            <div style="margin-top: 2rem;">
-                <a href="${cert.link}" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
-                    Verify Credential <i class="fa-solid fa-arrow-up-right-from-square ml-2" style="margin-left: 0.5rem;"></i>
-                </a>
-            </div>
-        ` : ''}
-    `;
+    currentGalleryImages = certImages;
+    let certIdx = 0;
 
+    const updateCertView = () => {
+        body.innerHTML = `
+            <div class="cert-modal-header" style="text-align: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
+                <h2 class="cert-modal-title" style="font-size: 1.5rem;">${cert.title}</h2>
+                <p class="cert-modal-issuer" style="color: var(--text-secondary); margin-bottom: 0;">${cert.issuer} ${cert.year ? `• ${cert.year}` : ''}</p>
+            </div>
+
+            <div class="cert-visual-container" style="margin-bottom: 1.5rem;">
+                ${certImages.length > 0 ? `
+                    <div class="cert-slider">
+                        ${certImages.length > 1 ? `
+                            <button class="cert-nav-btn prev" id="cert-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        ` : ''}
+                        
+                        <div class="cert-img-wrapper" id="cert-img-container" onclick="openLightbox(${certIdx})">
+                            <img src="${certImages[certIdx]}" alt="${cert.title}" class="cert-main-img">
+                            <div class="cert-img-hint"><i class="fa-solid fa-expand"></i> Click to expand</div>
+                        </div>
+
+                        ${certImages.length > 1 ? `
+                            <button class="cert-nav-btn next" id="cert-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        ` : ''}
+                    </div>
+                ` : !cert.pdf ? `
+                    <div class="cert-placeholder">No image available</div>
+                ` : ''}
+            </div>
+
+            <div class="cert-modal-actions">
+                ${cert.link ? `
+                    <a href="${cert.link}" target="_blank" class="btn btn-outline cert-verify-btn">
+                        Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                ` : ''}
+                ${cert.pdf ? `
+                    <a href="portfolio/certificates/${cert.folder}/${cert.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Access PDF
+                    </a>
+                ` : ''}
+            </div>
+            ${certImages.length > 1 ? `<div class="cert-counter" style="margin-top: 1rem; text-align: center; color: var(--text-secondary);">${certIdx + 1} / ${certImages.length}</div>` : ''}
+        `;
+
+        // Re-attach navigation logic
+        if (certImages.length > 1) {
+            document.getElementById('cert-prev-btn')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigate(1);
+            });
+            document.getElementById('cert-next-btn')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigate(-1);
+            });
+        }
+    };
+
+    const navigate = (dir) => {
+        certIdx = (certIdx - dir + certImages.length) % certImages.length;
+        updateCertView();
+    };
+
+    // Keyboard Support
+    const keyHandler = (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'ArrowRight') navigate(-1);
+        if (e.key === 'ArrowLeft') navigate(1);
+    };
+
+    // Swipe Support
+    let startX = 0;
+    const touchStart = (e) => startX = e.touches[0].clientX;
+    const touchEnd = (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) navigate(-1); // Swipe left
+        if (endX - startX > 50) navigate(1);  // Swipe right
+    };
+
+    document.addEventListener('keydown', keyHandler);
+    modal.addEventListener('touchstart', touchStart, {passive: true});
+    modal.addEventListener('touchend', touchEnd, {passive: true});
+
+    // Cleanup logic handled by event lifecycle
+    updateCertView();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+};
+
+window.openEduModal = function (id) {
+    const edu = state.education.find(e => e.id === id);
+    if (!edu) return;
+
+    const modal = document.getElementById('edu-modal');
+    const body = document.getElementById('edu-modal-body');
+
+    const eduImages = edu.images && edu.images.length > 0 
+        ? edu.images.map(img => `portfolio/education/${edu.folder}/${img}`)
+        : (edu.image ? [`portfolio/education/${edu.folder}/${edu.image}`] : []);
+
+    currentGalleryImages = eduImages;
+    let eduIdx = 0;
+
+    const updateEduView = () => {
+        body.innerHTML = `
+            <div class="cert-modal-header" style="text-align: center; margin-bottom: 1.5rem; margin-top: -0.5rem;">
+                <h2 class="cert-modal-title" style="font-size: 1.5rem;">${edu.school}</h2>
+                <p class="cert-modal-issuer" style="color: var(--text-secondary); margin-bottom: 0;">${edu.degree} • ${edu.period}</p>
+            </div>
+
+            <div class="cert-visual-container" style="margin-bottom: 1.5rem;">
+                ${eduImages.length > 0 ? `
+                    <div class="cert-slider">
+                        ${eduImages.length > 1 ? `
+                            <button class="cert-nav-btn prev" id="edu-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                        ` : ''}
+                        
+                        <div class="cert-img-wrapper" id="edu-img-container" onclick="openLightbox(${eduIdx})">
+                            <img src="${eduImages[eduIdx]}" alt="${edu.school}" class="cert-main-img">
+                            <div class="cert-img-hint"><i class="fa-solid fa-expand"></i> Click to expand</div>
+                        </div>
+
+                        ${eduImages.length > 1 ? `
+                            <button class="cert-nav-btn next" id="edu-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                        ` : ''}
+                    </div>
+                ` : !edu.pdf ? `
+                    <div class="cert-placeholder">No image available</div>
+                ` : ''}
+            </div>
+
+            <div class="cert-modal-actions">
+                ${edu.pdf ? `
+                    <a href="portfolio/education/${edu.folder}/${edu.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Access PDF
+                    </a>
+                ` : ''}
+            </div>
+            ${eduImages.length > 1 ? `<div class="cert-counter" style="margin-top: 1rem; text-align: center; color: var(--text-secondary);">${eduIdx + 1} / ${eduImages.length}</div>` : ''}
+        `;
+
+        // Re-attach navigation logic
+        if (eduImages.length > 1) {
+            document.getElementById('edu-prev-btn')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigate(1);
+            });
+            document.getElementById('edu-next-btn')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigate(-1);
+            });
+        }
+    };
+
+    const navigate = (dir) => {
+        eduIdx = (eduIdx - dir + eduImages.length) % eduImages.length;
+        updateEduView();
+    };
+
+    // Keyboard Support
+    const keyHandler = (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'ArrowRight') navigate(-1);
+        if (e.key === 'ArrowLeft') navigate(1);
+    };
+
+    // Swipe Support
+    let startX = 0;
+    const touchStart = (e) => startX = e.touches[0].clientX;
+    const touchEnd = (e) => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) navigate(-1); // Swipe left
+        if (endX - startX > 50) navigate(1);  // Swipe right
+    };
+
+    document.addEventListener('keydown', keyHandler);
+    modal.addEventListener('touchstart', touchStart, {passive: true});
+    modal.addEventListener('touchend', touchEnd, {passive: true});
+
+    updateEduView();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 };
