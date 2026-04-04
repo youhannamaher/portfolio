@@ -161,45 +161,57 @@ function setupUI() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    /**
+     * Optimizing Scroll performance with requestAnimationFrame
+     * This prevents 'direction change lag' on mobile by syncing logic with the screen refresh rate.
+     */
+    let isTicking = false;
     window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        
-        // 1. Scroll-to-Top Button Visibility
-        const scrollTopBtn = document.getElementById('scroll-to-top');
-        if (scrollTopBtn) {
-            if (scrolled > 500) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
+        if (!isTicking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.scrollY;
+                
+                // 1. Scroll-to-Top Button Visibility
+                const scrollTopBtn = document.getElementById('scroll-to-top');
+                if (scrollTopBtn) {
+                    if (scrolled > 500) {
+                        scrollTopBtn.classList.add('visible');
+                    } else {
+                        scrollTopBtn.classList.remove('visible');
+                    }
+                }
+
+                // 2. Navbar effects
+                const isDesktop = window.innerWidth > 768;
+                const zoomFactor = isDesktop ? 0.75 : 1;
+                const adjustedScroll = scrolled / zoomFactor;
+
+                if (scrolled > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Active link highlighting
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (adjustedScroll >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current) && current !== '') {
+                        link.classList.add('active');
+                    }
+                });
+
+                isTicking = false;
+            });
+            isTicking = true;
         }
-
-        // 2. Navbar effects
-        const isDesktop = window.innerWidth > 768;
-        const zoomFactor = isDesktop ? 0.75 : 1;
-        const adjustedScroll = scrolled / zoomFactor;
-
-        if (scrolled > 30) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        // Active link highlighting
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (adjustedScroll >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current) && current !== '') {
-                link.classList.add('active');
-            }
-        });
     }, { passive: true });
 
     // Scroll to Top Click Event
@@ -404,8 +416,8 @@ function setupObservers() {
             }
         });
     }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05, /* High-speed trigger */
+        rootMargin: '0px'
     });
 
     // Observe EVERYTHING with .reveal class

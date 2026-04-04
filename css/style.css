@@ -75,7 +75,15 @@
 }
 
 html {
+    /* Only enable for desktop to avoid mobile direction-change lag */
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-behavior: auto; /* Use high-velocity native momentum */
+    }
 }
 
 /* Global Dynamic Scrollbar */
