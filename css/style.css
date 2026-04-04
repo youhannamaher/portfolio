@@ -2025,6 +2025,14 @@ img {
     .search-bar-premium input:focus {
         max-width: 100%;
     }
+
+    /* FIX: Prevent iOS Safari from auto-zooming when focusing inputs */
+    .search-bar-premium input,
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px !important; /* Minimum size to block auto-zoom */
+    }
 }
 
 /* --- Premium Animation System --- */
