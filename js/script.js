@@ -164,12 +164,22 @@ function setupUI() {
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
         
-        // 3. Navbar scroll effect
+        // 1. Scroll-to-Top Button Visibility
+        const scrollTopBtn = document.getElementById('scroll-to-top');
+        if (scrollTopBtn) {
+            if (scrolled > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        }
+
+        // 2. Navbar effects
         const isDesktop = window.innerWidth > 768;
         const zoomFactor = isDesktop ? 0.75 : 1;
-        const adjustedScroll = window.scrollY / zoomFactor;
+        const adjustedScroll = scrolled / zoomFactor;
 
-        if (window.scrollY > 20) {
+        if (scrolled > 30) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -190,7 +200,15 @@ function setupUI() {
                 link.classList.add('active');
             }
         });
-    });
+    }, { passive: true });
+
+    // Scroll to Top Click Event
+    const scrollTopBtn = document.getElementById('scroll-to-top');
+    if (scrollTopBtn) {
+        scrollTopBtn.onclick = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    }
 
     // Modal Close Events
     const modals = document.querySelectorAll('.modal');
@@ -260,14 +278,41 @@ function setupUI() {
         body.classList.toggle('light-theme');
         body.classList.toggle('dark-theme');
         
-        if (root.classList.contains('light-theme')) {
-            themeIcon.className = 'fa-solid fa-moon';
-            localStorage.setItem('portfolio-theme', 'light');
-        } else {
-            themeIcon.className = 'fa-solid fa-sun';
-            localStorage.setItem('portfolio-theme', 'dark');
-        }
+        themeIcon.className = root.classList.contains('light-theme') ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+        localStorage.setItem('portfolio-theme', root.classList.contains('light-theme') ? 'light' : 'dark');
     });
+
+    // -------------------------------------------------------------------------
+    // ULTRA-PREMIUM INTERACTIVE LAYER: Magnetic Buttons & Mouse Parallax
+    // -------------------------------------------------------------------------
+    const magnets = document.querySelectorAll('.btn-primary, .btn-secondary, .btn-outline, .social-link');
+    const isTouch = 'ontouchstart' in window;
+
+    if (!isTouch) {
+        magnets.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const position = btn.getBoundingClientRect();
+                const x = e.pageX - position.left - position.width / 2;
+                const y = e.pageY - position.top - position.height / 2;
+                btn.style.transform = `translate(${x * 0.35}px, ${y * 0.35}px)`;
+                btn.style.zIndex = "10";
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = '';
+            });
+        });
+
+        // Background Parallax
+        const glows = document.querySelectorAll('.bg-glow');
+        window.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 40;
+            const y = (e.clientY / window.innerHeight - 0.5) * 40;
+            glows.forEach((g, i) => {
+                const factor = (i + 1) * 0.5;
+                g.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+            });
+        });
+    }
 
     // Seamless Formspree Integration via AJAX
     const contactForm = document.getElementById('contact-form');
@@ -350,23 +395,23 @@ function setupObservers() {
     }
 
     // 2. Observer for items
-    const revealObserver = new IntersectionObserver((entries) => {
+    window.revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal-active');
             } else {
-                // Remove the class when scrolled out of view to trigger animation again later
-                entry.target.classList.remove('reveal-active');
+                // Optional: remove to re-trigger or keep for performance
+                // entry.target.classList.remove('reveal-active');
             }
         });
     }, {
         threshold: 0.1,
-        rootMargin: '0px 0px -20px 0px' // Slightly tighter margin so they definitely disappear before coming back
+        rootMargin: '0px 0px -50px 0px'
     });
 
     // Observe EVERYTHING with .reveal class
     document.querySelectorAll('.reveal').forEach(el => {
-        revealObserver.observe(el);
+        window.revealObserver.observe(el);
     });
 }
 
@@ -494,9 +539,11 @@ function createProjectCard(project) {
     const primaryCategory = project.categories && project.categories.length > 0 ? project.categories[0] : '';
 
     return `
-        <div class="project-card" data-id="${project.id}">
+        <div class="project-card reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
             <div class="project-img-wrapper" style="cursor:pointer;" onclick="openProjectModal('${project.id}')">
-                <img src="${imgUrl}" alt="${project.title}" class="project-img" loading="lazy">
+                <img src="${imgUrl}" 
+                     alt="${project.title}" 
+                     class="project-img">
                 ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
             </div>
             <div class="project-content">
@@ -632,8 +679,14 @@ function renderProjects() {
             
             container.innerHTML = visibleProjects.map(p => createProjectCard(p)).join('');
             
+            
             const cards = container.querySelectorAll('.project-card');
             applyStagger(cards);
+            
+            // Re-observe newly created project cards for the reveal animation
+            if (window.revealObserver) {
+                cards.forEach(card => window.revealObserver.observe(card));
+            }
             
             renderPagination(currentFilteredProjects.length);
         }
@@ -1558,29 +1611,6 @@ function initParallaxGlows() {
             ticking = false;
         });
     }, { passive: true });
-}
-
-/**
- * 6. Back-to-Top Button — appears after scrolling, smooth scroll back up
- */
-function initBackToTop() {
-    const btn = document.createElement('button');
-    btn.className = 'back-to-top';
-    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
-    btn.setAttribute('aria-label', 'Back to top');
-    document.body.appendChild(btn);
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            btn.classList.add('visible');
-        } else {
-            btn.classList.remove('visible');
-        }
-    }, { passive: true });
-
-    btn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 }
 
 /**

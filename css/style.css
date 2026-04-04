@@ -271,20 +271,20 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--navbar-height);
     z-index: 1000;
-    transition: all var(--transition-base);
-    display: flex;
-    align-items: center;
-    background-color: transparent;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    background-color: transparent; /* Seamless on load */
+    border-bottom: 1px solid transparent;
+    padding: 1.25rem 0; /* Slightly larger on top */
 }
 
 .navbar.scrolled {
-    background-color: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--glass-border);
-    height: 72px;
+    background-color: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    padding: 0.75rem 0; /* Compact once you move */
 }
 
 /* Glass Card Global Base */
@@ -818,7 +818,10 @@ img {
     align-items: center;
     gap: 1.25rem;
     cursor: pointer;
-    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
+                background-color 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
+                border-color 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.45s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .cert-card:hover {
@@ -862,7 +865,10 @@ img {
     border: 1px solid var(--border-color);
     padding: 2rem;
     border-radius: 12px;
-    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
+                background-color 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
+                border-color 0.45s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.45s cubic-bezier(0.23, 1, 0.32, 1);
     cursor: pointer;
 }
 
@@ -2803,6 +2809,73 @@ img {
     animation: timelinePulse 2.5s ease-in-out infinite;
 }
 
+/* --- Infinite Tech Ticker (Marquee) --- */
+.tech-marquee-wrapper {
+    width: 100%;
+    background: rgba(10, 10, 15, 0.4);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    overflow: hidden;
+    margin-top: 0; /* Removed overlap */
+    position: relative;
+    z-index: 5;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 4rem;
+    white-space: nowrap;
+    animation: scrollMarquee 30s linear infinite;
+    width: max-content;
+}
+
+.marquee-content span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Locked width for seamlessness */
+}
+
+.marquee-content span i {
+    color: var(--accent-primary);
+    font-size: 1.25rem;
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+}
+
+.marquee-content span:hover {
+    opacity: 1;
+    color: var(--text-primary);
+    transform: scale(1.05);
+}
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.3333%); }
+}
+
+@media (max-width: 768px) {
+    .tech-marquee-wrapper {
+        padding: 1rem 0;
+        margin-top: 0;
+    }
+    .marquee-content {
+        gap: 2.5rem;
+    }
+    .marquee-content span {
+        font-size: 0.95rem;
+    }
+}
+
 /* 5. Button Ripple Effect */
 .ripple {
     position: absolute;
@@ -3081,38 +3154,88 @@ img {
     }
 }
 
-/* 21. Mobile Optimizations for Animations */
-@media (max-width: 768px) {
-    .scroll-progress {
-        height: 2px;
-    }
+/* --- 21. Premium Card Shimmer Effect --- */
+.project-card,
+.cert-card,
+.education-card,
+.expertise-card {
+    position: relative;
+    overflow: hidden;
+}
 
-    .back-to-top {
+.cert-card::after,
+.education-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(25deg);
+    transition: left 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.cert-card:hover::after,
+.education-card:hover::after {
+    left: 150%;
+}
+
+/* --- 22. Advanced Rendering & Mobile Polish --- */
+.section {
+    content-visibility: auto; /* Browser Optimization: Skip off-screen rendering */
+    contain-intrinsic-size: 1px 500px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.8);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: none;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    background-color: var(--accent-hover);
+    box-shadow: 0 15px 30px var(--shadow-glow);
+}
+
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
         width: 44px;
         height: 44px;
-        bottom: 1.25rem;
-        right: 1.25rem;
-    }
-
-    .hero-animate .hero-image img {
-        animation: heroFloat 6s ease-in-out infinite, heroGlowPulse 4s ease-in-out infinite;
-    }
-
-    .timeline-dot {
-        animation: timelinePulse 2.5s ease-in-out infinite;
-    }
-
-    .divider {
-        animation: dividerGlow 3s ease-in-out infinite;
-    }
-
-    .project-card::after,
-    .expertise-card::after,
-    .problem-card::after {
-        opacity: 0.4; /* Set a base visibility on mobile so they look premium without hover */
-        display: block;
     }
 }
+
 
 .modal-nav { display: flex; gap: 1.5rem; padding: 0 0 0.5rem 0; justify-content: flex-start; background: transparent; position: relative; border-bottom: 1px solid var(--border-color); width: 100%; overflow-x: auto; } .modal-nav-link { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); padding: 0.5rem 0.25rem 0.75rem; background: transparent; border: none; border-bottom: 3px solid transparent; cursor: pointer; text-decoration: none !important; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: -1px; white-space: nowrap; } .modal-nav-link:hover { color: var(--text-primary); border-bottom-color: var(--border-hover); } .modal-nav-link.active { color: var(--accent-primary); border-bottom-color: var(--accent-primary); } .modal-section { padding-top: 1rem; scroll-margin-top: 8rem; } .modal-body h3 { font-size: 1.35rem; margin-top: 1.5rem; border-left: 3px solid var(--accent-primary); padding-left: 0.8rem; } .modal-body p { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); }
 
