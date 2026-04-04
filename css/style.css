@@ -2349,6 +2349,9 @@ img {
 .btn-primary {
     position: relative;
     overflow: hidden;
+    opacity: 1 !important; /* Force visibility for critical CTA */
+    transform: none !important; /* Force stability for clickability */
+    filter: none !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

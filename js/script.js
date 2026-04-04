@@ -399,9 +399,8 @@ function setupObservers() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal-active');
-            } else {
-                // Optional: remove to re-trigger or keep for performance
-                // entry.target.classList.remove('reveal-active');
+                // Once revealed, we don't need to observe it anymore for this session
+                window.revealObserver.unobserve(entry.target);
             }
         });
     }, {
