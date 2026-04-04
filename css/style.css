@@ -496,24 +496,32 @@ img {
     font-weight: 500;
 }
 
-.hero-title {
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.5rem;
+.hero-name {
+    font-size: clamp(3.2rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.5rem;
     display: block;
-    background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: var(--text-primary); /* Color fallback for Safari */
+}
+
+.hero-title {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+    display: block;
+    opacity: 0.9;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 3rem;
-    max-width: 650px;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
 }
 
 .hero-highlights {
@@ -3032,9 +3040,18 @@ img {
     transition: color 0.3s ease;
 }
 
+.process-step {
+    cursor: default;
+    user-select: none;
+}
+
+.process-step p, .process-step h4 {
+    cursor: default;
+}
+
 .process-step:hover .step-icon-wrapper {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-glow), 0 0 30px rgba(59, 130, 246, 0.2);
+    transform: scale(1.05); /* Subtle, not 'button-like' */
+    box-shadow: var(--shadow-glow);
 }
 
 /* 14. Cert Card Shimmer on Hover */

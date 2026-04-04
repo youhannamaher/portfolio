@@ -542,7 +542,8 @@ function createProjectCard(project) {
             <div class="project-img-wrapper" style="cursor:pointer;" onclick="openProjectModal('${project.id}')">
                 <img src="${imgUrl}" 
                      alt="${project.title}" 
-                     class="project-img">
+                     class="project-img"
+                     loading="lazy">
                 ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
             </div>
             <div class="project-content">
@@ -1463,7 +1464,6 @@ function initAnimations() {
     initCardTilt();
     initRipple();
     initParallaxGlows();
-    initBackToTop();
     initMobileCarousel();
 }
 
