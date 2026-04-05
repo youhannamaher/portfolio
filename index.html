@@ -116,22 +116,82 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://youhannamaher.github.io/portfolio/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Portfolio",
-        "item": "https://youhannamaher.github.io/portfolio/#projects"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Expertise",
-        "item": "https://youhannamaher.github.io/portfolio/#expertise"
+      "@type": "WebSite",
+      "name": "Youhanna Maher",
+      "alternateName": ["Youhanna Maher Portfolio"],
+      "url": "https://youhannamaher.github.io/portfolio/"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Featured Power Platform Projects",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "MStack360 CRM System",
+            "description": "Full-scale CRM built with Power Apps and Dataverse to manage enterprise procurement and freelancers."
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Contract Lifecycle Management System",
+            "description": "Enterprise-grade CLM for procurement automation using Microsoft Power Platform."
+          }
+        }
+      ]
+    }
+    </script>
+
+
+    <!-- FAQPage Schema for Search Result Expandability -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What specific results can I expect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can expect significant time savings by automating manual data entry, improved accuracy by removing human error, and real-time visibility into your business metrics through automated dashboards."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How long does it typically take to build a solution?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Timelines depend on complexity. A simple automation might take 3–5 days, while a comprehensive Power Apps system typically ranges from 2–4 weeks from discovery to deployment."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you provide support after the implementation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. I believe in iterative improvement. After the initial launch, I offer support to ensure the team adopts the system and to make any necessary refinements based on real-world usage."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can you help if my existing data is a mess?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That is where I start. Most of my projects begin with messy Excel files or scattered data. Part of my 'Understanding' phase involves cleaning, structuring, and migrating your data into a reliable system."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which platforms do you use for your solutions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I specialize in the Microsoft Power Platform, specifically Power Apps (for interfaces), Power Automate (for logic), and Power BI (for data). I also use SharePoint and Dataverse for robust data storage."
+        }
       }]
     }
     </script>
@@ -144,6 +204,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Preload for Core Web Vitals -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="dark-theme">
@@ -302,7 +364,9 @@
             </div>
             <div class="about-content">
                 <div class="about-text" id="about-text">
-                    <!-- Populated by JS -->
+                    <p>As a dual-degree management student ranked first in my class at both Ain Shams University and the University of Poitiers, I offer a unique combination of business logic and technical execution.</p>
+                    <p>I focus on solving real-world problems. Whether it's replacing a messy Excel file with a robust app or automating an approval process that used to take days, my goal is to build systems that are efficient, reliable, and easy to use.</p>
+                    <p>With experience managing systems for over 15,000 users, I understand how to build for scale while keeping the user experience simple and effective.</p>
                 </div>
                 <div class="about-stats" id="about-stats">
                     <!-- Populated by JS -->
@@ -318,7 +382,26 @@
                 <div class="divider"></div>
             </div>
             <div class="expertise-grid" id="expertise-grid">
-                <!-- Populated by JS -->
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Power Apps</h3>
+                    <p>Custom business applications, role-based workflows, and internal tools designed to solve specific business problems.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Power Automate</h3>
+                    <p>Process automation, integration logic, and workflow acceleration to streamline repetitive tasks.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Power BI</h3>
+                    <p>KPI dashboards, operational analytics, and data visualization for real-time business insights.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="expertise-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>SharePoint & Dataverse</h3>
+                    <p>Structured data, backend development, and scalable process support for enterprise systems.</p>
+                </div>
             </div>
         </section>
 
@@ -417,7 +500,54 @@
             </div>
 
             <div class="projects-grid mt-4" id="projects-grid">
-                <!-- Populated by JS -->
+                <!-- Static Featured Projects (Crawlable Shell) -->
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="portfolio/projects/1- CRM - Mstack360/Thumbnail.jpeg" alt="MStack360 CRM System" class="project-img">
+                        <span class="project-category">Business Apps & Automation</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MStack360 CRM System</h3>
+                        <p class="project-summary">This solution automated procurement workflows using Power Apps and Dataverse, reducing manual processing time for managing freelancers and financial operations.</p>
+                        <div class="project-stack">
+                            <span class="stack-tag">Power Apps</span>
+                            <span class="stack-tag">Power Automate</span>
+                            <span class="stack-tag">SharePoint</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="portfolio/projects/2- CMS - Federon/Home Page.png" alt="Contract Lifecycle Management System" class="project-img">
+                        <span class="project-category">Internal Operations Systems</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Contract Lifecycle Management</h3>
+                        <p class="project-summary">A centralized CLM platform built on the Microsoft Power Platform to digitize complex procurement cycles from discovery through to final submission.</p>
+                        <div class="project-stack">
+                            <span class="stack-tag">Power Apps</span>
+                            <span class="stack-tag">Power Automate</span>
+                            <span class="stack-tag">Dataverse</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img-wrapper">
+                        <img src="portfolio/projects/4 - HR Demo System/3.png" alt="AI-Powered HR & ATS System" class="project-img">
+                        <span class="project-category">HR Digital Transformation</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI HR & ATS Automation</h3>
+                        <p class="project-summary">Automated CV screening and recruitment workflows using AI Builder and Power Automate to extract skills and rank candidates dynamically.</p>
+                        <div class="project-stack">
+                            <span class="stack-tag">Power Apps</span>
+                            <span class="stack-tag">AI Builder</span>
+                            <span class="stack-tag">Power Automate</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="projects-pagination-premium" id="projects-pagination" style="display: none;">
@@ -444,7 +574,22 @@
                 <div class="divider"></div>
             </div>
             <div class="timeline" id="experience-timeline">
-                <!-- Populated by JS -->
+                <div class="timeline-item">
+                    <div class="timeline-date">11/2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Power Platform Developer | Procurement Systems</h3>
+                        <h4>Federon Procurement Solutions</h4>
+                        <p>Architecting and developing a full Contract Management System (CMS) using Power Apps, Dataverse, and Power Automate.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">07/2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Power Platform Developer | HR Process Optimization</h3>
+                        <h4>Nestlé</h4>
+                        <p>Designing and deploying scalable Microsoft Power Platform solutions across regional HR operations for 2,500+ employees.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
