@@ -2,6 +2,14 @@
 
 Welcome to the documentation for your premium portfolio! 
 
+
+Check this Out! 
+https://youhannamaher.github.io/portfolio/
+
+
+
+
+
 As requested, this system uses a **Folder-Driven Automation approach (Option A)**. This means you will **NEVER** edit any HTML, CSS, or JSON array files directly to add a project.
 
 Instead, you just drop a folder into the `portfolio/` directory, click the updater script, and the website magically updates itself!
