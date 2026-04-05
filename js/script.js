@@ -553,7 +553,7 @@ function createProjectCard(project) {
         <div class="project-card reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
             <div class="project-img-wrapper" style="cursor:pointer;" onclick="openProjectModal('${project.id}')">
                 <img src="${imgUrl}" 
-                     alt="${project.title}" 
+                     alt="${project.title} - Power Platform Solution by Youhanna Maher" 
                      class="project-img"
                      loading="lazy">
                 ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
@@ -1048,7 +1048,7 @@ window.openProjectModal = function(id) {
     const imgUrl = project.thumbnail ? `portfolio/projects/${project.folder}/${project.thumbnail}` : 'https://placehold.co/1200x500/121216/ededf0?text=No+Cover+Image';
 
     let html = `
-        <img src="${imgUrl}" alt="${project.title}" class="modal-hero">
+        <img src="${imgUrl}" alt="${project.title} - Power Platform project by Youhanna Maher" class="modal-hero">
         <div class="modal-details">
             <div class="modal-top-bar" style="position: sticky; top: 0; z-index: 100; background: var(--glass-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); margin: -2.5rem -2.5rem 1.5rem; padding: 2rem 2.5rem 0; display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid transparent;">
                 <h2 class="modal-title" style="margin: 0; font-size: 1.5rem;">${project.title}</h2>
@@ -1109,7 +1109,7 @@ window.openProjectModal = function(id) {
                                 // Assign image URLs to our global state for the Lightbox router
                                 currentGalleryImages = project.images.map(img => `portfolio/projects/${project.folder}/images/${img}`);
                                 // Generate the clickable thumbnail tags
-                                return project.images.map((img, idx) => `<img src="portfolio/projects/${project.folder}/images/${img}" alt="Project screenshot" loading="lazy" onclick="openLightbox(${idx})" aria-label="View fullscreen image">`).join('');
+                                return project.images.map((img, idx) => `<img src="portfolio/projects/${project.folder}/images/${img}" alt="${project.title} - Power Platform system interface" loading="lazy" onclick="openLightbox(${idx})" aria-label="View fullscreen image">`).join('');
                             })()}
                         </div>
                     </div>
@@ -1232,7 +1232,7 @@ window.openCertModal = function (id) {
                         ` : ''}
                         
                         <div class="cert-img-wrapper" id="cert-img-container" onclick="openLightbox(${certIdx})">
-                            <img src="${certImages[certIdx]}" alt="${cert.title}" class="cert-main-img">
+                            <img src="${certImages[certIdx]}" alt="${cert.title} Certificate - Issued by ${cert.issuer}" class="cert-main-img">
                             <div class="cert-img-hint"><i class="fa-solid fa-expand"></i> Click to expand</div>
                         </div>
 
@@ -1348,7 +1348,7 @@ window.openEduModal = function (id) {
                         ` : ''}
                         
                         <div class="cert-img-wrapper" id="edu-img-container" onclick="openLightbox(${eduIdx})">
-                            <img src="${eduImages[eduIdx]}" alt="${edu.school}" class="cert-main-img">
+                            <img src="${eduImages[eduIdx]}" alt="${edu.degree} from ${edu.school} - Youhanna Maher Education" class="cert-main-img">
                             <div class="cert-img-hint"><i class="fa-solid fa-expand"></i> Click to expand</div>
                         </div>
 

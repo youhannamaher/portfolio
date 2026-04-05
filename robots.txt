@@ -1,0 +1,6 @@
+# Allow all bots
+User-agent: *
+Allow: /
+
+# Sitemap URL
+Sitemap: https://youhannamaher.github.io/portfolio/sitemap.xml
