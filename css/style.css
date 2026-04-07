@@ -78,6 +78,8 @@ html {
     /* Only enable for desktop to avoid mobile direction-change lag */
     scroll-behavior: smooth;
     overflow-x: hidden;
+    /* Native buffer for the fixed navbar */
+    scroll-padding-top: 100px;
 }
 
 @media (max-width: 768px) {
@@ -3215,8 +3217,10 @@ img {
 
 /* --- 22. Advanced Rendering & Mobile Polish --- */
 .section {
-    content-visibility: auto; /* Browser Optimization: Skip off-screen rendering */
-    contain-intrinsic-size: 1px 500px;
+    /* Prevent height drift by ensuring all sections are part of the initial layout calculation */
+    content-visibility: visible; 
+    /* Native buffer for anchor navigation - accounts for 80px navbar + 20px breathing room */
+    scroll-margin-top: 100px;
 }
 
 .scroll-to-top {

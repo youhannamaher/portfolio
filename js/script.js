@@ -104,11 +104,26 @@ function renderApp() {
     renderCertificates();
     renderEducation();
     
-    // Slight delay to ensure DOM is paint-ready
+    // Slight delay to ensure DOM is paint-ready and dynamic sections (Projects) have expanded
     setTimeout(() => {
         setupObservers();
         initAnimations();
-    }, 500);
+
+        // Handle initial hash navigation after data render
+        if (window.location.hash) {
+            const hash = window.location.hash;
+            const target = document.querySelector(hash);
+            if (target) {
+                // Trigger the custom scroll logic manually for the initial hash
+                const navbarHeight = 84;
+                const rect = target.getBoundingClientRect();
+                window.scrollTo({
+                    top: window.scrollY + rect.top - navbarHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, 1000); // 1s gives guaranteed time for projects grid and images to layout
 }
 
 /* =========================================================================
@@ -165,6 +180,48 @@ function setupUI() {
      * Optimizing Scroll performance with requestAnimationFrame
      * This prevents 'direction change lag' on mobile by syncing logic with the screen refresh rate.
      */
+    // Attach to all navigation links via delegation for maximum reliability (catches dynamic hero buttons too)
+    document.body.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href === '#hero') return;
+
+        const targetEl = document.getElementById(href.substring(1));
+        if (targetEl) {
+            e.preventDefault();
+
+            // 1. Close mobile menu if open
+            const mobileNav = document.getElementById('mobile-nav');
+            if (mobileNav && mobileNav.classList.contains('active')) {
+                const mobileBtn = document.getElementById('mobile-menu-btn');
+                mobileNav.classList.remove('active');
+                if (mobileBtn) mobileBtn.querySelector('i').className = 'fa-solid fa-bars';
+            }
+
+            // 2. Calculate the landing position precisely
+            // Fixed navbar height is approx 80px (we use a bit more for breathing room)
+            const navbarHeight = 84;
+            const rect = targetEl.getBoundingClientRect();
+            const currentScroll = window.scrollY;
+            
+            // This calculation works across all browsers even with the 0.75x zoom scale
+            const targetScroll = currentScroll + rect.top - navbarHeight;
+
+            window.scrollTo({
+                top: targetScroll,
+                behavior: 'smooth'
+            });
+
+            // 3. Update the URL state
+            if (history.pushState) {
+                history.pushState(null, null, href);
+            }
+        }
+    });
+
+    // Navbar scroll effect & Active section highlight
     let isTicking = false;
     window.addEventListener('scroll', () => {
         if (!isTicking) {
@@ -182,21 +239,18 @@ function setupUI() {
                 }
 
                 // 2. Navbar effects
-                const isDesktop = window.innerWidth > 768;
-                const zoomFactor = isDesktop ? 0.75 : 1;
-                const adjustedScroll = scrolled / zoomFactor;
-
                 if (scrolled > 30) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
 
-                // Active link highlighting
+                // Active link highlighting using zoom-agnostic viewport relative positions
                 let current = '';
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (adjustedScroll >= (sectionTop - 150)) {
+                    const rect = section.getBoundingClientRect();
+                    // If target section's top is near the navbar
+                    if (rect.top <= 150) {
                         current = section.getAttribute('id');
                     }
                 });
