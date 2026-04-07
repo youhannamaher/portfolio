@@ -144,6 +144,15 @@ function setupUI() {
         const isOpen = mobileNav.classList.contains('active');
         icon.className = isOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars';
         
+        // Ensure the parent navbar becomes solid and high-contrast when open
+        if (navbar) {
+            if (isOpen) {
+                navbar.classList.add('mobile-menu-open');
+            } else {
+                navbar.classList.remove('mobile-menu-open');
+            }
+        }
+        
         // Staggered arrival for mobile links
         const links = mobileNav.querySelectorAll('.mobile-nav-link');
         links.forEach((link, index) => {
@@ -167,6 +176,7 @@ function setupUI() {
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => {
             mobileNav.classList.remove('active');
+            navbar.classList.remove('mobile-menu-open'); // Release the solid background state
             mobileBtn.querySelector('i').className = 'fa-solid fa-bars';
         });
     });
@@ -196,7 +206,9 @@ function setupUI() {
             const mobileNav = document.getElementById('mobile-nav');
             if (mobileNav && mobileNav.classList.contains('active')) {
                 const mobileBtn = document.getElementById('mobile-menu-btn');
+                const navbar = document.getElementById('navbar');
                 mobileNav.classList.remove('active');
+                if (navbar) navbar.classList.remove('mobile-menu-open');
                 if (mobileBtn) mobileBtn.querySelector('i').className = 'fa-solid fa-bars';
             }
 

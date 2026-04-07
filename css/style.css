@@ -289,12 +289,35 @@ img {
 }
 
 .navbar.scrolled {
-    background-color: var(--glass-bg);
+    background-color: rgb(5, 5, 7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    padding: 0.75rem 0; /* Compact once you move */
+    padding: 0.75rem 0;
+}
+
+/* DEEP ISOLATION OVERLAY - GUARANTEES ZERO TRANSPARENCY */
+.navbar.mobile-menu-open {
+    background: rgb(0, 0, 0) !important;
+    background-image: linear-gradient(to bottom, #000000, #000000) !important; /* Force GPU-rendered solid layer */
+    opacity: 1 !important;
+    visibility: visible !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    isolation: isolate !important; /* Prevents blending with page glows/content */
+    mix-blend-mode: normal !important;
+    transition: none !important; 
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Light mode support for solid navbar */
+:root.light-theme .navbar.scrolled,
+:root.light-theme .navbar.mobile-menu-open,
+body.light-theme .navbar.scrolled,
+body.light-theme .navbar.mobile-menu-open {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
 /* Glass Card Global Base */
@@ -317,6 +340,8 @@ img {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    position: relative;
+    z-index: 6000; /* Keep branding and X button above the overlay */
 }
 
 .brand-name {
@@ -409,16 +434,30 @@ img {
 
 .mobile-nav {
     display: none;
-    position: fixed; /* Fixed is better for covering content */
-    top: 72px; /* Set directly to avoid any calculation gaps */
+    position: fixed;
+    top: 60px; 
     left: 0;
-    width: 100%;
-    height: calc(100vh - 72px); /* Fill the whole screen */
-    background-color: var(--bg-main); 
-    border-top: 1px solid var(--border-color);
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0) !important;
+    background-image: linear-gradient(to bottom, #000000, #000000) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    isolation: isolate !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    mix-blend-mode: normal !important;
     flex-direction: column;
-    padding: 2rem 0;
-    z-index: 999;
+    padding: 1rem 0;
+    z-index: 99999; /* Higher than everything */
+    overflow-y: auto;
+    pointer-events: auto;
+}
+
+/* Ensure no transitions interfere with initial solidity */
+:root.light-theme .mobile-nav, 
+body.light-theme .mobile-nav {
+    background-color: #ffffff !important;
 }
 
 .mobile-nav.active {
@@ -426,16 +465,19 @@ img {
 }
 
 .mobile-nav-link {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
     color: var(--text-primary);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
     border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: 100%;
 }
 
 .mobile-nav-link:active {
-    background-color: var(--accent-primary);
-    color: white;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-primary);
 }
 
 /* Hero Section */
@@ -2290,15 +2332,6 @@ img {
         padding-left: 45px;
     }
 
-    /* Fix: Mobile Navbar Visibility - SOLID and Opaque */
-    .navbar.scrolled,
-    .navbar.scrolled .mobile-nav.active {
-        background-color: var(--bg-surface) !important;
-        background-image: none !important;
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        border-bottom: 1px solid var(--border-color) !important;
-    }
 }
 
 /* --- Catchy Interactive Enhancements --- */
@@ -3367,5 +3400,21 @@ img {
     .cert-modal-content {
         height: auto !important;
         min-height: 50vh;
+    }
+}
+
+/* FINAL ATOMIC FIX FOR MOBILE TRANSPARENCY */
+@media (max-width: 768px) {
+    body.dark-theme .navbar,
+    body.dark-theme .navbar.scrolled,
+    body.dark-theme .mobile-nav,
+    body.dark-theme .navbar.mobile-menu-open {
+        background-color: #000000 !important;
+        background: #000000 !important;
+        background-image: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 }
