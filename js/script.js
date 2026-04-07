@@ -624,7 +624,7 @@ function renderExpertise() {
 
 function createProjectCard(project) {
     const stackTags = project.stack ? project.stack.slice(0, 3).map(s => `<span class="stack-tag">${s}</span>`).join('') : '';
-    const imgUrl = project.thumbnail ? `portfolio/projects/${project.folder}/${project.thumbnail}` : 'https://placehold.co/600x400/121216/ededf0?text=No+Preview';
+    const imgUrl = project.thumbnail ? `projects/${project.folder}/${project.thumbnail}` : 'https://placehold.co/600x400/121216/ededf0?text=No+Preview';
     
     // Display the first category if available
     const primaryCategory = project.categories && project.categories.length > 0 ? project.categories[0] : '';
@@ -1125,7 +1125,7 @@ window.openProjectModal = function(id) {
 
     const modal = document.getElementById('project-modal');
     const body = document.getElementById('project-modal-body');
-    const imgUrl = project.thumbnail ? `portfolio/projects/${project.folder}/${project.thumbnail}` : 'https://placehold.co/1200x500/121216/ededf0?text=No+Cover+Image';
+    const imgUrl = project.thumbnail ? `projects/${project.folder}/${project.thumbnail}` : 'https://placehold.co/1200x500/121216/ededf0?text=No+Cover+Image';
 
     let html = `
         <img src="${imgUrl}" alt="${project.title} - Power Platform project by Youhanna Maher" class="modal-hero">
@@ -1187,9 +1187,9 @@ window.openProjectModal = function(id) {
                         <div class="modal-gallery">
                             ${(() => {
                                 // Assign image URLs to our global state for the Lightbox router
-                                currentGalleryImages = project.images.map(img => `portfolio/projects/${project.folder}/images/${img}`);
+                                currentGalleryImages = project.images.map(img => `projects/${project.folder}/images/${img}`);
                                 // Generate the clickable thumbnail tags
-                                return project.images.map((img, idx) => `<img src="portfolio/projects/${project.folder}/images/${img}" alt="${project.title} - Power Platform system interface" loading="lazy" onclick="openLightbox(${idx})" aria-label="View fullscreen image">`).join('');
+                                return project.images.map((img, idx) => `<img src="projects/${project.folder}/images/${img}" alt="${project.title} - Power Platform system interface" loading="lazy" onclick="openLightbox(${idx})" aria-label="View fullscreen image">`).join('');
                             })()}
                         </div>
                     </div>
@@ -1198,7 +1198,7 @@ window.openProjectModal = function(id) {
 
             <div class="modal-actions">
                 ${project.liveLink ? `<a href="${project.liveLink}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-external-link-alt"></i> Live Demo</a>` : ''}
-                ${project.caseStudyFile ? `<a href="portfolio/projects/${project.folder}/files/${project.caseStudyFile}" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-file-pdf"></i> View Case Study</a>` : ''}
+                ${project.caseStudyFile ? `<a href="projects/${project.folder}/files/${project.caseStudyFile}" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-file-pdf"></i> View Case Study</a>` : ''}
             </div>
         </div>
     `;
@@ -1291,8 +1291,8 @@ window.openCertModal = function (id) {
 
     // Create a list of all images for this cert (handling both image and images array)
     const certImages = cert.images && cert.images.length > 0 
-        ? cert.images.map(img => `portfolio/certificates/${cert.folder}/${img}`)
-        : (cert.image ? [`portfolio/certificates/${cert.folder}/${cert.image}`] : []);
+        ? cert.images.map(img => `certificates/${cert.folder}/${img}`)
+        : (cert.image ? [`certificates/${cert.folder}/${cert.image}`] : []);
 
     currentGalleryImages = certImages;
     let certIdx = 0;
@@ -1338,7 +1338,7 @@ window.openCertModal = function (id) {
                     </a>
                 ` : ''}
                 ${cert.pdf ? `
-                    <a href="portfolio/certificates/${cert.folder}/${cert.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
+                    <a href="certificates/${cert.folder}/${cert.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
                         <i class="fa-solid fa-file-pdf"></i> Access PDF
                     </a>
                 ` : ''}
@@ -1405,8 +1405,8 @@ window.openEduModal = function (id) {
     const body = document.getElementById('edu-modal-body');
 
     const eduImages = edu.images && edu.images.length > 0 
-        ? edu.images.map(img => `portfolio/education/${edu.folder}/${img}`)
-        : (edu.image ? [`portfolio/education/${edu.folder}/${edu.image}`] : []);
+        ? edu.images.map(img => `education/${edu.folder}/${img}`)
+        : (edu.image ? [`education/${edu.folder}/${edu.image}`] : []);
 
     currentGalleryImages = eduImages;
     let eduIdx = 0;
@@ -1449,11 +1449,11 @@ window.openEduModal = function (id) {
 
             <div class="cert-modal-actions" style="flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
                 ${edu.pdfs ? edu.pdfs.map((pdf, pIdx) => `
-                    <a href="portfolio/education/${edu.folder}/${pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
+                    <a href="education/${edu.folder}/${pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
                         <i class="fa-solid fa-file-pdf"></i> Access PDF ${hasMultiplePdfs ? (pIdx + 1) : ''}
                     </a>
                 `).join('') : edu.pdf ? `
-                    <a href="portfolio/education/${edu.folder}/${edu.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
+                    <a href="education/${edu.folder}/${edu.pdf}" target="_blank" rel="noopener noreferrer" class="btn btn-primary cert-pdf-btn">
                         <i class="fa-solid fa-file-pdf"></i> Access PDF
                     </a>
                 ` : ''}

@@ -12,7 +12,7 @@ https://youhannamaher.github.io/portfolio/
 
 As requested, this system uses a **Folder-Driven Automation approach (Option A)**. This means you will **NEVER** edit any HTML, CSS, or JSON array files directly to add a project.
 
-Instead, you just drop a folder into the `portfolio/` directory, click the updater script, and the website magically updates itself!
+Instead, you just drop a folder into the `projects/` or `certificates/` directory on the root, click the updater script, and the website magically updates itself!
 
 ---
 
@@ -31,7 +31,7 @@ If you skip this step, clicking `update-portfolio.cmd` will give you a black scr
 
 ## ⚡ Quick Start: How to Update Your Portfolio
 
-1. Add your project or certificate into a new folder inside `portfolio/projects` or `portfolio/certificates`.
+1. Add your project or certificate into a new folder inside `projects/` or `certificates/` at the root.
 2. Double-click the **`update-portfolio.cmd`** file located in your main project folder.
 3. Refresh your Live Server browser tab. 
 *That's it! The system handles everything else.*
@@ -40,10 +40,10 @@ If you skip this step, clicking `update-portfolio.cmd` will give you a black scr
 
 ## 1. How to Add a Project (Step-by-Step)
 
-To make things extremely easy, I have created a `!_project-template` folder for you inside `portfolio/projects/`. You'll also see a `0-demo-case-study` folder which is a fully working demo with local images and an embedded video.
+To make things extremely easy, I have created a `!_project-template` folder for you inside `projects/`. You'll also see a `0-demo-case-study` folder which is a fully working demo with local images and an embedded video.
 
 ### Step 1: Create the Folder
-1. Go to `portfolio/projects/` and copy the `!_project-template` folder.
+1. Go to `projects/` and copy the `!_project-template` folder.
 2. Rename the pasted folder to your project's short name (e.g., `hr-desktop-app`).
 
 ### Step 2: Edit the Text Details
@@ -80,7 +80,7 @@ Double-click `update-portfolio.cmd`. Done! Refresh your Live Server browser and 
 
 Adding a certificate works just like adding a project! The system now supports single images, multi-image Lightbox galleries (like front & back), and full `.pdf` documents.
 
-1. Copy the `!_certificate-template` folder inside `portfolio/certificates/` and rename it (e.g., `pl-900`).
+1. Copy the `!_certificate-template` folder inside `certificates/` and rename it (e.g., `pl-900`).
 2. Add your certificate file inside the folder:
    - **For a Single Image:** Just drop your `.jpg` or `.png` into the folder.
    - **For Multiple Images (Front & Back):** Drop all `.png` / `.jpg` images directly into the folder and name them alphabetically (e.g., `1_front.jpg`, `2_back.jpg`). When clicked, it will turn into a full-screen Lightbox viewer!

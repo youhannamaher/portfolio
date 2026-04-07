@@ -2,10 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration Paths
-const SRC_DIR = path.join(__dirname, '../portfolio');
-const PROJECTS_DIR = path.join(SRC_DIR, 'projects');
-const CERTS_DIR = path.join(SRC_DIR, 'certificates');
-const EDU_DIR = path.join(SRC_DIR, 'education');
+const PROJECTS_DIR = path.join(__dirname, '../projects');
+const CERTS_DIR = path.join(__dirname, '../certificates');
+const EDU_DIR = path.join(__dirname, '../education');
 const DATA_DIR = path.join(__dirname, '../data');
 
 // Utility to ensure directory exists

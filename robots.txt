@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap URL
-Sitemap: https://youhannamaher.github.io/portfolio/sitemap.xml
+Sitemap: https://youhannamaher.github.io/sitemap.xml
