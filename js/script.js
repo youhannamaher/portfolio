@@ -109,18 +109,25 @@ function renderApp() {
         setupObservers();
         initAnimations();
 
-        // Handle initial hash navigation after data render
+        // 2. DEVICE-SPECIFIC INITIAL HASH FLOW
         if (window.location.hash) {
             const hash = window.location.hash;
             const target = document.querySelector(hash);
             if (target) {
-                // Trigger the custom scroll logic manually for the initial hash
-                const navbarHeight = 84;
-                const rect = target.getBoundingClientRect();
-                window.scrollTo({
-                    top: window.scrollY + rect.top - navbarHeight,
-                    behavior: 'smooth'
-                });
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    // Mobile: Using native scroll into view for maximum stability (uses scroll-padding-top)
+                    target.scrollIntoView(); 
+                } else {
+                    // Desktop: Custom high-precision math to bypass zoom browser bugs
+                    const navbar = document.getElementById('navbar');
+                    const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                    const rect = target.getBoundingClientRect();
+                    window.scrollTo({
+                        top: window.scrollY + rect.top - navbarHeight,
+                        behavior: 'smooth'
+                    });
+                }
             }
         }
     }, 200); // 200ms is enough for layout/zoom resolution while feeling near-instant
@@ -200,10 +207,10 @@ function setupUI() {
 
         const targetEl = document.getElementById(href.substring(1));
         if (targetEl) {
-            e.preventDefault();
-
             // 1. Close mobile menu if open
             const mobileNav = document.getElementById('mobile-nav');
+            const isMobile = window.innerWidth <= 768;
+
             if (mobileNav && mobileNav.classList.contains('active')) {
                 const mobileBtn = document.getElementById('mobile-menu-btn');
                 const navbar = document.getElementById('navbar');
@@ -212,13 +219,20 @@ function setupUI() {
                 if (mobileBtn) mobileBtn.querySelector('i').className = 'fa-solid fa-bars';
             }
 
-            // 2. Calculate the landing position precisely
-            // Fixed navbar height is approx 80px (we use a bit more for breathing room)
-            const navbarHeight = 84;
+            // 2. DEVICE-SPECIFIC NAVIGATION LOGIC
+            if (isMobile) {
+                // Restore original mobile behavior: Allow native browser anchor jumping
+                // This preserves stability on real phone devices without complex JS math.
+                return;
+            }
+
+            // DESKTOP ONLY: Keep the precise, zoom-safe math for high-density scaling (0.75x)
+            e.preventDefault();
+            const navbar = document.getElementById('navbar');
+            const navbarHeight = navbar ? navbar.offsetHeight : 80; 
             const rect = targetEl.getBoundingClientRect();
             const currentScroll = window.scrollY;
             
-            // This calculation works across all browsers even with the 0.75x zoom scale
             const targetScroll = currentScroll + rect.top - navbarHeight;
 
             window.scrollTo({

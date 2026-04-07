@@ -437,10 +437,10 @@ body.light-theme .navbar.mobile-menu-open {
 .mobile-nav {
     display: none;
     position: fixed;
-    top: 60px; 
+    top: 60px; /* Header Height */
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    bottom: 0; /* Ensures it fills only the visible viewport, not 100vh which can cut off content */
     background-color: var(--bg-main) !important;
     background: var(--bg-main) !important;
     opacity: 1 !important;
@@ -450,10 +450,11 @@ body.light-theme .navbar.mobile-menu-open {
     -webkit-backdrop-filter: none !important;
     mix-blend-mode: normal !important;
     flex-direction: column;
-    padding: 1rem 0;
+    padding: 1rem 0 120px 0; /* Increased bottom padding to prevent the last item (Contact) from being hidden by browser bars */
     z-index: 99999;
     overflow-y: auto;
     pointer-events: auto;
+    -webkit-overflow-scrolling: touch; /* Smoother scrolling for iOS */
 }
 
 /* Light Theme Override for Solidity & Visibility */
