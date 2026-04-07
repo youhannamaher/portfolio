@@ -19,58 +19,6 @@ let allProjects = [];
 let allCertificates = [];
 let currentGalleryImages = [];
 let currentGalleryIndex = 0;
-let calLoaded = false;
-
-/**
- * Priority 2 — CAL.COM LAZY LOADING
- * Loads the SDK ONLY when the section is in view or user clicks the booking tab.
- */
-function initCalCom() {
-    if (calLoaded) return;
-    const container = document.getElementById('my-cal-inline-free-15-mins-consultancy');
-    if (!container) return;
-    
-    calLoaded = true;
-    console.log("📅 Cal.com: Lazy loading SDK...");
-
-    (function (C, A, L) { 
-        let p = function (a, ar) { a.q.push(ar); }; 
-        let d = C.document; 
-        C.Cal = C.Cal || function () { 
-            let cal = C.Cal; 
-            let ar = arguments; 
-            if (!cal.loaded) { 
-                cal.ns = {}; cal.q = cal.q || []; 
-                const s = d.createElement("script");
-                s.src = A;
-                s.async = true;
-                d.head.appendChild(s);
-                cal.loaded = true; 
-            } 
-            if (ar[0] === L) { 
-                const api = function () { p(api, arguments); }; 
-                const namespace = ar[1]; 
-                api.q = api.q || []; 
-                if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); 
-                return;
-            } 
-            p(cal, ar); 
-        }; 
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-
-    Cal("init", "free-15-mins-consultancy", {origin:"https://app.cal.com"});
-    Cal.ns["free-15-mins-consultancy"]("inline", {
-        elementOrSelector:"#my-cal-inline-free-15-mins-consultancy",
-        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-        calLink: "youhanna-maher/free-15-mins-consultancy",
-    });
-    Cal.ns["free-15-mins-consultancy"]("ui", {
-        "cssVarsPerTheme":{"light":{"cal-brand":"#3b82f6"},"dark":{"cal-brand":"#3b82f6"}},
-        "hideEventTypeDetails":false,
-        "layout":"month_view",
-        "theme":"auto"
-    });
-}
 
 async function initApp() {
     console.log("🚀 App Initializing...");
@@ -183,9 +131,6 @@ function renderApp() {
             }
         }
     }, 200); // 200ms is enough for layout/zoom resolution while feeling near-instant
-
-    // Start lazy-load observer for Cal.com
-    setupCalComObserver();
 }
 
 /* =========================================================================
@@ -597,25 +542,6 @@ function applyStagger(elements, limit = 5) {
     });
 }
 
-/**
- * Setup IntersectionObserver for Cal.com lazy loading
- */
-function setupCalComObserver() {
-    const contactSection = document.getElementById('contact');
-    if (!contactSection) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                initCalCom();
-                observer.unobserve(contactSection);
-            }
-        });
-    }, { rootMargin: '300px' }); // Pre-fetch slightly before user scrolls to contact
-
-    observer.observe(contactSection);
-}
-
 /* =========================================================================
    RENDERING LOGIC
    ========================================================================= */
@@ -709,10 +635,7 @@ function createProjectCard(project) {
                 <img src="${imgUrl}" 
                      alt="${project.title} - Power Platform Solution by Youhanna Maher" 
                      class="project-img"
-                     loading="lazy"
-                     width="300"
-                     height="200"
-                     style="background: var(--bg-surface-solid);">
+                     loading="lazy">
                 ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
             </div>
             <div class="project-content">
@@ -1615,9 +1538,6 @@ function initContactHub() {
             } else {
                 messageContainer.classList.remove('active');
                 bookingContainer.classList.add('active');
-                
-                // Force load Cal.com when user explicitly wants to book
-                initCalCom();
             }
         });
     });
