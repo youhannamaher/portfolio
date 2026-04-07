@@ -123,7 +123,7 @@ function renderApp() {
                 });
             }
         }
-    }, 1000); // 1s gives guaranteed time for projects grid and images to layout
+    }, 200); // 200ms is enough for layout/zoom resolution while feeling near-instant
 }
 
 /* =========================================================================

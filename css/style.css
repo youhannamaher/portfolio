@@ -317,6 +317,8 @@ img {
 body.light-theme .navbar.scrolled,
 body.light-theme .navbar.mobile-menu-open {
     background-color: #ffffff !important;
+    background: #ffffff !important;
+    background-image: none !important;
     color: #000000 !important;
 }
 
@@ -439,8 +441,8 @@ body.light-theme .navbar.mobile-menu-open {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgb(0, 0, 0) !important;
-    background-image: linear-gradient(to bottom, #000000, #000000) !important;
+    background-color: var(--bg-main) !important;
+    background: var(--bg-main) !important;
     opacity: 1 !important;
     visibility: visible !important;
     isolation: isolate !important;
@@ -449,15 +451,17 @@ body.light-theme .navbar.mobile-menu-open {
     mix-blend-mode: normal !important;
     flex-direction: column;
     padding: 1rem 0;
-    z-index: 99999; /* Higher than everything */
+    z-index: 99999;
     overflow-y: auto;
     pointer-events: auto;
 }
 
-/* Ensure no transitions interfere with initial solidity */
+/* Light Theme Override for Solidity & Visibility */
 :root.light-theme .mobile-nav, 
 body.light-theme .mobile-nav {
     background-color: #ffffff !important;
+    background: #ffffff !important;
+    background-image: none !important;
 }
 
 .mobile-nav.active {
@@ -3403,14 +3407,29 @@ body.light-theme .mobile-nav {
     }
 }
 
-/* FINAL ATOMIC FIX FOR MOBILE TRANSPARENCY */
+/* FINAL ATOMIC FIX FOR MOBILE SOLIDITY & THEME CONSISTENCY */
 @media (max-width: 768px) {
+    /* Dark Theme */
     body.dark-theme .navbar,
     body.dark-theme .navbar.scrolled,
     body.dark-theme .mobile-nav,
     body.dark-theme .navbar.mobile-menu-open {
         background-color: #000000 !important;
         background: #000000 !important;
+        background-image: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Light Theme */
+    body.light-theme .navbar,
+    body.light-theme .navbar.scrolled,
+    body.light-theme .mobile-nav,
+    body.light-theme .navbar.mobile-menu-open {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
         background-image: none !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
