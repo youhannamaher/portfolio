@@ -104,6 +104,9 @@ function renderApp() {
     renderCertificates();
     renderEducation();
     
+    // Initialize secure booking platform
+    initCalWidget();
+    
     // Slight delay to ensure DOM is paint-ready and dynamic sections (Projects) have expanded
     setTimeout(() => {
         setupObservers();
@@ -372,6 +375,11 @@ function setupUI() {
         
         themeIcon.className = root.classList.contains('light-theme') ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
         localStorage.setItem('portfolio-theme', root.classList.contains('light-theme') ? 'light' : 'dark');
+        
+        // Full Refresh of Cal.com integration for 100% theme accuracy
+        if (typeof refreshCalWidget === 'function') {
+            refreshCalWidget();
+        }
     });
 
     // -------------------------------------------------------------------------
@@ -1762,4 +1770,69 @@ function initMobileCarousel() {
     
     // Initial paint
     updateCarouselState();
+}
+
+
+/**
+ * DYNAMIC CAL.COM WIDGET (RESPONSIVE & THEME-AWARE)
+ * Synchronizes the booking platform with the portfolio visual stack.
+ */
+function initCalWidget() {
+    refreshCalWidget();
+}
+
+/**
+ * FULL INTEGRATION REFRESH (FOR REAL-TIME THEME ACCURACY)
+ * Re-initializes the Cal.com widget from scratch with the current site theme.
+ */
+function refreshCalWidget() {
+    const container = document.getElementById('my-cal-inline-free-15-mins-consultancy');
+    if (!container) return;
+    
+    // Clear existing iframe to force a fresh theme load
+    container.innerHTML = '';
+    
+    const isMobile = window.innerWidth <= 768;
+    const currentTheme = document.documentElement.classList.contains('light-theme') ? 'light' : 'dark';
+    
+    // Initialization Snippet
+    (function (C, A, L) { 
+        let p = function (a, ar) { a.q.push(ar); }; 
+        let d = C.document; 
+        C.Cal = C.Cal || function () { 
+            let cal = C.Cal; 
+            let ar = arguments; 
+            if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } 
+            if (ar[0] === L) { 
+                const api = function () { p(api, arguments); }; 
+                const namespace = ar[1]; 
+                api.q = api.q || []; 
+                if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} 
+                else p(cal, ar); 
+                return;
+            } p(cal, ar); 
+        }; 
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", "free-15-mins-consultancy", {origin:"https://app.cal.com"});
+
+    Cal.ns["free-15-mins-consultancy"]("inline", {
+        elementOrSelector:"#my-cal-inline-free-15-mins-consultancy",
+        config: {
+            "layout":"month_view",
+            "useSlotsViewOnSmallScreen":"true",
+            "theme": currentTheme
+        },
+        calLink: "youhanna-maher/free-15-mins-consultancy",
+    });
+
+    Cal.ns["free-15-mins-consultancy"]("ui", {
+        "hideEventTypeDetails": isMobile,
+        "layout":"month_view",
+        "theme": currentTheme,
+        "cssVarsPerTheme": {
+            "light": { "cal-brand": "#3b82f6" }, 
+            "dark": { "cal-brand": "#3b82f6" }
+        }
+    });
 }
