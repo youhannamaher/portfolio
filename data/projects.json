@@ -77,6 +77,48 @@
     "thumbnail": "Screenshot 2026-04-03 161214.png"
   },
   {
+    "title": "Finance Pro – AI Financial Command Center",
+    "shortTitle": "Finance Pro",
+    "categories": [
+      "Dashboards & Analytics",
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Full-Stack Developer",
+    "period": "2026",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Google Gemini AI",
+      "Vercel"
+    ],
+    "summary": "AI-powered financial system combining real-time tracking, smart automation, and natural language expense management.",
+    "featured": true,
+    "order": 2,
+    "impact": [
+      "Enabled natural language financial tracking using AI (Arabic & English).",
+      "Centralized income, expenses, investments, and balances into one real-time system.",
+      "Automated detection of untracked spending through balance reconciliation.",
+      "Delivered a full product experience with secure sandbox mode for public usage."
+    ],
+    "videoEmbed": "",
+    "folder": "15 - Finance Tracker",
+    "id": "finance-pro-ai-financial-command-center",
+    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
+    "images": [
+      "Screenshot 2026-04-22 232016.png",
+      "Screenshot 2026-04-22 232033.png",
+      "Screenshot 2026-04-22 232056.png",
+      "Screenshot 2026-04-22 232103.png",
+      "Screenshot 2026-04-22 232140.png",
+      "Screenshot 2026-04-22 232200.png",
+      "Screenshot 2026-04-23 002512.png",
+      "Screenshot 2026-04-23 002621.png"
+    ],
+    "thumbnail": "Screenshot 2026-04-23 002512.png"
+  },
+  {
     "title": "Contract Lifecycle Management System",
     "shortTitle": "Federon CMS",
     "categories": [

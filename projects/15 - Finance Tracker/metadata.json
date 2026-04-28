@@ -1,0 +1,28 @@
+{
+  "title": "Finance Pro – AI Financial Command Center",
+  "shortTitle": "Finance Pro",
+  "categories": [
+    "Dashboards & Analytics",
+    "Business Apps & Automation"
+  ],
+  "clientOrOrganization": "Personal Project",
+  "role": "Full-Stack Developer",
+  "period": "2026",
+  "stack": [
+    "React",
+    "TypeScript",
+    "Supabase",
+    "Google Gemini AI",
+    "Vercel"
+  ],
+  "summary": "AI-powered financial system combining real-time tracking, smart automation, and natural language expense management.",
+  "featured": true,
+  "order": 2,
+  "impact": [
+    "Enabled natural language financial tracking using AI (Arabic & English).",
+    "Centralized income, expenses, investments, and balances into one real-time system.",
+    "Automated detection of untracked spending through balance reconciliation.",
+    "Delivered a full product experience with secure sandbox mode for public usage."
+  ],
+  "videoEmbed": ""
+}
