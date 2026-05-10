@@ -1,0 +1,7 @@
+I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.
+
+The solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.
+
+The dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.
+
+Built using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.
