@@ -637,6 +637,20 @@ function createProjectCard(project) {
     // Display the first category if available
     const primaryCategory = project.categories && project.categories.length > 0 ? project.categories[0] : '';
 
+    let actionsHtml = '';
+    if (project.url) {
+        actionsHtml = `
+            <div class="project-card-actions mt-2">
+                <a href="${project.url}" target="_blank" class="btn btn-primary project-card-btn" onclick="event.stopPropagation();">Visit Website <i class="fa-solid fa-external-link-alt ml-1"></i></a>
+                <button class="btn btn-outline project-card-btn" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        `;
+    } else {
+        actionsHtml = `
+            <button class="btn btn-outline w-100 mt-2" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
+        `;
+    }
+
     return `
         <div class="project-card reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
             <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
@@ -650,7 +664,7 @@ function createProjectCard(project) {
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-summary">${project.summary || ''}</p>
                 <div class="project-stack">${stackTags}</div>
-                <button class="btn btn-outline w-100 mt-2" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                ${actionsHtml}
             </div>
         </div>
     `;
@@ -1365,7 +1379,8 @@ window.openProjectModal = function(id) {
             </div>
 
             <div class="modal-actions">
-                ${project.liveLink ? `<a href="${project.liveLink}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-external-link-alt"></i> Live Demo</a>` : ''}
+                ${project.url ? `<a href="${project.url}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-external-link-alt"></i> Visit Website</a>` : ''}
+                ${project.liveLink && project.liveLink !== project.url ? `<a href="${project.liveLink}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-external-link-alt"></i> Live Demo</a>` : ''}
                 ${project.caseStudyFile ? `<a href="projects/${project.folder}/files/${project.caseStudyFile}" target="_blank" class="btn btn-secondary"><i class="fa-solid fa-file-pdf"></i> View Case Study</a>` : ''}
             </div>
         </div>

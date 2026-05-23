@@ -864,6 +864,31 @@ body.light-theme .mobile-nav {
     border: 1px solid var(--border-color);
 }
 
+.project-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+.project-card-actions .project-card-btn {
+    flex: 1;
+    min-width: 0;
+    padding: 0.6rem 0.5rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .project-card-actions {
+        flex-direction: column;
+    }
+    .project-card-actions .project-card-btn {
+        width: 100%;
+    }
+}
+
 /* Experience Timeline */
 .timeline {
     position: relative;

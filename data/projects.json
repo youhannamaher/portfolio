@@ -93,6 +93,7 @@
       "Vercel"
     ],
     "summary": "AI-powered financial system combining real-time tracking, smart automation, and natural language expense management.",
+    "url": "https://finance-pro-sm.vercel.app",
     "featured": true,
     "order": 2,
     "impact": [
@@ -575,6 +576,7 @@
       "Vercel"
     ],
     "summary": "A premium personal portfolio website showcasing creative work, video content, projects, experience, and contact details.",
+    "url": "https://fabula-portfolio.vercel.app",
     "featured": false,
     "order": 13,
     "impact": [
@@ -651,6 +653,7 @@
       "Vercel"
     ],
     "summary": "AI-powered platform helping students discover suitable university programs and career paths through personalized assessments and real educational data.",
+    "url": "https://pathwise-edu.vercel.app",
     "featured": false,
     "order": 0,
     "impact": [
@@ -693,6 +696,7 @@
       "Vercel"
     ],
     "summary": "A browser-based social gaming platform where people can host real-time party games and play instantly with friends, family, or colleagues.",
+    "url": "https://bondy-eg.vercel.app",
     "featured": true,
     "order": 0,
     "impact": [
