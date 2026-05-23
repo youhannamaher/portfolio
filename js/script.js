@@ -652,20 +652,22 @@ function createProjectCard(project) {
     }
 
     return `
-        <div class="project-card-wrapper reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
-            <div class="project-card">
-                <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
-                    <img src="${imgUrl}" 
-                         alt="${project.title} - Power Platform Solution by Youhanna Maher" 
-                         class="project-img"
-                         loading="lazy">
-                    ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">${project.title}</h3>
-                    <p class="project-summary">${project.summary || ''}</p>
-                    <div class="project-stack">${stackTags}</div>
-                    ${actionsHtml}
+        <div class="project-grid-item" data-category="${project.categories?.join(',')}" data-id="${project.id}">
+            <div class="project-card-wrapper reveal">
+                <div class="project-card">
+                    <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
+                        <img src="${imgUrl}" 
+                             alt="${project.title} - Power Platform Solution by Youhanna Maher" 
+                             class="project-img"
+                             loading="lazy">
+                        ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">${project.title}</h3>
+                        <p class="project-summary">${project.summary || ''}</p>
+                        <div class="project-stack">${stackTags}</div>
+                        ${actionsHtml}
+                    </div>
                 </div>
             </div>
         </div>

@@ -787,8 +787,17 @@ body.light-theme .mobile-nav {
     align-items: stretch;
 }
 
+.project-grid-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: stretch;
+}
+
 .project-card-wrapper {
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     height: 100%;
     align-self: stretch;
 }
@@ -804,6 +813,7 @@ body.light-theme .mobile-nav {
     height: 100%;
     width: 100%;
     align-self: stretch;
+    flex-grow: 1;
 }
 
 .project-card:hover {
