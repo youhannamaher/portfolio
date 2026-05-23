@@ -796,6 +796,7 @@ body.light-theme .mobile-nav {
 .project-card-wrapper {
     display: grid;
     align-self: stretch;
+    height: 100%;
 }
 
 .project-card {
@@ -807,6 +808,7 @@ body.light-theme .mobile-nav {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     align-self: stretch;
 }
 
