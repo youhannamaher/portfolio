@@ -1,25 +1,25 @@
 {
-    "title":  "MStack360 CRM System",
-    "shortTitle":  "MStack360 CRM",
-    "categories":  [
-                       "Business Apps \u0026 Automation"
-                   ],
-    "clientOrOrganization":  "MStack360",
-    "role":  "Power Platform Developer",
-    "period":  "2025",
-    "stack":  [
-                  "Power Apps",
-                  "Power Automate",
-                  "SharePoint"
-              ],
-    "summary":  "Full-scale CRM managing clients, projects, freelancers, invoicing, and financials in one unified Power Apps platform.",
-    "featured":  true,
-    "order":  4,
-    "impact":  [
-                   "Centralized client, project, and freelancer management into a single system.",
-                   "Automated invoice generation and email communication workflows.",
-                   "Improved visibility on financials, payments, and project performance."
-               ],
-    "videoEmbed":  "",
-    "thumbnail":  "thumbnail.jpeg"
+    "title": "MStack360 CRM System",
+    "shortTitle": "MStack360 CRM",
+    "categories": [
+        "Business Apps \u0026 Automation"
+    ],
+    "clientOrOrganization": "MStack360",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+        "Power Apps",
+        "Power Automate",
+        "SharePoint"
+    ],
+    "summary": "Full-scale CRM managing clients, projects, freelancers, invoicing, and financials in one unified Power Apps platform.",
+    "featured": true,
+    "order": 4,
+    "impact": [
+        "Centralized client, project, and freelancer management into a single system.",
+        "Automated invoice generation and email communication workflows.",
+        "Improved visibility on financials, payments, and project performance."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png"
 }
