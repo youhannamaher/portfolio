@@ -789,15 +789,12 @@ body.light-theme .mobile-nav {
 }
 
 .project-grid-item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-self: stretch;
 }
 
 .project-card-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    display: grid;
     align-self: stretch;
 }
 
@@ -811,7 +808,6 @@ body.light-theme .mobile-nav {
     flex-direction: column;
     width: 100%;
     align-self: stretch;
-    flex-grow: 1;
 }
 
 .project-card:hover {
