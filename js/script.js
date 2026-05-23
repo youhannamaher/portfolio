@@ -913,7 +913,6 @@ function renderProjects() {
             }
             
             // Trigger staggers on the initial visible page
-            const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
             if (activeSlide) {
                 const cards = activeSlide.querySelectorAll('.project-card');
                 applyStagger(cards);
