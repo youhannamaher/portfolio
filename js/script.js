@@ -639,7 +639,7 @@ function createProjectCard(project) {
 
     return `
         <div class="project-card reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
-            <div class="project-img-wrapper" style="cursor:pointer;" onclick="openProjectModal('${project.id}')">
+            <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
                 <img src="${imgUrl}" 
                      alt="${project.title} - Power Platform Solution by Youhanna Maher" 
                      class="project-img"
@@ -650,7 +650,7 @@ function createProjectCard(project) {
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-summary">${project.summary || ''}</p>
                 <div class="project-stack">${stackTags}</div>
-                <button class="btn btn-outline w-100 mt-2" onclick="openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                <button class="btn btn-outline w-100 mt-2" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
             </div>
         </div>
     `;
@@ -659,15 +659,18 @@ function createProjectCard(project) {
 function renderProjects() {
     if (!state.projects || state.projects.length === 0) return;
 
-    const container = document.getElementById('projects-grid');
+    const track = document.getElementById('projects-carousel-track');
+    const containerEl = document.getElementById('projects-carousel-container');
     const viewModes = document.getElementById('view-modes');
     const filtersArea = document.getElementById('projects-filters-area');
     const categoryContainer = document.getElementById('project-categories');
     const searchInput = document.getElementById('project-search');
     const paginationDiv = document.getElementById('projects-pagination');
-    const showMoreBtn = document.getElementById('show-more-projects-btn');
 
-    if (!container || !viewModes || !filtersArea || !categoryContainer || !searchInput) return;
+    if (!track || !containerEl || !viewModes || !filtersArea || !categoryContainer || !searchInput) return;
+
+    // Initialize dragging flag globally/window-scoped to prevent click-drag conflicts
+    window.isDraggingProjects = false;
 
     // 1. Build Dynamic Categories
     const uniqueCategories = new Set();
@@ -758,7 +761,8 @@ function renderProjects() {
                 else if (btn.id === 'next-page') currentPage++;
                 else currentPage = parseInt(btn.dataset.page);
                 
-                updateGrid();
+                slideCarousel();
+                renderPagination(currentFilteredProjects.length);
                 
                 // IMPORTANT: Only scroll when clicking page numbers/nav, not when changing limit
                 // Scroll specifically to the #projects section for orientation
@@ -767,26 +771,55 @@ function renderProjects() {
         });
     };
 
-    const updateGrid = () => {
-        if (currentFilteredProjects.length === 0) {
-            container.innerHTML = `<div class="w-100 text-center text-muted py-5 col-span-full">No projects found matching your criteria.</div>`;
-            // Even if empty, we may want to show the limit selector?
-            // But if empty, pagination is irrelevant.
-            paginationDiv.style.display = 'none';
-        } else {
-            const startIdx = (currentPage - 1) * projectsPerPage;
-            const visibleProjects = currentFilteredProjects.slice(startIdx, startIdx + projectsPerPage);
-            
-            container.innerHTML = visibleProjects.map(p => createProjectCard(p)).join('');
-            
-            
-            const cards = container.querySelectorAll('.project-card');
+    const slideCarousel = () => {
+        track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+        track.style.transform = `translateX(-${(currentPage - 1) * 100}%)`;
+        
+        // Re-trigger reveal elements for the visible page slide
+        const activeSlide = track.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
+        if (activeSlide) {
+            const cards = activeSlide.querySelectorAll('.project-card');
             applyStagger(cards);
-            
-            // Re-observe newly created project cards for the reveal animation
             if (window.revealObserver) {
                 cards.forEach(card => window.revealObserver.observe(card));
             }
+        }
+    };
+
+    const updateGrid = () => {
+        if (currentFilteredProjects.length === 0) {
+            track.innerHTML = `
+                <div class="projects-carousel-slide w-100">
+                    <div class="w-100 text-center text-muted py-5">No projects found matching your criteria.</div>
+                </div>
+            `;
+            paginationDiv.style.display = 'none';
+            track.style.transform = 'translateX(0)';
+        } else {
+            const totalPages = Math.ceil(currentFilteredProjects.length / projectsPerPage);
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+
+            let slidesHtml = '';
+            const isList = document.querySelector('.layout-btn[data-layout="list"]')?.classList.contains('active');
+
+            for (let page = 1; page <= totalPages; page++) {
+                const startIdx = (page - 1) * projectsPerPage;
+                const pageProjects = currentFilteredProjects.slice(startIdx, startIdx + projectsPerPage);
+                
+                slidesHtml += `
+                    <div class="projects-carousel-slide" data-page="${page}">
+                        <div class="projects-grid ${isList ? 'list-view' : ''}">
+                            ${pageProjects.map(p => createProjectCard(p)).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            track.innerHTML = slidesHtml;
+            
+            // Slide to the correct page slide
+            slideCarousel();
             
             renderPagination(currentFilteredProjects.length);
         }
@@ -802,8 +835,7 @@ function renderProjects() {
             filtersArea.style.display = 'flex';
         } else {
             filtersArea.style.display = 'none';
-            // Optional: reset search when hiding? User said "Featured remains curated and focused".
-            // I'll clear the search for a truly curated featured view.
+            // Curated featured view: clear search when returning to featured
             if (searchTerm) {
                 searchInput.value = '';
             }
@@ -816,10 +848,8 @@ function renderProjects() {
             // mode filter
             if (viewMode === 'featured' && !p.featured) return false;
 
-            // search filter (only in 'all' mode or if we want search in featured too)
-            // The user wants Featured to be curated, so I'll only apply search in 'all' mode.
+            // search filter (only in 'all' mode)
             if (viewMode === 'all') {
-                // Deep search across ALL textual project data
                 const searchContent = [
                     p.title,
                     p.short_title,
@@ -832,7 +862,6 @@ function renderProjects() {
                 ].filter(Boolean).join(' ').toLowerCase();
 
                 const matchSearch = searchContent.includes(searchTerm);
-
                 if (!matchSearch) return false;
 
                 // category filter
@@ -845,7 +874,7 @@ function renderProjects() {
             return true;
         });
 
-        // Unique projects only (no duplicates)
+        // Unique projects only
         currentFilteredProjects = [...new Set(currentFilteredProjects)];
         
         // Sort
@@ -881,7 +910,6 @@ function renderProjects() {
                 categoryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             };
 
-            // Optional: Toggle visibility of buttons based on scroll
             const updateScrollButtons = () => {
                 const { scrollLeft, scrollWidth, clientWidth } = categoryContainer;
                 prevBtn.style.opacity = scrollLeft > 0 ? '1' : '0.3';
@@ -919,10 +947,11 @@ function renderProjects() {
                 layoutToggle.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
+                const grids = track.querySelectorAll('.projects-grid');
                 if (layout === 'list') {
-                    container.classList.add('list-view');
+                    grids.forEach(g => g.classList.add('list-view'));
                 } else {
-                    container.classList.remove('list-view');
+                    grids.forEach(g => g.classList.remove('list-view'));
                 }
             }
         });
@@ -940,6 +969,107 @@ function renderProjects() {
 
     // Search Input
     searchInput.addEventListener('input', applyView);
+
+    // 4. Swipe & Drag Functionality
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let dragDeltaX = 0;
+    let dragDeltaY = 0;
+    let isHorizontalSwipe = false;
+
+    containerEl.addEventListener('dragstart', (e) => {
+        if (e.target.tagName === 'IMG' || e.target.closest('a')) {
+            e.preventDefault();
+        }
+    });
+
+    containerEl.addEventListener('pointerdown', (e) => {
+        if (e.button !== 0 && e.pointerType === 'mouse') return;
+        if (e.target.closest('.btn') || e.target.closest('a') || e.target.closest('select')) return;
+        
+        isDragging = true;
+        window.isDraggingProjects = false;
+        startX = e.clientX;
+        startY = e.clientY;
+        currentX = startX;
+        dragDeltaX = 0;
+        dragDeltaY = 0;
+        isHorizontalSwipe = false;
+        
+        track.style.transition = 'none';
+        containerEl.setPointerCapture(e.pointerId);
+    });
+
+    containerEl.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        
+        currentX = e.clientX;
+        dragDeltaX = currentX - startX;
+        dragDeltaY = e.clientY - startY;
+
+        if (Math.abs(dragDeltaX) > 5 || Math.abs(dragDeltaY) > 5) {
+            window.isDraggingProjects = true;
+        }
+        
+        if (!isHorizontalSwipe && Math.abs(dragDeltaX) > 10) {
+            if (Math.abs(dragDeltaX) > Math.abs(dragDeltaY)) {
+                isHorizontalSwipe = true;
+            } else {
+                isDragging = false;
+                return;
+            }
+        }
+        
+        if (isHorizontalSwipe) {
+            e.preventDefault();
+            const containerWidth = containerEl.clientWidth;
+            const totalPages = Math.ceil(currentFilteredProjects.length / projectsPerPage);
+            
+            let finalDeltaX = dragDeltaX;
+            if ((currentPage === 1 && dragDeltaX > 0) || (currentPage === totalPages && dragDeltaX < 0)) {
+                finalDeltaX = dragDeltaX * 0.25; // Resistance
+            }
+            
+            const percentShift = (finalDeltaX / containerWidth) * 100;
+            track.style.transform = `translateX(calc(-${(currentPage - 1) * 100}% + ${percentShift}%))`;
+        }
+    });
+
+    containerEl.addEventListener('pointerup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        containerEl.releasePointerCapture(e.pointerId);
+        
+        // Wait a micro-tick before resetting drag flag to prevent click triggers
+        setTimeout(() => {
+            window.isDraggingProjects = false;
+        }, 50);
+
+        if (isHorizontalSwipe) {
+            const containerWidth = containerEl.clientWidth;
+            const swipeThreshold = containerWidth * 0.12;
+            const totalPages = Math.ceil(currentFilteredProjects.length / projectsPerPage);
+            
+            if (dragDeltaX < -swipeThreshold && currentPage < totalPages) {
+                currentPage++;
+            } else if (dragDeltaX > swipeThreshold && currentPage > 1) {
+                currentPage--;
+            }
+            
+            slideCarousel();
+            renderPagination(currentFilteredProjects.length);
+        }
+    });
+
+    containerEl.addEventListener('pointercancel', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        containerEl.releasePointerCapture(e.pointerId);
+        window.isDraggingProjects = false;
+        slideCarousel();
+    });
 
     // Initial load
     renderCategories();
