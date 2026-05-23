@@ -652,19 +652,21 @@ function createProjectCard(project) {
     }
 
     return `
-        <div class="project-card reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
-            <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
-                <img src="${imgUrl}" 
-                     alt="${project.title} - Power Platform Solution by Youhanna Maher" 
-                     class="project-img"
-                     loading="lazy">
-                ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">${project.title}</h3>
-                <p class="project-summary">${project.summary || ''}</p>
-                <div class="project-stack">${stackTags}</div>
-                ${actionsHtml}
+        <div class="project-card-wrapper reveal" data-category="${project.categories?.join(',')}" data-id="${project.id}">
+            <div class="project-card">
+                <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
+                    <img src="${imgUrl}" 
+                         alt="${project.title} - Power Platform Solution by Youhanna Maher" 
+                         class="project-img"
+                         loading="lazy">
+                    ${primaryCategory ? `<span class="project-category">${primaryCategory}</span>` : ''}
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-summary">${project.summary || ''}</p>
+                    <div class="project-stack">${stackTags}</div>
+                    ${actionsHtml}
+                </div>
             </div>
         </div>
     `;
@@ -856,7 +858,7 @@ function renderProjects() {
             // Re-trigger reveal elements for the visible page slide
             const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
             if (activeSlide) {
-                const cards = activeSlide.querySelectorAll('.project-card');
+                const cards = activeSlide.querySelectorAll('.project-card-wrapper');
                 applyStagger(cards);
                 if (window.revealObserver) {
                     cards.forEach(card => window.revealObserver.observe(card));
@@ -914,7 +916,7 @@ function renderProjects() {
             
             // Trigger staggers on the initial visible page
             if (activeSlide) {
-                const cards = activeSlide.querySelectorAll('.project-card');
+                const cards = activeSlide.querySelectorAll('.project-card-wrapper');
                 applyStagger(cards);
                 if (window.revealObserver) {
                     cards.forEach(card => window.revealObserver.observe(card));

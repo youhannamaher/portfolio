@@ -787,6 +787,12 @@ body.light-theme .mobile-nav {
     align-items: stretch;
 }
 
+.project-card-wrapper {
+    display: flex;
+    height: 100%;
+    align-self: stretch;
+}
+
 .project-card {
     background: var(--bg-surface);
     border: 1px solid var(--glass-border);
@@ -796,6 +802,7 @@ body.light-theme .mobile-nav {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     align-self: stretch;
 }
 
