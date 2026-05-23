@@ -3,8 +3,7 @@
     "title": "MStack360 CRM System",
     "shortTitle": "MStack360 CRM",
     "categories": [
-      "Business Apps & Automation",
-      "Internal Operations Systems"
+      "Business Apps & Automation"
     ],
     "clientOrOrganization": "MStack360",
     "role": "Power Platform Developer",
@@ -44,7 +43,7 @@
     "shortTitle": "Federon BI Dashboard",
     "categories": [
       "Dashboards & Analytics",
-      "Internal Operations Systems"
+      "Business Apps & Automation"
     ],
     "clientOrOrganization": "Federon Procurement Solutions",
     "role": "Power Platform Developer",
@@ -122,7 +121,6 @@
     "title": "Contract Lifecycle Management System",
     "shortTitle": "Federon CMS",
     "categories": [
-      "Internal Operations Systems",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Federon Procurement Solutions",
@@ -206,7 +204,7 @@
     "title": "Employee Recognition & Nomination Platform",
     "shortTitle": "Nestlé Nomination App",
     "categories": [
-      "HR Digital Transformation",
+      "Digital HR",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Nestlé",
@@ -246,7 +244,7 @@
     "title": "AI-Powered HR & ATS Automation System",
     "shortTitle": "HR ATS System",
     "categories": [
-      "HR Digital Transformation",
+      "Digital HR",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Personal Project",
@@ -285,7 +283,6 @@
     "title": "Quality Tracking & Ticket Management System",
     "shortTitle": "Nestlé Ticketing System",
     "categories": [
-      "Internal Operations Systems",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Nestlé",
@@ -323,8 +320,7 @@
     "title": "Internal Operations Applications",
     "shortTitle": "Orange Business Apps",
     "categories": [
-      "Business Apps & Automation",
-      "Internal Operations Systems"
+      "Business Apps & Automation"
     ],
     "clientOrOrganization": "Orange Business",
     "role": "Power Platform Developer Intern",
@@ -359,7 +355,6 @@
     "title": "Inventory Management System",
     "shortTitle": "Bondy Inventory",
     "categories": [
-      "Internal Operations Systems",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Bondy",
@@ -395,8 +390,7 @@
     "title": "Internal E-Commerce & Inventory System",
     "shortTitle": "YM Store",
     "categories": [
-      "Business Apps & Automation",
-      "Internal Operations Systems"
+      "Business Apps & Automation"
     ],
     "clientOrOrganization": "Personal Project",
     "role": "Power Platform Developer",
@@ -433,7 +427,6 @@
     "title": "Change Request Management System",
     "shortTitle": "RATP Dev System",
     "categories": [
-      "Internal Operations Systems",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "RATP Dev",
@@ -467,7 +460,7 @@
     "title": "Smart Interview Scheduling System",
     "shortTitle": "Interview Scheduler",
     "categories": [
-      "HR Digital Transformation",
+      "Digital HR",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Personal Project",
@@ -503,7 +496,7 @@
     "shortTitle": "Certificate Automation",
     "categories": [
       "Business Apps & Automation",
-      "HR Digital Transformation"
+      "Digital HR"
     ],
     "clientOrOrganization": "Personal Project",
     "role": "Power Platform Developer",
@@ -735,7 +728,7 @@
     "title": "HR Absenteeism & Workforce Analytics Automation System",
     "shortTitle": "Absenteeism Analytics",
     "categories": [
-      "HR Digital Transformation",
+      "Digital HR",
       "Business Apps & Automation",
       "Dashboards & Analytics"
     ],
@@ -784,9 +777,8 @@
     "title": "Turnover Analysis Dashboard",
     "shortTitle": "HR Turnover Analytics",
     "categories": [
-      "HR Analytics",
-      "Excel Dashboards",
-      "Data Analysis & Visualization"
+      "Digital HR",
+      "Dashboards & Analytics"
     ],
     "clientOrOrganization": "Nestlé",
     "role": "HR Process Optimizer / Data Analyst",

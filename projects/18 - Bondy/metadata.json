@@ -1,28 +1,28 @@
 {
-  "title": "Bondy – Social Gaming Platform",
-  "shortTitle": "Bondy",
-  "categories": [
-    "Business Apps & Automation",
-    "Web & App Development"
-  ],
-  "clientOrOrganization": "Personal Project",
-  "role": "Founder & Full-Stack Developer",
-  "period": "2026 - Present",
-  "stack": [
-    "Next.js",
-    "React",
-    "Supabase",
-    "Tailwind CSS",
-    "Vercel"
-  ],
-  "summary": "A browser-based social gaming platform where people can host real-time party games and play instantly with friends, family, or colleagues.",
-  "featured": true,
-  "order": 0,
-  "impact": [
-    "Built a real-time multiplayer platform with room codes, host controls, and synchronized gameplay.",
-    "Designed and launched multiple social games focused on connection, laughter, and group interaction.",
-    "Created a no-download experience optimized for mobile and desktop browsers.",
-    "Developed Bondy as an ongoing product with branding, SEO, feedback flows, and future game expansion."
-  ],
-  "videoEmbed": ""
+    "title": "Bondy – Social Gaming Platform",
+    "shortTitle": "Bondy",
+    "categories": [
+        "Business Apps & Automation",
+        "Web & App Development"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Founder & Full-Stack Developer",
+    "period": "2026 - Present",
+    "stack": [
+        "Next.js",
+        "React",
+        "Supabase",
+        "Tailwind CSS",
+        "Vercel"
+    ],
+    "summary": "A browser-based social gaming platform where people can host real-time party games and play instantly with friends, family, or colleagues.",
+    "featured": true,
+    "order": 0,
+    "impact": [
+        "Built a real-time multiplayer platform with room codes, host controls, and synchronized gameplay.",
+        "Designed and launched multiple social games focused on connection, laughter, and group interaction.",
+        "Created a no-download experience optimized for mobile and desktop browsers.",
+        "Developed Bondy as an ongoing product with branding, SEO, feedback flows, and future game expansion."
+    ],
+    "videoEmbed": ""
 }

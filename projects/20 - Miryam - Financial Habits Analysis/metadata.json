@@ -1,26 +1,26 @@
 {
-  "title": "Google Forms Financial Habits Analysis Dashboard",
-  "shortTitle": "Financial Habits Dashboard",
-  "categories": [
-    "Dashboards & Analytics"
-  ],
-  "clientOrOrganization": "Academic Statistical Analysis Project",
-  "role": "Data Analyst & Dashboard Developer",
-  "period": "2026",
-  "stack": [
-    "Microsoft Excel",
-    "Pivot Tables",
-    "Pivot Charts",
-    "Google Forms",
-    "Excel Formulas"
-  ],
-  "summary": "Transformed raw Google Forms survey responses into a complete Excel statistical analysis dashboard with KPIs, charts, pivot tables, calculated fields, and financial behavior insights.",
-  "featured": false,
-  "order": 14,
-  "impact": [
-    "Cleaned and standardized more than 100 messy survey responses containing inconsistent numeric formats and manual text entries.",
-    "Built a professional Excel dashboard with KPIs, statistical measures, cross-tab analysis, and interactive visualizations.",
-    "Generated actionable insights about savings behavior, budgeting habits, payment methods, expenses, and financial satisfaction."
-  ],
-  "videoEmbed": ""
+    "title": "Google Forms Financial Habits Analysis Dashboard",
+    "shortTitle": "Financial Habits Dashboard",
+    "categories": [
+        "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "Academic Statistical Analysis Project",
+    "role": "Data Analyst & Dashboard Developer",
+    "period": "2026",
+    "stack": [
+        "Microsoft Excel",
+        "Pivot Tables",
+        "Pivot Charts",
+        "Google Forms",
+        "Excel Formulas"
+    ],
+    "summary": "Transformed raw Google Forms survey responses into a complete Excel statistical analysis dashboard with KPIs, charts, pivot tables, calculated fields, and financial behavior insights.",
+    "featured": false,
+    "order": 14,
+    "impact": [
+        "Cleaned and standardized more than 100 messy survey responses containing inconsistent numeric formats and manual text entries.",
+        "Built a professional Excel dashboard with KPIs, statistical measures, cross-tab analysis, and interactive visualizations.",
+        "Generated actionable insights about savings behavior, budgeting habits, payment methods, expenses, and financial satisfaction."
+    ],
+    "videoEmbed": ""
 }

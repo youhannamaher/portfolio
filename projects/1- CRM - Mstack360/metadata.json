@@ -1,25 +1,24 @@
 {
-  "title": "MStack360 CRM System",
-  "shortTitle": "MStack360 CRM",
-  "categories": [
-    "Business Apps & Automation",
-    "Internal Operations Systems"
-  ],
-  "clientOrOrganization": "MStack360",
-  "role": "Power Platform Developer",
-  "period": "2025",
-  "stack": [
-    "Power Apps",
-    "Power Automate",
-    "SharePoint"
-  ],
-  "summary": "End-to-end CRM system managing clients, projects, freelancers, and financial operations in one unified platform.",
-  "featured": true,
-  "order": 1,
-  "impact": [
-    "Centralized client, project, and freelancer management into a single system.",
-    "Automated invoice generation and email communication workflows.",
-    "Improved visibility on financials, payments, and project performance."
-  ],
-  "videoEmbed": ""
+    "title": "MStack360 CRM System",
+    "shortTitle": "MStack360 CRM",
+    "categories": [
+        "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "MStack360",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+        "Power Apps",
+        "Power Automate",
+        "SharePoint"
+    ],
+    "summary": "End-to-end CRM system managing clients, projects, freelancers, and financial operations in one unified platform.",
+    "featured": true,
+    "order": 1,
+    "impact": [
+        "Centralized client, project, and freelancer management into a single system.",
+        "Automated invoice generation and email communication workflows.",
+        "Improved visibility on financials, payments, and project performance."
+    ],
+    "videoEmbed": ""
 }

@@ -1,26 +1,26 @@
 {
-  "title": "AI-Powered HR & ATS Automation System",
-  "shortTitle": "HR ATS System",
-  "categories": [
-    "HR Digital Transformation",
-    "Business Apps & Automation"
-  ],
-  "clientOrOrganization": "Personal Project",
-  "role": "Power Platform Developer",
-  "period": "2025",
-  "stack": [
-    "Power Apps",
-    "Power Automate",
-    "AI Builder",
-    "SharePoint"
-  ],
-  "summary": "AI-driven recruitment system automating CV screening, candidate ranking, and HR workflows.",
-  "featured": true,
-  "order": 5,
-  "impact": [
-    "Automated CV screening and keyword extraction using AI Builder.",
-    "Reduced manual recruitment effort through dynamic candidate filtering and ranking.",
-    "Enabled personalized communication with candidates through automated email workflows."
-  ],
-  "videoEmbed": "https://www.youtube.com/embed/zJimL4T-EwU"
+    "title": "AI-Powered HR & ATS Automation System",
+    "shortTitle": "HR ATS System",
+    "categories": [
+        "Digital HR",
+        "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+        "Power Apps",
+        "Power Automate",
+        "AI Builder",
+        "SharePoint"
+    ],
+    "summary": "AI-driven recruitment system automating CV screening, candidate ranking, and HR workflows.",
+    "featured": true,
+    "order": 5,
+    "impact": [
+        "Automated CV screening and keyword extraction using AI Builder.",
+        "Reduced manual recruitment effort through dynamic candidate filtering and ranking.",
+        "Enabled personalized communication with candidates through automated email workflows."
+    ],
+    "videoEmbed": "https://www.youtube.com/embed/zJimL4T-EwU"
 }
