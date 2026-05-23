@@ -721,12 +721,22 @@ body.light-theme .mobile-nav {
 }
 
 .projects-carousel-slide {
-    flex: 0 0 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% - 80px);
+    width: calc(100% - 80px);
     box-sizing: border-box;
-    snap-align: start;
+    snap-align: center;
     flex-shrink: 0;
-    padding: 0 4px;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .projects-carousel-slide {
+        flex: 0 0 calc(100% - 40px);
+        width: calc(100% - 40px);
+        padding: 0 0.75rem;
+    }
 }
 
 /* Limit Pills & Custom Pagination Override */
@@ -774,6 +784,9 @@ body.light-theme .mobile-nav {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
+    align-items: stretch;
+    height: 100%;
+    flex-grow: 1;
 }
 
 .project-card {
@@ -785,6 +798,7 @@ body.light-theme .mobile-nav {
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-self: stretch;
 }
 
 .project-card:hover {

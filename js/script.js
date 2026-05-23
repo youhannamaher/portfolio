@@ -813,11 +813,18 @@ function renderProjects() {
         
         currentPage = targetPage;
         
-        const width = containerEl.clientWidth;
-        containerEl.scrollTo({
-            left: (targetPage - 1) * width,
-            behavior: 'smooth'
-        });
+        const targetSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${targetPage}"]`);
+        if (targetSlide) {
+            const containerWidth = containerEl.clientWidth;
+            const slideLeft = targetSlide.offsetLeft;
+            const slideWidth = targetSlide.clientWidth;
+            const targetScrollLeft = slideLeft - (containerWidth - slideWidth) / 2;
+            
+            containerEl.scrollTo({
+                left: targetScrollLeft,
+                behavior: 'smooth'
+            });
+        }
         
         renderPagination(currentFilteredProjects.length);
     };
@@ -826,9 +833,24 @@ function renderProjects() {
         const { scrollLeft, clientWidth } = containerEl;
         if (clientWidth === 0) return;
         
-        const page = Math.round(scrollLeft / clientWidth) + 1;
-        if (page !== currentPage && page >= 1) {
-            currentPage = page;
+        const slides = containerEl.querySelectorAll('.projects-carousel-slide');
+        if (slides.length === 0) return;
+        
+        let closestPage = 1;
+        let minDiff = Infinity;
+        const containerCenter = scrollLeft + clientWidth / 2;
+        
+        slides.forEach(slide => {
+            const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+            const diff = Math.abs(containerCenter - slideCenter);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closestPage = parseInt(slide.dataset.page) || 1;
+            }
+        });
+        
+        if (closestPage !== currentPage && closestPage >= 1) {
+            currentPage = closestPage;
             renderPagination(currentFilteredProjects.length);
             
             // Re-trigger reveal elements for the visible page slide
@@ -877,8 +899,18 @@ function renderProjects() {
             containerEl.innerHTML = slidesHtml;
             
             // Instantly sync scroll position to current page without layout flash
-            const width = containerEl.clientWidth;
-            containerEl.scrollLeft = (currentPage - 1) * width;
+            const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
+            if (activeSlide && activeSlide.offsetLeft > 0) {
+                const containerWidth = containerEl.clientWidth;
+                const slideLeft = activeSlide.offsetLeft;
+                const slideWidth = activeSlide.clientWidth;
+                containerEl.scrollLeft = slideLeft - (containerWidth - slideWidth) / 2;
+            } else {
+                const slideWidthPct = window.innerWidth <= 768 ? 0.94 : 0.92;
+                const approxSlideWidth = containerEl.clientWidth * slideWidthPct;
+                const approxLeft = (currentPage - 1) * approxSlideWidth;
+                containerEl.scrollLeft = approxLeft;
+            }
             
             // Trigger staggers on the initial visible page
             const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
@@ -1080,9 +1112,27 @@ function renderProjects() {
         containerEl.style.scrollSnapType = 'x mandatory';
         containerEl.style.scrollBehavior = 'smooth';
         
-        const width = containerEl.clientWidth;
-        const page = Math.round(containerEl.scrollLeft / width);
-        containerEl.scrollTo({ left: page * width, behavior: 'smooth' });
+        // Snap to closest slide center
+        const slides = containerEl.querySelectorAll('.projects-carousel-slide');
+        if (slides.length > 0) {
+            let closestPage = 1;
+            let minDiff = Infinity;
+            let targetScrollLeft = 0;
+            const containerWidth = containerEl.clientWidth;
+            const containerCenter = containerEl.scrollLeft + containerWidth / 2;
+            
+            slides.forEach(slide => {
+                const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+                const diff = Math.abs(containerCenter - slideCenter);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    closestPage = parseInt(slide.dataset.page) || 1;
+                    targetScrollLeft = slide.offsetLeft - (containerWidth - slide.clientWidth) / 2;
+                }
+            });
+            
+            containerEl.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
+        }
         
         setTimeout(() => {
             window.isDraggingProjects = false;
@@ -1108,10 +1158,24 @@ function renderProjects() {
     // Handle density adaptation on screen resize
     window.addEventListener('resize', () => {
         const targetLimit = isMobile() ? 4 : 6;
+        let changed = false;
         if (projectsPerPage !== targetLimit) {
             projectsPerPage = targetLimit;
             currentPage = 1;
+            changed = true;
+        }
+        
+        if (changed) {
             updateGrid();
+        } else {
+            // Recenter current page
+            const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
+            if (activeSlide) {
+                const containerWidth = containerEl.clientWidth;
+                const slideLeft = activeSlide.offsetLeft;
+                const slideWidth = activeSlide.clientWidth;
+                containerEl.scrollLeft = slideLeft - (containerWidth - slideWidth) / 2;
+            }
         }
     });
 
