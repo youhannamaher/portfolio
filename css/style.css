@@ -824,6 +824,7 @@ body.light-theme .mobile-nav {
     overflow: hidden;
     position: relative;
     background-color: var(--bg-alt);
+    flex-shrink: 0;
 }
 
 .project-img {
