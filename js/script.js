@@ -659,7 +659,6 @@ function createProjectCard(project) {
 function renderProjects() {
     if (!state.projects || state.projects.length === 0) return;
 
-    const track = document.getElementById('projects-carousel-track');
     const containerEl = document.getElementById('projects-carousel-container');
     const viewModes = document.getElementById('view-modes');
     const filtersArea = document.getElementById('projects-filters-area');
@@ -667,7 +666,7 @@ function renderProjects() {
     const searchInput = document.getElementById('project-search');
     const paginationDiv = document.getElementById('projects-pagination');
 
-    if (!track || !containerEl || !viewModes || !filtersArea || !categoryContainer || !searchInput) return;
+    if (!containerEl || !viewModes || !filtersArea || !categoryContainer || !searchInput) return;
 
     // Initialize dragging flag globally/window-scoped to prevent click-drag conflicts
     window.isDraggingProjects = false;
@@ -683,30 +682,53 @@ function renderProjects() {
 
     // 2. Pagination & Filter State
     const isMobile = () => window.innerWidth <= 768;
-    const limitSelect = document.getElementById('project-limit-select');
     const pageNumbersDiv = document.getElementById('projects-page-numbers');
     
     let currentPage = 1;
     let projectsPerPage = isMobile() ? 4 : 6;
     let currentFilteredProjects = [];
 
-    const initializeLimitSelect = () => {
-        const options = isMobile() ? [2, 4, 6] : [3, 6, 9];
-        limitSelect.innerHTML = options.map(opt => `<option value="${opt}" ${opt === projectsPerPage ? 'selected' : ''}>${opt}</option>`).join('');
+    // Smooth scroll page back to the top of the gallery section (useful on page changes)
+    const scrollToGamesTop = () => {
+        const section = document.getElementById('projects');
+        if (section) {
+            const offset = 100; // Header offset to prevent layout jumping under navbars
+            const rect = section.getBoundingClientRect();
+            const top = window.scrollY + rect.top - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }
+    };
+
+    const renderLimitPills = () => {
+        const pillsContainer = document.getElementById('project-limit-pills');
+        if (!pillsContainer) return;
         
-        limitSelect.onchange = (e) => {
-            const newLimit = parseInt(e.target.value);
-            const isDecreasing = newLimit < projectsPerPage;
-            
-            projectsPerPage = newLimit;
-            currentPage = 1;
-            updateGrid();
-            
-            // Only scroll when shrinking view (prevents jumping to experience section)
-            if (isDecreasing) {
-                document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        };
+        const options = isMobile() ? [2, 4, 6] : [3, 6, 9];
+        // Ensure projectsPerPage matches one of the options
+        if (!options.includes(projectsPerPage)) {
+            projectsPerPage = options[1] || 6;
+        }
+
+        pillsContainer.innerHTML = options.map(val => `
+            <button class="limit-pill-btn ${val === projectsPerPage ? 'active' : ''}" data-limit="${val}">
+                ${val}
+            </button>
+        `).join('');
+        
+        pillsContainer.querySelectorAll('.limit-pill-btn').forEach(btn => {
+            btn.onclick = () => {
+                const newLimit = parseInt(btn.dataset.limit);
+                const isDecreasing = newLimit < projectsPerPage;
+                
+                projectsPerPage = newLimit;
+                currentPage = 1;
+                updateGrid();
+                
+                if (isDecreasing) {
+                    scrollToGamesTop();
+                }
+            };
+        });
     };
 
     const renderPagination = (totalItems) => {
@@ -757,44 +779,66 @@ function renderProjects() {
         // Attach pagination events
         pageNumbersDiv.querySelectorAll('.page-btn').forEach(btn => {
             btn.onclick = () => {
-                if (btn.id === 'prev-page') currentPage--;
-                else if (btn.id === 'next-page') currentPage++;
-                else currentPage = parseInt(btn.dataset.page);
+                let targetPage = currentPage;
+                if (btn.id === 'prev-page') targetPage--;
+                else if (btn.id === 'next-page') targetPage++;
+                else targetPage = parseInt(btn.dataset.page);
                 
-                slideCarousel();
-                renderPagination(currentFilteredProjects.length);
+                goToPage(targetPage);
                 
-                // IMPORTANT: Only scroll when clicking page numbers/nav, not when changing limit
-                // Scroll specifically to the #projects section for orientation
-                document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (targetPage > currentPage) {
+                    scrollToGamesTop();
+                }
             };
         });
     };
 
-    const slideCarousel = () => {
-        track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-        track.style.transform = `translateX(-${(currentPage - 1) * 100}%)`;
+    const goToPage = (page) => {
+        const total = Math.ceil(currentFilteredProjects.length / projectsPerPage);
+        const targetPage = Math.min(Math.max(1, page), total);
         
-        // Re-trigger reveal elements for the visible page slide
-        const activeSlide = track.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
-        if (activeSlide) {
-            const cards = activeSlide.querySelectorAll('.project-card');
-            applyStagger(cards);
-            if (window.revealObserver) {
-                cards.forEach(card => window.revealObserver.observe(card));
+        currentPage = targetPage;
+        
+        const width = containerEl.clientWidth;
+        containerEl.scrollTo({
+            left: (targetPage - 1) * width,
+            behavior: 'smooth'
+        });
+        
+        renderPagination(currentFilteredProjects.length);
+    };
+
+    const handleGamesScroll = () => {
+        const { scrollLeft, clientWidth } = containerEl;
+        if (clientWidth === 0) return;
+        
+        const page = Math.round(scrollLeft / clientWidth) + 1;
+        if (page !== currentPage && page >= 1) {
+            currentPage = page;
+            renderPagination(currentFilteredProjects.length);
+            
+            // Re-trigger reveal elements for the visible page slide
+            const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
+            if (activeSlide) {
+                const cards = activeSlide.querySelectorAll('.project-card');
+                applyStagger(cards);
+                if (window.revealObserver) {
+                    cards.forEach(card => window.revealObserver.observe(card));
+                }
             }
         }
     };
 
     const updateGrid = () => {
+        renderLimitPills();
+        
         if (currentFilteredProjects.length === 0) {
-            track.innerHTML = `
+            containerEl.innerHTML = `
                 <div class="projects-carousel-slide w-100">
                     <div class="w-100 text-center text-muted py-5">No projects found matching your criteria.</div>
                 </div>
             `;
             paginationDiv.style.display = 'none';
-            track.style.transform = 'translateX(0)';
         } else {
             const totalPages = Math.ceil(currentFilteredProjects.length / projectsPerPage);
             if (currentPage > totalPages) currentPage = totalPages;
@@ -816,10 +860,21 @@ function renderProjects() {
                 `;
             }
             
-            track.innerHTML = slidesHtml;
+            containerEl.innerHTML = slidesHtml;
             
-            // Slide to the correct page slide
-            slideCarousel();
+            // Instantly sync scroll position to current page without layout flash
+            const width = containerEl.clientWidth;
+            containerEl.scrollLeft = (currentPage - 1) * width;
+            
+            // Trigger staggers on the initial visible page
+            const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
+            if (activeSlide) {
+                const cards = activeSlide.querySelectorAll('.project-card');
+                applyStagger(cards);
+                if (window.revealObserver) {
+                    cards.forEach(card => window.revealObserver.observe(card));
+                }
+            }
             
             renderPagination(currentFilteredProjects.length);
         }
@@ -884,8 +939,6 @@ function renderProjects() {
         updateGrid();
     };
 
-    initializeLimitSelect();
-
     // 3. Render Initial Category Buttons
     const renderCategories = () => {
         categoryContainer.innerHTML = `
@@ -947,7 +1000,7 @@ function renderProjects() {
                 layoutToggle.querySelectorAll('.layout-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 
-                const grids = track.querySelectorAll('.projects-grid');
+                const grids = containerEl.querySelectorAll('.projects-grid');
                 if (layout === 'list') {
                     grids.forEach(g => g.classList.add('list-view'));
                 } else {
@@ -970,14 +1023,13 @@ function renderProjects() {
     // Search Input
     searchInput.addEventListener('input', applyView);
 
-    // 4. Swipe & Drag Functionality
-    let isDragging = false;
-    let startX = 0;
-    let startY = 0;
-    let currentX = 0;
-    let dragDeltaX = 0;
-    let dragDeltaY = 0;
-    let isHorizontalSwipe = false;
+    // 4. Scroll listener for bidirectional page sync
+    containerEl.addEventListener('scroll', handleGamesScroll, { passive: true });
+
+    // 5. Desktop click-and-drag-to-scroll utility with snap sync
+    let isDown = false;
+    let startX;
+    let scrollLeftVal;
 
     containerEl.addEventListener('dragstart', (e) => {
         if (e.target.tagName === 'IMG' || e.target.closest('a')) {
@@ -985,90 +1037,68 @@ function renderProjects() {
         }
     });
 
-    containerEl.addEventListener('pointerdown', (e) => {
-        if (e.button !== 0 && e.pointerType === 'mouse') return;
+    containerEl.addEventListener('mousedown', (e) => {
         if (e.target.closest('.btn') || e.target.closest('a') || e.target.closest('select')) return;
-        
-        isDragging = true;
+        isDown = true;
         window.isDraggingProjects = false;
-        startX = e.clientX;
-        startY = e.clientY;
-        currentX = startX;
-        dragDeltaX = 0;
-        dragDeltaY = 0;
-        isHorizontalSwipe = false;
+        startX = e.pageX - containerEl.offsetLeft;
+        scrollLeftVal = containerEl.scrollLeft;
         
-        track.style.transition = 'none';
-        containerEl.setPointerCapture(e.pointerId);
+        containerEl.style.scrollSnapType = 'none';
+        containerEl.style.scrollBehavior = 'auto';
     });
 
-    containerEl.addEventListener('pointermove', (e) => {
-        if (!isDragging) return;
-        
-        currentX = e.clientX;
-        dragDeltaX = currentX - startX;
-        dragDeltaY = e.clientY - startY;
-
-        if (Math.abs(dragDeltaX) > 5 || Math.abs(dragDeltaY) > 5) {
+    containerEl.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - containerEl.offsetLeft;
+        const walk = (x - startX) * 1.2;
+        if (Math.abs(walk) > 5) {
             window.isDraggingProjects = true;
         }
-        
-        if (!isHorizontalSwipe && Math.abs(dragDeltaX) > 10) {
-            if (Math.abs(dragDeltaX) > Math.abs(dragDeltaY)) {
-                isHorizontalSwipe = true;
-            } else {
-                isDragging = false;
-                return;
-            }
-        }
-        
-        if (isHorizontalSwipe) {
-            e.preventDefault();
-            const containerWidth = containerEl.clientWidth;
-            const totalPages = Math.ceil(currentFilteredProjects.length / projectsPerPage);
-            
-            let finalDeltaX = dragDeltaX;
-            if ((currentPage === 1 && dragDeltaX > 0) || (currentPage === totalPages && dragDeltaX < 0)) {
-                finalDeltaX = dragDeltaX * 0.25; // Resistance
-            }
-            
-            const percentShift = (finalDeltaX / containerWidth) * 100;
-            track.style.transform = `translateX(calc(-${(currentPage - 1) * 100}% + ${percentShift}%))`;
-        }
+        containerEl.scrollLeft = scrollLeftVal - walk;
     });
 
-    containerEl.addEventListener('pointerup', (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        containerEl.releasePointerCapture(e.pointerId);
+    const endDrag = () => {
+        if (!isDown) return;
+        isDown = false;
         
-        // Wait a micro-tick before resetting drag flag to prevent click triggers
+        containerEl.style.scrollSnapType = 'x mandatory';
+        containerEl.style.scrollBehavior = 'smooth';
+        
+        const width = containerEl.clientWidth;
+        const page = Math.round(containerEl.scrollLeft / width);
+        containerEl.scrollTo({ left: page * width, behavior: 'smooth' });
+        
         setTimeout(() => {
             window.isDraggingProjects = false;
         }, 50);
+    };
 
-        if (isHorizontalSwipe) {
-            const containerWidth = containerEl.clientWidth;
-            const swipeThreshold = containerWidth * 0.12;
-            const totalPages = Math.ceil(currentFilteredProjects.length / projectsPerPage);
-            
-            if (dragDeltaX < -swipeThreshold && currentPage < totalPages) {
-                currentPage++;
-            } else if (dragDeltaX > swipeThreshold && currentPage > 1) {
-                currentPage--;
-            }
-            
-            slideCarousel();
-            renderPagination(currentFilteredProjects.length);
-        }
-    });
+    containerEl.addEventListener('mouseup', endDrag);
+    containerEl.addEventListener('mouseleave', endDrag);
 
-    containerEl.addEventListener('pointercancel', (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        containerEl.releasePointerCapture(e.pointerId);
+    // 6. Touch drag prevention for modal trigger
+    containerEl.addEventListener('touchstart', () => {
         window.isDraggingProjects = false;
-        slideCarousel();
+    }, { passive: true });
+    containerEl.addEventListener('touchmove', () => {
+        window.isDraggingProjects = true;
+    }, { passive: true });
+    containerEl.addEventListener('touchend', () => {
+        setTimeout(() => {
+            window.isDraggingProjects = false;
+        }, 50);
+    }, { passive: true });
+
+    // Handle density adaptation on screen resize
+    window.addEventListener('resize', () => {
+        const targetLimit = isMobile() ? 4 : 6;
+        if (projectsPerPage !== targetLimit) {
+            projectsPerPage = targetLimit;
+            currentPage = 1;
+            updateGrid();
+        }
     });
 
     // Initial load

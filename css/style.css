@@ -699,7 +699,12 @@ body.light-theme .mobile-nav {
 /* Projects Cards */
 .projects-carousel-container {
     width: 100%;
-    overflow: hidden;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     position: relative;
     cursor: grab;
     user-select: none;
@@ -707,22 +712,62 @@ body.light-theme .mobile-nav {
     touch-action: pan-y;
 }
 
-.projects-carousel-container:active {
-    cursor: grabbing;
+.projects-carousel-container::-webkit-scrollbar {
+    display: none;
 }
 
-.projects-carousel-track {
-    display: flex;
-    width: 100%;
-    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: transform;
+.projects-carousel-container:active {
+    cursor: grabbing;
 }
 
 .projects-carousel-slide {
     flex: 0 0 100%;
     width: 100%;
     box-sizing: border-box;
+    snap-align: start;
+    flex-shrink: 0;
     padding: 0 4px;
+}
+
+/* Limit Pills & Custom Pagination Override */
+.limit-pills {
+    display: flex;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 3px;
+    border-radius: 10px;
+    gap: 2px;
+}
+
+.limit-pill-btn {
+    background: transparent;
+    border: none;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.limit-pill-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-surface-hover);
+}
+
+.limit-pill-btn.active {
+    background: var(--accent-primary) !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.page-btn {
+    border-radius: 10px !important;
 }
 
 .projects-grid {

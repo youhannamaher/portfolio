@@ -503,56 +503,54 @@
                 </div>
             </div>
 
-            <div class="projects-carousel-container mt-4" id="projects-carousel-container">
-                <div class="projects-carousel-track" id="projects-carousel-track">
-                    <div class="projects-carousel-slide" data-page="1">
-                        <div class="projects-grid" id="projects-grid">
-                            <!-- Static Featured Projects (Crawlable Shell) -->
-                            <div class="project-card reveal">
-                                <div class="project-img-wrapper">
-                                    <img src="projects/1- CRM - Mstack360/Thumbnail.jpeg" alt="MStack360 CRM System" class="project-img">
-                                    <span class="project-category">Business Apps & Automation</span>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-title">MStack360 CRM System</h3>
-                                    <p class="project-summary">This solution automated procurement workflows using Power Apps and Dataverse, reducing manual processing time for managing freelancers and financial operations.</p>
-                                    <div class="project-stack">
-                                        <span class="stack-tag">Power Apps</span>
-                                        <span class="stack-tag">Power Automate</span>
-                                        <span class="stack-tag">SharePoint</span>
-                                    </div>
+            <div class="projects-carousel-container mt-4 no-scrollbar" id="projects-carousel-container">
+                <div class="projects-carousel-slide" data-page="1">
+                    <div class="projects-grid" id="projects-grid">
+                        <!-- Static Featured Projects (Crawlable Shell) -->
+                        <div class="project-card reveal">
+                            <div class="project-img-wrapper">
+                                <img src="projects/1- CRM - Mstack360/Thumbnail.jpeg" alt="MStack360 CRM System" class="project-img">
+                                <span class="project-category">Business Apps & Automation</span>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">MStack360 CRM System</h3>
+                                <p class="project-summary">This solution automated procurement workflows using Power Apps and Dataverse, reducing manual processing time for managing freelancers and financial operations.</p>
+                                <div class="project-stack">
+                                    <span class="stack-tag">Power Apps</span>
+                                    <span class="stack-tag">Power Automate</span>
+                                    <span class="stack-tag">SharePoint</span>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="project-card reveal">
-                                <div class="project-img-wrapper">
-                                    <img src="projects/2- CMS - Federon/Home Page.png" alt="Contract Lifecycle Management System" class="project-img">
-                                    <span class="project-category">Internal Operations Systems</span>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-title">Contract Lifecycle Management</h3>
-                                    <p class="project-summary">A centralized CLM platform built on the Microsoft Power Platform to digitize complex procurement cycles from discovery through to final submission.</p>
-                                    <div class="project-stack">
-                                        <span class="stack-tag">Power Apps</span>
-                                        <span class="stack-tag">Power Automate</span>
-                                        <span class="stack-tag">Dataverse</span>
-                                    </div>
+                        <div class="project-card reveal">
+                            <div class="project-img-wrapper">
+                                <img src="projects/2- CMS - Federon/Home Page.png" alt="Contract Lifecycle Management System" class="project-img">
+                                <span class="project-category">Internal Operations Systems</span>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Contract Lifecycle Management</h3>
+                                <p class="project-summary">A centralized CLM platform built on the Microsoft Power Platform to digitize complex procurement cycles from discovery through to final submission.</p>
+                                <div class="project-stack">
+                                    <span class="stack-tag">Power Apps</span>
+                                    <span class="stack-tag">Power Automate</span>
+                                    <span class="stack-tag">Dataverse</span>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="project-card reveal">
-                                <div class="project-img-wrapper">
-                                    <img src="projects/4 - HR Demo System/3.png" alt="AI-Powered HR & ATS System" class="project-img">
-                                    <span class="project-category">HR Digital Transformation</span>
-                                </div>
-                                <div class="project-content">
-                                    <h3 class="project-title">AI HR & ATS Automation</h3>
-                                    <p class="project-summary">Automated CV screening and recruitment workflows using AI Builder and Power Automate to extract skills and rank candidates dynamically.</p>
-                                    <div class="project-stack">
-                                        <span class="stack-tag">Power Apps</span>
-                                        <span class="stack-tag">AI Builder</span>
-                                        <span class="stack-tag">Power Automate</span>
-                                    </div>
+                        <div class="project-card reveal">
+                            <div class="project-img-wrapper">
+                                <img src="projects/4 - HR Demo System/3.png" alt="AI-Powered HR & ATS System" class="project-img">
+                                <span class="project-category">HR Digital Transformation</span>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">AI HR & ATS Automation</h3>
+                                <p class="project-summary">Automated CV screening and recruitment workflows using AI Builder and Power Automate to extract skills and rank candidates dynamically.</p>
+                                <div class="project-stack">
+                                    <span class="stack-tag">Power Apps</span>
+                                    <span class="stack-tag">AI Builder</span>
+                                    <span class="stack-tag">Power Automate</span>
                                 </div>
                             </div>
                         </div>
@@ -562,12 +560,9 @@
 
             <div class="projects-pagination-premium" id="projects-pagination" style="display: none;">
                 <div class="pagination-limit-wrapper">
-                    <span class="limit-label">Projects Per Page:</span>
-                    <div class="limit-select-container">
-                        <select id="project-limit-select" class="limit-select">
-                            <!-- Options injected by JS -->
-                        </select>
-                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    <span class="limit-label">SHOW:</span>
+                    <div class="limit-pills" id="project-limit-pills">
+                        <!-- Pill buttons injected by JS -->
                     </div>
                 </div>
                 
