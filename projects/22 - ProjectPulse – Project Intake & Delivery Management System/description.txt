@@ -1,0 +1,5 @@
+ProjectPulse is a modern Project Intake & Delivery Management system built with Power Apps, Power Automate, and Power BI. The solution centralizes internal project requests, approval workflows, project tracking, and portfolio reporting into one structured platform.
+
+The application allows business users to submit new project requests through a guided intake form, while managers and PMO teams can review, approve, return, or prioritize requests through a dedicated approval center. Once approved, requests are converted into active projects where teams can monitor progress, budget consumption, milestones, ownership, and delivery health.
+
+The system also includes dashboards and reporting views that provide visibility into active projects, pending approvals, team capacity, delayed initiatives, approval cycle time, and overall delivery performance. By combining automation, structured data, and visual reporting, ProjectPulse reduces manual coordination and helps organizations manage internal projects with more clarity and control.

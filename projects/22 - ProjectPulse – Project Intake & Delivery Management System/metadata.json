@@ -1,0 +1,32 @@
+{
+    "title": "ProjectPulse – Project Intake & Delivery Management System",
+    "shortTitle": "ProjectPulse",
+    "categories": [
+        "Business Apps & Automation",
+        "Dashboard & Analytics"
+    ],
+    "clientOrOrganization": "Concept Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+        "Power Apps",
+        "Power Automate",
+        "Power BI",
+        "Dataverse",
+        "SharePoint",
+        "Microsoft Teams",
+        "Outlook"
+    ],
+    "summary": "A modern Power Platform solution for managing project intake, approvals, delivery tracking, team capacity, and portfolio reporting in one centralized system.",
+    "featured": false,
+    "order": 17,
+    "impact": [
+        "Centralized project requests, approvals, and delivery tracking into one structured platform.",
+        "Automated approval routing, reminders, and escalation workflows using Power Automate.",
+        "Improved management visibility through real-time dashboards and Power BI reporting.",
+        "Enabled better prioritization by tracking project status, budget, team capacity, and delivery health.",
+        "Reduced manual coordination between requesters, managers, PMO teams, and delivery owners."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png"
+}

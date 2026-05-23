@@ -696,6 +696,48 @@
     ]
   },
   {
+    "title": "ProjectPulse – Project Intake & Delivery Management System",
+    "shortTitle": "ProjectPulse",
+    "categories": [
+      "Business Apps & Automation",
+      "Dashboard & Analytics"
+    ],
+    "clientOrOrganization": "Concept Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "Power BI",
+      "Dataverse",
+      "SharePoint",
+      "Microsoft Teams",
+      "Outlook"
+    ],
+    "summary": "A modern Power Platform solution for managing project intake, approvals, delivery tracking, team capacity, and portfolio reporting in one centralized system.",
+    "featured": false,
+    "order": 17,
+    "impact": [
+      "Centralized project requests, approvals, and delivery tracking into one structured platform.",
+      "Automated approval routing, reminders, and escalation workflows using Power Automate.",
+      "Improved management visibility through real-time dashboards and Power BI reporting.",
+      "Enabled better prioritization by tracking project status, budget, team capacity, and delivery health.",
+      "Reduced manual coordination between requesters, managers, PMO teams, and delivery owners."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "22 - ProjectPulse – Project Intake & Delivery Management System",
+    "id": "projectpulse-project-intake-delivery-management-system",
+    "longDescription": "ProjectPulse is a modern Project Intake & Delivery Management system built with Power Apps, Power Automate, and Power BI. The solution centralizes internal project requests, approval workflows, project tracking, and portfolio reporting into one structured platform.\r\n\r\nThe application allows business users to submit new project requests through a guided intake form, while managers and PMO teams can review, approve, return, or prioritize requests through a dedicated approval center. Once approved, requests are converted into active projects where teams can monitor progress, budget consumption, milestones, ownership, and delivery health.\r\n\r\nThe system also includes dashboards and reporting views that provide visibility into active projects, pending approvals, team capacity, delayed initiatives, approval cycle time, and overall delivery performance. By combining automation, structured data, and visual reporting, ProjectPulse reduces manual coordination and helps organizations manage internal projects with more clarity and control.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png"
+    ]
+  },
+  {
     "title": "Financial Habits Analysis Dashboard",
     "shortTitle": "Financial Habits Dashboard",
     "categories": [
