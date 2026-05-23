@@ -653,7 +653,7 @@ function createProjectCard(project) {
 
     return `
         <div class="project-grid-item" data-category="${project.categories?.join(',')}" data-id="${project.id}">
-            <div class="project-card-wrapper reveal">
+            <div class="project-card-wrapper">
                 <div class="project-card">
                     <div class="project-img-wrapper" style="cursor:pointer;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">
                         <img src="${imgUrl}" 
@@ -705,6 +705,37 @@ function renderProjects() {
     let currentPage = 1;
     let projectsPerPage = isMobile() ? 4 : 6;
     let currentFilteredProjects = [];
+    let isProgrammaticScrolling = false;
+    let programmaticScrollTimeout = null;
+
+    const syncProjectCardHeights = () => {
+        const cards = containerEl.querySelectorAll('.project-card');
+        const summaries = containerEl.querySelectorAll('.project-summary');
+        
+        cards.forEach(card => {
+            card.style.height = 'auto';
+        });
+        summaries.forEach(s => {
+            s.style.height = 'auto';
+        });
+
+        const isList = document.querySelector('.layout-btn[data-layout="list"]')?.classList.contains('active');
+        if (isList) return;
+
+        let maxHeight = 0;
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.height > maxHeight) {
+                maxHeight = rect.height;
+            }
+        });
+
+        if (maxHeight > 0) {
+            cards.forEach(card => {
+                card.style.height = `${maxHeight}px`;
+            });
+        }
+    };
 
     // Smooth scroll page back to the top of the gallery section (useful on page changes)
     const scrollToGamesTop = () => {
@@ -816,6 +847,8 @@ function renderProjects() {
         const targetPage = Math.min(Math.max(1, page), total);
         
         currentPage = targetPage;
+        isProgrammaticScrolling = true;
+        if (programmaticScrollTimeout) clearTimeout(programmaticScrollTimeout);
         
         const targetSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${targetPage}"]`);
         if (targetSlide) {
@@ -831,9 +864,15 @@ function renderProjects() {
         }
         
         renderPagination(currentFilteredProjects.length);
+        
+        programmaticScrollTimeout = setTimeout(() => {
+            isProgrammaticScrolling = false;
+        }, 600);
     };
 
     const handleGamesScroll = () => {
+        if (isProgrammaticScrolling) return;
+
         const { scrollLeft, clientWidth } = containerEl;
         if (clientWidth === 0) return;
         
@@ -902,6 +941,11 @@ function renderProjects() {
             
             containerEl.innerHTML = slidesHtml;
             
+            // Sync card heights dynamically
+            syncProjectCardHeights();
+            requestAnimationFrame(syncProjectCardHeights);
+            setTimeout(syncProjectCardHeights, 50);
+            
             // Instantly sync scroll position to current page without layout flash
             const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
             if (activeSlide && activeSlide.offsetLeft > 0) {
@@ -926,6 +970,9 @@ function renderProjects() {
             }
             
             renderPagination(currentFilteredProjects.length);
+            
+            // Final check on height sync after staggers and observers bind
+            setTimeout(syncProjectCardHeights, 100);
         }
     };
 
@@ -1055,6 +1102,10 @@ function renderProjects() {
                 } else {
                     grids.forEach(g => g.classList.remove('list-view'));
                 }
+                
+                // Recalculate and synchronize heights
+                syncProjectCardHeights();
+                setTimeout(syncProjectCardHeights, 50);
             }
         });
     }
@@ -1179,6 +1230,10 @@ function renderProjects() {
                 const slideWidth = activeSlide.clientWidth;
                 containerEl.scrollLeft = slideLeft - (containerWidth - slideWidth) / 2;
             }
+            
+            // Recalculate card heights
+            syncProjectCardHeights();
+            setTimeout(syncProjectCardHeights, 50);
         }
     });
 
