@@ -1,29 +1,29 @@
 {
-    "title":  "PathWise – AI Academic \u0026 Career Compass",
-    "shortTitle":  "PathWise",
-    "categories":  [
-                       "Web \u0026 App Development"
-                   ],
-    "clientOrOrganization":  "Personal Project",
-    "role":  "Full-Stack Developer",
-    "period":  "2026",
-    "stack":  [
-                  "Next.js",
-                  "React",
-                  "Supabase",
-                  "Google Gemini AI",
-                  "Vercel"
-              ],
-    "summary":  "AI-powered platform guiding students to the right university and career path through personalized assessments and real Egyptian university data.",
-    "url":  "https://pathwise-edu.vercel.app",
-    "featured":  true,
-    "order":  3,
-    "impact":  [
-                   "Built an AI-powered career guidance experience personalized to each student profile.",
-                   "Integrated real Egyptian university data with intelligent matching and comparison tools.",
-                   "Developed a secure full-stack architecture with AI fallback systems and responsive design.",
-                   "Transformed career exploration into an interactive and decision-oriented journey."
-               ],
-    "videoEmbed":  "",
-    "thumbnail":  "thumbnail.png"
+    "title": "PathWise – AI Academic \u0026 Career Compass",
+    "shortTitle": "PathWise",
+    "categories": [
+        "Web \u0026 App Development"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Full-Stack Developer",
+    "period": "2026",
+    "stack": [
+        "Next.js",
+        "React",
+        "Supabase",
+        "Google Gemini AI",
+        "Vercel"
+    ],
+    "summary": "AI-powered platform guiding students to the right university and career path through personalized assessments and real Egyptian university data.",
+    "url": "https://path-wise-mu.vercel.app/",
+    "featured": true,
+    "order": 3,
+    "impact": [
+        "Built an AI-powered career guidance experience personalized to each student profile.",
+        "Integrated real Egyptian university data with intelligent matching and comparison tools.",
+        "Developed a secure full-stack architecture with AI fallback systems and responsive design.",
+        "Transformed career exploration into an interactive and decision-oriented journey."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png"
 }

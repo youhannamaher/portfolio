@@ -113,9 +113,14 @@ function renderApp() {
         initAnimations();
 
         // 2. DEVICE-SPECIFIC INITIAL HASH FLOW
-        if (window.location.hash) {
-            const hash = window.location.hash;
-            const target = document.querySelector(hash);
+        let targetHash = window.location.hash;
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!targetHash && urlParams.has('category')) {
+            targetHash = '#projects';
+        }
+
+        if (targetHash) {
+            const target = document.querySelector(targetHash);
             if (target) {
                 const isMobile = window.innerWidth <= 768;
                 if (isMobile) {
@@ -641,14 +646,14 @@ function createProjectCard(project) {
     if (project.url) {
         actionsHtml = `
             <div class="project-card-actions">
-                <a href="${project.url}" target="_blank" class="btn btn-primary project-card-btn" onclick="event.stopPropagation();">Visit Website <i class="fa-solid fa-external-link-alt ml-1"></i></a>
-                <button class="btn btn-outline project-card-btn" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                <a href="${project.url}" target="_blank" class="btn btn-primary project-card-btn" onclick="event.stopPropagation();"><span class="btn-text-extra">Visit </span>Website <i class="fa-solid fa-external-link-alt ml-1"></i></a>
+                <button class="btn btn-outline project-card-btn" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')"><span class="btn-text-extra">View </span>Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
             </div>
         `;
     } else {
         actionsHtml = `
             <div class="project-card-actions">
-                <button class="btn btn-outline project-card-btn" style="width:100%;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                <button class="btn btn-outline project-card-btn" style="width:100%;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')"><span class="btn-text-extra">View </span>Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
             </div>
         `;
     }
@@ -1210,6 +1215,31 @@ function renderProjects() {
 
     // Initial load
     renderCategories();
+
+    // Check URL for direct category linking
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    if (categoryParam) {
+        const targetCategory = categoryParam.toLowerCase();
+        
+        // Find if this category exists in our buttons
+        const catBtns = Array.from(categoryContainer.querySelectorAll('.cat-btn'));
+        const matchingBtn = catBtns.find(b => b.dataset.filter === targetCategory);
+        
+        if (matchingBtn) {
+            // Switch view to 'all' to ensure category filters are used
+            const viewAllBtn = viewModes.querySelector('.view-btn[data-view="all"]');
+            if (viewAllBtn) {
+                viewModes.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                viewAllBtn.classList.add('active');
+            }
+            
+            // Set the target category as active
+            catBtns.forEach(b => b.classList.remove('active'));
+            matchingBtn.classList.add('active');
+        }
+    }
+
     applyView();
 }
 
@@ -2103,4 +2133,9 @@ function refreshCalWidget() {
             "dark": { "cal-brand": "#3b82f6" }
         }
     });
+}
+
+function syncProjectCardHeights() {
+    // Card heights are fully controlled by responsive CSS classes.
+    // This function acts as a safe stub to prevent reference errors.
 }

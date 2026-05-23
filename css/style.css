@@ -733,9 +733,10 @@ body.light-theme .mobile-nav {
 
 @media (max-width: 768px) {
     .projects-carousel-slide {
-        flex: 0 0 calc(100% - 40px);
-        width: calc(100% - 40px);
-        padding: 0 0.75rem;
+        flex: 0 0 85% !important;
+        width: 85% !important;
+        padding: 0 0.375rem !important; /* Half of column gap */
+        scroll-snap-align: start !important;
     }
 }
 
@@ -932,12 +933,7 @@ body.light-theme .mobile-nav {
 }
 
 @media (max-width: 480px) {
-    .project-card-actions {
-        flex-direction: column;
-    }
-    .project-card-actions .project-card-btn {
-        width: 100%;
-    }
+    /* Kept side-by-side on all mobile screens as requested */
 }
 
 /* Experience Timeline */
@@ -2438,13 +2434,41 @@ body.light-theme .mobile-nav {
     }
 
     .projects-grid {
-        /* grid-template-columns: 1fr; -- PREVIOUS SINGLE COLUMN */
-        grid-template-columns: 1fr 1fr; /* NEW HIGH-DENSITY 2-COLUMN */
-        gap: 1rem;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        grid-auto-rows: 420px !important;
+        gap: 1.25rem 0.75rem !important;
+    }
+
+    .project-grid-item,
+    .project-card-wrapper,
+    .project-card {
+        height: 420px !important;
     }
 
     .project-card .project-content {
-        padding: 1rem;
+        padding: 1rem 0.75rem !important;
+    }
+
+    .btn-text-extra {
+        display: none !important;
+    }
+
+    .project-card-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 0.25rem !important;
+    }
+
+    .project-card-actions .project-card-btn {
+        flex: 1 !important;
+        min-width: 0 !important;
+        padding: 0.4rem 0.2rem !important;
+        font-size: 0.65rem !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .project-card .project-title {

@@ -109,7 +109,7 @@
       "Vercel"
     ],
     "summary": "AI-powered platform guiding students to the right university and career path through personalized assessments and real Egyptian university data.",
-    "url": "https://pathwise-edu.vercel.app",
+    "url": "https://path-wise-mu.vercel.app/",
     "featured": true,
     "order": 3,
     "impact": [
@@ -411,8 +411,7 @@
     "images": [
       "1.png",
       "2.png",
-      "3.png",
-      "4.png"
+      "3.png"
     ]
   },
   {
@@ -632,9 +631,7 @@
       "2.png",
       "3.png",
       "4.png",
-      "5.png",
-      "6.png",
-      "7.png"
+      "5.png"
     ]
   },
   {
