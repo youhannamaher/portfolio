@@ -713,6 +713,7 @@ function renderProjects() {
         const summaries = containerEl.querySelectorAll('.project-summary');
         const wrappers = containerEl.querySelectorAll('.project-card-wrapper');
         const gridItems = containerEl.querySelectorAll('.project-grid-item');
+        const grids = containerEl.querySelectorAll('.projects-grid');
         
         cards.forEach(card => {
             card.style.height = 'auto';
@@ -724,7 +725,10 @@ function renderProjects() {
         const isList = document.querySelector('.layout-btn[data-layout="list"]')?.classList.contains('active');
         if (isList) return;
 
-        // Temporarily bypass grid/flex alignment to scan natural layouts
+        // Temporarily bypass all grid and flex alignment to scan natural heights
+        grids.forEach(g => {
+            g.style.display = 'block';
+        });
         gridItems.forEach(item => {
             item.style.display = 'block';
         });
@@ -736,14 +740,17 @@ function renderProjects() {
         let maxHeight = 0;
         cards.forEach(card => {
             const rect = card.getBoundingClientRect();
-            // Add a small 12px buffer for cross-browser font renders
-            const heightWithBuffer = Math.ceil(rect.height) + 12;
+            // Add a small 16px buffer for cross-browser rendering tolerance
+            const heightWithBuffer = Math.ceil(rect.height) + 16;
             if (heightWithBuffer > maxHeight) {
                 maxHeight = heightWithBuffer;
             }
         });
 
-        // Restore layout bindings
+        // Restore layout configurations
+        grids.forEach(g => {
+            g.style.display = '';
+        });
         gridItems.forEach(item => {
             item.style.display = '';
         });
