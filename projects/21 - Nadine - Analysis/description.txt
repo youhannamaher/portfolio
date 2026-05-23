@@ -1,0 +1,9 @@
+Turnover Analysis Dashboard is an HR analytics project built in Excel to transform raw exit interview and resignation data into a clean, structured, and executive-ready dashboard for turnover analysis and retention insights. The project focused on converting unorganized HR records into meaningful visual analytics that help identify why employees leave, which departments and grades are most affected, and how turnover trends evolve over time.
+
+The solution started from a raw dataset containing employee grades, departments, talent categories, resignation dates, critical and regrettable flags, and resignation reasons. One of the main challenges was handling multi-select resignation reasons stored inside single cells, which required creating a normalized analysis structure to accurately measure turnover drivers. The data was cleaned, standardized, and enriched with calculated fields such as resignation month, year, quarter, and employee tenure to support deeper HR analysis.
+
+The final dashboard includes executive KPI cards, resignation trends by month, top reasons for leaving, grade distribution analysis, department impact analysis, and top talent turnover metrics. Additional business insights were added to help management quickly understand the most important findings without manually interpreting the charts.
+
+The dashboard was designed using a premium corporate visual style inspired by Nestlé branding, with clean KPI cards, structured layouts, branded colors, and presentation-ready formatting to make the analysis suitable for HR reviews and leadership reporting.
+
+This project demonstrates skills in Excel dashboarding, HR analytics, data cleaning, data modeling, business storytelling, and executive reporting by transforming raw resignation records into actionable insights for workforce and retention analysis.

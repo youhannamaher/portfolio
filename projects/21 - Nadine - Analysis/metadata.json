@@ -1,0 +1,53 @@
+{
+  "title": "Turnover Analysis Dashboard",
+  "shortTitle": "HR Turnover Analytics",
+  "categories": [
+    "HR Analytics",
+    "Excel Dashboards",
+    "Data Analysis & Visualization"
+  ],
+  "clientOrOrganization": "Nestlé",
+  "role": "HR Process Optimizer / Data Analyst",
+  "period": "2025 - 2026",
+  "stack": [
+    "Microsoft Excel",
+    "Pivot Tables",
+    "Excel Charts",
+    "Data Cleaning",
+    "HR Analytics"
+  ],
+  "summary": "Executive HR turnover dashboard built in Excel to transform raw exit interview data into actionable insights about resignation drivers, employee grades, department impact, and talent retention trends.",
+  "featured": false,
+  "order": 0,
+  "impact": [
+    "Transformed raw HR exit interview exports into a structured and analysis-ready dataset.",
+    "Normalized multi-select resignation reasons to enable accurate turnover driver analysis.",
+    "Built executive KPI cards for turnover volume, top talent loss, average tenure, and most impacted departments.",
+    "Created professional HR dashboards with monthly resignation trends, grade distribution analysis, and resignation reason breakdowns.",
+    "Reduced manual HR analysis effort by centralizing turnover reporting into a presentation-ready Excel dashboard."
+  ],
+  "keyFeatures": [
+    "Top resignation reasons analysis",
+    "Monthly turnover trend tracking",
+    "Grade-level resignation concentration",
+    "Department impact analysis",
+    "Top talent turnover KPIs",
+    "Normalized resignation reasons table",
+    "Executive insights section",
+    "Corporate-style dashboard presentation"
+  ],
+  "businessValue": [
+    "Helped HR teams quickly identify major resignation drivers.",
+    "Improved visibility into critical talent losses and department-level turnover concentration.",
+    "Supported management reporting with executive-ready visuals and KPIs.",
+    "Enabled faster and more accurate turnover discussions using structured analytics."
+  ],
+  "designHighlights": [
+    "Nestlé-inspired executive dashboard style",
+    "Clean KPI card layout",
+    "Corporate color palette",
+    "Presentation-focused formatting",
+    "Professional chart standardization"
+  ],
+  "videoEmbed": ""
+}

@@ -105,7 +105,7 @@
     "videoEmbed": "",
     "folder": "15 - Finance Tracker",
     "id": "finance-pro-ai-financial-command-center",
-    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
+    "longDescription": "The Finance Tracker is a business-oriented financial management and analytics solution developed to centralize expense tracking, financial monitoring, and executive reporting into a clean and structured dashboard experience. The project was designed to transform manually managed financial records into an organized, interactive, and data-driven system that simplifies financial analysis and decision-making.\r\n\r\nThe solution allows users to manage and monitor financial activities through structured datasets, categorized transactions, KPI tracking, and dynamic visual dashboards. The platform focuses on improving financial visibility by converting raw spreadsheet data into meaningful insights through automated calculations, filtering systems, and visual analytics.\r\n\r\nThe project includes interactive dashboards displaying key financial indicators, expense distributions, category analysis, trend monitoring, and summarized business insights. The system was designed to help users quickly identify spending patterns, monitor financial performance, and make faster operational decisions without relying on manual calculations or fragmented Excel sheets.\r\n\r\nSpecial attention was given to dashboard presentation, UI organization, and executive-level readability. The interface was redesigned to provide a modern and premium reporting experience with cleaner layouts, improved data hierarchy, and visually structured KPI sections to support management reporting and stakeholder presentations.\r\n\r\nThe project demonstrates skills in financial data structuring, dashboard design, data transformation, KPI visualization, and business reporting using tools such as Excel, Pivot Tables, Power Query, formulas, and advanced reporting techniques. It highlights how operational financial processes can be streamlined into a more scalable and professional analytical solution.",
     "images": [
       "Screenshot 2026-04-22 232016.png",
       "Screenshot 2026-04-22 232033.png",
@@ -592,7 +592,7 @@
     "videoEmbed": "",
     "folder": "17 - Fabula Portfolio",
     "id": "fabula-creative-portfolio-website",
-    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
+    "longDescription": "Fabula is a premium creative portfolio website developed to showcase the professional identity, multimedia work, and storytelling capabilities of a creative content professional. The platform combines elegant visual design with structured content presentation to create a modern digital portfolio experience focused on branding, video production, and creative communication.\r\n\r\nThe website includes dedicated sections for personal introduction, creative skills, professional experience, multimedia portfolio projects, and direct communication. A categorized video portfolio system was implemented to organize creative productions across different themes such as branding, documentaries, campaigns, editing, and social media content.\r\n\r\nThe platform was designed with a strong focus on visual hierarchy, typography, responsive layouts, and premium UI/UX styling to reflect the creative and artistic nature of the portfolio owner while maintaining professionalism and clarity. The result is a polished personal branding website that serves both as a professional portfolio and as a digital representation of creative identity and storytelling expertise.",
     "images": [
       "Screenshot 2026-05-10 232102.png",
       "Screenshot 2026-05-10 232113.png",
@@ -603,6 +603,43 @@
       "Screenshot 2026-05-10 232209.png"
     ],
     "thumbnail": "Screenshot 2026-05-10 232113.png"
+  },
+  {
+    "title": "Google Forms Financial Habits Analysis Dashboard",
+    "shortTitle": "Financial Habits Dashboard",
+    "categories": [
+      "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "Academic Statistical Analysis Project",
+    "role": "Data Analyst & Dashboard Developer",
+    "period": "2026",
+    "stack": [
+      "Microsoft Excel",
+      "Pivot Tables",
+      "Pivot Charts",
+      "Google Forms",
+      "Excel Formulas"
+    ],
+    "summary": "Transformed raw Google Forms survey responses into a complete Excel statistical analysis dashboard with KPIs, charts, pivot tables, calculated fields, and financial behavior insights.",
+    "featured": false,
+    "order": 14,
+    "impact": [
+      "Cleaned and standardized more than 100 messy survey responses containing inconsistent numeric formats and manual text entries.",
+      "Built a professional Excel dashboard with KPIs, statistical measures, cross-tab analysis, and interactive visualizations.",
+      "Generated actionable insights about savings behavior, budgeting habits, payment methods, expenses, and financial satisfaction."
+    ],
+    "videoEmbed": "",
+    "folder": "20 - Miryam - Financial Habits Analysis",
+    "id": "google-forms-financial-habits-analysis-dashboard",
+    "longDescription": "This project focused on transforming raw Google Forms survey responses into a complete Excel-based statistical analysis and dashboard system. The original dataset contained messy manual entries, inconsistent numeric formats, spelling mistakes, mixed text values, and unstandardized categories that required extensive cleaning before any meaningful analysis could be performed.\r\n\r\nI cleaned and standardized the dataset by converting text-based numeric values (such as “20k” or “500-600 EGP”) into usable formats, correcting category inconsistencies, handling missing and irregular values, and preparing structured analytical fields including savings rate, expense rate, net balance, age groups, and expense tracking levels.\r\n\r\nThe final Excel workbook was organized into multiple analytical layers including raw data, cleaned data, pivot tables, statistical measures, KPI reporting, insights, and a fully interactive dashboard. The dashboard provided visual analysis for savings behavior, budgeting habits, financial satisfaction, payment methods, spending categories, expense tracking behavior, income versus expenses, and demographic comparisons across more than 100 survey responses.\r\n\r\nThe project included:\r\n\r\nData cleaning and transformation\r\nPivot tables and pivot charts\r\nStatistical measures (mean, median, standard deviation, min/max)\r\nKPI cards and executive summary metrics\r\nCross-tab analysis and comparative charts\r\nDashboard design and visualization\r\nFinancial behavior insights generation\r\n\r\nThis project demonstrates strong capabilities in Excel analytics, survey data processing, dashboard design, statistical analysis, KPI reporting, and transforming real-world unstructured datasets into clear and actionable insights.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png"
+    ],
+    "thumbnail": "1.png"
   },
   {
     "title": "PathWise – AI Academic & Career Compass",
@@ -632,16 +669,18 @@
     "videoEmbed": "",
     "folder": "16 - PathWise",
     "id": "pathwise-ai-academic-career-compass",
-    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
+    "longDescription": "PathWise is a career guidance and educational orientation platform designed to help students discover academic paths and career opportunities that align with their personalities, interests, skills, and ambitions. The project was developed as a business-oriented digital solution combining technology, education, and personalized career exploration into a modern interactive experience.\r\n\r\nThe platform features a complete multi-step “Career DNA” assessment system where users answer questions related to interests, work styles, strengths, goals, and personal preferences. Based on the responses, the system generates personalized academic and career recommendations tailored to each student profile.\r\n\r\nThe project was built as a real MVP (Minimum Viable Product) with a fully designed user journey including landing pages, authentication flows, dashboard experience, assessment process, recommendation engine, and program exploration pages. The interface was carefully designed using modern UI/UX principles with responsive layouts, glassmorphism-inspired visuals, animations, and smooth interactions to create a professional and engaging experience for students.\r\n\r\nPathWise was not only a technical project but also a complete entrepreneurial and business model initiative. The project included market positioning, value proposition design, business strategy, MVP presentation, and a full startup-oriented pitch experience. The platform demonstrates how digital tools and intelligent profiling systems can simplify educational orientation and help students make more informed academic and career decisions.\r\n\r\nThe solution was developed using modern web technologies including Next.js, TypeScript, Tailwind CSS, and Framer Motion, with deployment and scalability considerations integrated into the project vision from the beginning.",
     "images": [
-      "Screenshot 2026-05-10 231504.png",
+      "1.png",
       "Screenshot 2026-05-10 231520.png",
       "Screenshot 2026-05-10 231535.png",
       "Screenshot 2026-05-10 231609.png",
       "Screenshot 2026-05-10 231623.png",
-      "Screenshot 2026-05-10 231641.png"
+      "Screenshot 2026-05-10 231641.png",
+      "Screenshot 2026-05-11 220430.png",
+      "Screenshot 2026-05-11 220534.png"
     ],
-    "thumbnail": "Screenshot 2026-05-10 231535.png"
+    "thumbnail": "Screenshot 2026-05-11 220430.png"
   },
   {
     "title": "Bondy – Social Gaming Platform",
@@ -672,7 +711,7 @@
     "videoEmbed": "",
     "folder": "18 - Bondy",
     "id": "bondy-social-gaming-platform",
-    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
+    "longDescription": "Bondy is a social gaming platform built to help people create better moments together through interactive multiplayer experiences. The project started from a simple idea: people today are constantly connected online, yet real social interaction is becoming weaker and less meaningful. Bondy was created to transform games into a tool for connection, communication, laughter, and shared memories between friends, couples, families, classmates, and teams.\r\n\r\nThe platform focuses on lightweight, accessible, and instantly playable social games that work directly through the browser without downloads or complicated setup. Users can create a room, invite others through a code, QR, or direct link, and immediately start playing together in real time from any device.\r\n\r\nBondy was designed with a strong emphasis on user experience, visual identity, and social interaction. The platform uses a premium dark-themed interface with cinematic lighting, modern animations, responsive layouts, and a mobile-first multiplayer experience to create a polished and immersive atmosphere. Every part of the experience was built to feel simple, modern, and engaging while keeping the focus on people rather than complexity.\r\n\r\nThe project includes multiplayer party games such as “Guess What” and “Think Like Me,” featuring real-time synchronization, dynamic player roles, team management, timers, scoring systems, custom word packs, and multilingual gameplay support. The backend architecture was designed to support scalable real-time sessions and smooth synchronization between players, while maintaining fairness in gameplay rotation and session flow.\r\n\r\nBeyond the games themselves, Bondy represents a larger long-term vision of building a digital social entertainment ecosystem centered around human interaction rather than passive content consumption. The platform is being developed as a real ongoing startup-style project with continuous improvements, branding development, UI/UX iterations, gameplay experimentation, and future expansion plans for additional games and social features.\r\n\r\nThis project demonstrates skills in product design, startup ideation, UI/UX design, real-time multiplayer systems, frontend development, branding, business thinking, and user-centered experience creation.",
     "images": [
       "1.png",
       "2.png",
@@ -691,5 +730,115 @@
       "15.png"
     ],
     "thumbnail": "Screenshot 2026-05-10 232737.png"
+  },
+  {
+    "title": "HR Absenteeism & Workforce Analytics Automation System",
+    "shortTitle": "Absenteeism Analytics",
+    "categories": [
+      "HR Digital Transformation",
+      "Business Apps & Automation",
+      "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "Nestlé",
+    "role": "Power Platform Developer",
+    "period": "2026",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint",
+      "Excel"
+    ],
+    "summary": "Automated HR absenteeism reporting system transforming monthly Excel files into structured workforce analytics and interactive reporting matrices.",
+    "featured": true,
+    "order": 0,
+    "impact": [
+      "Automated monthly absence data ingestion from Excel into SharePoint through Power Automate.",
+      "Built historical employee tracking to manage active, inactive, new, and transferred employees accurately.",
+      "Created dynamic HR reporting matrices for department, employee, organization, and absence type analysis.",
+      "Reduced manual calculations and improved reporting accuracy through centralized workforce data."
+    ],
+    "videoEmbed": "",
+    "folder": "19 - Nestle - Abs & Ovr",
+    "id": "hr-absenteeism-workforce-analytics-automation-system",
+    "longDescription": "This project was developed to transform a highly manual HR absenteeism reporting process into a structured, automated, and scalable workforce analytics system using Power Apps, Power Automate, SharePoint, and Excel.\r\n\r\nOriginally, the process relied heavily on Excel files, manual calculations, employee checks, and repetitive monthly reporting activities. HR teams needed to manually calculate absence hours, validate active employees, update organizational changes, and generate absenteeism metrics across departments and organizations. A single incorrect formula or missing update could compromise the accuracy of the entire report.\r\n\r\nTo solve this problem, I designed and built a complete HR workforce analytics solution where the user only uploads the monthly Excel file while the platform automatically processes, transforms, stores, and analyzes the data.\r\n\r\nThe solution includes automated Excel ingestion through Power Automate, historical employee assignment tracking, structured SharePoint data architecture, and interactive reporting matrices built in Power Apps. The system dynamically tracks employee movements between departments and organizations, inactive employees, new hires, and historical workforce changes while maintaining accurate reporting for every reporting period.\r\n\r\nThe platform provides several analytical views including:\r\n\r\nDepartment absenteeism matrix\r\nEmployee-level absenteeism tracking\r\nOrganization comparison reporting\r\nAbsence type analysis\r\nHistorical absence records\r\nWorkforce capacity calculations\r\nImport audit history and tracking\r\n\r\nThe solution also calculates:\r\n\r\nTotal working capacity\r\nMonthly absenteeism rates\r\nYear-to-date absenteeism metrics\r\nActive employee counts\r\nDepartment and organization performance indicators\r\n\r\nOne of the most critical parts of the project was implementing historical employee assignment logic. Instead of overwriting employee records, the system maintains assignment history over time, allowing accurate reporting even when employees move between departments, organizations, or become inactive.\r\n\r\nThe final system significantly reduced manual work, improved reporting accuracy, centralized workforce data, and created a scalable HR analytics foundation that can later be extended to additional workforce operations modules such as overtime analytics, approval workflows, Power BI dashboards, and workforce performance monitoring.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.blur.png",
+      "4.png",
+      "5.png",
+      "6. blur.png",
+      "9.png",
+      "10.png",
+      "11.png",
+      "11111.png",
+      "ai_3.png",
+      "ai_6.png",
+      "old 1.png",
+      "old 2.png",
+      "Screenshot 2026-05-23 025407.png"
+    ],
+    "thumbnail": "2.png"
+  },
+  {
+    "title": "Turnover Analysis Dashboard",
+    "shortTitle": "HR Turnover Analytics",
+    "categories": [
+      "HR Analytics",
+      "Excel Dashboards",
+      "Data Analysis & Visualization"
+    ],
+    "clientOrOrganization": "Nestlé",
+    "role": "HR Process Optimizer / Data Analyst",
+    "period": "2025 - 2026",
+    "stack": [
+      "Microsoft Excel",
+      "Pivot Tables",
+      "Excel Charts",
+      "Data Cleaning",
+      "HR Analytics"
+    ],
+    "summary": "Executive HR turnover dashboard built in Excel to transform raw exit interview data into actionable insights about resignation drivers, employee grades, department impact, and talent retention trends.",
+    "featured": false,
+    "order": 0,
+    "impact": [
+      "Transformed raw HR exit interview exports into a structured and analysis-ready dataset.",
+      "Normalized multi-select resignation reasons to enable accurate turnover driver analysis.",
+      "Built executive KPI cards for turnover volume, top talent loss, average tenure, and most impacted departments.",
+      "Created professional HR dashboards with monthly resignation trends, grade distribution analysis, and resignation reason breakdowns.",
+      "Reduced manual HR analysis effort by centralizing turnover reporting into a presentation-ready Excel dashboard."
+    ],
+    "keyFeatures": [
+      "Top resignation reasons analysis",
+      "Monthly turnover trend tracking",
+      "Grade-level resignation concentration",
+      "Department impact analysis",
+      "Top talent turnover KPIs",
+      "Normalized resignation reasons table",
+      "Executive insights section",
+      "Corporate-style dashboard presentation"
+    ],
+    "businessValue": [
+      "Helped HR teams quickly identify major resignation drivers.",
+      "Improved visibility into critical talent losses and department-level turnover concentration.",
+      "Supported management reporting with executive-ready visuals and KPIs.",
+      "Enabled faster and more accurate turnover discussions using structured analytics."
+    ],
+    "designHighlights": [
+      "Nestlé-inspired executive dashboard style",
+      "Clean KPI card layout",
+      "Corporate color palette",
+      "Presentation-focused formatting",
+      "Professional chart standardization"
+    ],
+    "videoEmbed": "",
+    "folder": "21 - Nadine - Analysis",
+    "id": "turnover-analysis-dashboard",
+    "longDescription": "Turnover Analysis Dashboard is an HR analytics project built in Excel to transform raw exit interview and resignation data into a clean, structured, and executive-ready dashboard for turnover analysis and retention insights. The project focused on converting unorganized HR records into meaningful visual analytics that help identify why employees leave, which departments and grades are most affected, and how turnover trends evolve over time.\r\n\r\nThe solution started from a raw dataset containing employee grades, departments, talent categories, resignation dates, critical and regrettable flags, and resignation reasons. One of the main challenges was handling multi-select resignation reasons stored inside single cells, which required creating a normalized analysis structure to accurately measure turnover drivers. The data was cleaned, standardized, and enriched with calculated fields such as resignation month, year, quarter, and employee tenure to support deeper HR analysis.\r\n\r\nThe final dashboard includes executive KPI cards, resignation trends by month, top reasons for leaving, grade distribution analysis, department impact analysis, and top talent turnover metrics. Additional business insights were added to help management quickly understand the most important findings without manually interpreting the charts.\r\n\r\nThe dashboard was designed using a premium corporate visual style inspired by Nestlé branding, with clean KPI cards, structured layouts, branded colors, and presentation-ready formatting to make the analysis suitable for HR reviews and leadership reporting.\r\n\r\nThis project demonstrates skills in Excel dashboarding, HR analytics, data cleaning, data modeling, business storytelling, and executive reporting by transforming raw resignation records into actionable insights for workforce and retention analysis.",
+    "images": [
+      "1.png",
+      "2.png"
+    ],
+    "thumbnail": "1.png"
   }
 ]

@@ -1,0 +1,17 @@
+This project focused on transforming raw Google Forms survey responses into a complete Excel-based statistical analysis and dashboard system. The original dataset contained messy manual entries, inconsistent numeric formats, spelling mistakes, mixed text values, and unstandardized categories that required extensive cleaning before any meaningful analysis could be performed.
+
+I cleaned and standardized the dataset by converting text-based numeric values (such as “20k” or “500-600 EGP”) into usable formats, correcting category inconsistencies, handling missing and irregular values, and preparing structured analytical fields including savings rate, expense rate, net balance, age groups, and expense tracking levels.
+
+The final Excel workbook was organized into multiple analytical layers including raw data, cleaned data, pivot tables, statistical measures, KPI reporting, insights, and a fully interactive dashboard. The dashboard provided visual analysis for savings behavior, budgeting habits, financial satisfaction, payment methods, spending categories, expense tracking behavior, income versus expenses, and demographic comparisons across more than 100 survey responses.
+
+The project included:
+
+Data cleaning and transformation
+Pivot tables and pivot charts
+Statistical measures (mean, median, standard deviation, min/max)
+KPI cards and executive summary metrics
+Cross-tab analysis and comparative charts
+Dashboard design and visualization
+Financial behavior insights generation
+
+This project demonstrates strong capabilities in Excel analytics, survey data processing, dashboard design, statistical analysis, KPI reporting, and transforming real-world unstructured datasets into clear and actionable insights.

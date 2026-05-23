@@ -1,0 +1,29 @@
+This project was developed to transform a highly manual HR absenteeism reporting process into a structured, automated, and scalable workforce analytics system using Power Apps, Power Automate, SharePoint, and Excel.
+
+Originally, the process relied heavily on Excel files, manual calculations, employee checks, and repetitive monthly reporting activities. HR teams needed to manually calculate absence hours, validate active employees, update organizational changes, and generate absenteeism metrics across departments and organizations. A single incorrect formula or missing update could compromise the accuracy of the entire report.
+
+To solve this problem, I designed and built a complete HR workforce analytics solution where the user only uploads the monthly Excel file while the platform automatically processes, transforms, stores, and analyzes the data.
+
+The solution includes automated Excel ingestion through Power Automate, historical employee assignment tracking, structured SharePoint data architecture, and interactive reporting matrices built in Power Apps. The system dynamically tracks employee movements between departments and organizations, inactive employees, new hires, and historical workforce changes while maintaining accurate reporting for every reporting period.
+
+The platform provides several analytical views including:
+
+Department absenteeism matrix
+Employee-level absenteeism tracking
+Organization comparison reporting
+Absence type analysis
+Historical absence records
+Workforce capacity calculations
+Import audit history and tracking
+
+The solution also calculates:
+
+Total working capacity
+Monthly absenteeism rates
+Year-to-date absenteeism metrics
+Active employee counts
+Department and organization performance indicators
+
+One of the most critical parts of the project was implementing historical employee assignment logic. Instead of overwriting employee records, the system maintains assignment history over time, allowing accurate reporting even when employees move between departments, organizations, or become inactive.
+
+The final system significantly reduced manual work, improved reporting accuracy, centralized workforce data, and created a scalable HR analytics foundation that can later be extended to additional workforce operations modules such as overtime analytics, approval workflows, Power BI dashboards, and workforce performance monitoring.
