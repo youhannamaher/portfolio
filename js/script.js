@@ -1220,7 +1220,19 @@ function renderProjects() {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
     if (categoryParam) {
-        const targetCategory = categoryParam.toLowerCase();
+        let targetCategory = categoryParam.toLowerCase();
+        
+        // Mapping for simpler URLs
+        const categoryMap = {
+            'business': 'business apps & automation',
+            'dashboards': 'dashboards & analytics',
+            'hr': 'digital hr',
+            'web': 'web & app development'
+        };
+        
+        if (categoryMap[targetCategory]) {
+            targetCategory = categoryMap[targetCategory];
+        }
         
         // Find if this category exists in our buttons
         const catBtns = Array.from(categoryContainer.querySelectorAll('.cat-btn'));

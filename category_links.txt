@@ -1,0 +1,19 @@
+Here are the direct links to share your portfolio filtered by specific categories. They will automatically open on the Projects section and apply the requested filter.
+
+Featured Projects (Default View):
+https://youhannamaher.github.io/#projects
+
+All Projects:
+https://youhannamaher.github.io/?category=all
+
+Business Apps & Automation:
+https://youhannamaher.github.io/?category=business
+
+Dashboards & Analytics:
+https://youhannamaher.github.io/?category=dashboards
+
+Digital HR: 
+https://youhannamaher.github.io/?category=hr
+
+Web & App Development: 
+https://youhannamaher.github.io/?category=web
