@@ -1,5 +1,141 @@
 [
   {
+    "title": "Bondy – Social Gaming Platform",
+    "shortTitle": "Bondy",
+    "categories": [
+      "Web & App Development"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Founder & Full-Stack Developer",
+    "period": "2026 - Present",
+    "stack": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "summary": "Browser-based social gaming platform with real-time multiplayer party games — no download needed. Built and launched as a live product.",
+    "url": "https://bondy-eg.vercel.app",
+    "featured": true,
+    "order": 1,
+    "impact": [
+      "Built a real-time multiplayer platform with room codes, host controls, and synchronized gameplay.",
+      "Designed and launched multiple social games focused on connection, laughter, and group interaction.",
+      "Created a no-download experience optimized for mobile and desktop browsers.",
+      "Developed Bondy as an ongoing product with branding, SEO, feedback flows, and future game expansion."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "18 - Bondy",
+    "id": "bondy-social-gaming-platform",
+    "longDescription": "Bondy is a social gaming platform built to help people create better moments together through interactive multiplayer experiences. The project started from a simple idea: people today are constantly connected online, yet real social interaction is becoming weaker and less meaningful. Bondy was created to transform games into a tool for connection, communication, laughter, and shared memories between friends, couples, families, classmates, and teams.\r\n\r\nThe platform focuses on lightweight, accessible, and instantly playable social games that work directly through the browser without downloads or complicated setup. Users can create a room, invite others through a code, QR, or direct link, and immediately start playing together in real time from any device.\r\n\r\nBondy was designed with a strong emphasis on user experience, visual identity, and social interaction. The platform uses a premium dark-themed interface with cinematic lighting, modern animations, responsive layouts, and a mobile-first multiplayer experience to create a polished and immersive atmosphere. Every part of the experience was built to feel simple, modern, and engaging while keeping the focus on people rather than complexity.\r\n\r\nThe project includes multiplayer party games such as “Guess What” and “Think Like Me,” featuring real-time synchronization, dynamic player roles, team management, timers, scoring systems, custom word packs, and multilingual gameplay support. The backend architecture was designed to support scalable real-time sessions and smooth synchronization between players, while maintaining fairness in gameplay rotation and session flow.\r\n\r\nBeyond the games themselves, Bondy represents a larger long-term vision of building a digital social entertainment ecosystem centered around human interaction rather than passive content consumption. The platform is being developed as a real ongoing startup-style project with continuous improvements, branding development, UI/UX iterations, gameplay experimentation, and future expansion plans for additional games and social features.\r\n\r\nThis project demonstrates skills in product design, startup ideation, UI/UX design, real-time multiplayer systems, frontend development, branding, business thinking, and user-centered experience creation.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png",
+      "9.png",
+      "10.jpeg",
+      "11.jpeg",
+      "12.png",
+      "13.png",
+      "14.png",
+      "15.png"
+    ]
+  },
+  {
+    "title": "Finance Pro – AI Financial Command Center",
+    "shortTitle": "Finance Pro",
+    "categories": [
+      "Web & App Development",
+      "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Full-Stack Developer",
+    "period": "2026",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Google Gemini AI",
+      "Vercel"
+    ],
+    "summary": "AI-powered finance app with natural language expense tracking, real-time dashboards, and smart automation — in Arabic & English.",
+    "url": "https://finance-tracker-teal-gamma-89.vercel.app/",
+    "featured": true,
+    "order": 2,
+    "impact": [
+      "Enabled natural language financial tracking using AI (Arabic & English).",
+      "Centralized income, expenses, investments, and balances into one real-time system.",
+      "Automated detection of untracked spending through balance reconciliation.",
+      "Delivered a full product experience with secure sandbox mode for public usage."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "15 - Finance Tracker",
+    "id": "finance-pro-ai-financial-command-center",
+    "longDescription": "The Finance Tracker is a business-oriented financial management and analytics solution developed to centralize expense tracking, financial monitoring, and executive reporting into a clean and structured dashboard experience. The project was designed to transform manually managed financial records into an organized, interactive, and data-driven system that simplifies financial analysis and decision-making.\r\n\r\nThe solution allows users to manage and monitor financial activities through structured datasets, categorized transactions, KPI tracking, and dynamic visual dashboards. The platform focuses on improving financial visibility by converting raw spreadsheet data into meaningful insights through automated calculations, filtering systems, and visual analytics.\r\n\r\nThe project includes interactive dashboards displaying key financial indicators, expense distributions, category analysis, trend monitoring, and summarized business insights. The system was designed to help users quickly identify spending patterns, monitor financial performance, and make faster operational decisions without relying on manual calculations or fragmented Excel sheets.\r\n\r\nSpecial attention was given to dashboard presentation, UI organization, and executive-level readability. The interface was redesigned to provide a modern and premium reporting experience with cleaner layouts, improved data hierarchy, and visually structured KPI sections to support management reporting and stakeholder presentations.\r\n\r\nThe project demonstrates skills in financial data structuring, dashboard design, data transformation, KPI visualization, and business reporting using tools such as Excel, Pivot Tables, Power Query, formulas, and advanced reporting techniques. It highlights how operational financial processes can be streamlined into a more scalable and professional analytical solution.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png",
+      "9.png"
+    ]
+  },
+  {
+    "title": "PathWise – AI Academic & Career Compass",
+    "shortTitle": "PathWise",
+    "categories": [
+      "Web & App Development"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Full-Stack Developer",
+    "period": "2026",
+    "stack": [
+      "Next.js",
+      "React",
+      "Supabase",
+      "Google Gemini AI",
+      "Vercel"
+    ],
+    "summary": "AI-powered platform guiding students to the right university and career path through personalized assessments and real Egyptian university data.",
+    "url": "https://pathwise-edu.vercel.app",
+    "featured": true,
+    "order": 3,
+    "impact": [
+      "Built an AI-powered career guidance experience personalized to each student profile.",
+      "Integrated real Egyptian university data with intelligent matching and comparison tools.",
+      "Developed a secure full-stack architecture with AI fallback systems and responsive design.",
+      "Transformed career exploration into an interactive and decision-oriented journey."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "16 - PathWise",
+    "id": "pathwise-ai-academic-career-compass",
+    "longDescription": "PathWise is a career guidance and educational orientation platform designed to help students discover academic paths and career opportunities that align with their personalities, interests, skills, and ambitions. The project was developed as a business-oriented digital solution combining technology, education, and personalized career exploration into a modern interactive experience.\r\n\r\nThe platform features a complete multi-step “Career DNA” assessment system where users answer questions related to interests, work styles, strengths, goals, and personal preferences. Based on the responses, the system generates personalized academic and career recommendations tailored to each student profile.\r\n\r\nThe project was built as a real MVP (Minimum Viable Product) with a fully designed user journey including landing pages, authentication flows, dashboard experience, assessment process, recommendation engine, and program exploration pages. The interface was carefully designed using modern UI/UX principles with responsive layouts, glassmorphism-inspired visuals, animations, and smooth interactions to create a professional and engaging experience for students.\r\n\r\nPathWise was not only a technical project but also a complete entrepreneurial and business model initiative. The project included market positioning, value proposition design, business strategy, MVP presentation, and a full startup-oriented pitch experience. The platform demonstrates how digital tools and intelligent profiling systems can simplify educational orientation and help students make more informed academic and career decisions.\r\n\r\nThe solution was developed using modern web technologies including Next.js, TypeScript, Tailwind CSS, and Framer Motion, with deployment and scalability considerations integrated into the project vision from the beginning.",
+    "images": [
+      "1.png",
+      "2.jpg",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png",
+      "9.png"
+    ]
+  },
+  {
     "title": "MStack360 CRM System",
     "shortTitle": "MStack360 CRM",
     "categories": [
@@ -13,110 +149,30 @@
       "Power Automate",
       "SharePoint"
     ],
-    "summary": "End-to-end CRM system managing clients, projects, freelancers, and financial operations in one unified platform.",
+    "summary": "Full-scale CRM managing clients, projects, freelancers, invoicing, and financials in one unified Power Apps platform.",
     "featured": true,
-    "order": 1,
+    "order": 4,
     "impact": [
       "Centralized client, project, and freelancer management into a single system.",
       "Automated invoice generation and email communication workflows.",
       "Improved visibility on financials, payments, and project performance."
     ],
     "videoEmbed": "",
+    "thumbnail": "thumbnail.jpeg",
     "folder": "1- CRM - Mstack360",
     "id": "mstack360-crm-system",
     "longDescription": "I designed and developed a custom CRM system for MStack360, a freelance-based company where employees operate as freelancers and clients are primarily technical organizations. The solution centralizes the management of clients, employees, projects, tasks, leads, and financial operations into a single unified platform, enabling efficient tracking of work, payments, and client relationships.\r\n\r\nThe system includes a comprehensive Client Management module providing a 360° view of each client, including project history, active work, payments, and follow-ups. Users can generate invoices directly from the application by adding line items, after which a Power Automate workflow automatically creates a professionally formatted PDF invoice and sends it via email. The platform also integrates a built-in HTML email system to send customized communications to clients.\r\n\r\nIn addition, the solution features Employee Management, allowing tracking of freelancer performance, workload, payments, and assigned projects. A structured Projects & Tasks module supports milestone tracking and operational follow-up, while the Finance module provides visibility on payments received, payments due, and overall financial status. The system also includes a Follow-Up module to manage client communication and an integrated dashboard to visualize business activity.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the CRM significantly reduces manual work, improves operational visibility, and provides a scalable foundation for managing freelance-based business operations.",
     "images": [
-      "Client Management page.jpeg",
-      "Employee Management Page.jpeg",
-      "Finance.jpeg",
-      "Follow Up HTML Email .jpeg",
-      "Invoice Creation.jpeg",
-      "Invoice Email.jpeg",
-      "Invoice PDF and Email.jpeg",
-      "Invoice PDF.jpeg",
-      "Projects.jpeg"
-    ],
-    "thumbnail": "Thumbnail.jpeg"
-  },
-  {
-    "title": "Executive Operations & Performance Dashboard",
-    "shortTitle": "Federon BI Dashboard",
-    "categories": [
-      "Dashboards & Analytics",
-      "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Federon Procurement Solutions",
-    "role": "Power Platform Developer",
-    "period": "2026",
-    "stack": [
-      "Power BI",
-      "Dataverse"
-    ],
-    "summary": "Executive dashboard providing end-to-end visibility on contract lifecycle, performance, and operational efficiency.",
-    "featured": false,
-    "order": 1,
-    "impact": [
-      "Enabled leadership to monitor contract pipeline, approvals, and performance in real time.",
-      "Identified operational bottlenecks through cycle time and phase analysis.",
-      "Provided actionable insights on team performance, deadlines, and conversion rates."
-    ],
-    "videoEmbed": "",
-    "folder": "14 - Federon Dashboard",
-    "id": "executive-operations-performance-dashboard",
-    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
-    "images": [
-      "Screenshot 2026-04-03 161129.png",
-      "Screenshot 2026-04-03 161200.png",
-      "Screenshot 2026-04-03 161214.png",
-      "Screenshot 2026-04-03 161227.png",
-      "Screenshot 2026-04-03 161240.png",
-      "Screenshot 2026-04-03 161252.png",
-      "Screenshot 2026-04-03 161305.png"
-    ],
-    "thumbnail": "Screenshot 2026-04-03 161214.png"
-  },
-  {
-    "title": "Finance Pro – AI Financial Command Center",
-    "shortTitle": "Finance Pro",
-    "categories": [
-      "Dashboards & Analytics",
-      "Web & App Development"
-    ],
-    "clientOrOrganization": "Personal Project",
-    "role": "Full-Stack Developer",
-    "period": "2026",
-    "stack": [
-      "React",
-      "TypeScript",
-      "Supabase",
-      "Google Gemini AI",
-      "Vercel"
-    ],
-    "summary": "AI-powered financial system combining real-time tracking, smart automation, and natural language expense management.",
-    "url": "https://finance-tracker-teal-gamma-89.vercel.app/",
-    "featured": true,
-    "order": 2,
-    "impact": [
-      "Enabled natural language financial tracking using AI (Arabic & English).",
-      "Centralized income, expenses, investments, and balances into one real-time system.",
-      "Automated detection of untracked spending through balance reconciliation.",
-      "Delivered a full product experience with secure sandbox mode for public usage."
-    ],
-    "videoEmbed": "",
-    "folder": "15 - Finance Tracker",
-    "id": "finance-pro-ai-financial-command-center",
-    "longDescription": "The Finance Tracker is a business-oriented financial management and analytics solution developed to centralize expense tracking, financial monitoring, and executive reporting into a clean and structured dashboard experience. The project was designed to transform manually managed financial records into an organized, interactive, and data-driven system that simplifies financial analysis and decision-making.\r\n\r\nThe solution allows users to manage and monitor financial activities through structured datasets, categorized transactions, KPI tracking, and dynamic visual dashboards. The platform focuses on improving financial visibility by converting raw spreadsheet data into meaningful insights through automated calculations, filtering systems, and visual analytics.\r\n\r\nThe project includes interactive dashboards displaying key financial indicators, expense distributions, category analysis, trend monitoring, and summarized business insights. The system was designed to help users quickly identify spending patterns, monitor financial performance, and make faster operational decisions without relying on manual calculations or fragmented Excel sheets.\r\n\r\nSpecial attention was given to dashboard presentation, UI organization, and executive-level readability. The interface was redesigned to provide a modern and premium reporting experience with cleaner layouts, improved data hierarchy, and visually structured KPI sections to support management reporting and stakeholder presentations.\r\n\r\nThe project demonstrates skills in financial data structuring, dashboard design, data transformation, KPI visualization, and business reporting using tools such as Excel, Pivot Tables, Power Query, formulas, and advanced reporting techniques. It highlights how operational financial processes can be streamlined into a more scalable and professional analytical solution.",
-    "images": [
-      "Screenshot 2026-04-22 232016.png",
-      "Screenshot 2026-04-22 232033.png",
-      "Screenshot 2026-04-22 232056.png",
-      "Screenshot 2026-04-22 232103.png",
-      "Screenshot 2026-04-22 232140.png",
-      "Screenshot 2026-04-22 232200.png",
-      "Screenshot 2026-04-23 002512.png",
-      "Screenshot 2026-04-23 002621.png"
-    ],
-    "thumbnail": "Screenshot 2026-04-23 002512.png"
+      "1.jpeg",
+      "2.jpeg",
+      "3.jpeg",
+      "4.jpeg",
+      "5.jpeg",
+      "6.jpeg",
+      "7.jpeg",
+      "8.jpeg",
+      "9.jpeg"
+    ]
   },
   {
     "title": "Contract Lifecycle Management System",
@@ -133,29 +189,29 @@
       "Dataverse",
       "Power BI"
     ],
-    "summary": "Enterprise contract management platform centralizing procurement workflows from discovery to submission.",
+    "summary": "Enterprise procurement platform managing the full contract lifecycle — discovery, approval, and submission — with real-time tracking.",
     "featured": true,
-    "order": 2,
+    "order": 5,
     "impact": [
       "Centralized contract operations and reduced reliance on emails and spreadsheets.",
       "Implemented structured workflow across multiple roles (discovery, partner, specialist, submission).",
       "Enabled real-time tracking and reporting of contract lifecycle and team performance."
     ],
     "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
     "folder": "2- CMS - Federon",
     "id": "contract-lifecycle-management-system",
     "longDescription": "I am currently developing a Contract Lifecycle Management System for Federon Procurement Solutions, designed to centralize and digitize complex procurement workflows across multiple teams. The platform integrates external contract data into a unified system and manages the full operational lifecycle from initial discovery through internal evaluation, assignment, and submission processes.\r\n\r\nThe solution supports a structured, role-based workflow involving discovery teams, partners, specialists, and submission teams. Contracts are tracked through multiple stages, enabling clear visibility of their status, ownership, and progression. The system ensures that all actions, updates, and decisions are recorded within a centralized platform, reducing dependency on manual communication and disconnected tools.\r\n\r\nBuilt using Power Apps, Power Automate, Dataverse, and Power BI, the platform provides role-based interfaces, automated workflows, and real-time dashboards to enhance operational transparency and decision-making. The ongoing vision of the system is to evolve into a fully integrated operations platform, further centralizing procurement activities, performance tracking, and reporting across the entire contract lifecycle.",
     "images": [
-      "All Contracts Tabular.png",
-      "Contract Line Items and Gant Chart.png",
-      "Creating Line Items.png",
-      "Home Page.png",
-      "Kanban View.png",
-      "One of the Many Flows.png",
-      "Powerbi Dashboard.png",
-      "Specific Contract Page.png"
-    ],
-    "thumbnail": "Home Page.png"
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png"
+    ]
   },
   {
     "title": "ASU Employment Fair Registration System",
@@ -175,71 +231,31 @@
       "Google Sheets",
       "App Script"
     ],
-    "summary": "End-to-end event registration and QR-based verification system handling 15,000+ participants.",
+    "summary": "End-to-end event registration and QR-based check-in system handling 15,000+ participants with real-time analytics.",
     "featured": true,
-    "order": 3,
+    "order": 6,
     "impact": [
       "Managed registration and attendance tracking for over 15,000 participants.",
       "Replaced manual Excel-based processes with a fully automated digital system.",
       "Enabled real-time analytics, filtering, and targeted communication during and after the event."
     ],
     "videoEmbed": "https://www.youtube.com/embed/M0VVYtuocNw",
+    "thumbnail": "thumbnail.jpg",
     "folder": "3- ASU Caree Center",
     "id": "asu-employment-fair-registration-system",
     "longDescription": "I developed a smart registration and event management system for the ASU Career Center, designed to handle over 15,000 participants during the Employment Fair. The solution replaced manual Excel-based processes with a fully automated and centralized digital system, improving efficiency, accuracy, and real-time visibility across event operations.\r\n\r\nParticipants registered through an online form, triggering an automated workflow that generated a unique QR code and sent it via a professionally designed email. During the event, volunteers used a mobile Power Apps application to scan QR codes or search participants using identifiers such as phone number or ID, enabling fast and accurate attendance tracking. The system also supported workshop access control with capacity limitations.\r\n\r\nAn administrative interface allowed organizers to manage workshops and monitor operations through an interactive dashboard, providing real-time insights before, during, and after the event. Users could filter participant data, export results, and send targeted communications directly from the system. Built using Power Apps, Power Automate, SharePoint, Power BI, Google Sheets, and App Script, the solution significantly improved event management efficiency and enabled data-driven decision-making.",
     "images": [
+      "1.png",
+      "2.jpg",
       "3.png",
       "4.png",
       "5.png",
       "6.png",
       "7.png",
       "8.png",
-      "MainPage.png",
-      "Screenshot 2025-01-23 150346.png",
-      "Screenshot 2025-02-19 003104.png",
-      "WhatsApp Image 2025-02-28 at 02.05.25_119dc703.jpg"
-    ],
-    "thumbnail": "WhatsApp Image 2025-02-28 at 02.05.25_119dc703.jpg"
-  },
-  {
-    "title": "Employee Recognition & Nomination Platform",
-    "shortTitle": "Nestlé Nomination App",
-    "categories": [
-      "Digital HR",
-      "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Nestlé",
-    "role": "Power Platform Developer",
-    "period": "2025",
-    "stack": [
-      "Power Apps",
-      "Power Automate",
-      "SharePoint"
-    ],
-    "summary": "Digital nomination platform streamlining employee recognition with role-based workflows and modern UI/UX.",
-    "featured": false,
-    "order": 4,
-    "impact": [
-      "Digitized and streamlined the employee nomination and recognition process.",
-      "Improved user engagement through a modern and intuitive UI/UX experience.",
-      "Automated multi-stage approval workflow and communication across HR and management."
-    ],
-    "videoEmbed": "",
-    "folder": "5 - Nestle Nominations",
-    "id": "employee-recognition-nomination-platform",
-    "longDescription": "I developed an Employee Recognition and Nomination platform for Nestlé to digitize and streamline the process of recognizing employee achievements across the organization. The application allows users to nominate colleagues through a guided multi-step experience, capturing nominator details, nominee information, nomination context, and supporting documents in a structured and user-friendly way.\r\n\r\nThe solution features a role-based workflow involving nominators, HR teams, and management, enabling efficient review, decision-making, and communication. HR can evaluate nominations, provide feedback through threaded comments, and approve submissions, after which nominees receive automated notifications and can contribute additional content such as supporting videos. The process continues through management review, where final decisions are made across different recognition categories.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the platform emphasizes a modern UI/UX design, providing a smooth, engaging, and intuitive user experience. The system centralizes the entire nomination lifecycle, enhances transparency, and improves participation in employee recognition programs.",
-    "images": [
-      "All New Nomination - HR View.png",
-      "Attachments.png",
-      "Email to Nominee.png",
-      "Mancom View After Video Upload.png",
-      "Nomination Details.png",
-      "Nominator Details.png",
-      "Nominee - Modern People Picker.png",
-      "Nominee Details.png",
-      "Nominee Opening Page - Deep Linking.png"
-    ],
-    "thumbnail": "Mancom View After Video Upload.png"
+      "9.png",
+      "10.png"
+    ]
   },
   {
     "title": "AI-Powered HR & ATS Automation System",
@@ -257,15 +273,16 @@
       "AI Builder",
       "SharePoint"
     ],
-    "summary": "AI-driven recruitment system automating CV screening, candidate ranking, and HR workflows.",
-    "featured": true,
-    "order": 5,
+    "summary": "AI-driven recruitment platform automating CV screening, candidate ranking, and HR workflows using AI Builder.",
+    "featured": false,
+    "order": 7,
     "impact": [
       "Automated CV screening and keyword extraction using AI Builder.",
       "Reduced manual recruitment effort through dynamic candidate filtering and ranking.",
       "Enabled personalized communication with candidates through automated email workflows."
     ],
     "videoEmbed": "https://www.youtube.com/embed/zJimL4T-EwU",
+    "thumbnail": "thumbnail.png",
     "folder": "4 - HR Demo System",
     "id": "ai-powered-hr-ats-automation-system",
     "longDescription": "I developed an AI-powered HR system prototype to demonstrate how recruitment and HR processes can be fully automated using Microsoft Power Platform. The solution includes a complete Applicant Tracking System (ATS) that allows recruiters to create job postings, collect candidate applications through online forms, and manage the recruitment pipeline in a structured and efficient way.\r\n\r\nCandidate applications and CVs are automatically processed using Power Automate and AI Builder, which extract key information and relevant skills from uploaded CVs and store them in a structured format. Recruiters can then review candidates through a PowerApps interface, filter applicants by criteria such as degree level or keywords, and prioritize candidates based on AI-driven relevance. The system also allows viewing CVs directly within the application and managing candidate progression through different recruitment stages.\r\n\r\nThe platform includes automated communication workflows, sending personalized HTML emails to candidates, including interview invitations for selected applicants and detailed feedback for rejected candidates. In addition, a payroll module is integrated to track working hours, calculate compensation, and automate salary notifications. Built using Power Apps, Power Automate, AI Builder, and SharePoint, this project demonstrates how HR operations can be transformed into a scalable, automated, and data-driven system.",
@@ -277,185 +294,90 @@
       "5.png",
       "6.png",
       "7.png"
-    ],
-    "thumbnail": "3.png"
+    ]
   },
   {
-    "title": "Quality Tracking & Ticket Management System",
-    "shortTitle": "Nestlé Ticketing System",
+    "title": "HR Absenteeism & Workforce Analytics System",
+    "shortTitle": "Absenteeism Analytics",
     "categories": [
+      "Digital HR",
+      "Dashboards & Analytics",
       "Business Apps & Automation"
     ],
     "clientOrOrganization": "Nestlé",
     "role": "Power Platform Developer",
-    "period": "2025",
-    "stack": [
-      "Power Apps",
-      "Power Automate",
-      "SharePoint",
-      "Power BI"
-    ],
-    "summary": "End-to-end ticketing system centralizing issue tracking, resolution workflows, and performance monitoring.",
-    "featured": false,
-    "order": 5,
-    "impact": [
-      "Centralized issue tracking and eliminated reliance on emails and manual follow-ups.",
-      "Automated ticket lifecycle with role-based workflows and notifications.",
-      "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
-    ],
-    "videoEmbed": "",
-    "folder": "6- Nestle Quality Tracking",
-    "id": "quality-tracking-ticket-management-system",
-    "longDescription": "I developed a Quality Tracking and Ticket Management system for Nestlé to centralize and streamline the process of reporting, tracking, and resolving operational issues across teams. The platform allows employees to submit tickets with detailed information and attachments, after which each ticket is automatically assigned a unique reference number and routed to the responsible processor through automated workflows.\r\n\r\nThe system manages the full ticket lifecycle, including issue investigation, root cause analysis, managerial review, and requester validation or escalation. All communications and actions are handled within the application, supported by automated HTML email notifications with deep linking to ensure seamless user interaction and follow-up. Scheduled reminders are also implemented to notify stakeholders when tickets remain pending beyond defined timeframes.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Power BI, the solution provides role-based views for requesters, processors, managers, and administrators, along with dashboards that offer real-time insights into ticket volume, resolution performance, and team activity. The system improves operational transparency, accountability, and efficiency while delivering a structured and scalable issue management process.",
-    "images": [
-      "Screenshot 2026-03-17 145306.png",
-      "Screenshot 2026-03-17 145503.png",
-      "Screenshot 2026-03-17 145536.png",
-      "Screenshot 2026-03-17 145601.png",
-      "Screenshot 2026-03-17 145621.png",
-      "Screenshot 2026-03-17 145655.png"
-    ],
-    "thumbnail": "Screenshot 2026-03-17 145621.png"
-  },
-  {
-    "title": "Internal Operations Applications",
-    "shortTitle": "Orange Business Apps",
-    "categories": [
-      "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Orange Business",
-    "role": "Power Platform Developer Intern",
-    "period": "2024",
+    "period": "2026",
     "stack": [
       "Power Apps",
       "Power Automate",
       "SharePoint",
       "Excel"
     ],
-    "summary": "Developed internal apps for learning management and procurement tracking used across enterprise teams.",
+    "summary": "Automated Nestlé HR system ingesting monthly Excel files to generate structured workforce analytics, reporting matrices, and absence insights.",
     "featured": false,
-    "order": 6,
+    "order": 8,
     "impact": [
-      "Improved access to training programs for over 2,500 employees.",
-      "Streamlined procurement tracking and approval workflows.",
-      "Enabled better operational visibility through centralized applications."
+      "Automated monthly absence data ingestion from Excel into SharePoint through Power Automate.",
+      "Built historical employee tracking to manage active, inactive, new, and transferred employees accurately.",
+      "Created dynamic HR reporting matrices for department, employee, organization, and absence type analysis.",
+      "Reduced manual calculations and improved reporting accuracy through centralized workforce data."
     ],
     "videoEmbed": "",
-    "folder": "7- Orange Business Apps",
-    "id": "internal-operations-applications",
-    "longDescription": "During my time at Orange Business, I developed two PowerApps solutions aimed at improving internal operations and supporting data-driven decision-making across teams. The first solution, MSC Learning Studio, was designed for the Learning & Development function to provide more than 2,500 employees with a centralized platform to access training programs, learning resources, and development opportunities in a structured and user-friendly way.\r\n\r\nThe second solution, Global PO Tracker, focuses on procurement operations by enabling teams to track purchase orders, monitor their status, and follow approval workflows in real time. The system reduces reliance on manual tracking and improves coordination between different stakeholders involved in the procurement process.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Excel, these applications enhanced operational efficiency, improved visibility on internal processes, and contributed to a more structured and scalable way of managing learning and procurement activities within the organization.",
-    "images": [
-      "1.png",
-      "2.png",
-      "3.png",
-      "Screenshot 2024-12-27 133129.png"
-    ],
-    "thumbnail": "Screenshot 2024-12-27 133129.png"
-  },
-  {
-    "title": "Inventory Management System",
-    "shortTitle": "Bondy Inventory",
-    "categories": [
-      "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Bondy",
-    "role": "Power Platform Developer",
-    "period": "2025",
-    "stack": [
-      "Power Apps",
-      "Power Automate"
-    ],
-    "summary": "Inventory tracking system managing stock levels, product transformation, and sales operations.",
-    "featured": false,
-    "order": 7,
-    "impact": [
-      "Enabled real-time tracking of inventory and stock levels.",
-      "Improved visibility on product lifecycle from raw materials to finished goods.",
-      "Centralized transaction tracking for purchases, production, and sales."
-    ],
-    "videoEmbed": "",
-    "folder": "8- Bondy Inventory System",
-    "id": "inventory-management-system",
-    "longDescription": "I developed an inventory management system for Bondy to track product transactions, stock levels, and the transformation of raw materials into finished goods. The solution monitors the full inventory lifecycle, from purchasing garments as raw materials to converting them into final products and tracking their sales.\r\n\r\nThe application provides real-time visibility into stock levels, current inventory value, and the availability of both packaging materials and finished products. It centralizes all inventory-related operations, including purchases, production, and sales transactions, ensuring accurate and up-to-date tracking.\r\n\r\nBuilt using Power Apps and Power Automate, the system improves operational visibility and enables more efficient management of inventory and supply chain activities.\r\n",
+    "thumbnail": "thumbnail.png",
+    "folder": "19 - Nestle - Abs & Ovr",
+    "id": "hr-absenteeism-workforce-analytics-system",
+    "longDescription": "This project was developed to transform a highly manual HR absenteeism reporting process into a structured, automated, and scalable workforce analytics system using Power Apps, Power Automate, SharePoint, and Excel.\r\n\r\nOriginally, the process relied heavily on Excel files, manual calculations, employee checks, and repetitive monthly reporting activities. HR teams needed to manually calculate absence hours, validate active employees, update organizational changes, and generate absenteeism metrics across departments and organizations. A single incorrect formula or missing update could compromise the accuracy of the entire report.\r\n\r\nTo solve this problem, I designed and built a complete HR workforce analytics solution where the user only uploads the monthly Excel file while the platform automatically processes, transforms, stores, and analyzes the data.\r\n\r\nThe solution includes automated Excel ingestion through Power Automate, historical employee assignment tracking, structured SharePoint data architecture, and interactive reporting matrices built in Power Apps. The system dynamically tracks employee movements between departments and organizations, inactive employees, new hires, and historical workforce changes while maintaining accurate reporting for every reporting period.\r\n\r\nThe platform provides several analytical views including:\r\n\r\nDepartment absenteeism matrix\r\nEmployee-level absenteeism tracking\r\nOrganization comparison reporting\r\nAbsence type analysis\r\nHistorical absence records\r\nWorkforce capacity calculations\r\nImport audit history and tracking\r\n\r\nThe solution also calculates:\r\n\r\nTotal working capacity\r\nMonthly absenteeism rates\r\nYear-to-date absenteeism metrics\r\nActive employee counts\r\nDepartment and organization performance indicators\r\n\r\nOne of the most critical parts of the project was implementing historical employee assignment logic. Instead of overwriting employee records, the system maintains assignment history over time, allowing accurate reporting even when employees move between departments, organizations, or become inactive.\r\n\r\nThe final system significantly reduced manual work, improved reporting accuracy, centralized workforce data, and created a scalable HR analytics foundation that can later be extended to additional workforce operations modules such as overtime analytics, approval workflows, Power BI dashboards, and workforce performance monitoring.",
     "images": [
       "1.png",
       "2.png",
       "3.png",
       "4.png",
       "5.png",
-      "6.jpg"
-    ],
-    "thumbnail": "2.png"
+      "6.png",
+      "7.png",
+      "8.png",
+      "9.png",
+      "10.png",
+      "11.png"
+    ]
   },
   {
-    "title": "Internal E-Commerce & Inventory System",
-    "shortTitle": "YM Store",
+    "title": "Executive Operations & Performance Dashboard",
+    "shortTitle": "Federon BI Dashboard",
     "categories": [
+      "Dashboards & Analytics",
       "Business Apps & Automation"
     ],
-    "clientOrOrganization": "Personal Project",
+    "clientOrOrganization": "Federon Procurement Solutions",
     "role": "Power Platform Developer",
-    "period": "2024",
+    "period": "2026",
     "stack": [
-      "Power Apps",
-      "Power Automate",
-      "Excel"
+      "Power BI",
+      "Dataverse"
     ],
-    "summary": "Internal store system managing customers, orders, inventory, and financial tracking.",
+    "summary": "Power BI executive dashboard giving leadership real-time visibility into contract pipeline, team performance, and operational bottlenecks.",
     "featured": false,
-    "order": 8,
+    "order": 9,
     "impact": [
-      "Automated purchasing process with real-time inventory updates.",
-      "Integrated order management with invoice generation and email notifications.",
-      "Centralized financial tracking with transaction history and reporting."
+      "Enabled leadership to monitor contract pipeline, approvals, and performance in real time.",
+      "Identified operational bottlenecks through cycle time and phase analysis.",
+      "Provided actionable insights on team performance, deadlines, and conversion rates."
     ],
-    "videoEmbed": "https://www.youtube.com/embed/VkqxCcYTvqI",
-    "folder": "9- YM Store",
-    "id": "internal-e-commerce-inventory-system",
-    "longDescription": "I developed an internal digital store system designed to manage purchasing, inventory, and financial tracking within a centralized platform. The solution allows users to create accounts, browse available products, add items to a cart, and complete purchases directly within the application, with automated email notifications and PDF invoice generation.\r\n\r\nThe system also includes an administrative interface for managing products, updating stock levels, and monitoring customer activity. Inventory is automatically updated based on purchases, ensuring real-time stock accuracy. Administrators can also track top customers, monitor product performance, and analyze transaction data.\r\n\r\nIn addition, the application records all financial activities in an accounting-style journal, capturing incoming and outgoing transactions, payments, and revenue. Built using Power Apps, Power Automate, and Excel, the project demonstrates a complete end-to-end system covering customer management, order processing, inventory control, and financial tracking.",
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "14 - Federon Dashboard",
+    "id": "executive-operations-performance-dashboard",
+    "longDescription": "I developed an Executive Operations & Performance Dashboard for Federon Procurement Solutions to provide leadership with full visibility into contract lifecycle performance, operational efficiency, and team productivity. The dashboard centralizes data from the contract management system and transforms it into actionable insights across multiple dimensions of the business.\r\n\r\nThe solution includes multiple analytical views such as pipeline tracking, conversion funnels, team performance, deadline risk monitoring, and operational bottleneck analysis. It enables stakeholders to understand how contracts move through different phases, identify delays, measure approval rates, and evaluate workload distribution across teams and individuals.\r\n\r\nThe dashboard also provides predictive and performance-driven insights, including approval rates, expected pipeline outcomes, and urgency-based prioritization. Advanced filtering capabilities allow users to analyze data by partner, specialist, category, contract type, and time period, supporting both high-level strategic decisions and detailed operational analysis.\r\n\r\nBuilt using Power BI and Dataverse, the solution transforms raw operational data into a structured, visual, and decision-oriented platform, significantly improving transparency, accountability, and performance management across the organization.",
     "images": [
       "1.png",
       "2.png",
       "3.png",
       "4.png",
-      "Screenshot 2026-03-14 231743.png",
-      "Screenshot 2026-03-14 231816.png",
-      "Screenshot 2026-03-14 232102.png"
-    ],
-    "thumbnail": "Screenshot 2026-03-14 231743.png"
-  },
-  {
-    "title": "Change Request Management System",
-    "shortTitle": "RATP Dev System",
-    "categories": [
-      "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "RATP Dev",
-    "role": "Power Platform Developer",
-    "period": "2025",
-    "stack": [
-      "Power Apps",
-      "Power Automate",
-      "SharePoint"
-    ],
-    "summary": "Workflow-driven system managing change requests from submission to approval and implementation.",
-    "featured": false,
-    "order": 9,
-    "impact": [
-      "Structured and standardized change request lifecycle across multiple stakeholders.",
-      "Automated communication and approval workflows, reducing manual coordination.",
-      "Improved transparency and tracking of requests through dashboards and status monitoring."
-    ],
-    "videoEmbed": "",
-    "folder": "10 - RATP Dev",
-    "id": "change-request-management-system",
-    "longDescription": "I developed a Change Request Management system for RATP Dev to digitize and streamline the process of handling internal system updates, issues, and improvement requests. The platform allows employees to submit change requests, including bugs, enhancements, or recommendations, which are then tracked through a structured and centralized workflow.\r\n\r\nThe system manages the full lifecycle of each request, starting with technical assessment, followed by potential budget evaluation, and progressing through business approval before implementation. Once completed, stakeholders are notified, ensuring clear communication and accountability throughout the process.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the solution includes automated workflows, role-based interactions, and dashboards that provide real-time visibility into request status and operational performance. The system improves efficiency, reduces reliance on manual coordination, and ensures a more transparent and controlled change management process.",
-    "images": [
-      "1.png",
-      "2.png",
-      "Flow.jpeg"
-    ],
-    "thumbnail": "1.png"
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png"
+    ]
   },
   {
     "title": "Smart Interview Scheduling System",
@@ -473,7 +395,7 @@
       "Outlook",
       "Microsoft Teams"
     ],
-    "summary": "Automated interview scheduling with dynamic time slots and integrated Outlook & Teams invitations.",
+    "summary": "Automated interview scheduling system with dynamic time-slot management and integrated Outlook & Teams calendar invitations.",
     "featured": false,
     "order": 10,
     "impact": [
@@ -482,233 +404,82 @@
       "Enhanced candidate experience through structured and branded communication."
     ],
     "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
     "folder": "11 - Interviews Scheduling",
     "id": "smart-interview-scheduling-system",
     "longDescription": "I developed a smart interview scheduling system to demonstrate how recruitment processes can be streamlined while enhancing candidate experience and employer branding. The application allows recruiters to select candidates, define interview duration, and generate available time slots dynamically based on working hours and availability.\r\n\r\nOnce a time slot is selected, the system automatically creates a meeting integrated with Outlook and Microsoft Teams and sends a professionally designed HTML invitation to the candidate. The process is fully automated and can be completed in just a few clicks, eliminating manual coordination and scheduling effort.\r\n\r\nBuilt using Power Apps, Power Automate, Outlook, and Microsoft Teams integration, the solution highlights how simple automation can significantly improve recruitment efficiency and deliver a more professional and structured communication experience.",
     "images": [
-      "Getting the Interview Email.png",
-      "Interview Scheduled.png",
-      "Scheduling The Interview Through PowerApp.png"
-    ],
-    "thumbnail": "Scheduling The Interview Through PowerApp.png"
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ]
   },
   {
-    "title": "Automated Certificate Generation System",
-    "shortTitle": "Certificate Automation",
+    "title": "Quality Tracking & Ticket Management System",
+    "shortTitle": "Nestlé Ticketing System",
     "categories": [
-      "Business Apps & Automation",
-      "Digital HR"
+      "Business Apps & Automation"
     ],
-    "clientOrOrganization": "Personal Project",
+    "clientOrOrganization": "Nestlé",
     "role": "Power Platform Developer",
     "period": "2025",
     "stack": [
+      "Power Apps",
       "Power Automate",
-      "Excel",
-      "HTML/CSS"
+      "SharePoint",
+      "Power BI"
     ],
-    "summary": "Automated system generating and sending personalized certificates at scale using dynamic templates.",
+    "summary": "Nestlé internal ticketing system centralizing issue tracking, role-based resolution workflows, and live performance monitoring dashboards.",
     "featured": false,
     "order": 11,
     "impact": [
-      "Eliminated manual certificate creation and email sending processes.",
-      "Enabled scalable generation of personalized PDF certificates.",
-      "Delivered consistent and professional branded communication experience."
+      "Centralized issue tracking and eliminated reliance on emails and manual follow-ups.",
+      "Automated ticket lifecycle with role-based workflows and notifications.",
+      "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
     ],
     "videoEmbed": "",
-    "folder": "12- Certificate Generatiom",
-    "id": "automated-certificate-generation-system",
-    "longDescription": "I designed and developed an automated certificate generation system to streamline the process of creating and sending personalized certificates at scale. The solution uses a structured Excel file as a data source, where each row represents a recipient, including their name and email address.\r\n\r\nUsing Power Automate, the system reads the data, dynamically injects recipient information into a professionally designed HTML certificate template, and generates a PDF-ready document for each individual. The process is fully automated, allowing certificates to be created consistently without any manual editing or formatting.\r\n\r\nThe workflow also sends personalized HTML emails to each recipient, attaching their certificate and delivering a cohesive, branded communication experience. Built using Power Automate, Excel, and HTML/CSS, the solution transforms a repetitive manual process into a scalable and efficient automation while maintaining a high level of design quality and professionalism.",
-    "images": [
-      "Getting the Interview Email.png",
-      "Interview Scheduled.png",
-      "Scheduling The Interview Through PowerApp.png"
-    ],
-    "thumbnail": "Screenshot 2026-03-17 022803.png"
-  },
-  {
-    "title": "Interactive Financial Dashboard",
-    "shortTitle": "Excel Dashboard",
-    "categories": [
-      "Dashboards & Analytics"
-    ],
-    "clientOrOrganization": "Personal Project",
-    "role": "Data Analyst / Developer",
-    "period": "2023",
-    "stack": [
-      "Excel",
-      "VBA",
-      "Pivot Tables"
-    ],
-    "summary": "Dynamic financial dashboard with automated tracking, interactive charts, and real-time data updates.",
-    "featured": false,
-    "order": 12,
-    "impact": [
-      "Built a fully dynamic dashboard with real-time updates based on user input.",
-      "Automated data handling and reporting using VBA and Excel forms.",
-      "Delivered clear financial insights through interactive charts and KPI tracking."
-    ],
-    "videoEmbed": "https://www.youtube.com/embed/1YLmsf0g3-U",
-    "folder": "13- Excel Dashboard",
-    "id": "interactive-financial-dashboard",
-    "longDescription": "I developed an interactive financial dashboard in Excel to track income, expenses, and overall financial performance in a dynamic and automated way. The solution includes multiple visual components such as income and expense tracking, profit analysis with highlighted peak values, net revenue comparison, and goal tracking indicators.\r\n\r\nThe dashboard is fully dynamic, with data entered through forms and automatically reflected across all visualizations in real time. It leverages Pivot Tables, slicers, and interactive charts to provide a clear and structured overview of financial data, enabling better analysis and decision-making.\r\n\r\nTo enhance automation, I implemented VBA and Excel forms to streamline data input and processing, reducing manual effort and ensuring data consistency. This project demonstrates how Excel can be transformed into a powerful reporting and visualization tool capable of delivering advanced analytics without relying on external BI platforms.",
-    "images": [
-      "Slide1.PNG",
-      "Slide2.PNG",
-      "Slide3.PNG",
-      "Slide4.PNG"
-    ],
-    "thumbnail": "Slide1.PNG"
-  },
-  {
-    "title": "Fabula – Creative Portfolio Website",
-    "shortTitle": "Fabula Portfolio",
-    "categories": [
-      "Web & App Development"
-    ],
-    "clientOrOrganization": "Fabula",
-    "role": "Web Developer",
-    "period": "2026",
-    "stack": [
-      "React",
-      "TypeScript",
-      "CSS",
-      "Vercel"
-    ],
-    "summary": "A premium personal portfolio website showcasing creative work, video content, projects, experience, and contact details.",
-    "url": "https://youhannamaher.github.io/fabula-portfolio/",
-    "featured": false,
-    "order": 13,
-    "impact": [
-      "Designed and built a clean, premium portfolio experience tailored to a creative professional.",
-      "Structured creative work into clear sections including skills, video portfolio, projects, and experience.",
-      "Implemented a responsive layout with polished visual identity, smooth navigation, and a contact form."
-    ],
-    "videoEmbed": "",
-    "folder": "17 - Fabula Portfolio",
-    "id": "fabula-creative-portfolio-website",
-    "longDescription": "Fabula is a premium creative portfolio website developed to showcase the professional identity, multimedia work, and storytelling capabilities of a creative content professional. The platform combines elegant visual design with structured content presentation to create a modern digital portfolio experience focused on branding, video production, and creative communication.\r\n\r\nThe website includes dedicated sections for personal introduction, creative skills, professional experience, multimedia portfolio projects, and direct communication. A categorized video portfolio system was implemented to organize creative productions across different themes such as branding, documentaries, campaigns, editing, and social media content.\r\n\r\nThe platform was designed with a strong focus on visual hierarchy, typography, responsive layouts, and premium UI/UX styling to reflect the creative and artistic nature of the portfolio owner while maintaining professionalism and clarity. The result is a polished personal branding website that serves both as a professional portfolio and as a digital representation of creative identity and storytelling expertise.",
-    "images": [
-      "Screenshot 2026-05-10 232102.png",
-      "Screenshot 2026-05-10 232113.png",
-      "Screenshot 2026-05-10 232129.png",
-      "Screenshot 2026-05-10 232141.png",
-      "Screenshot 2026-05-10 232151.png",
-      "Screenshot 2026-05-10 232200.png",
-      "Screenshot 2026-05-10 232209.png"
-    ],
-    "thumbnail": "Screenshot 2026-05-10 232113.png"
-  },
-  {
-    "title": "Google Forms Financial Habits Analysis Dashboard",
-    "shortTitle": "Financial Habits Dashboard",
-    "categories": [
-      "Dashboards & Analytics"
-    ],
-    "clientOrOrganization": "Academic Statistical Analysis Project",
-    "role": "Data Analyst & Dashboard Developer",
-    "period": "2026",
-    "stack": [
-      "Microsoft Excel",
-      "Pivot Tables",
-      "Pivot Charts",
-      "Google Forms",
-      "Excel Formulas"
-    ],
-    "summary": "Transformed raw Google Forms survey responses into a complete Excel statistical analysis dashboard with KPIs, charts, pivot tables, calculated fields, and financial behavior insights.",
-    "featured": false,
-    "order": 14,
-    "impact": [
-      "Cleaned and standardized more than 100 messy survey responses containing inconsistent numeric formats and manual text entries.",
-      "Built a professional Excel dashboard with KPIs, statistical measures, cross-tab analysis, and interactive visualizations.",
-      "Generated actionable insights about savings behavior, budgeting habits, payment methods, expenses, and financial satisfaction."
-    ],
-    "videoEmbed": "",
-    "folder": "20 - Miryam - Financial Habits Analysis",
-    "id": "google-forms-financial-habits-analysis-dashboard",
-    "longDescription": "This project focused on transforming raw Google Forms survey responses into a complete Excel-based statistical analysis and dashboard system. The original dataset contained messy manual entries, inconsistent numeric formats, spelling mistakes, mixed text values, and unstandardized categories that required extensive cleaning before any meaningful analysis could be performed.\r\n\r\nI cleaned and standardized the dataset by converting text-based numeric values (such as “20k” or “500-600 EGP”) into usable formats, correcting category inconsistencies, handling missing and irregular values, and preparing structured analytical fields including savings rate, expense rate, net balance, age groups, and expense tracking levels.\r\n\r\nThe final Excel workbook was organized into multiple analytical layers including raw data, cleaned data, pivot tables, statistical measures, KPI reporting, insights, and a fully interactive dashboard. The dashboard provided visual analysis for savings behavior, budgeting habits, financial satisfaction, payment methods, spending categories, expense tracking behavior, income versus expenses, and demographic comparisons across more than 100 survey responses.\r\n\r\nThe project included:\r\n\r\nData cleaning and transformation\r\nPivot tables and pivot charts\r\nStatistical measures (mean, median, standard deviation, min/max)\r\nKPI cards and executive summary metrics\r\nCross-tab analysis and comparative charts\r\nDashboard design and visualization\r\nFinancial behavior insights generation\r\n\r\nThis project demonstrates strong capabilities in Excel analytics, survey data processing, dashboard design, statistical analysis, KPI reporting, and transforming real-world unstructured datasets into clear and actionable insights.",
+    "thumbnail": "thumbnail.png",
+    "folder": "6- Nestle Quality Tracking",
+    "id": "quality-tracking-ticket-management-system",
+    "longDescription": "I developed a Quality Tracking and Ticket Management system for Nestlé to centralize and streamline the process of reporting, tracking, and resolving operational issues across teams. The platform allows employees to submit tickets with detailed information and attachments, after which each ticket is automatically assigned a unique reference number and routed to the responsible processor through automated workflows.\r\n\r\nThe system manages the full ticket lifecycle, including issue investigation, root cause analysis, managerial review, and requester validation or escalation. All communications and actions are handled within the application, supported by automated HTML email notifications with deep linking to ensure seamless user interaction and follow-up. Scheduled reminders are also implemented to notify stakeholders when tickets remain pending beyond defined timeframes.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Power BI, the solution provides role-based views for requesters, processors, managers, and administrators, along with dashboards that offer real-time insights into ticket volume, resolution performance, and team activity. The system improves operational transparency, accountability, and efficiency while delivering a structured and scalable issue management process.",
     "images": [
       "1.png",
       "2.png",
       "3.png",
       "4.png",
-      "5.png"
-    ],
-    "thumbnail": "1.png"
+      "5.png",
+      "6.png"
+    ]
   },
   {
-    "title": "PathWise – AI Academic & Career Compass",
-    "shortTitle": "PathWise",
+    "title": "Employee Recognition & Nomination Platform",
+    "shortTitle": "Nestlé Nomination App",
     "categories": [
-      "Web & App Development"
+      "Digital HR",
+      "Business Apps & Automation"
     ],
-    "clientOrOrganization": "Personal Project",
-    "role": "Full-Stack Developer",
-    "period": "2026",
+    "clientOrOrganization": "Nestlé",
+    "role": "Power Platform Developer",
+    "period": "2025",
     "stack": [
-      "Next.js",
-      "React",
-      "Supabase",
-      "Google Gemini AI",
-      "Vercel"
+      "Power Apps",
+      "Power Automate",
+      "SharePoint"
     ],
-    "summary": "AI-powered platform helping students discover suitable university programs and career paths through personalized assessments and real educational data.",
-    "url": "https://pathwise-edu.vercel.app",
+    "summary": "Nestlé digital nomination platform with modern UI, multi-stage approval workflows, and automated HR & management communication.",
     "featured": false,
-    "order": 0,
+    "order": 12,
     "impact": [
-      "Built an AI-powered career guidance experience personalized to each student profile.",
-      "Integrated real Egyptian university data with intelligent matching and comparison tools.",
-      "Developed a secure full-stack architecture with AI fallback systems and responsive design.",
-      "Transformed career exploration into an interactive and decision-oriented journey."
+      "Digitized and streamlined the employee nomination and recognition process.",
+      "Improved user engagement through a modern and intuitive UI/UX experience.",
+      "Automated multi-stage approval workflow and communication across HR and management."
     ],
     "videoEmbed": "",
-    "folder": "16 - PathWise",
-    "id": "pathwise-ai-academic-career-compass",
-    "longDescription": "PathWise is a career guidance and educational orientation platform designed to help students discover academic paths and career opportunities that align with their personalities, interests, skills, and ambitions. The project was developed as a business-oriented digital solution combining technology, education, and personalized career exploration into a modern interactive experience.\r\n\r\nThe platform features a complete multi-step “Career DNA” assessment system where users answer questions related to interests, work styles, strengths, goals, and personal preferences. Based on the responses, the system generates personalized academic and career recommendations tailored to each student profile.\r\n\r\nThe project was built as a real MVP (Minimum Viable Product) with a fully designed user journey including landing pages, authentication flows, dashboard experience, assessment process, recommendation engine, and program exploration pages. The interface was carefully designed using modern UI/UX principles with responsive layouts, glassmorphism-inspired visuals, animations, and smooth interactions to create a professional and engaging experience for students.\r\n\r\nPathWise was not only a technical project but also a complete entrepreneurial and business model initiative. The project included market positioning, value proposition design, business strategy, MVP presentation, and a full startup-oriented pitch experience. The platform demonstrates how digital tools and intelligent profiling systems can simplify educational orientation and help students make more informed academic and career decisions.\r\n\r\nThe solution was developed using modern web technologies including Next.js, TypeScript, Tailwind CSS, and Framer Motion, with deployment and scalability considerations integrated into the project vision from the beginning.",
-    "images": [
-      "1.png",
-      "Screenshot 2026-05-10 231520.png",
-      "Screenshot 2026-05-10 231535.png",
-      "Screenshot 2026-05-10 231609.png",
-      "Screenshot 2026-05-10 231623.png",
-      "Screenshot 2026-05-10 231641.png",
-      "Screenshot 2026-05-11 220430.png",
-      "Screenshot 2026-05-11 220534.png"
-    ],
-    "thumbnail": "Screenshot 2026-05-11 220430.png"
-  },
-  {
-    "title": "Bondy – Social Gaming Platform",
-    "shortTitle": "Bondy",
-    "categories": [
-      "Business Apps & Automation",
-      "Web & App Development"
-    ],
-    "clientOrOrganization": "Personal Project",
-    "role": "Founder & Full-Stack Developer",
-    "period": "2026 - Present",
-    "stack": [
-      "Next.js",
-      "React",
-      "Supabase",
-      "Tailwind CSS",
-      "Vercel"
-    ],
-    "summary": "A browser-based social gaming platform where people can host real-time party games and play instantly with friends, family, or colleagues.",
-    "url": "https://bondy-eg.vercel.app",
-    "featured": true,
-    "order": 0,
-    "impact": [
-      "Built a real-time multiplayer platform with room codes, host controls, and synchronized gameplay.",
-      "Designed and launched multiple social games focused on connection, laughter, and group interaction.",
-      "Created a no-download experience optimized for mobile and desktop browsers.",
-      "Developed Bondy as an ongoing product with branding, SEO, feedback flows, and future game expansion."
-    ],
-    "videoEmbed": "",
-    "folder": "18 - Bondy",
-    "id": "bondy-social-gaming-platform",
-    "longDescription": "Bondy is a social gaming platform built to help people create better moments together through interactive multiplayer experiences. The project started from a simple idea: people today are constantly connected online, yet real social interaction is becoming weaker and less meaningful. Bondy was created to transform games into a tool for connection, communication, laughter, and shared memories between friends, couples, families, classmates, and teams.\r\n\r\nThe platform focuses on lightweight, accessible, and instantly playable social games that work directly through the browser without downloads or complicated setup. Users can create a room, invite others through a code, QR, or direct link, and immediately start playing together in real time from any device.\r\n\r\nBondy was designed with a strong emphasis on user experience, visual identity, and social interaction. The platform uses a premium dark-themed interface with cinematic lighting, modern animations, responsive layouts, and a mobile-first multiplayer experience to create a polished and immersive atmosphere. Every part of the experience was built to feel simple, modern, and engaging while keeping the focus on people rather than complexity.\r\n\r\nThe project includes multiplayer party games such as “Guess What” and “Think Like Me,” featuring real-time synchronization, dynamic player roles, team management, timers, scoring systems, custom word packs, and multilingual gameplay support. The backend architecture was designed to support scalable real-time sessions and smooth synchronization between players, while maintaining fairness in gameplay rotation and session flow.\r\n\r\nBeyond the games themselves, Bondy represents a larger long-term vision of building a digital social entertainment ecosystem centered around human interaction rather than passive content consumption. The platform is being developed as a real ongoing startup-style project with continuous improvements, branding development, UI/UX iterations, gameplay experimentation, and future expansion plans for additional games and social features.\r\n\r\nThis project demonstrates skills in product design, startup ideation, UI/UX design, real-time multiplayer systems, frontend development, branding, business thinking, and user-centered experience creation.",
+    "thumbnail": "thumbnail.png",
+    "folder": "5 - Nestle Nominations",
+    "id": "employee-recognition-nomination-platform",
+    "longDescription": "I developed an Employee Recognition and Nomination platform for Nestlé to digitize and streamline the process of recognizing employee achievements across the organization. The application allows users to nominate colleagues through a guided multi-step experience, capturing nominator details, nominee information, nomination context, and supporting documents in a structured and user-friendly way.\r\n\r\nThe solution features a role-based workflow involving nominators, HR teams, and management, enabling efficient review, decision-making, and communication. HR can evaluate nominations, provide feedback through threaded comments, and approve submissions, after which nominees receive automated notifications and can contribute additional content such as supporting videos. The process continues through management review, where final decisions are made across different recognition categories.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the platform emphasizes a modern UI/UX design, providing a smooth, engaging, and intuitive user experience. The system centralizes the entire nomination lifecycle, enhances transparency, and improves participation in employee recognition programs.",
     "images": [
       "1.png",
       "2.png",
@@ -717,65 +488,149 @@
       "5.png",
       "6.png",
       "7.png",
-      "8.1.png",
-      "9.png",
-      "10.jpeg",
-      "11.jpeg",
-      "12.1.png",
-      "12.2.png",
-      "13.png",
-      "15.png"
-    ],
-    "thumbnail": "Screenshot 2026-05-10 232737.png"
+      "8.png",
+      "9.png"
+    ]
   },
   {
-    "title": "HR Absenteeism & Workforce Analytics Automation System",
-    "shortTitle": "Absenteeism Analytics",
+    "title": "Change Request Management System",
+    "shortTitle": "RATP Dev System",
     "categories": [
-      "Digital HR",
-      "Business Apps & Automation",
-      "Dashboards & Analytics"
+      "Business Apps & Automation"
     ],
-    "clientOrOrganization": "Nestlé",
+    "clientOrOrganization": "RATP Dev",
     "role": "Power Platform Developer",
-    "period": "2026",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "SharePoint"
+    ],
+    "summary": "Workflow-driven platform for RATP Dev managing the full change request lifecycle from submission through multi-stakeholder approval.",
+    "featured": false,
+    "order": 13,
+    "impact": [
+      "Structured and standardized change request lifecycle across multiple stakeholders.",
+      "Automated communication and approval workflows, reducing manual coordination.",
+      "Improved transparency and tracking of requests through dashboards and status monitoring."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "10 - RATP Dev",
+    "id": "change-request-management-system",
+    "longDescription": "I developed a Change Request Management system for RATP Dev to digitize and streamline the process of handling internal system updates, issues, and improvement requests. The platform allows employees to submit change requests, including bugs, enhancements, or recommendations, which are then tracked through a structured and centralized workflow.\r\n\r\nThe system manages the full lifecycle of each request, starting with technical assessment, followed by potential budget evaluation, and progressing through business approval before implementation. Once completed, stakeholders are notified, ensuring clear communication and accountability throughout the process.\r\n\r\nBuilt using Power Apps, Power Automate, and SharePoint, the solution includes automated workflows, role-based interactions, and dashboards that provide real-time visibility into request status and operational performance. The system improves efficiency, reduces reliance on manual coordination, and ensures a more transparent and controlled change management process.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.jpeg"
+    ]
+  },
+  {
+    "title": "Internal Operations Applications",
+    "shortTitle": "Orange Business Apps",
+    "categories": [
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Orange Business",
+    "role": "Power Platform Developer Intern",
+    "period": "2024",
     "stack": [
       "Power Apps",
       "Power Automate",
       "SharePoint",
       "Excel"
     ],
-    "summary": "Automated HR absenteeism reporting system transforming monthly Excel files into structured workforce analytics and interactive reporting matrices.",
-    "featured": true,
-    "order": 0,
+    "summary": "Suite of internal Power Apps tools for Orange Business covering learning management and procurement tracking across 2,500+ employees.",
+    "featured": false,
+    "order": 14,
     "impact": [
-      "Automated monthly absence data ingestion from Excel into SharePoint through Power Automate.",
-      "Built historical employee tracking to manage active, inactive, new, and transferred employees accurately.",
-      "Created dynamic HR reporting matrices for department, employee, organization, and absence type analysis.",
-      "Reduced manual calculations and improved reporting accuracy through centralized workforce data."
+      "Improved access to training programs for over 2,500 employees.",
+      "Streamlined procurement tracking and approval workflows.",
+      "Enabled better operational visibility through centralized applications."
     ],
     "videoEmbed": "",
-    "folder": "19 - Nestle - Abs & Ovr",
-    "id": "hr-absenteeism-workforce-analytics-automation-system",
-    "longDescription": "This project was developed to transform a highly manual HR absenteeism reporting process into a structured, automated, and scalable workforce analytics system using Power Apps, Power Automate, SharePoint, and Excel.\r\n\r\nOriginally, the process relied heavily on Excel files, manual calculations, employee checks, and repetitive monthly reporting activities. HR teams needed to manually calculate absence hours, validate active employees, update organizational changes, and generate absenteeism metrics across departments and organizations. A single incorrect formula or missing update could compromise the accuracy of the entire report.\r\n\r\nTo solve this problem, I designed and built a complete HR workforce analytics solution where the user only uploads the monthly Excel file while the platform automatically processes, transforms, stores, and analyzes the data.\r\n\r\nThe solution includes automated Excel ingestion through Power Automate, historical employee assignment tracking, structured SharePoint data architecture, and interactive reporting matrices built in Power Apps. The system dynamically tracks employee movements between departments and organizations, inactive employees, new hires, and historical workforce changes while maintaining accurate reporting for every reporting period.\r\n\r\nThe platform provides several analytical views including:\r\n\r\nDepartment absenteeism matrix\r\nEmployee-level absenteeism tracking\r\nOrganization comparison reporting\r\nAbsence type analysis\r\nHistorical absence records\r\nWorkforce capacity calculations\r\nImport audit history and tracking\r\n\r\nThe solution also calculates:\r\n\r\nTotal working capacity\r\nMonthly absenteeism rates\r\nYear-to-date absenteeism metrics\r\nActive employee counts\r\nDepartment and organization performance indicators\r\n\r\nOne of the most critical parts of the project was implementing historical employee assignment logic. Instead of overwriting employee records, the system maintains assignment history over time, allowing accurate reporting even when employees move between departments, organizations, or become inactive.\r\n\r\nThe final system significantly reduced manual work, improved reporting accuracy, centralized workforce data, and created a scalable HR analytics foundation that can later be extended to additional workforce operations modules such as overtime analytics, approval workflows, Power BI dashboards, and workforce performance monitoring.",
+    "thumbnail": "thumbnail.png",
+    "folder": "7- Orange Business Apps",
+    "id": "internal-operations-applications",
+    "longDescription": "During my time at Orange Business, I developed two PowerApps solutions aimed at improving internal operations and supporting data-driven decision-making across teams. The first solution, MSC Learning Studio, was designed for the Learning & Development function to provide more than 2,500 employees with a centralized platform to access training programs, learning resources, and development opportunities in a structured and user-friendly way.\r\n\r\nThe second solution, Global PO Tracker, focuses on procurement operations by enabling teams to track purchase orders, monitor their status, and follow approval workflows in real time. The system reduces reliance on manual tracking and improves coordination between different stakeholders involved in the procurement process.\r\n\r\nBuilt using Power Apps, Power Automate, SharePoint, and Excel, these applications enhanced operational efficiency, improved visibility on internal processes, and contributed to a more structured and scalable way of managing learning and procurement activities within the organization.",
     "images": [
       "1.png",
       "2.png",
-      "3.blur.png",
+      "3.png",
+      "4.png"
+    ]
+  },
+  {
+    "title": "Inventory Management System",
+    "shortTitle": "Bondy Inventory",
+    "categories": [
+      "Business Apps & Automation"
+    ],
+    "clientOrOrganization": "Bondy",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Apps",
+      "Power Automate"
+    ],
+    "summary": "Power Apps inventory system tracking stock levels, product transformations, and sales operations for Bondy's operational needs.",
+    "featured": false,
+    "order": 15,
+    "impact": [
+      "Enabled real-time tracking of inventory and stock levels.",
+      "Improved visibility on product lifecycle from raw materials to finished goods.",
+      "Centralized transaction tracking for purchases, production, and sales."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "8- Bondy Inventory System",
+    "id": "inventory-management-system",
+    "longDescription": "I developed an inventory management system for Bondy to track product transactions, stock levels, and the transformation of raw materials into finished goods. The solution monitors the full inventory lifecycle, from purchasing garments as raw materials to converting them into final products and tracking their sales.\r\n\r\nThe application provides real-time visibility into stock levels, current inventory value, and the availability of both packaging materials and finished products. It centralizes all inventory-related operations, including purchases, production, and sales transactions, ensuring accurate and up-to-date tracking.\r\n\r\nBuilt using Power Apps and Power Automate, the system improves operational visibility and enables more efficient management of inventory and supply chain activities.\r\n",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
       "4.png",
       "5.png",
-      "6. blur.png",
-      "9.png",
-      "10.png",
-      "11.png",
-      "11111.png",
-      "ai_3.png",
-      "ai_6.png",
-      "old 1.png",
-      "old 2.png",
-      "Screenshot 2026-05-23 025407.png"
+      "6.jpg"
+    ]
+  },
+  {
+    "title": "Internal E-Commerce & Inventory System",
+    "shortTitle": "YM Store",
+    "categories": [
+      "Business Apps & Automation"
     ],
-    "thumbnail": "2.png"
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2024",
+    "stack": [
+      "Power Apps",
+      "Power Automate",
+      "Excel"
+    ],
+    "summary": "Power Apps internal store managing customers, orders, inventory, invoicing, and financial tracking end-to-end.",
+    "featured": false,
+    "order": 16,
+    "impact": [
+      "Automated purchasing process with real-time inventory updates.",
+      "Integrated order management with invoice generation and email notifications.",
+      "Centralized financial tracking with transaction history and reporting."
+    ],
+    "videoEmbed": "https://www.youtube.com/embed/VkqxCcYTvqI",
+    "thumbnail": "thumbnail.png",
+    "folder": "9- YM Store",
+    "id": "internal-e-commerce-inventory-system",
+    "longDescription": "I developed an internal digital store system designed to manage purchasing, inventory, and financial tracking within a centralized platform. The solution allows users to create accounts, browse available products, add items to a cart, and complete purchases directly within the application, with automated email notifications and PDF invoice generation.\r\n\r\nThe system also includes an administrative interface for managing products, updating stock levels, and monitoring customer activity. Inventory is automatically updated based on purchases, ensuring real-time stock accuracy. Administrators can also track top customers, monitor product performance, and analyze transaction data.\r\n\r\nIn addition, the application records all financial activities in an accounting-style journal, capturing incoming and outgoing transactions, payments, and revenue. Built using Power Apps, Power Automate, and Excel, the project demonstrates a complete end-to-end system covering customer management, order processing, inventory control, and financial tracking.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png"
+    ]
   },
   {
     "title": "Turnover Analysis Dashboard",
@@ -794,9 +649,9 @@
       "Data Cleaning",
       "HR Analytics"
     ],
-    "summary": "Executive HR turnover dashboard built in Excel to transform raw exit interview data into actionable insights about resignation drivers, employee grades, department impact, and talent retention trends.",
+    "summary": "Executive Excel dashboard transforming Nestlé exit interview data into insights on resignation drivers, talent loss, and department turnover.",
     "featured": false,
-    "order": 0,
+    "order": 17,
     "impact": [
       "Transformed raw HR exit interview exports into a structured and analysis-ready dataset.",
       "Normalized multi-select resignation reasons to enable accurate turnover driver analysis.",
@@ -828,13 +683,160 @@
       "Professional chart standardization"
     ],
     "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
     "folder": "21 - Nadine - Analysis",
     "id": "turnover-analysis-dashboard",
     "longDescription": "Turnover Analysis Dashboard is an HR analytics project built in Excel to transform raw exit interview and resignation data into a clean, structured, and executive-ready dashboard for turnover analysis and retention insights. The project focused on converting unorganized HR records into meaningful visual analytics that help identify why employees leave, which departments and grades are most affected, and how turnover trends evolve over time.\r\n\r\nThe solution started from a raw dataset containing employee grades, departments, talent categories, resignation dates, critical and regrettable flags, and resignation reasons. One of the main challenges was handling multi-select resignation reasons stored inside single cells, which required creating a normalized analysis structure to accurately measure turnover drivers. The data was cleaned, standardized, and enriched with calculated fields such as resignation month, year, quarter, and employee tenure to support deeper HR analysis.\r\n\r\nThe final dashboard includes executive KPI cards, resignation trends by month, top reasons for leaving, grade distribution analysis, department impact analysis, and top talent turnover metrics. Additional business insights were added to help management quickly understand the most important findings without manually interpreting the charts.\r\n\r\nThe dashboard was designed using a premium corporate visual style inspired by Nestlé branding, with clean KPI cards, structured layouts, branded colors, and presentation-ready formatting to make the analysis suitable for HR reviews and leadership reporting.\r\n\r\nThis project demonstrates skills in Excel dashboarding, HR analytics, data cleaning, data modeling, business storytelling, and executive reporting by transforming raw resignation records into actionable insights for workforce and retention analysis.",
     "images": [
       "1.png",
       "2.png"
+    ]
+  },
+  {
+    "title": "Financial Habits Analysis Dashboard",
+    "shortTitle": "Financial Habits Dashboard",
+    "categories": [
+      "Dashboards & Analytics"
     ],
-    "thumbnail": "1.png"
+    "clientOrOrganization": "Academic Statistical Analysis Project",
+    "role": "Data Analyst & Dashboard Developer",
+    "period": "2026",
+    "stack": [
+      "Microsoft Excel",
+      "Pivot Tables",
+      "Pivot Charts",
+      "Google Forms",
+      "Excel Formulas"
+    ],
+    "summary": "Transformed 100+ messy Google Forms survey responses into a complete Excel analytics dashboard with KPIs, cross-tabs, and financial behavior insights.",
+    "featured": false,
+    "order": 18,
+    "impact": [
+      "Cleaned and standardized more than 100 messy survey responses containing inconsistent numeric formats and manual text entries.",
+      "Built a professional Excel dashboard with KPIs, statistical measures, cross-tab analysis, and interactive visualizations.",
+      "Generated actionable insights about savings behavior, budgeting habits, payment methods, expenses, and financial satisfaction."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "20 - Miryam - Financial Habits Analysis",
+    "id": "financial-habits-analysis-dashboard",
+    "longDescription": "This project focused on transforming raw Google Forms survey responses into a complete Excel-based statistical analysis and dashboard system. The original dataset contained messy manual entries, inconsistent numeric formats, spelling mistakes, mixed text values, and unstandardized categories that required extensive cleaning before any meaningful analysis could be performed.\r\n\r\nI cleaned and standardized the dataset by converting text-based numeric values (such as “20k” or “500-600 EGP”) into usable formats, correcting category inconsistencies, handling missing and irregular values, and preparing structured analytical fields including savings rate, expense rate, net balance, age groups, and expense tracking levels.\r\n\r\nThe final Excel workbook was organized into multiple analytical layers including raw data, cleaned data, pivot tables, statistical measures, KPI reporting, insights, and a fully interactive dashboard. The dashboard provided visual analysis for savings behavior, budgeting habits, financial satisfaction, payment methods, spending categories, expense tracking behavior, income versus expenses, and demographic comparisons across more than 100 survey responses.\r\n\r\nThe project included:\r\n\r\nData cleaning and transformation\r\nPivot tables and pivot charts\r\nStatistical measures (mean, median, standard deviation, min/max)\r\nKPI cards and executive summary metrics\r\nCross-tab analysis and comparative charts\r\nDashboard design and visualization\r\nFinancial behavior insights generation\r\n\r\nThis project demonstrates strong capabilities in Excel analytics, survey data processing, dashboard design, statistical analysis, KPI reporting, and transforming real-world unstructured datasets into clear and actionable insights.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png"
+    ]
+  },
+  {
+    "title": "Fabula – Creative Portfolio Website",
+    "shortTitle": "Fabula Portfolio",
+    "categories": [
+      "Web & App Development"
+    ],
+    "clientOrOrganization": "Fabula",
+    "role": "Web Developer",
+    "period": "2026",
+    "stack": [
+      "React",
+      "TypeScript",
+      "CSS",
+      "Vercel"
+    ],
+    "summary": "Premium React portfolio website for a creative professional — showcasing work, video content, and experience with polished UI and responsive design.",
+    "url": "https://youhannamaher.github.io/fabula-portfolio/",
+    "featured": false,
+    "order": 19,
+    "impact": [
+      "Designed and built a clean, premium portfolio experience tailored to a creative professional.",
+      "Structured creative work into clear sections including skills, video portfolio, projects, and experience.",
+      "Implemented a responsive layout with polished visual identity, smooth navigation, and a contact form."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "17 - Fabula Portfolio",
+    "id": "fabula-creative-portfolio-website",
+    "longDescription": "Fabula is a premium creative portfolio website developed to showcase the professional identity, multimedia work, and storytelling capabilities of a creative content professional. The platform combines elegant visual design with structured content presentation to create a modern digital portfolio experience focused on branding, video production, and creative communication.\r\n\r\nThe website includes dedicated sections for personal introduction, creative skills, professional experience, multimedia portfolio projects, and direct communication. A categorized video portfolio system was implemented to organize creative productions across different themes such as branding, documentaries, campaigns, editing, and social media content.\r\n\r\nThe platform was designed with a strong focus on visual hierarchy, typography, responsive layouts, and premium UI/UX styling to reflect the creative and artistic nature of the portfolio owner while maintaining professionalism and clarity. The result is a polished personal branding website that serves both as a professional portfolio and as a digital representation of creative identity and storytelling expertise.",
+    "images": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png"
+    ]
+  },
+  {
+    "title": "Interactive Financial Dashboard",
+    "shortTitle": "Excel Dashboard",
+    "categories": [
+      "Dashboards & Analytics"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Data Analyst / Developer",
+    "period": "2023",
+    "stack": [
+      "Excel",
+      "VBA",
+      "Pivot Tables"
+    ],
+    "summary": "Dynamic Excel financial dashboard with VBA automation, interactive charts, and real-time KPI tracking — an early analytics project.",
+    "featured": false,
+    "order": 20,
+    "impact": [
+      "Built a fully dynamic dashboard with real-time updates based on user input.",
+      "Automated data handling and reporting using VBA and Excel forms.",
+      "Delivered clear financial insights through interactive charts and KPI tracking."
+    ],
+    "videoEmbed": "https://www.youtube.com/embed/1YLmsf0g3-U",
+    "thumbnail": "thumbnail.png",
+    "folder": "13- Excel Dashboard",
+    "id": "interactive-financial-dashboard",
+    "longDescription": "I developed an interactive financial dashboard in Excel to track income, expenses, and overall financial performance in a dynamic and automated way. The solution includes multiple visual components such as income and expense tracking, profit analysis with highlighted peak values, net revenue comparison, and goal tracking indicators.\r\n\r\nThe dashboard is fully dynamic, with data entered through forms and automatically reflected across all visualizations in real time. It leverages Pivot Tables, slicers, and interactive charts to provide a clear and structured overview of financial data, enabling better analysis and decision-making.\r\n\r\nTo enhance automation, I implemented VBA and Excel forms to streamline data input and processing, reducing manual effort and ensuring data consistency. This project demonstrates how Excel can be transformed into a powerful reporting and visualization tool capable of delivering advanced analytics without relying on external BI platforms.",
+    "images": [
+      "1.png",
+      "2.PNG",
+      "3.PNG",
+      "4.PNG",
+      "5.PNG"
+    ]
+  },
+  {
+    "title": "Automated Certificate Generation System",
+    "shortTitle": "Certificate Automation",
+    "categories": [
+      "Business Apps & Automation",
+      "Digital HR"
+    ],
+    "clientOrOrganization": "Personal Project",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+      "Power Automate",
+      "Excel",
+      "HTML/CSS"
+    ],
+    "summary": "Power Automate system generating and sending personalized PDF certificates at scale from dynamic HTML templates.",
+    "featured": false,
+    "order": 21,
+    "impact": [
+      "Eliminated manual certificate creation and email sending processes.",
+      "Enabled scalable generation of personalized PDF certificates.",
+      "Delivered consistent and professional branded communication experience."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png",
+    "folder": "12- Certificate Generatiom",
+    "id": "automated-certificate-generation-system",
+    "longDescription": "I designed and developed an automated certificate generation system to streamline the process of creating and sending personalized certificates at scale. The solution uses a structured Excel file as a data source, where each row represents a recipient, including their name and email address.\r\n\r\nUsing Power Automate, the system reads the data, dynamically injects recipient information into a professionally designed HTML certificate template, and generates a PDF-ready document for each individual. The process is fully automated, allowing certificates to be created consistently without any manual editing or formatting.\r\n\r\nThe workflow also sends personalized HTML emails to each recipient, attaching their certificate and delivering a cohesive, branded communication experience. Built using Power Automate, Excel, and HTML/CSS, the solution transforms a repetitive manual process into a scalable and efficient automation while maintaining a high level of design quality and professionalism.",
+    "images": [
+      "1.png",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
   }
 ]

@@ -1,23 +1,24 @@
 {
-    "title": "Inventory Management System",
-    "shortTitle": "Bondy Inventory",
-    "categories": [
-        "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Bondy",
-    "role": "Power Platform Developer",
-    "period": "2025",
-    "stack": [
-        "Power Apps",
-        "Power Automate"
-    ],
-    "summary": "Inventory tracking system managing stock levels, product transformation, and sales operations.",
-    "featured": false,
-    "order": 7,
-    "impact": [
-        "Enabled real-time tracking of inventory and stock levels.",
-        "Improved visibility on product lifecycle from raw materials to finished goods.",
-        "Centralized transaction tracking for purchases, production, and sales."
-    ],
-    "videoEmbed": ""
+    "title":  "Inventory Management System",
+    "shortTitle":  "Bondy Inventory",
+    "categories":  [
+                       "Business Apps \u0026 Automation"
+                   ],
+    "clientOrOrganization":  "Bondy",
+    "role":  "Power Platform Developer",
+    "period":  "2025",
+    "stack":  [
+                  "Power Apps",
+                  "Power Automate"
+              ],
+    "summary":  "Power Apps inventory system tracking stock levels, product transformations, and sales operations for Bondy\u0027s operational needs.",
+    "featured":  false,
+    "order":  15,
+    "impact":  [
+                   "Enabled real-time tracking of inventory and stock levels.",
+                   "Improved visibility on product lifecycle from raw materials to finished goods.",
+                   "Centralized transaction tracking for purchases, production, and sales."
+               ],
+    "videoEmbed":  "",
+    "thumbnail":  "thumbnail.png"
 }

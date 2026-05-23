@@ -1,29 +1,30 @@
 {
-    "title": "Finance Pro – AI Financial Command Center",
-    "shortTitle": "Finance Pro",
-    "categories": [
-        "Dashboards & Analytics",
-        "Web & App Development"
-    ],
-    "clientOrOrganization": "Personal Project",
-    "role": "Full-Stack Developer",
-    "period": "2026",
-    "stack": [
-        "React",
-        "TypeScript",
-        "Supabase",
-        "Google Gemini AI",
-        "Vercel"
-    ],
-    "summary": "AI-powered financial system combining real-time tracking, smart automation, and natural language expense management.",
-    "url": "https://finance-tracker-teal-gamma-89.vercel.app/",
-    "featured": true,
-    "order": 2,
-    "impact": [
-        "Enabled natural language financial tracking using AI (Arabic & English).",
-        "Centralized income, expenses, investments, and balances into one real-time system.",
-        "Automated detection of untracked spending through balance reconciliation.",
-        "Delivered a full product experience with secure sandbox mode for public usage."
-    ],
-    "videoEmbed": ""
+    "title":  "Finance Pro – AI Financial Command Center",
+    "shortTitle":  "Finance Pro",
+    "categories":  [
+                       "Web \u0026 App Development",
+                       "Dashboards \u0026 Analytics"
+                   ],
+    "clientOrOrganization":  "Personal Project",
+    "role":  "Full-Stack Developer",
+    "period":  "2026",
+    "stack":  [
+                  "React",
+                  "TypeScript",
+                  "Supabase",
+                  "Google Gemini AI",
+                  "Vercel"
+              ],
+    "summary":  "AI-powered finance app with natural language expense tracking, real-time dashboards, and smart automation — in Arabic \u0026 English.",
+    "url":  "https://finance-tracker-teal-gamma-89.vercel.app/",
+    "featured":  true,
+    "order":  2,
+    "impact":  [
+                   "Enabled natural language financial tracking using AI (Arabic \u0026 English).",
+                   "Centralized income, expenses, investments, and balances into one real-time system.",
+                   "Automated detection of untracked spending through balance reconciliation.",
+                   "Delivered a full product experience with secure sandbox mode for public usage."
+               ],
+    "videoEmbed":  "",
+    "thumbnail":  "thumbnail.png"
 }

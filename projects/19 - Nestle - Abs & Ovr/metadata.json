@@ -1,28 +1,29 @@
 {
-    "title": "HR Absenteeism & Workforce Analytics Automation System",
-    "shortTitle": "Absenteeism Analytics",
-    "categories": [
-        "Digital HR",
-        "Business Apps & Automation",
-        "Dashboards & Analytics"
-    ],
-    "clientOrOrganization": "Nestlé",
-    "role": "Power Platform Developer",
-    "period": "2026",
-    "stack": [
-        "Power Apps",
-        "Power Automate",
-        "SharePoint",
-        "Excel"
-    ],
-    "summary": "Automated HR absenteeism reporting system transforming monthly Excel files into structured workforce analytics and interactive reporting matrices.",
-    "featured": true,
-    "order": 0,
-    "impact": [
-        "Automated monthly absence data ingestion from Excel into SharePoint through Power Automate.",
-        "Built historical employee tracking to manage active, inactive, new, and transferred employees accurately.",
-        "Created dynamic HR reporting matrices for department, employee, organization, and absence type analysis.",
-        "Reduced manual calculations and improved reporting accuracy through centralized workforce data."
-    ],
-    "videoEmbed": ""
+    "title":  "HR Absenteeism \u0026 Workforce Analytics System",
+    "shortTitle":  "Absenteeism Analytics",
+    "categories":  [
+                       "Digital HR",
+                       "Dashboards \u0026 Analytics",
+                       "Business Apps \u0026 Automation"
+                   ],
+    "clientOrOrganization":  "Nestlé",
+    "role":  "Power Platform Developer",
+    "period":  "2026",
+    "stack":  [
+                  "Power Apps",
+                  "Power Automate",
+                  "SharePoint",
+                  "Excel"
+              ],
+    "summary":  "Automated Nestlé HR system ingesting monthly Excel files to generate structured workforce analytics, reporting matrices, and absence insights.",
+    "featured":  false,
+    "order":  8,
+    "impact":  [
+                   "Automated monthly absence data ingestion from Excel into SharePoint through Power Automate.",
+                   "Built historical employee tracking to manage active, inactive, new, and transferred employees accurately.",
+                   "Created dynamic HR reporting matrices for department, employee, organization, and absence type analysis.",
+                   "Reduced manual calculations and improved reporting accuracy through centralized workforce data."
+               ],
+    "videoEmbed":  "",
+    "thumbnail":  "thumbnail.png"
 }

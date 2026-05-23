@@ -1,24 +1,25 @@
 {
-    "title": "Executive Operations & Performance Dashboard",
-    "shortTitle": "Federon BI Dashboard",
-    "categories": [
-        "Dashboards & Analytics",
-        "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Federon Procurement Solutions",
-    "role": "Power Platform Developer",
-    "period": "2026",
-    "stack": [
-        "Power BI",
-        "Dataverse"
-    ],
-    "summary": "Executive dashboard providing end-to-end visibility on contract lifecycle, performance, and operational efficiency.",
-    "featured": false,
-    "order": 1,
-    "impact": [
-        "Enabled leadership to monitor contract pipeline, approvals, and performance in real time.",
-        "Identified operational bottlenecks through cycle time and phase analysis.",
-        "Provided actionable insights on team performance, deadlines, and conversion rates."
-    ],
-    "videoEmbed": ""
+    "title":  "Executive Operations \u0026 Performance Dashboard",
+    "shortTitle":  "Federon BI Dashboard",
+    "categories":  [
+                       "Dashboards \u0026 Analytics",
+                       "Business Apps \u0026 Automation"
+                   ],
+    "clientOrOrganization":  "Federon Procurement Solutions",
+    "role":  "Power Platform Developer",
+    "period":  "2026",
+    "stack":  [
+                  "Power BI",
+                  "Dataverse"
+              ],
+    "summary":  "Power BI executive dashboard giving leadership real-time visibility into contract pipeline, team performance, and operational bottlenecks.",
+    "featured":  false,
+    "order":  9,
+    "impact":  [
+                   "Enabled leadership to monitor contract pipeline, approvals, and performance in real time.",
+                   "Identified operational bottlenecks through cycle time and phase analysis.",
+                   "Provided actionable insights on team performance, deadlines, and conversion rates."
+               ],
+    "videoEmbed":  "",
+    "thumbnail":  "thumbnail.png"
 }

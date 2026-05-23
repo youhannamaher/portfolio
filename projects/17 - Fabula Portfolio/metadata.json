@@ -1,26 +1,27 @@
 {
-    "title": "Fabula – Creative Portfolio Website",
-    "shortTitle": "Fabula Portfolio",
-    "categories": [
-        "Web & App Development"
-    ],
-    "clientOrOrganization": "Fabula",
-    "role": "Web Developer",
-    "period": "2026",
-    "stack": [
-        "React",
-        "TypeScript",
-        "CSS",
-        "Vercel"
-    ],
-    "summary": "A premium personal portfolio website showcasing creative work, video content, projects, experience, and contact details.",
-    "url": "https://youhannamaher.github.io/fabula-portfolio/",
-    "featured": false,
-    "order": 13,
-    "impact": [
-        "Designed and built a clean, premium portfolio experience tailored to a creative professional.",
-        "Structured creative work into clear sections including skills, video portfolio, projects, and experience.",
-        "Implemented a responsive layout with polished visual identity, smooth navigation, and a contact form."
-    ],
-    "videoEmbed": ""
+    "title":  "Fabula – Creative Portfolio Website",
+    "shortTitle":  "Fabula Portfolio",
+    "categories":  [
+                       "Web \u0026 App Development"
+                   ],
+    "clientOrOrganization":  "Fabula",
+    "role":  "Web Developer",
+    "period":  "2026",
+    "stack":  [
+                  "React",
+                  "TypeScript",
+                  "CSS",
+                  "Vercel"
+              ],
+    "summary":  "Premium React portfolio website for a creative professional — showcasing work, video content, and experience with polished UI and responsive design.",
+    "url":  "https://youhannamaher.github.io/fabula-portfolio/",
+    "featured":  false,
+    "order":  19,
+    "impact":  [
+                   "Designed and built a clean, premium portfolio experience tailored to a creative professional.",
+                   "Structured creative work into clear sections including skills, video portfolio, projects, and experience.",
+                   "Implemented a responsive layout with polished visual identity, smooth navigation, and a contact form."
+               ],
+    "videoEmbed":  "",
+    "thumbnail":  "thumbnail.png"
 }

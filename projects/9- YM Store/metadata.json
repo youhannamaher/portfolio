@@ -1,24 +1,25 @@
 {
-    "title": "Internal E-Commerce & Inventory System",
-    "shortTitle": "YM Store",
-    "categories": [
-        "Business Apps & Automation"
-    ],
-    "clientOrOrganization": "Personal Project",
-    "role": "Power Platform Developer",
-    "period": "2024",
-    "stack": [
-        "Power Apps",
-        "Power Automate",
-        "Excel"
-    ],
-    "summary": "Internal store system managing customers, orders, inventory, and financial tracking.",
-    "featured": false,
-    "order": 8,
-    "impact": [
-        "Automated purchasing process with real-time inventory updates.",
-        "Integrated order management with invoice generation and email notifications.",
-        "Centralized financial tracking with transaction history and reporting."
-    ],
-    "videoEmbed": "https://www.youtube.com/embed/VkqxCcYTvqI"
+    "title":  "Internal E-Commerce \u0026 Inventory System",
+    "shortTitle":  "YM Store",
+    "categories":  [
+                       "Business Apps \u0026 Automation"
+                   ],
+    "clientOrOrganization":  "Personal Project",
+    "role":  "Power Platform Developer",
+    "period":  "2024",
+    "stack":  [
+                  "Power Apps",
+                  "Power Automate",
+                  "Excel"
+              ],
+    "summary":  "Power Apps internal store managing customers, orders, inventory, invoicing, and financial tracking end-to-end.",
+    "featured":  false,
+    "order":  16,
+    "impact":  [
+                   "Automated purchasing process with real-time inventory updates.",
+                   "Integrated order management with invoice generation and email notifications.",
+                   "Centralized financial tracking with transaction history and reporting."
+               ],
+    "videoEmbed":  "https://www.youtube.com/embed/VkqxCcYTvqI",
+    "thumbnail":  "thumbnail.png"
 }

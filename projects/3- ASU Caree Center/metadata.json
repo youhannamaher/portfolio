@@ -1,28 +1,29 @@
 {
-    "title": "ASU Employment Fair Registration System",
-    "shortTitle": "ASU Registration System",
-    "categories": [
-        "Business Apps & Automation",
-        "Dashboards & Analytics"
-    ],
-    "clientOrOrganization": "ASU Career Center",
-    "role": "Power Platform Developer",
-    "period": "2025",
-    "stack": [
-        "Power Apps",
-        "Power Automate",
-        "SharePoint",
-        "Power BI",
-        "Google Sheets",
-        "App Script"
-    ],
-    "summary": "End-to-end event registration and QR-based verification system handling 15,000+ participants.",
-    "featured": true,
-    "order": 3,
-    "impact": [
-        "Managed registration and attendance tracking for over 15,000 participants.",
-        "Replaced manual Excel-based processes with a fully automated digital system.",
-        "Enabled real-time analytics, filtering, and targeted communication during and after the event."
-    ],
-    "videoEmbed": "https://www.youtube.com/embed/M0VVYtuocNw"
+    "title":  "ASU Employment Fair Registration System",
+    "shortTitle":  "ASU Registration System",
+    "categories":  [
+                       "Business Apps \u0026 Automation",
+                       "Dashboards \u0026 Analytics"
+                   ],
+    "clientOrOrganization":  "ASU Career Center",
+    "role":  "Power Platform Developer",
+    "period":  "2025",
+    "stack":  [
+                  "Power Apps",
+                  "Power Automate",
+                  "SharePoint",
+                  "Power BI",
+                  "Google Sheets",
+                  "App Script"
+              ],
+    "summary":  "End-to-end event registration and QR-based check-in system handling 15,000+ participants with real-time analytics.",
+    "featured":  true,
+    "order":  6,
+    "impact":  [
+                   "Managed registration and attendance tracking for over 15,000 participants.",
+                   "Replaced manual Excel-based processes with a fully automated digital system.",
+                   "Enabled real-time analytics, filtering, and targeted communication during and after the event."
+               ],
+    "videoEmbed":  "https://www.youtube.com/embed/M0VVYtuocNw",
+    "thumbnail":  "thumbnail.jpg"
 }

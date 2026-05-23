@@ -640,14 +640,16 @@ function createProjectCard(project) {
     let actionsHtml = '';
     if (project.url) {
         actionsHtml = `
-            <div class="project-card-actions mt-2">
+            <div class="project-card-actions">
                 <a href="${project.url}" target="_blank" class="btn btn-primary project-card-btn" onclick="event.stopPropagation();">Visit Website <i class="fa-solid fa-external-link-alt ml-1"></i></a>
                 <button class="btn btn-outline project-card-btn" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-1"></i></button>
             </div>
         `;
     } else {
         actionsHtml = `
-            <button class="btn btn-outline w-100 mt-2" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            <div class="project-card-actions">
+                <button class="btn btn-outline project-card-btn" style="width:100%;" onclick="if(window.isDraggingProjects) return; openProjectModal('${project.id}')">View Details <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
         `;
     }
 
@@ -708,63 +710,7 @@ function renderProjects() {
     let isProgrammaticScrolling = false;
     let programmaticScrollTimeout = null;
 
-    const syncProjectCardHeights = () => {
-        const cards = containerEl.querySelectorAll('.project-card');
-        const summaries = containerEl.querySelectorAll('.project-summary');
-        const wrappers = containerEl.querySelectorAll('.project-card-wrapper');
-        const gridItems = containerEl.querySelectorAll('.project-grid-item');
-        const grids = containerEl.querySelectorAll('.projects-grid');
-        
-        cards.forEach(card => {
-            card.style.height = 'auto';
-        });
-        summaries.forEach(s => {
-            s.style.height = 'auto';
-        });
-
-        const isList = document.querySelector('.layout-btn[data-layout="list"]')?.classList.contains('active');
-        if (isList) return;
-
-        // Temporarily bypass all grid and flex alignment to scan natural heights
-        grids.forEach(g => {
-            g.style.display = 'block';
-        });
-        gridItems.forEach(item => {
-            item.style.display = 'block';
-        });
-        wrappers.forEach(w => {
-            w.style.display = 'block';
-            w.style.height = 'auto';
-        });
-
-        let maxHeight = 0;
-        cards.forEach(card => {
-            const rect = card.getBoundingClientRect();
-            // Add a small 16px buffer for cross-browser rendering tolerance
-            const heightWithBuffer = Math.ceil(rect.height) + 16;
-            if (heightWithBuffer > maxHeight) {
-                maxHeight = heightWithBuffer;
-            }
-        });
-
-        // Restore layout configurations
-        grids.forEach(g => {
-            g.style.display = '';
-        });
-        gridItems.forEach(item => {
-            item.style.display = '';
-        });
-        wrappers.forEach(w => {
-            w.style.display = '';
-            w.style.height = '';
-        });
-
-        if (maxHeight > 0) {
-            cards.forEach(card => {
-                card.style.height = `${maxHeight}px`;
-            });
-        }
-    };
+    // Card heights are fixed via CSS (420px) — no JS sync needed.
 
     // Smooth scroll page back to the top of the gallery section (useful on page changes)
     const scrollToGamesTop = () => {
@@ -970,10 +916,7 @@ function renderProjects() {
             
             containerEl.innerHTML = slidesHtml;
             
-            // Sync card heights dynamically
-            syncProjectCardHeights();
-            requestAnimationFrame(syncProjectCardHeights);
-            setTimeout(syncProjectCardHeights, 50);
+
             
             // Instantly sync scroll position to current page without layout flash
             const activeSlide = containerEl.querySelector(`.projects-carousel-slide[data-page="${currentPage}"]`);
@@ -1000,8 +943,7 @@ function renderProjects() {
             
             renderPagination(currentFilteredProjects.length);
             
-            // Final check on height sync after staggers and observers bind
-            setTimeout(syncProjectCardHeights, 100);
+
         }
     };
 
