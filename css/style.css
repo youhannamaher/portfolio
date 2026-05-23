@@ -785,8 +785,6 @@ body.light-theme .mobile-nav {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     align-items: stretch;
-    height: 100%;
-    flex-grow: 1;
 }
 
 .project-card {
