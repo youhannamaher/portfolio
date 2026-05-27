@@ -709,7 +709,7 @@ body.light-theme .mobile-nav {
     cursor: grab;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
 }
 
 .projects-carousel-container::-webkit-scrollbar {
@@ -2443,6 +2443,10 @@ body.light-theme .mobile-nav {
     .project-card-wrapper,
     .project-card {
         height: 420px !important;
+    }
+
+    .project-category {
+        display: none !important;
     }
 
     .project-card .project-content {
