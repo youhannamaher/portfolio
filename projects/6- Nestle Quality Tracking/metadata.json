@@ -1,26 +1,27 @@
 {
-    "title":  "Quality Tracking \u0026 Ticket Management System",
-    "shortTitle":  "Nestlé Ticketing System",
-    "categories":  [
-                       "Business Apps \u0026 Automation"
-                   ],
-    "clientOrOrganization":  "Nestlé",
-    "role":  "Power Platform Developer",
-    "period":  "2025",
-    "stack":  [
-                  "Power Apps",
-                  "Power Automate",
-                  "SharePoint",
-                  "Power BI"
-              ],
-    "summary":  "Nestlé internal ticketing system centralizing issue tracking, role-based resolution workflows, and live performance monitoring dashboards.",
-    "featured":  false,
-    "order":  11,
-    "impact":  [
-                   "Centralized issue tracking and eliminated reliance on emails and manual follow-ups.",
-                   "Automated ticket lifecycle with role-based workflows and notifications.",
-                   "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
-               ],
-    "videoEmbed":  "",
-    "thumbnail":  "thumbnail.png"
+    "title": "Quality Tracking \u0026 Ticket Management System",
+    "shortTitle": "Nestlé Ticketing System",
+    "categories": [
+        "Business Apps \u0026 Automation",
+        "Digital HR"
+    ],
+    "clientOrOrganization": "Nestlé",
+    "role": "Power Platform Developer",
+    "period": "2025",
+    "stack": [
+        "Power Apps",
+        "Power Automate",
+        "SharePoint",
+        "Power BI"
+    ],
+    "summary": "Nestlé internal ticketing system centralizing issue tracking, role-based resolution workflows, and live performance monitoring dashboards.",
+    "featured": false,
+    "order": 11,
+    "impact": [
+        "Centralized issue tracking and eliminated reliance on emails and manual follow-ups.",
+        "Automated ticket lifecycle with role-based workflows and notifications.",
+        "Enabled real-time monitoring of ticket performance and resolution rates through dashboards."
+    ],
+    "videoEmbed": "",
+    "thumbnail": "thumbnail.png"
 }

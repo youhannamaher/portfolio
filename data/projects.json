@@ -417,7 +417,8 @@
     "title": "Quality Tracking & Ticket Management System",
     "shortTitle": "Nestlé Ticketing System",
     "categories": [
-      "Business Apps & Automation"
+      "Business Apps & Automation",
+      "Digital HR"
     ],
     "clientOrOrganization": "Nestlé",
     "role": "Power Platform Developer",
