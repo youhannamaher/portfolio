@@ -531,7 +531,8 @@
     "title": "Internal Operations Applications",
     "shortTitle": "Orange Business Apps",
     "categories": [
-      "Business Apps & Automation"
+      "Business Apps & Automation",
+      "Digital HR"
     ],
     "clientOrOrganization": "Orange Business",
     "role": "Power Platform Developer Intern",
