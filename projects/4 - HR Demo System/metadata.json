@@ -15,7 +15,7 @@
         "SharePoint"
     ],
     "summary": "AI-driven recruitment platform automating CV screening, candidate ranking, and HR workflows using AI Builder.",
-    "featured": false,
+    "featured": true,
     "order": 7,
     "impact": [
         "Automated CV screening and keyword extraction using AI Builder.",
